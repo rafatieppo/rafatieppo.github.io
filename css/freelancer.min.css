@@ -9,15 +9,15 @@
    
  p.small{font-size:16px}
  
- a,a.active,a:active,a:focus,a:hover{color:#248cc8;outline:0; font-weight:bold;}
- 
+ a,a.active,a:active,a:focus,a:hover{color:#027891;outline:0;font-weight:bold;} 
+ /*blue  #248cc8 #027891 #3a4660 #00303F golden #b48c36  #d8ab4e */
  h1,h2{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700}
 
- h3{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;color:#393f4d;font-weight:700; font-size:18px;} 
+ h3{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700; font-size:18px;} 
 
- h4{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;font-style:italic; color:#393f4d; font-size:16px;}
+ h4{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;font-style:normal; color:#393f4d; font-size:18px;}
  
- h5{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal; font-weight:700; font-size:18px;}
+ h5{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic; font-weight:700; font-size:16px;}
 
  h6{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic; color:#393f4d; font-size:14px;}
 
