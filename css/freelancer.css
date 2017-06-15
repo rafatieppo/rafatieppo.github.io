@@ -2,13 +2,19 @@
  * Start Bootstrap - Freelancer v3.3.7+1 (http://startbootstrap.com/template-overviews/freelancer)
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+Deep rusted red: #c1432e
+Silver head-dress: #4b6777
+Rusted Gold: #ce9e62
+Black for Contrast: #2c2c2c
  */
+
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden; background:#f7f7f7;
 }
 p {
   font-size: 20px;
+  text-align: justify;
 }
 p.small {
   font-size: 16px;
@@ -18,9 +24,25 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #18BC9C;
-  outline: none;
+    color:#027891;
+    outline:0;
+    font-weight:bold;
+  /**color: #18BC9C; /**
+  outline: none; **/
 }
+ /*blue  #248cc8 #027891 #3a4660 #00303F golden #b48c36  #d8ab4e */
+
+ h1,h2{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700}
+
+ h3{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700; font-size:18px;} 
+
+ h4{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;font-style:normal; color:#393f4d; font-size:18px;}
+ 
+ h5{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic; font-weight:700; font-size:16px;}
+
+ h6{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:italic; color:#393f4d; font-size:14px;}
+
+/**
 h1,
 h2,
 h3,
@@ -31,6 +53,9 @@ h6 {
   text-transform: uppercase;
   font-weight: 700;
 }
+**/
+
+
 hr.star-light,
 hr.star-primary {
   padding: 0;
@@ -67,11 +92,20 @@ hr.star-primary:after {
 .img-centered {
   margin: 0 auto;
 }
-header {
-  text-align: center;
-  background: #18BC9C;
-  color: white;
-}
+
+ intro{
+ text-align:justify;
+ color: #393f4d;  /**#393f4d;**/
+ background: #f7f7f7; /** #233140; #2C3E50;      #18BC9C;**/
+ }
+
+ header{
+ text-align:justify;
+ color: #393f4d;  /**#393f4d;**/
+ background-image: url("https://sites.google.com/a/unemat.br/biossistemas/home/site_git/_SAM6032_copy.jpg");
+ /**background: #2C3E50; /** #2C3E50 #233140; #2C3E50;      #18BC9C;**/
+ }
+
 header .container {
   padding-top: 100px;
   padding-bottom: 50px;
@@ -93,8 +127,8 @@ header .intro-text .skills {
 }
 @media (min-width: 768px) {
   header .container {
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 250px;
   }
   header .intro-text .name {
     font-size: 4.75em;
@@ -104,59 +138,85 @@ header .intro-text .skills {
   }
 }
 .navbar-custom {
-  background: #2C3E50;
+  background: #233140;   /* #233140 #393f4d;  #1d1e22*/
+  /**  background: #2C3E50; **/
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   border: none;
+  color:#ce9e62; /*#feda6a*/
+  font-size:1.1em;
 }
+
 .navbar-custom a:focus {
-  outline: none;
+    outline:0;
+ /** outline: none;**/
 }
+
+
 .navbar-custom .navbar-brand {
-  color: white;
+    color:#ce9e62 ; /** #feda6a white;**/
+
 }
-.navbar-custom .navbar-brand:hover,
+
+.navbar-custom .navbar-brand:hover{
+    color: white;
+}
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:active,
-.navbar-custom .navbar-brand.active {
-  color: white;
+.navbar-custom .navbar-brand .active {
+  color: #feda6a; /** white**/
 }
+
 .navbar-custom .navbar-nav {
   letter-spacing: 1px;
 }
 .navbar-custom .navbar-nav li a {
-  color: white;
+  color: #ce9e62; /*#feda6a*/
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #18BC9C;
-  outline: none;
+    color: #d4d4dc; /**#18BC9C;**/
+  outline: 0; /** none**/
 }
 .navbar-custom .navbar-nav li a:focus,
 .navbar-custom .navbar-nav li a:active {
-  color: white;
+  color: #fff;
 }
+
+
+ .navbar-custom .navbar-nav li.active a,
+ .navbar-custom .navbar-nav li.active a:active,
+ .navbar-custom
+ .navbar-nav li.active a:focus,
+ .navbar-custom .navbar-nav li.active a:hover{
+     color:#393f4d;
+     background:#ce9e62; /*#feda6a*/}
+
+/**
 .navbar-custom .navbar-nav li.active a {
-  color: white;
+    color:#393f4d;
+    background:#feda6a;
+    /** color: white;
   background: #18BC9C;
-}
-.navbar-custom .navbar-nav li.active a:hover,
-.navbar-custom .navbar-nav li.active a:focus,
-.navbar-custom .navbar-nav li.active a:active {
-  color: white;
-  background: #18BC9C;
-}
+} 
+
+.navbar-custom .navbar-nav li.active a:focus{
+    color:#fff} **/
+
+ 
 .navbar-custom .navbar-toggle {
-  color: white;
+  color: #fff; /** white**/
   text-transform: uppercase;
   font-size: 10px;
-  border-color: white;
+  border-color: #fff; /** white**/
 }
+
+/*menu*/
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #18BC9C;
+  background-color: #c1432e;
   color: white;
-  border-color: #18BC9C;
+  border-color: #c1432e;
 }
 @media (min-width: 768px) {
   .navbar-custom {
@@ -166,7 +226,7 @@ header .intro-text .skills {
     transition: padding 0.3s;
   }
   .navbar-custom .navbar-brand {
-    font-size: 2em;
+    font-size: 2.5em;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -175,9 +235,9 @@ header .intro-text .skills {
     padding: 10px 0;
   }
   .navbar-custom.affix .navbar-brand {
-    font-size: 1.5em;
-  }
+    font-size: 1.5em;}
 }
+
 section {
   padding: 100px 0;
 }
@@ -415,12 +475,15 @@ fieldset[disabled] .btn-success.active {
   display: inline-block;
   height: 50px;
   width: 50px;
-  border: 2px solid white;
+  border: 2px solid #ce9e62;
   border-radius: 100%;
   text-align: center;
   font-size: 20px;
   line-height: 45px;
+  color:#ce9e62;
+  background-color:#233140; /** #c1432e; **/
 }
+
 .btn:focus,
 .btn:active,
 .btn.active {
