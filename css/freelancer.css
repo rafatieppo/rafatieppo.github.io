@@ -479,7 +479,7 @@ fieldset[disabled] .btn-success.active {
   border-radius: 100%;
   text-align: center;
   font-size: 20px;
-  line-height: 45px;
+  line-height: 40px; /** to set the symbol into circle**/
   color:#ce9e62;
   background-color:#233140; /** #c1432e; **/
 }
