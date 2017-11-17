@@ -104,6 +104,7 @@ hr.star-primary:after {
  color: #393f4d;  /**#393f4d;**/
  background-image: url("https://sites.google.com/a/unemat.br/biossistemas/home/site_git/_SAM6032_copy.jpg");
  /**background: #2C3E50; /** #2C3E50 #233140; #2C3E50;      #18BC9C;**/
+ height: 450px;
  }
 
 header .container {
