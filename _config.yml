@@ -80,9 +80,9 @@ analytics:
 author:
   name             : "Rafael Tieppo"
   avatar           : "SAM4006_cp.JPG" #profile.png
-  bio              : "Professor na UNEMAT"
-  location         : "Tangará da Serra - MT - BR"
-  employer         : #"UNEMAT"
+  bio              : "Professor na UNEMAT - Tangará da Serra."
+  location         : "-57.432792, -14.650941 <br>UTC 04:00 / DST: UTC 03:00"
+  employer         : #"UNEMAT - Tangará da Serra"
   googlescholar    : "https://scholar.google.com.br/citations?user=ClN1Q6AAAAAJ&hl=en"
   email            : "rafaeltieppo@yahoo.com.br"
   uri              :

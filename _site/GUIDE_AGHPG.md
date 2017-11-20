@@ -64,13 +64,14 @@ Example: editing a markdown file for a talk
 
 More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
 
-
-
 ## Install Jekyll Ubuntu 16.04
 
 * $ sudo apt-get update
 * $ sudo apt-get install ruby ruby-dev make gcc
 * $ sudo gem install jekyll bundler
+* $ bundle install (into sites's folder)
+* $ sudo apt-get install nodejs
+
 
 ## To run locally (not on GitHub Pages, to serve on your own computer)
 
@@ -80,3 +81,8 @@ More info about configuring academicpages can be found in [the guide](https://ac
     4. Run bundle install to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
     5. Run bundle exec jekyll serve to generate the HTML and serve it from localhost:4000
 
+## Changing site apearance features
+
+It is necessary to modify the file `_variables.scss` into `_sass` dir.
+
+ 
