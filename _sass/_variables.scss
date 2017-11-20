@@ -14,13 +14,13 @@ $indent-var                 : 1.3em;
 
 /* system typefaces */
 $serif                      : 'PT Serif', serif;/*Georgia, Times, serif;*/
-$sans-serif                 : -apple-system, "San Francisco", "Lucida Grande", ".SFNSText-Regular", "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$sans-serif                 : -apple-system, "Lucida Grande", ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 $monospace                  : "Lucida Console", Monaco, Consolas, monospace;
 
 
 /* sans serif typefaces */
-$sans-serif-narrow          : "PT Sans Narrow", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-/*$sans-serif-narrow          : $sans-serif;*/
+/*$sans-serif-narrow          : "PT Sans Narrow", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;*/
+$sans-serif-narrow          : $sans-serif;
 $helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
 
 /* serif typefaces */
