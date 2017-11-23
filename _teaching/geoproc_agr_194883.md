@@ -36,7 +36,7 @@ TGAD852GEOA-194883.
 
 ## Resultados
 
-- Resultados das avaliações, <a href="https://sites.google.com/a/unemat.br/biossistemas/home/mec/MEC1701_RESULT.html?attredirects=0&d=1" target="_blank">AQUI</a>.
+- Resultados das avaliações, <a href="https://sites.google.com/a/unemat.br/biossistemas/home/geo/GEO1702_RESULT.html?attredirects=0&d=1" target="_blank">AQUI</a>.
 
 
 ## Material complementar
