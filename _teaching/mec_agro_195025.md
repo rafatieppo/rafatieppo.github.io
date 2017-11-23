@@ -1,14 +1,14 @@
 ---
 title: "Mecanização Agrícola"
 collection: teaching
-type: "Graduação Agronomia"
+type: "Graduação Agronomia 6º semestre"
 permalink: /teaching/mec_agro_195025
 venue: ""
 date: 2017-01-01 
 location: ""
 ---
 
-.
+TGAD852MECA - 195025
 
 ## Horário
 

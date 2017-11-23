@@ -1,14 +1,14 @@
 ---
 title: "Geoprocessamento"
 collection: teaching
-type: "Graduação Agronomia"
+type: "Graduação Agronomia 4º semestre agronomia "
 permalink: /teaching/geoproc_agr_194883
 venue: ""
 date: 2017-01-01 
 location: ""
 ---
 
-.
+TGAD852GEOA-194883.
 
 ## Horário
 
