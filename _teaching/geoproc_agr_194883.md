@@ -41,7 +41,7 @@ TGAD852GEOA-194883.
 
 ## Material complementar
 
-- Apostila Geoprocessamento com uso do software <b>QGIS</b> (<a href="https://sites.google.com/a/unemat.br/biossistemas/home/geo/GIS_BOOKLET_PREAMBULO.pdf?attredirects=0&d=1" target="_blank">AQUI</a>), última atualização 06/07/17
+- Apostila Geoprocessamento com uso do software <b>QGIS</b> (<a href="https://sites.google.com/a/unemat.br/biossistemas/home/geo/GIS_BOOKLET_PREAMBULO.pdf?attredirects=0&d=1" target="_blank">AQUI</a>), última atualização 23/11/17
 - Banco de dados para o mapa de produtividade (<a href="https://sites.google.com/a/unemat.br/biossistemas/home/geo/C051_soja_min.csv?attredirects=0&d=1">AQUI </a>)
 
 
