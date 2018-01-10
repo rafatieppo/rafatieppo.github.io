@@ -17,7 +17,7 @@ TGAD852GEOA-194883
 
 ## Calendário de provas
 
-- Prova 1: 
+- Prova 1: 26/01/2018
 
 
 - **PROVA FINAL**
@@ -38,6 +38,15 @@ TGAD852GEOA-194883
 
 - Análise temporal de variáveis climáticas no estado de Mato Grosso
 - Detalhes [AQUI](https://sites.google.com/a/unemat.br/biossistemas/home/geo/TRAB_GEO_INTERP_CLIMA.pdf?attredirects=0&d=1)
+
+### Trabalho 3
+
+- Interpolação de variáveis climatológicas
+
+### Trabalho Final
+
+- Projeto com uso de geotecnologias
+- Detalhes [AQUI](https://sites.google.com/a/unemat.br/biossistemas/home/geo/TRAB_GEO_GLOBAL.pdf?attredirects=0&d=1)
 
 ## Resultados
 
