@@ -6,10 +6,10 @@ main:
 #  - title: "Talks"
 #    url: /talks/    
 
-  - title: "Ensino"
+  - title: "Teaching"
     url: /teaching/    
     
-  - title: "Pesquisa e Extensão"
+  - title: "Portfolio"
     url: /portfolio/
         
   - title: "Blog Posts"
@@ -18,5 +18,5 @@ main:
 #  - title: "CV"
 #    url: /cv/
     
-  - title: "Pessoal"
+  - title: "About"
     url: /markdown/
