@@ -86,10 +86,10 @@ analytics:
 # Site Author
 author:
   name             : "Rafael Tieppo"
-  avatar           : "/docs/assets/image/SAM4006_cp.JPG" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/SAM4006_cp.JPG" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Professor at State University of Mato Grosso - MT - Brazil"
   location         : "-57.432792, -14.650941 <br>UTC 04:00 / DST: UTC 03:00"
-  email            :"rafaeltieppo@yahoo.com.br"
+  email            : "rafaeltieppo@yahoo.com.br"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
