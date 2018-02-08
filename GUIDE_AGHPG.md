@@ -85,4 +85,6 @@ More info about configuring academicpages can be found in [the guide](https://ac
 
 It is necessary to modify the file `_variables.scss` into `_sass` dir.
 
- 
+## Changing navigation menu
+
+Access `./_data/navigation.yml`
