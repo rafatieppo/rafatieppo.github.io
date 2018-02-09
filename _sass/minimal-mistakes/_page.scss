@@ -70,12 +70,20 @@
   h2 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
+  font-size: $type-size-5;
   }
 
   p,
-  li,
   dl {
-    font-size: 1em;
+  font-size: $type-size-6;
+  }
+
+  li {
+  font-size: $type-size-5;
+  }
+
+  code {
+  font-size: $type-size-6;
   }
 
   /* paragraph indents */
@@ -450,3 +458,4 @@
     }
   }
 }
+

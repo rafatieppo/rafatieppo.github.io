@@ -1,5 +1,6 @@
 ---
 title: "Docker: GDB, SSH... "
+date: 2018-01-03
 categories:
   - GDB
   - Remote Debugging

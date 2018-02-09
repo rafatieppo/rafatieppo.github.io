@@ -116,3 +116,30 @@ Find the file `_includes/author-profile-custom-links.html` and type:
 
 make sure to copy `./fonts` in `./assets`
 
+
+## Make list of blogs
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+another format:
+
+  {% for post in site.posts %}
+<p>
+      <small><a href="{{ post.url }}">{{ post.title }}</a></small>
+      <small><a href="{{ post.url }}">{{ post.date | date: '%Y-%m-%d' }}</a> </small> 
+      <small>{{ post.excerpt }}</small>
+    <hr>
+</p>
+
+  {% endfor %}
+
+https://jekyllrb.com/docs/posts/#displaying-an-index-of-posts
+https://jekyllrb.com/docs/templates/
+https://jekyllrb.com/docs/frontmatter/
+

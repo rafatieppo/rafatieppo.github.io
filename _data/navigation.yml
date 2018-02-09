@@ -2,10 +2,12 @@
 main:
   - title: "Home"
     url: https://rafatieppo.github.io/
-  - title: "About"
-    url: /about/
+  - title: "Teaching"
+    url: /teaching/
   - title: "Posts"
     url: /posts/
+  - title: "About"
+    url: /about/
   # - title: "Portfolio"
   #   url: /collection-archive/
   # - title: "Sitemap"
