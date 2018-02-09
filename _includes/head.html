@@ -2,6 +2,8 @@
 
 {% include seo.html %}
 
+<link rel="stylesheet" href="{{ '/assets/css/academicons.css' | absolute_url }}">
+
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -14,6 +16,10 @@
 </script>
 
 <!-- For all browsers -->
+
+<!-- Link to Academicon ORDID icon -->
+<link rel="stylesheet" href="/assets/css/academicons.css"/>
+
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
 
 <!--[if lte IE 9]>

@@ -1,8 +1,11 @@
 ---
 permalink: /about/
 title: "About"
+layout: single
 excerpt: "Minimal Mistakes is a flexible two-column Jekyll theme."
-toc: true
+category: statistics
+tags: [statistics, education]
+toc: false
 author_profile: false
 
 ---

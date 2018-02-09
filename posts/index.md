@@ -1,6 +1,6 @@
 ---
-layout: single
-title: All Posts
+layout: archive
+title: Posts
 excerpt: "A List of Posts"
 ---
 
