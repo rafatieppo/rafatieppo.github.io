@@ -64,11 +64,16 @@
     }
   }
 
+/*
+   Font size
+   ========================================================================== */
+
   ul {
     margin: 0;
     padding: 0;
     clear: both;
     list-style-type: none;
+   font-size: $type-size-5;
   }
 }
 

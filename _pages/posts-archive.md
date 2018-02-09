@@ -13,7 +13,7 @@ excerpt: "A List of Posts"
       <h6> &check; <a href="{{ post.url }}">{{ post.date | date: '%Y-%m-%d' }}</a> 
            &#62;&#62; <a href="{{ post.url }}">{{ post.title }}</a> 
       </h6>
-      <small>{{ post.excerpt }}</small>
+      {{ post.excerpt }}
 
 </p>
 <hr>

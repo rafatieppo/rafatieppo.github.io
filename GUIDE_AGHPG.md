@@ -142,13 +142,6 @@ author_profile: false
   {% endfor %}
 </div>
 ```
-
-
-
-
-
-
-
 Further insert setting as follows in `_config.yml`
 
 ```shell

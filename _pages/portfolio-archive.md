@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Portifolio"
+title: "Portfolio"
 permalink: /portfolio/
 author_profile: false
 ---
