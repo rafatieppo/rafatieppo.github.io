@@ -81,6 +81,10 @@ More info about configuring academicpages can be found in [the guide](https://ac
     4. Run bundle install to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
     5. Run bundle exec jekyll serve to generate the HTML and serve it from localhost:4000
 
+## Home page
+
+The `index.html` in `home` folder just call the layout in `_layouts`. Therefore, to change features in home page you must code at `./_layouts/LAYOUT_NAME.html`
+
 ## Changing site apearance features
 
 To change fonts:
