@@ -4,12 +4,13 @@
 
 .masthead {
   position: relative;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 5px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
+  height:90px;
 
   &__inner-wrap {
     @include clearfix;
@@ -49,7 +50,7 @@
 }
 
 .masthead__menu {
-  float: left;
+  float: right;
   margin-left: 0;
   margin-right: 0;
   width: 100%;

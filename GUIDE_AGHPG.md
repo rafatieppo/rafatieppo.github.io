@@ -83,8 +83,36 @@ More info about configuring academicpages can be found in [the guide](https://ac
 
 ## Changing site apearance features
 
-It is necessary to modify the file `_variables.scss` into `_sass` dir.
+To change fonts:
+- `_variables.scss` into `_sass` dir.
+
+To change side bar margin etc:
+- `_sidebar.scss`
 
 ## Changing navigation menu
 
 Access `./_data/navigation.yml`
+
+## Add new icon
+
+Assing the path in `./_inlcudes/head.htm`
+
+<!-- Link to Academicon ORDID icon -->
+<link rel="stylesheet" href="/assets/css/academicons.css"/>
+
+Find the file `_includes/author-profile-custom-links.html` and type:
+
+  <li>
+    <a href="http://orcid.org/0000-0001-8132-4813" itemprop="sameAs">
+      <i class="ai ai-orcid-square ai-fw"></i> ORCID
+    </a>
+  </li>
+
+  <li>
+    <a href="https://www.researchgate.net/profile/rafatieppo" itemprop="sameAs">
+      <i class="ai ai-researchgate-square ai-fw"></i> ResearchGate
+    </a>
+  </li>
+
+make sure to copy `./fonts` in `./assets`
+
