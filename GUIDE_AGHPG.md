@@ -121,6 +121,78 @@ Find the file `_includes/author-profile-custom-links.html` and type:
 make sure to copy `./fonts` in `./assets`
 
 
+## Controling pages
+
+Each page has a intial frame. You can find the control files in `_pages`.
+For instance, to show a list of **posts**, you just need to create a `.html` file with a appropriate head, e.g. `portfolio-archive.html`
+
+```shell
+---
+layout: archive
+title: "Portsss"
+permalink: /portfolio/
+author_profile: false
+---
+
+{% include base_path %}
+
+<div class="grid__wrapper">
+  {% for post in site.portfolio %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
+```
+
+
+
+
+
+
+
+Further insert setting as follows in `_config.yml`
+
+```shell
+# Defaults
+defaults:
+  #  _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+  # _portfolio
+  - scope:
+      path: "_portfolio"
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+
+# Collections
+collections:
+  talks:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  resources:
+    output: true
+    permalink: /:collection/:path/
+  research:
+    output: true
+permalink: /:collection/:path/
+```
+
 ## Make list of blogs
 
 <ul>

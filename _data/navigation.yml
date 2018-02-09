@@ -1,9 +1,11 @@
 # main links
 main:
-  - title: "Home"
-    url: https://rafatieppo.github.io/
+  #- title: "Home"
+  #  url: https://rafatieppo.github.io/
   - title: "Teaching"
     url: /teaching/
+  - title: "Portfolio"
+    url: /portfolio/
   - title: "Posts"
     url: /posts/
   - title: "About"
