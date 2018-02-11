@@ -97,7 +97,7 @@ To change side bar margin etc:
 
 Access `./_data/navigation.yml`
 
-## Add new icon
+## Add new icon in side bar
 
 Assing the path in `./_inlcudes/head.htm`
 
@@ -120,6 +120,15 @@ Find the file `_includes/author-profile-custom-links.html` and type:
 
 make sure to copy `./fonts` in `./assets`
 
+
+## Add icon image in browser
+
+Find `custom.html` in `_includes/head/`and set path in:
+
+```
+<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon.png" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon.ico" sizes="64x64">
+```
 
 ## Controling pages
 
