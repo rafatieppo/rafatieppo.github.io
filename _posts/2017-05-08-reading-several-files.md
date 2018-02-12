@@ -1,7 +1,7 @@
 ---
-title: "Reading and storing several files at one step"
+title: "Reading and storing several files using R"
 date: 2017-05-08
-excerpt: "A practical method to read and store data"
+excerpt: "A practical method to read and store data in R (statistical programming language)"
 categories:
   - R
 tags:
