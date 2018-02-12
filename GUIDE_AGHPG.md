@@ -126,8 +126,8 @@ make sure to copy `./fonts` in `./assets`
 Find `custom.html` in `_includes/head/`and set path in:
 
 ```
-<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon.png" sizes="32x32">
-<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon.ico" sizes="64x64">
+<link rel="shortcut icon" href="{{ base_path }}favicon.ico">
+<link rel="shortcut icon" href="{{ base_path }}favicon.png">
 ```
 
 ## Controling pages

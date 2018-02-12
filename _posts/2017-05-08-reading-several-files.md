@@ -1,12 +1,13 @@
 ---
 title: "Reading and storing several files at one step"
 date: 2017-05-08
-excerpt: ""
+excerpt: "A practical method to read and store data"
 categories:
   - R
 tags:
   - R
   - lists
+  - excel
 toc: true
 ---
 
@@ -15,17 +16,17 @@ toc: true
 Usually we need to read several files to create a data bank (data frame
 with all data). If you have two or three files it is simple. However, if
 you have five or more files like `.csv`, `.dat`, etc, it can demand more
-time. One of the options to solve it using R is possibility to work with
-*lists*. 
+time. Using **R**, one of the options to solve it is the *list* object,
+we will show how to handle with.
 
-## Case I
+## Case I - reading several files
 
-Vamos supor que você tenha uma série de arquivos no formato `.csv`
-Supposing you have `.csv` files.
+Supposing you have some `.csv` files. If you have not one we will create them.
 
+###  Creating a hypothetical data frame
 
 ```r
-### Criando um data.frame hipotético
+
 DF <-
     data.frame(BLOCO = rep(seq(1,4), each = 12),
                TRAT=rep(c("T1", "T2", "T3"), each = 4),
@@ -44,8 +45,9 @@ head(DF)
 ## 6     1   T2   2 28.90498
 ```
 
+###  Recording five `.csv` files
+
 ```r
-### Gerando uma série de arquivos csv
 sapply(c("foo1.csv", "foo2.csv", "foo3.csv", "foo4.csv", "foo5.csv"),
        function(i){
        write.csv(DF, paste(i))})
@@ -68,8 +70,9 @@ sapply(c("foo1.csv", "foo2.csv", "foo3.csv", "foo4.csv", "foo5.csv"),
 ## NULL
 ```
 
+### Checking if the five files have been created
+
 ```r
-### Verifique se os arquivos .csv foram criados
 dir()
 ```
 
@@ -80,8 +83,9 @@ dir()
 ## [7] "foo5.csv"
 ```
 
+###  Reading file's (`.csv`) names 
+
 ```r
-### Lendo os nomes dos arquivos .csv
 temp = list.files(pattern="*.csv")
 temp
 ```
@@ -90,9 +94,12 @@ temp
 ## [1] "foo1.csv" "foo2.csv" "foo3.csv" "foo4.csv" "foo5.csv"
 ```
 
-```r
-### Gerando uma lista com os arquivos .csv
+### All `.csv` file in only one list, and transforming it to data frame
 
+In my opinion, a good way to store data from several files is the *list*
+format. Especially for files with the same header.
+
+```r
 DF_LIST <-
     lapply(seq(1, length(temp)),
            function(z)
@@ -101,7 +108,6 @@ DF_LIST <-
                         dec = ".",
                         sep = ","))
 
-### Agrupando em um único data.frame
 DF_LIST_agrup <-
     do.call(rbind.data.frame, DF_LIST)
 
@@ -118,6 +124,8 @@ head(DF_LIST_agrup)
 ## 6 6     1   T2   2 28.90498
 ```
 
+### Checking dimensions. All looks great.
+
 ```r
 dim(DF_LIST_agrup)
 ```
@@ -126,76 +134,79 @@ dim(DF_LIST_agrup)
 ## [1] 240   5
 ```
 
-## Estudo de caso II 
-
-Quando se tem arquivos `.xls` ou `.xlsx` pode-se utilizar o pacote
-`readxl`.
-
+You can see it.
 
 ```r
-#library(readxl)
+View(DF_LIST_agrup)
+```
+
+## Case  II - Excel files, dealing with ...
+
+If you work with spread sheets (`.xls` or `.xlsx`), you can use `readxl` package.
+
+```r
+library(readxl)
 
 DF1 <- 
-read_excel("NOME_DO_ARQUIVO.xlsx")
+read_excel("FILE_NAME.xlsx")
 ```
-Caso seja necessário ler uma pasta específica do seu arquivo `.xls` ou
-`xlxs` basta usar as opções da função.
 
+Just in case, if you require a specif sheet from your file `.xls` or
+`.xlsx`, you can set the options.
 
 ```r
 #library(readxl)
 
 DF2 <-
-    read_excel("NOME_DO_ARQUIVO.xlsx",
-               sheet = "NOME_DA_PASTA")
+    read_excel("FILE_NAME.xlsx",
+               sheet = "SHEET_NAME")
 ```
 
-## Estudo de caso III
+## Case III - more than one sheet in your excel file
 
-Se seu arquivo `.xls` ou `xlxs` tiver uma série de pastas, basta usar a
-mesma lógica do **Estudo de caso I**.
+If you `.xls` or `xlxs` file has more than one sheet, you can use the
+same logic for **Case I**.
 
+### Create a list with sheet's names
 
 ```r
-#library(readxl)
+library(readxl)
 
-LISTA_PASTAS <- c("PASTA1",
-                  "PASTA2",
-                  "PASTA3")
+LIST_SHEET <- c("SHEET1",
+                "SHEET2",
+                "SHEET3")
+```
 
-### Lendo as pastas do arquivo  "NOME_DO_ARQUIVO.xlsx"
+### Reading file and sheets
 
-DF3_LISTA <-
-    sapply(LISTA_PASTAS,
+```r
+DF3_LIST <-
+    sapply(LIST_SHEET,
            function(L){
-               read_excel("NOME_DO_ARQUIVO.xlsx",
+               read_excel("FILE_NAME.xlsx",
                           sheet = L)
                },
            simplify = FALSE)
-
-### DB ACCOUNT
-DF3_DF <- do.call(rbind.data.frame, DF3_LISTA)
 ```
 
-Para maiores detalhes sobre ler os dados de arquivos `.xls` ou `.xlsx`
-consulte as referências.
+### Transform to data frame (if necessary)
+
+```r
+### DB ACCOUNT
+DF3_DF <-
+    do.call(rbind.data.frame, DF3_LIST)
+```
+
+More details about reading and storing data in R you can find in References
 
 []
 
+>“Without data, you're just another person with an opinion.”  
+>*W. Edwards Deming*
 
->“Without data, you're just another person with an opinion.”
->* W. Edwards Deming*
-
-
-## Referências
+## References
 
 [Convert a list of data frames into one data frame](http://stackoverflow.com/questions/2851327/convert-a-list-of-data-frames-into-one-data-frame)
 [Concatenating a list of data frames](https://www.r-bloggers.com/concatenating-a-list-of-data-frames/)
 [readxl](http://readxl.tidyverse.org/)
-
-
-
-
-
-
 
