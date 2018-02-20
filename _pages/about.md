@@ -29,5 +29,3 @@ blog posts are released under a
 [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 All opinions and views are my own and do not represent my employer.
-
-
