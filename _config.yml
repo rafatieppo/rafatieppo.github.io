@@ -88,7 +88,7 @@ author:
   name             : "Rafael Tieppo"
   avatar           : "/images/SAM4006_cp.JPG" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Agricultural Engineering"
-  location         : "-57.432792, -14.650941 <br>UTC 04:00 / DST: UTC 03:00"
+  location         : "-57.432792, -14.650941" # <br> UTC 04:00 / DST: UTC 03:00"
   email            : "rafaeltieppo@yahoo.com.br"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"

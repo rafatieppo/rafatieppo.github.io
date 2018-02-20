@@ -23,14 +23,20 @@ body {
 
 h1,
 h2,
-h3,
+h3 {
+  margin: 2em 0em 0.3em;
+  line-height: 1.2;
+  font-family: $header-font-family;
+  font-weight: bold; /*bold*/
+}
+
 h4,
 h5,
 h6 {
-  margin: 2em 0 0.5em;
+  margin: 0.3em 0 0.0em; /*Top Right bottom left*/
   line-height: 1.2;
   font-family: $header-font-family;
-  font-weight: bold;
+  font-weight: normal; /*bold*/
 }
 
 h1 {
@@ -51,16 +57,16 @@ h4 {
 }
 
 h5 {
-  font-size: $type-size-6;
+  font-size: $type-size-7;
 }
 
 h6 {
-  font-size: $type-size-6;
+  font-size: $type-size-8;
 }
 
 small,
 .small {
-  font-size: $type-size-6;
+  font-size: $type-size-8;
 }
 
 p {
