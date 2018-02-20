@@ -10,13 +10,13 @@
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
-  height:85px;
+  height:80px;
 
   &__inner-wrap {
     @include clearfix;
     margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
+    margin-right: auto; /*auto*/
+    padding: 0.5em;
     max-width: 100%;
     display: -webkit-box;
     display: flex;
@@ -41,7 +41,7 @@
 .site-title {
   display: -webkit-box;
   display: flex;
-  padding: 0.5rem 0;
+  padding: 0.5em;
   align-self: stretch;
   -webkit-box-align: center;
   align-items: center;
@@ -65,7 +65,7 @@
   }
 
 /*
-   Font size
+   Font size menu
    ========================================================================== */
 
   ul {
@@ -73,7 +73,8 @@
     padding: 0;
     clear: both;
     list-style-type: none;
-   font-size: $type-size-5;
+  font-size: $type-size-5;
+  font-weight: 700;
   }
 }
 
