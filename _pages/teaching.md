@@ -8,7 +8,7 @@ excerpt: ""
 
 Professor at [State University of Mato Grosso](http://tangara.unemat.br/agronomia/) - Agricultural Engineering Department. 
 
-## Geoprocessing 
+### Geoprocessing 
 
 - Graduate level introduction to the concepts of datum, projections,
 interpolations, data analysis.
@@ -17,7 +17,7 @@ interpolations, data analysis.
 - Advance info click [HERE](http://docente.unemat.br/rafaeltieppo/)
 
 
-## Agricultural machinery management 
+### Agricultural machinery management 
 
 - Graduate level, an approach to sizing, planning and management for agricultural machinery
 - TGAD852MECA-195025
