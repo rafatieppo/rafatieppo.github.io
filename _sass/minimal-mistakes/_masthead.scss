@@ -4,13 +4,13 @@
 
 .masthead {
   position: relative;
-  border-bottom: 5px solid $border-color;
+  border-bottom: 5px groove gray;/*$border-color;*/
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
-  height:90px;
+  height:85px;
 
   &__inner-wrap {
     @include clearfix;
