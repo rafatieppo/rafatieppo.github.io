@@ -1,6 +1,7 @@
 ---
 title: "Integrating emacs org-mode and google calendar"
 date: 2018-02-20
+comments: true
 excerpt: "A python script to synchronize .ical file"
 categories:
   - python
