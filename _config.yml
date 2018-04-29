@@ -21,7 +21,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : true, "disqus", "facebook"
+  provider               : true
   disqus:
     shortname            : rafatieppo # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
