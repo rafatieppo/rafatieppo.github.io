@@ -81,6 +81,8 @@ More info about configuring academicpages can be found in [the guide](https://ac
     4. Run bundle install to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
     5. Run bundle exec jekyll serve to generate the HTML and serve it from localhost:4000
 
+sometime use bundle exec jekyll `build` before `serve`
+
 ## Home page
 
 The `index.html` in `home` folder just call the layout in `_layouts`. Therefore, to change features in home page you must code at `./_layouts/LAYOUT_NAME.html`
@@ -216,6 +218,23 @@ another format:
 </p>
 
   {% endfor %}
+
+
+### I used it in past (it works)
+
+- option to limit posts:   {% for post in site.posts limit: 5 %}
+
+  {% for post in site.posts %}
+<p align="left">
+      <h4> &check; <a href="{{ post.url }}">{{ post.date | date: '%Y-%m-%d' }}</a> 
+           &#62;&#62; <a href="{{ post.url }}">{{ post.title }}</a> 
+      <br>
+      <i>{{ post.excerpt }}</i>
+      </h4>
+</p>
+<hr>
+  {% endfor %}
+
 
 https://jekyllrb.com/docs/posts/#displaying-an-index-of-posts
 https://jekyllrb.com/docs/templates/
