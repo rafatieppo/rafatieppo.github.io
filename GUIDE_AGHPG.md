@@ -222,7 +222,10 @@ another format:
 
 ### I used it in past (it works)
 
-- option to limit posts:   {% for post in site.posts limit: 5 %}
+- option to limit posts:
+
+{% for post in site.posts limit: 5 %}
+{% endfor %}
 
   {% for post in site.posts %}
 <p align="left">
