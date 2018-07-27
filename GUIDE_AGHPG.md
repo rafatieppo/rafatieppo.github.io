@@ -83,6 +83,24 @@ More info about configuring academicpages can be found in [the guide](https://ac
 
 sometime use bundle exec jekyll `build` before `serve`
 
+## EQUATIONS: mathjax
+
+http://zjuwhw.github.io/2017/06/04/MathJax.html
+http://blog.lostinmyterminal.com/webpages/2015/01/09/math-support-in-jekyll.html
+
+**YOU MUST** added the following to my _includes/head.html:
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
 ## Home page
 
 The `index.html` in `home` folder just call the layout in `_layouts`. Therefore, to change features in home page you must code at `./_layouts/LAYOUT_NAME.html`
