@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolios on Rafael Tieppo</title>
+    <link>/portfolio/</link>
+    <description>Recent content in Portfolios on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 11 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>APP PEESA SPRAYING</title>
+      <link>/portfolio/2017-09-09-portfolio_03_peesaspray/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/2017-09-09-portfolio_03_peesaspray/</guid>
+      <description>O PE2SA Spraying é um software de uso livre para ANDROID, sem garantia alguma, que visa o auxílio na calibração de pulverizadores. Este aplicativo é parte do PE2SA (Projeto de Extensão em Engeharia de Sistemas Agrícolas) da UNEMAT. Para saber mais sobre o autor Clique aqui!
+ Download na Google Play (Android 5 ou +)  </description>
+    </item>
+    
+    <item>
+      <title>Software AGCOM</title>
+      <link>/portfolio/2015-01-01-portfolio_02_agcom/</link>
+      <pubDate>Fri, 11 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/2015-01-01-portfolio_02_agcom/</guid>
+      <description>O AGCOM é um software de uso livre, sem garantia alguma, que visa à predição dos custos nas operações mecanizadas na agricultura. Com uma interface simples, o gestor poderá selecionar entre as operações de semeadura, pulverização e colheita. Após a inserção das informações sobre as máquinas que serão utilizadas, os custos operacionais são disponibilizados.
+ Download para Windows Download para Linux Guia do Usuário: Apresentação on-line do software: Versão do software on-line:  </description>
+    </item>
+    
+    <item>
+      <title>Software FOS</title>
+      <link>/portfolio/2010-06-01-portfolio_01_fos/</link>
+      <pubDate>Sat, 11 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/2010-06-01-portfolio_01_fos/</guid>
+      <description>A adubação é uma das práticas agrícolas que mais onera o custo de produção das culturas comerciais. Deste modo, a otimização no uso de fertilizantes pode reduzir os custos de produção e elevar o lucro do produtor. Em lavouras comerciais, na compra das formulações mistas, o produtor pode reduzir o custo de aquisição ao optar por fontes de nutrientes que atendam as necessidades agronômicas ao menor custo e com o maior nível de concentração.</description>
+    </item>
+    
+  </channel>
+</rss>

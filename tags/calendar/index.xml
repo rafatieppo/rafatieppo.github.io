@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>calendar on Rafael Tieppo</title>
+    <link>/tags/calendar/</link>
+    <description>Recent content in calendar on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/calendar/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Integrating emacs org-mode and google calendar</title>
+      <link>/post/2018-02-20-emacs-googlecal/</link>
+      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-02-20-emacs-googlecal/</guid>
+      <description>I am an EMACS user and consequently I use the amazing Org mode to plan my schedule and to manage my projects. However I was boring about how I synchronized the .ics file from EMACS and my Google calendar. I spent some minutes in my Google calendar to clear the appointments, and import a new file. So, a while ago I improved my routine. I did know nothing about it.</description>
+    </item>
+    
+  </channel>
+</rss>
