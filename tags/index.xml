@@ -119,6 +119,15 @@
     </item>
     
     <item>
+      <title>frequency</title>
+      <link>/tags/frequency/</link>
+      <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/frequency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>google</title>
       <link>/tags/google/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
@@ -173,6 +182,15 @@
     </item>
     
     <item>
+      <title>matplotlib</title>
+      <link>/tags/matplotlib/</link>
+      <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/matplotlib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>meteorologia</title>
       <link>/tags/meteorologia/</link>
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
@@ -214,6 +232,15 @@
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>seaborn</title>
+      <link>/tags/seaborn/</link>
+      <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/seaborn/</guid>
       <description></description>
     </item>
     

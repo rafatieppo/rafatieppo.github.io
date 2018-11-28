@@ -12,10 +12,10 @@
     
     <item>
       <title>Reading and storing several files using R</title>
-      <link>/post/2017-05-08-reading-several-files/</link>
+      <link>/post/2017_05_08_reading_several_files/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-05-08-reading-several-files/</guid>
+      <guid>/post/2017_05_08_reading_several_files/</guid>
       <description>Introduction Usually we need to read several files to create a data bank (data frame with all data). If you have two or three files it is simple. However, if you have five or more files like .csv, .dat, etc, it can demand more time. Using R, one of the options to solve it is the list object, we will show how to handle with.
 Case I - reading several files Supposing you have some .</description>
     </item>

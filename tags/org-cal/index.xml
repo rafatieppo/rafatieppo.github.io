@@ -12,10 +12,10 @@
     
     <item>
       <title>Integrating emacs org-mode and google calendar</title>
-      <link>/post/2018-02-20-emacs-googlecal/</link>
+      <link>/post/2018_02_20_emacs_googlecal/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-02-20-emacs-googlecal/</guid>
+      <guid>/post/2018_02_20_emacs_googlecal/</guid>
       <description>I am an EMACS user and consequently I use the amazing Org mode to plan my schedule and to manage my projects. However I was boring about how I synchronized the .ics file from EMACS and my Google calendar. I spent some minutes in my Google calendar to clear the appointments, and import a new file. So, a while ago I improved my routine. I did know nothing about it.</description>
     </item>
     

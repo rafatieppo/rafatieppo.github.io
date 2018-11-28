@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/2018-07-27-idw2pyr/</loc>
+    <loc>/post/2018_11_26_barhistpy/</loc>
+    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2018_07_27_idw2pyr/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2018-04-29-emacs-orgplan/</loc>
+    <loc>/post/2018_04_29_emacs_orgplan/</loc>
     <lastmod>2018-04-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2018-02-20-emacs-googlecal/</loc>
+    <loc>/post/2018_02_20_emacs_googlecal/</loc>
     <lastmod>2018-02-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -28,7 +33,7 @@
   </url>
   
   <url>
-    <loc>/post/2017-05-08-reading-several-files/</loc>
+    <loc>/post/2017_05_08_reading_several_files/</loc>
     <lastmod>2017-05-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -86,7 +91,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -104,7 +109,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -181,7 +186,7 @@
   
   <url>
     <loc>/categories/datascience/</loc>
-    <lastmod>2014-12-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -200,6 +205,12 @@
   <url>
     <loc>/tags/excel/</loc>
     <lastmod>2017-05-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/frequency/</loc>
+    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -246,6 +257,12 @@
   </url>
   
   <url>
+    <loc>/tags/matplotlib/</loc>
+    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/meteorologia/</loc>
     <lastmod>2014-12-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -278,6 +295,12 @@
   <url>
     <loc>/tags/python/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/seaborn/</loc>
+    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
