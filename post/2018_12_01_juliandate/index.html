@@ -421,10 +421,10 @@ for <strong>2018-11-01</strong>. Running the code:</p>
 <h2 id="from-julian-date-to-standard-date">From Julian date to standard Date</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">jdtodatestd</span> (jdate):
     fmt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;%Y%j&#39;</span>
-    datestd <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>strptime(jdate, <span style="color:#e6db74">&#39;%Y%j&#39;</span>)<span style="color:#f92672">.</span>date()
+    datestd <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>strptime(jdate, fmt)<span style="color:#f92672">.</span>date()
     <span style="color:#66d9ef">return</span>(datestd)</code></pre></div>
 <p>If you need to know month and day for the 305<sup>th</sup> of 2018.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> jdtodatestd(<span style="color:#ae81ff">2018305</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> jdtodatestd(<span style="color:#e6db74">&#39;2018305&#39;</span>)
 datetime<span style="color:#f92672">.</span>date(<span style="color:#ae81ff">2018</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">1</span>)</code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
 
