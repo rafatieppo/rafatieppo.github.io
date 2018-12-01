@@ -101,6 +101,15 @@
     </item>
     
     <item>
+      <title>datetime</title>
+      <link>/tags/datetime/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/datetime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>emacs</title>
       <link>/tags/emacs/</link>
       <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
@@ -200,6 +209,15 @@
     </item>
     
     <item>
+      <title>meteorology</title>
+      <link>/tags/meteorology/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/meteorology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>org-cal</title>
       <link>/tags/org-cal/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
@@ -229,7 +247,7 @@
     <item>
       <title>python</title>
       <link>/tags/python/</link>
-      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/python/</guid>
       <description></description>
@@ -259,6 +277,15 @@
       <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/spraying/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidy</title>
+      <link>/tags/tidy/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tidy/</guid>
       <description></description>
     </item>
     

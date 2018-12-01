@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/2018_12_01_juliandate/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018_11_26_barhistpy/</loc>
     <lastmod>2018-11-26T00:00:00+00:00</lastmod>
   </url>
@@ -91,7 +96,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -109,7 +114,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -186,7 +191,13 @@
   
   <url>
     <loc>/categories/datascience/</loc>
-    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/datetime/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -269,6 +280,12 @@
   </url>
   
   <url>
+    <loc>/tags/meteorology/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/org-cal/</loc>
     <lastmod>2018-02-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -294,7 +311,7 @@
   
   <url>
     <loc>/tags/python/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -313,6 +330,12 @@
   <url>
     <loc>/tags/spraying/</loc>
     <lastmod>2017-12-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tidy/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

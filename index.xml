@@ -5,10 +5,20 @@
     <link>/</link>
     <description>Recent content on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 26 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Julian date with python 3</title>
+      <link>/post/2018_12_01_juliandate/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018_12_01_juliandate/</guid>
+      <description>Introduction The work in data science must be tidy. A simple file name can help you to save a lot of time. For instance, if you have a series of satellite images from LANDSAT 8, the files are ordered by Julian date:
+rt@rt-d5567:~/Documents/$ find -name &#39;*305*.TIF&#39; ./LO82280702018305CUB00_B3.TIF ./LO82280702018305CUB00_B9.TIF ./LO82280702018305CUB00_B5.TIF  If you did not realize, note that after 2018 there are three numbers 305. The number 305 means the 305th day of the year.</description>
+    </item>
     
     <item>
       <title>Histogram and Barplot with Python</title>
