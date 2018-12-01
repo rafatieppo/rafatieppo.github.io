@@ -333,9 +333,9 @@ images from LANDSAT 8, the files are ordered by Julian date:</p>
 </code></pre>
 
 <p>If you did not realize, note that after <code>2018</code> there are three numbers
-<code>305</code>. The number <code>305</code> means the 305<sup>th</sup> day of the year. If we join <code>2018</code>
-and <code>305</code>, we get <code>2018305</code> (305<sup>th</sup> day of 2018 year). It is the same
-of <code>2018-11-01</code> (standard date: year, month, day).</p>
+<code>305</code>. The number <code>305</code> means the 305<sup>th</sup> day of the year. If
+we join <code>2018</code> and <code>305</code>, we get <code>2018305</code> (305<sup>th</sup> day of 2018
+year). It is the same of <code>2018-11-01</code> (standard date: year, month, day).</p>
 
 <p>Another user of Julian date is in meteorology. Usually the data are
 organized by Julian date:</p>
@@ -401,6 +401,9 @@ organized by Julian date:</p>
 and Julian day from a string date in python.</p>
 
 <h2 id="from-standard-date-to-julian-date">From standard Date to Julian date</h2>
+
+<p>Once your date is in <code>datetime</code> format, just convert to <code>timetuple</code>,
+as follows:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> datetime
 
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">datestdtojd</span> (stddate):
@@ -409,9 +412,8 @@ and Julian day from a string date in python.</p>
     sdtdate <span style="color:#f92672">=</span> sdtdate<span style="color:#f92672">.</span>timetuple()
     jdate <span style="color:#f92672">=</span> sdtdate<span style="color:#f92672">.</span>tm_yday
     <span style="color:#66d9ef">return</span>(jdate)</code></pre></div>
-<p>Once your date is in <code>datetime</code> format, just convert to
-<code>timetuple</code>. Let&rsquo;s suppose that you would like to know the Julian date
-for <strong>2018-11-01</strong>Running the code:</p>
+<p>Let&rsquo;s suppose that you would like to know the Julian date
+for <strong>2018-11-01</strong>. Running the code:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> datestdtojd(<span style="color:#e6db74">&#39;2018-11-01&#39;</span>)
 <span style="color:#ae81ff">305</span></code></pre></div>
 <p>It means 305<sup>th</sup> day of 2018.</p>
@@ -421,7 +423,7 @@ for <strong>2018-11-01</strong>Running the code:</p>
     fmt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;%Y%j&#39;</span>
     datestd <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>strptime(jdate, <span style="color:#e6db74">&#39;%Y%j&#39;</span>)<span style="color:#f92672">.</span>date()
     <span style="color:#66d9ef">return</span>(datestd)</code></pre></div>
-<p>If you net to know month and day for 305<sup>th</sup> of 2018.</p>
+<p>If you need to know month and day for the 305<sup>th</sup> of 2018.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> jdtodatestd(<span style="color:#ae81ff">2018305</span>)
 datetime<span style="color:#f92672">.</span>date(<span style="color:#ae81ff">2018</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">1</span>)</code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
