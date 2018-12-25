@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>datascience on Rafael Tieppo</title>
-    <link>/tags/datascience/</link>
-    <description>Recent content in datascience on Rafael Tieppo</description>
+    <title>tips on Rafael Tieppo</title>
+    <link>/tags/tips/</link>
+    <description>Recent content in tips on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 16 Dec 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/datascience/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/tips/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       <guid>/post/2018_12_16_pythontips/</guid>
       <description>Introduction I spent around 4 years working with R, and I can say that R is amazing. However, I decided to start a new stage in my professional life, and a need came, a multi proposal language. My option was Python, because It provides have data science tools, and has a huge support for others applications.
 After some months, studying in my free time, I would like to share some code that I learned (from several sources).</description>
-    </item>
-    
-    <item>
-      <title>Lendo e armazenando uma série de arquivos</title>
-      <link>/post/170514_reading_files/</link>
-      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/post/170514_reading_files/</guid>
-      <description>Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.</description>
     </item>
     
   </channel>
