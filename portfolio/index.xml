@@ -5,10 +5,20 @@
     <link>/portfolio/</link>
     <description>Recent content in Portfolios on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 11 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/portfolio/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>lucyLattes</title>
+      <link>/portfolio/2019-03-19-portfolio_04_lucylattes/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/2019-03-19-portfolio_04_lucylattes/</guid>
+      <description>O script lucyLattes.py é um script em python para extração, compilação, e organização dos dados dos currículos da plataforma Lattes em arquivos de texto, e geração de um relátório simplificado, que proporcionam agilidade para a geração de informação.
+ Download e instruções aqui.  </description>
+    </item>
     
     <item>
       <title>APP PEESA SPRAYING</title>

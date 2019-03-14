@@ -5,10 +5,30 @@
     <link>/tags/python/</link>
     <description>Recent content in python on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 16 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>lucyLattes</title>
+      <link>/portfolio/2019-03-19-portfolio_04_lucylattes/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/2019-03-19-portfolio_04_lucylattes/</guid>
+      <description>O script lucyLattes.py é um script em python para extração, compilação, e organização dos dados dos currículos da plataforma Lattes em arquivos de texto, e geração de um relátório simplificado, que proporcionam agilidade para a geração de informação.
+ Download e instruções aqui.  </description>
+    </item>
+    
+    <item>
+      <title>lucyLattes um script maniplular dados da plataforma Lattes</title>
+      <link>/post/2019_03_13_lucylattes/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019_03_13_lucylattes/</guid>
+      <description>Introdução Historicamente o CNPq gerencia uma base dados sobre pesquisadores em C&amp;amp;T para diversos fins, cita-se como exemplo a avaliação de programas de pós-graduação, seleção de bolsas para pesquisadores, entre outros. Esta base dados é denominada Plataforma Lattes.
+Devido esta referida plataforma ser amplamente utilizada, tornou-se padrão em universidades, órgãos de pesquisa, etc. Nesta plataforma é possível encontrar desde a formação acadêmica do profissional, as empresas que trabalhou, até sua produção científica, e artística, etc.</description>
+    </item>
     
     <item>
       <title>Python beginner tips</title>
