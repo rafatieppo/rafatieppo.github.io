@@ -1,0 +1,35 @@
+{{ partial "header" . }}
+
+{{ partial "nav/entry_nav" . }}
+<hr>
+<p>
+<h1>Portfolio</h1>
+
+{{ range (where .Data.Pages "Params.projected" "proj") }}
+<!--            <div class="rel-pos">  -->
+<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <div class="rrr">
+    {{ with .Params.featured_image }} <img src="/portfolio/{{ . }}">  {{ end }} 
+    {{ .Summary }}
+
+    <a href="{{ .RelPermalink }}">Read More…</a>
+
+            </div>
+{{ end }}
+
+<!--    {{ if .Truncated }} {{ end }}-->
+
+<!-- funciona, fica igual os posts
+{{ range (where .Data.Pages "Type" "portfolio").GroupByDate "2006" }}
+<p class="container list-container">{{ .Key }}</p>
+{{ range .Pages }}
+<li><article class="list taxonomy-cloud">
+        {{ .Date.Format "January 2, 2006" }}
+    <a href="{{ .Permalink }}" class="archive-item-link">{{ .Title }}</a></li>
+</article>
+{{ end }}
+{{ end }}
+-->
+{{ partial "entry/comments" . }}
+
+{{ partial "footer" . }}
