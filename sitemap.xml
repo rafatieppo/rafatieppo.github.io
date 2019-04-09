@@ -122,14 +122,14 @@
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <loc>/categories/r/</loc>
+    <lastmod>2017-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2017-05-10T00:00:00+00:00</lastmod>
+    <loc>/tags/r/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -205,13 +205,13 @@
   </url>
   
   <url>
-    <loc>/tags/datascience/</loc>
+    <loc>/categories/datascience/</loc>
     <lastmod>2019-03-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/datascience/</loc>
+    <loc>/tags/datascience/</loc>
     <lastmod>2019-03-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -223,13 +223,13 @@
   </url>
   
   <url>
-    <loc>/tags/emacs/</loc>
+    <loc>/categories/emacs/</loc>
     <lastmod>2018-04-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/emacs/</loc>
+    <loc>/tags/emacs/</loc>
     <lastmod>2018-04-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -273,6 +273,12 @@
   <url>
     <loc>/tags/inmet/</loc>
     <lastmod>2014-12-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/lattes/</loc>
+    <lastmod>2019-03-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
