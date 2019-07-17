@@ -5,10 +5,21 @@
     <link>/tags/python/</link>
     <description>Recent content in python on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 13 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Filtering objects from a workdir</title>
+      <link>/post/2019_07_08_filterobje/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019_07_08_filterobje/</guid>
+      <description>Introduction Usually, if you work with in data science field, you need to create several objects, like list, DataFrame, matrix, etc. Besides, you have to handle some files to read and make copies. For that and other actions, sometime you have to select some objects from your workdir.
+The goal in this post is to show some options about how to filter objects from your workdir.
+Listing and Filtering your objects There are several options to list the objects from a workdir.</description>
+    </item>
     
     <item>
       <title>lucyLattes</title>

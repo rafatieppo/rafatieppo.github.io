@@ -103,7 +103,7 @@
     <item>
       <title>datascience</title>
       <link>/tags/datascience/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/datascience/</guid>
       <description></description>
@@ -133,6 +133,15 @@
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>filter</title>
+      <link>/tags/filter/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/filter/</guid>
       <description></description>
     </item>
     
@@ -274,7 +283,7 @@
     <item>
       <title>python</title>
       <link>/tags/python/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/python/</guid>
       <description></description>
