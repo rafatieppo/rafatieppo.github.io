@@ -5,18 +5,10 @@
     <link>/categories/</link>
     <description>Recent content in Categories on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 08 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>R</title>
-      <link>/categories/r/</link>
-      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/r/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>datascience</title>
@@ -28,11 +20,11 @@
     </item>
     
     <item>
-      <title>emacs</title>
-      <link>/categories/emacs/</link>
-      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
+      <title>programming</title>
+      <link>/categories/programming/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/emacs/</guid>
+      <guid>/categories/programming/</guid>
       <description></description>
     </item>
     
@@ -46,11 +38,20 @@
     </item>
     
     <item>
-      <title>programming</title>
-      <link>/categories/programming/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      <title>emacs</title>
+      <link>/categories/emacs/</link>
+      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/programming/</guid>
+      <guid>/categories/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/categories/r/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/r/</guid>
       <description></description>
     </item>
     

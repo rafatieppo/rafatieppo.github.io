@@ -83,6 +83,17 @@ IDW is a deterministic method for interpolation, once you have a set of know poi
     </item>
     
     <item>
+      <title>SEBAL model by means GRASS and PYTHON</title>
+      <link>/portfolio/2018-07-06-portfolio_05_sebal/</link>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/2018-07-06-portfolio_05_sebal/</guid>
+      <description>SEBAL model by means GRASS and PYTHON 
+O modelo SEBAL ((Surface Energy Balance Algorithm for Land) utiliza o balanço de energia da superfície terrestre para a realizar a predição de algumas características hidrológicas (evapotranspiração, deficit de água, etc)). O principal criador do referido modelo é o Professor Wim G. M. Bastiaanssen (Bastiaanssen et al., 1998).
+Para maiores detalhes e download, acesse a página do código em: https://rafatieppo.github.io/SEBAL/.</description>
+    </item>
+    
+    <item>
       <title>Planning all your projects with EMACS</title>
       <link>/post/2018_04_29_emacs_orgplan/</link>
       <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>

@@ -5,100 +5,10 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 13 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Lattes</title>
-      <link>/tags/lattes/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/lattes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>agriculture</title>
-      <link>/tags/agriculture/</link>
-      <pubDate>Fri, 11 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/agriculture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>android</title>
-      <link>/tags/android/</link>
-      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>calendar</title>
-      <link>/tags/calendar/</link>
-      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/calendar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>column-view</title>
-      <link>/tags/column-view/</link>
-      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/column-view/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cost</title>
-      <link>/tags/cost/</link>
-      <pubDate>Fri, 11 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/cost/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>csv</title>
-      <link>/tags/csv/</link>
-      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/csv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dados climáticos</title>
-      <link>/tags/dados-clim%C3%A1ticos/</link>
-      <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/dados-clim%C3%A1ticos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dataframe</title>
-      <link>/tags/dataframe/</link>
-      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/dataframe/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>datascience</title>
@@ -106,33 +16,6 @@
       <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/datascience/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>datetime</title>
-      <link>/tags/datetime/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/datetime/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>emacs</title>
-      <link>/tags/emacs/</link>
-      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/emacs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>excel</title>
-      <link>/tags/excel/</link>
-      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/excel/</guid>
       <description></description>
     </item>
     
@@ -146,6 +29,78 @@
     </item>
     
     <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lattes</title>
+      <link>/tags/lattes/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lattes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lucyLattes</title>
+      <link>/tags/lucylattes/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lucylattes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scraping</title>
+      <link>/tags/scraping/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/scraping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tips</title>
+      <link>/tags/tips/</link>
+      <pubDate>Sun, 16 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>datetime</title>
+      <link>/tags/datetime/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/datetime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meteorology</title>
+      <link>/tags/meteorology/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/meteorology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tidy</title>
+      <link>/tags/tidy/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tidy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>frequency</title>
       <link>/tags/frequency/</link>
       <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
@@ -155,11 +110,29 @@
     </item>
     
     <item>
-      <title>google</title>
-      <link>/tags/google/</link>
-      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
+      <title>matplotlib</title>
+      <link>/tags/matplotlib/</link>
+      <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/google/</guid>
+      <guid>/tags/matplotlib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>seaborn</title>
+      <link>/tags/seaborn/</link>
+      <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/seaborn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
@@ -182,83 +155,47 @@
     </item>
     
     <item>
-      <title>inmet</title>
-      <link>/tags/inmet/</link>
-      <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
+      <title>digital agriculture</title>
+      <link>/tags/digital-agriculture/</link>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/inmet/</guid>
+      <guid>/tags/digital-agriculture/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>lattes</title>
-      <link>/tags/lattes/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      <title>grass</title>
+      <link>/tags/grass/</link>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/lattes/</guid>
+      <guid>/tags/grass/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>list</title>
-      <link>/tags/list/</link>
-      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      <title>remote sensing</title>
+      <link>/tags/remote-sensing/</link>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/list/</guid>
+      <guid>/tags/remote-sensing/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>lucyLattes</title>
-      <link>/tags/lucylattes/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      <title>column-view</title>
+      <link>/tags/column-view/</link>
+      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/lucylattes/</guid>
+      <guid>/tags/column-view/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>machinery</title>
-      <link>/tags/machinery/</link>
-      <pubDate>Fri, 11 Dec 2015 00:00:00 +0000</pubDate>
+      <title>emacs</title>
+      <link>/tags/emacs/</link>
+      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/machinery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>matplotlib</title>
-      <link>/tags/matplotlib/</link>
-      <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/matplotlib/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>meteorologia</title>
-      <link>/tags/meteorologia/</link>
-      <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/meteorologia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>meteorology</title>
-      <link>/tags/meteorology/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/meteorology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>org-cal</title>
-      <link>/tags/org-cal/</link>
-      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/org-cal/</guid>
+      <guid>/tags/emacs/</guid>
       <description></description>
     </item>
     
@@ -281,38 +218,38 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>/tags/python/</link>
-      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
+      <title>calendar</title>
+      <link>/tags/calendar/</link>
+      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/python/</guid>
+      <guid>/tags/calendar/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>scraping</title>
-      <link>/tags/scraping/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      <title>google</title>
+      <link>/tags/google/</link>
+      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/scraping/</guid>
+      <guid>/tags/google/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>seaborn</title>
-      <link>/tags/seaborn/</link>
-      <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
+      <title>org-cal</title>
+      <link>/tags/org-cal/</link>
+      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/seaborn/</guid>
+      <guid>/tags/org-cal/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>simplex</title>
-      <link>/tags/simplex/</link>
-      <pubDate>Sat, 11 Dec 2010 00:00:00 +0000</pubDate>
+      <title>android</title>
+      <link>/tags/android/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/simplex/</guid>
+      <guid>/tags/android/</guid>
       <description></description>
     </item>
     
@@ -326,20 +263,101 @@
     </item>
     
     <item>
-      <title>tidy</title>
-      <link>/tags/tidy/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <title>csv</title>
+      <link>/tags/csv/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tidy/</guid>
+      <guid>/tags/csv/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tips</title>
-      <link>/tags/tips/</link>
-      <pubDate>Sun, 16 Dec 2018 00:00:00 +0000</pubDate>
+      <title>dataframe</title>
+      <link>/tags/dataframe/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tips/</guid>
+      <guid>/tags/dataframe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>list</title>
+      <link>/tags/list/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>excel</title>
+      <link>/tags/excel/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>agriculture</title>
+      <link>/tags/agriculture/</link>
+      <pubDate>Fri, 11 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/agriculture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cost</title>
+      <link>/tags/cost/</link>
+      <pubDate>Fri, 11 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machinery</title>
+      <link>/tags/machinery/</link>
+      <pubDate>Fri, 11 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/machinery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dados climáticos</title>
+      <link>/tags/dados-clim%C3%A1ticos/</link>
+      <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/dados-clim%C3%A1ticos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>inmet</title>
+      <link>/tags/inmet/</link>
+      <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/inmet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meteorologia</title>
+      <link>/tags/meteorologia/</link>
+      <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/meteorologia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>simplex</title>
+      <link>/tags/simplex/</link>
+      <pubDate>Sat, 11 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/simplex/</guid>
       <description></description>
     </item>
     
