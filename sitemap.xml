@@ -32,13 +32,13 @@
   </url>
   
   <url>
-    <loc>/tags/datascience/</loc>
+    <loc>/categories/datascience/</loc>
     <lastmod>2019-07-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/datascience/</loc>
+    <loc>/tags/datascience/</loc>
     <lastmod>2019-07-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -216,13 +216,13 @@
   </url>
   
   <url>
-    <loc>/tags/emacs/</loc>
+    <loc>/categories/emacs/</loc>
     <lastmod>2018-04-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/emacs/</loc>
+    <loc>/tags/emacs/</loc>
     <lastmod>2018-04-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
