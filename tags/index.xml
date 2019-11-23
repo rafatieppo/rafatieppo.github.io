@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Rafael Tieppo</title>
@@ -38,7 +38,16 @@
     </item>
     
     <item>
-      <title>lattes</title>
+      <title>data mining</title>
+      <link>/tags/data-mining/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/data-mining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lattes</title>
       <link>/tags/lattes/</link>
       <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -52,6 +61,15 @@
       <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/lucylattes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mineiração</title>
+      <link>/tags/mineira%C3%A7%C3%A3o/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/mineira%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
     
@@ -128,15 +146,6 @@
     </item>
     
     <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>idw</title>
       <link>/tags/idw/</link>
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
@@ -151,6 +160,15 @@
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/idw2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
