@@ -47,7 +47,8 @@ Case I - reading several files Supposing you have some .</description>
       <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/post/170514_reading_files/</guid>
-      <description>Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.</description>
+      <description>Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.
+Estudo de caso I Vamos supor que você tenha uma série de arquivos no formato .</description>
     </item>
     
     <item>

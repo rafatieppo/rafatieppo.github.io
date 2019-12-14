@@ -13,7 +13,7 @@ Devido esta referida plataforma ser amplamente utilizada, tornou-se padrão em u
 <meta property='og:site_name' content='Rafael Tieppo'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='datascience'><meta property='article:tag' content='lattes'><meta property='article:tag' content='lucyLattes'><meta property='article:tag' content='python'><meta property='article:tag' content='mineiração'><meta property='article:tag' content='data mining'><meta property='article:published_time' content='2019-03-13T00:00:00Z'/><meta property='article:modified_time' content='2019-03-13T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.61.0" />
 
   <title>lucyLattes um script para manipular dados da plataforma Lattes • Rafael Tieppo</title>
   <link rel='canonical' href='/post/2019_03_13_lucylattes/'>
@@ -147,6 +147,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/android/' style='font-size:1em'>android</a>
       </li><li>
+        <a href='/tags/avell/' style='font-size:1em'>avell</a>
+      </li><li>
         <a href='/tags/calendar/' style='font-size:1em'>calendar</a>
       </li><li>
         <a href='/tags/column-view/' style='font-size:1em'>column-view</a>
@@ -166,6 +168,8 @@ if (!doNotTrack) {
         <a href='/tags/datetime/' style='font-size:1em'>datetime</a>
       </li><li>
         <a href='/tags/digital-agriculture/' style='font-size:1em'>digital agriculture</a>
+      </li><li>
+        <a href='/tags/distros/' style='font-size:1em'>distros</a>
       </li><li>
         <a href='/tags/emacs/' style='font-size:1.125em'>emacs</a>
       </li><li>
@@ -187,6 +191,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/lattes/' style='font-size:1.125em'>Lattes</a>
       </li><li>
+        <a href='/tags/linux/' style='font-size:1em'>linux</a>
+      </li><li>
         <a href='/tags/list/' style='font-size:1em'>list</a>
       </li><li>
         <a href='/tags/lucylattes/' style='font-size:1em'>lucyLattes</a>
@@ -206,6 +212,8 @@ if (!doNotTrack) {
         <a href='/tags/org-mode/' style='font-size:1em'>org-mode</a>
       </li><li>
         <a href='/tags/planning/' style='font-size:1em'>planning</a>
+      </li><li>
+        <a href='/tags/popos/' style='font-size:1em'>PopOS</a>
       </li><li>
         <a href='/tags/python/' style='font-size:2em'>python</a>
       </li><li>
@@ -316,106 +324,87 @@ if (!doNotTrack) {
     <span>Table of Contents</span>
   </summary>
   <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#introdução">Introdução</a></li>
-<li><a href="#como-usar-e-quais-os-resultados-obtidos">Como usar e quais os resultados obtidos</a>
-<ul>
-<li><a href="#passo-1">Passo 1</a></li>
-<li><a href="#passo-2">Passo 2</a></li>
-<li><a href="#passo-3">Passo 3</a></li>
-<li><a href="#passo-4">Passo 4</a></li>
-<li><a href="#passo-5">Passo 5</a></li>
-<li><a href="#passo-6-último">Passo 6 (último) :)</a></li>
-</ul></li>
-<li><a href="#considerações">Considerações</a></li>
-<li><a href="#gostou">Gostou?</a></li>
-<li><a href="#notas">Notas</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#introduo">Introdução</a></li>
+    <li><a href="#como-usar-e-quais-os-resultados-obtidos">Como usar e quais os resultados obtidos</a>
+      <ul>
+        <li><a href="#passo-1">Passo 1</a></li>
+        <li><a href="#passo-2">Passo 2</a></li>
+        <li><a href="#passo-3">Passo 3</a></li>
+        <li><a href="#passo-4">Passo 4</a></li>
+        <li><a href="#passo-5">Passo 5</a></li>
+        <li><a href="#passo-6-ltimo-">Passo 6 (último) :)</a></li>
+      </ul>
+    </li>
+    <li><a href="#consideraes">Considerações</a></li>
+    <li><a href="#gostou">Gostou?</a></li>
+    <li><a href="#notas">Notas</a></li>
+  </ul>
 </nav>
 </details>
 
 
   <div class='container entry-content'>
-  
-
-<h2 id="introdução">Introdução</h2>
-
-<p>Historicamente o <a href="http://www.cnpq.br/" target="_blank">CNPq</a> gerencia uma base dados
+  <h2 id="introduo">Introdução</h2>
+<p>Historicamente o <a href="http://www.cnpq.br/">CNPq</a> gerencia uma base dados
 sobre pesquisadores em C&amp;T para diversos fins, cita-se como exemplo a
 avaliação de programas de pós-graduação, seleção de bolsas para
-pesquisadores, entre outros. Esta base dados é denominada <a href="http://lattes.cnpq.br/" target="_blank">Plataforma
+pesquisadores, entre outros. Esta base dados é denominada <a href="http://lattes.cnpq.br/">Plataforma
 Lattes</a>.</p>
-
 <p>Devido esta referida plataforma ser amplamente utilizada, tornou-se
 padrão em universidades, órgãos de pesquisa, etc. Nesta plataforma é
 possível encontrar desde a formação acadêmica do profissional, as
 empresas que trabalhou, até sua produção científica, e artística, etc.</p>
-
-<p>O que deixava o uso do <a href="http://buscatextual.cnpq.br/buscatextual/busca.do?metodo=apresentar" target="_blank">Currículo
+<p>O que deixava o uso do <a href="http://buscatextual.cnpq.br/buscatextual/busca.do?metodo=apresentar">Currículo
 Lattes</a>
 tedioso era a extração dos dados, pois usualmente era manual, o que
 consequentemente torna o trabalho massante. Contudo, tudo mudou com
-<a href="http://scriptlattes.sourceforge.net/" target="_blank">scriptLattes</a>. Este script
+<a href="http://scriptlattes.sourceforge.net/">scriptLattes</a>. Este script
 GNU-GPL realiza a extração e compilação automática de: produções
 bibliográficas, técnicas,artísticas, orientações, projetos de pesquisa,
 etc, de um conjunto de pesquisadores cadastrados na plataforma Lattes.</p>
-
 <p>Todavia, com a implementação do captcha (código de segurança), a
-utilização do <a href="http://scriptlattes.sourceforge.net/" target="_blank">scriptLattes</a> foi
-impossibilitada, <a href="http://revistas.iel.unicamp.br/index.php/edicc/article/view/5208" target="_blank">veja
+utilização do <a href="http://scriptlattes.sourceforge.net/">scriptLattes</a> foi
+impossibilitada, <a href="http://revistas.iel.unicamp.br/index.php/edicc/article/view/5208">veja
 aqui</a>.</p>
-
 <p>Devido à necessidade estudar o panorama de um grupo de profissionais, e
 para contornar a impossibilidade do uso do
-<a href="http://scriptlattes.sourceforge.net/" target="_blank">scriptLattes</a>, o
-<a href="https://rafatieppo.github.io/lucyLattes/" target="_blank">lucyLattes</a> foi
+<a href="http://scriptlattes.sourceforge.net/">scriptLattes</a>, o
+<a href="https://rafatieppo.github.io/lucyLattes/">lucyLattes</a> foi
 desenvolvido.</p>
-
-<p>O <a href="https://rafatieppo.github.io/lucyLattes/" target="_blank">lucyLattes</a> é um script em
-<a href="https://www.python.org/" target="_blank">python</a>, que faz a extração, a compilação,
+<p>O <a href="https://rafatieppo.github.io/lucyLattes/">lucyLattes</a> é um script em
+<a href="https://www.python.org/">python</a>, que faz a extração, a compilação,
 a organização dos dados dos currículos da plataforma Lattes em arquivos de
 texto, e a geração de um relatório simplificado, que proporcionam
 agilidade para a geração de informação. O inconveniente é ter que fazer
 o download dos arquivos <code>.xml</code> dos Currículo <em>Lattes</em> a serem
 analisados.</p>
-
 <p>Caso você esteja se perguntando o porquê do nome <code>lucyLattes</code>, a
 resposta é simples. Como o nome mais obvio, que seria <code>scriptLattes</code>, já
 está em uso, parei para pensar e olhei para o lado, e encontrando a Lucy
 &hellip;</p>
-
 <figure>
   <img src="/post/pics/20190313_lucy.jpg" width="330" height="auto"  />
   <figcaption>
       <p>Figure 1: Lucy<p>
   </figcaption>
 </figure>
-
 <h2 id="como-usar-e-quais-os-resultados-obtidos">Como usar e quais os resultados obtidos</h2>
-
 <p>Inicialmente, tudo ficará mais fácil se utilizar um sistema operacional
 <em>Linux</em>. Eu uso e testei no
-<a href="https://www.ubuntu.com/download/flavours" target="_blank">Ubuntu</a>, mas fique à vontade
+<a href="https://www.ubuntu.com/download/flavours">Ubuntu</a>, mas fique à vontade
 para escolher a sua distribuição. No sistema Windows eu não fiz testes
 (e não pretendo).</p>
-
 <p>Os pacotes necessários e como proceder a instalação dos mesmos está descrito
-<a href="https://rafatieppo.github.io/lucyLattes/" target="_blank">AQUI</a>.</p>
-
+<a href="https://rafatieppo.github.io/lucyLattes/">AQUI</a>.</p>
 <p>Uma vez que os requisitos necessários foram atendidos, torna-se possível
 utilizar o <code>lucyLattes</code>. Siga as seguintes etapas:</p>
-
 <h3 id="passo-1">Passo 1</h3>
-
-<p>Após fazer o download do <code>lucyLattes</code> (<a href="https://github.com/rafatieppo/lucyLattes/archive/master.zip" target="_blank">download
+<p>Após fazer o download do <code>lucyLattes</code> (<a href="https://github.com/rafatieppo/lucyLattes/archive/master.zip">download
 aqui</a>),
 descompacte o arquivo <code>lucyLattes-master.zip</code>. Após a descompactação a
 pasta <code>lucyLattes-master</code> estará disponível. Abra esta pasta e você terá
 acesso aos seguintes arquivos e diretórios:</p>
-
 <pre><code>| lucyLattes-master
    | --- csv_producao/
    | --- __pycache__/
@@ -440,53 +429,42 @@ acesso aos seguintes arquivos e diretórios:</p>
    | --- config.txt
    | --- LICENSE.txt
    | --- list_id_name.txt
-</code></pre>
-
-<h3 id="passo-2">Passo 2</h3>
-
+</code></pre><h3 id="passo-2">Passo 2</h3>
 <p>Acesse o site de busca de currículo
-<a href="http://buscatextual.cnpq.br/buscatextual/busca.do" target="_blank">Lattes</a> e faça o
+<a href="http://buscatextual.cnpq.br/buscatextual/busca.do">Lattes</a> e faça o
 download dos arquivos <code>.xml</code> de todos os currículos desejados. O botão
 com o link para fazer o download do arquivo <code>.xml</code> fica no canto direito
 superior da página com o currículo Lattes. Por exemplo, acesse
-<a href="http://lattes.cnpq.br/3275865819287843" target="_blank">http://lattes.cnpq.br/3275865819287843</a>,
+<a href="http://lattes.cnpq.br/3275865819287843">http://lattes.cnpq.br/3275865819287843</a>,
 preencha o captcha, e olhe no canto direito da página o botão <em>XLM</em>, é
 só clicar para fazer o download (Figure 2).</p>
-
 <figure>
   <img src="/post/pics/20190313_xlmbutton.png" width="auto" height="250"  />
   <figcaption>
       <p>Figure 2: Download do arquivo `.XML`<p>
   </figcaption>
 </figure>
-
 <p>Após clicar no botão <em>XML</em> será realizado o download do arquivo <code>.zip</code>
 com o nome <code>2300099357169820.zip</code>. <strong>NÃO</strong> descompacte ou renomeie este
 arquivo, este número é o identificador do profissional na plataforma
 <em>Lattes</em>.</p>
-
 <p>Neste exemplo usamos quatro currículos, consequentemente fizemos o
 download de quatro arquivos: <code>1292986021348016.zip</code>,
 <code>2300099357169820.zip</code>, <code>3275865819287843.zip</code>,
 <code>5859946324646438.zip</code>. <strong>Copie</strong> estes quatro arquivos na pasta <code>xml_zip</code>.</p>
-
 <h3 id="passo-3">Passo 3</h3>
-
 <p>No diretório <code>lucyLattes-master</code> abra o arquivo <code>list_id_name.txt</code> com o
 <strong>EDITOR de texto</strong> e preencha de acordo com as orientações que estão no
 arquivo. Repare que não há espaço antes e após a vírgula, e obedeça a
 sequência: número do currículo, nome abreviado do profissional, grupo do
 profissional (Figure 3).</p>
-
 <figure>
   <img src="/post/pics/20190313_listid.png" width="auto" height="250"  />
   <figcaption>
       <p>Figure 3: Preenchimento do arquivo  list_id_name.txt<p>
   </figcaption>
 </figure>
-
 <h3 id="passo-4">Passo 4</h3>
-
 <p>No diretório <code>lucyLattes-master</code> abra o arquivo <code>config.txt</code> com o
 <strong>EDITOR de texto</strong>. Defina qual o qualis desejado, repare que no
 diretório <code>lucyLattes-master</code> há seis arquivos disponíveis. Se precisar
@@ -494,64 +472,52 @@ de algum específico, pode entrar em contato que podemos preparar. Neste
 exemplo utilizamos o qualis da ciências agrárias que está no arquivo
 <code>qualis_agrarias_periodicos_2016.csv</code>, com início da análise desde o ano
 2010 até 2019 (Figure 4).</p>
-
 <figure>
   <img src="/post/pics/20190313_config.png" width="auto" height="250"  />
   <figcaption>
       <p>Figure 4: Preenchimento do arquivo  config.txt<p>
   </figcaption>
 </figure>
-
 <h3 id="passo-5">Passo 5</h3>
-
 <p>Utilizando o <strong>Terminal</strong> acesse o diretório <code>lucyLattes-master</code> e
 digite <code>python3 lucyLattes.py</code> e aperte <code>ENTER</code> (Figure 5).</p>
-
 <figure>
   <img src="/post/pics/20190313_terminal.png" width="auto" height="250"  />
   <figcaption>
       <p>Figure 5: Executando o script pelo terminal<p>
   </figcaption>
 </figure>
-
-<h3 id="passo-6-último">Passo 6 (último) :)</h3>
-
+<h3 id="passo-6-ltimo-">Passo 6 (último) :)</h3>
 <p>Se tudo ocorreu bem, no diretório <code>lucyLattes-master</code>, acesse a pasta
 relatório, e abra com o navegador (Firefox ou Chrome) o arquivo
 <code>relatorio_producao.html</code>. No navegador aparecerá um relatório com as
 seguinte informações: <em>Equipe</em>, <em>Resumo da produção</em>, <em>Projetos de
 extensão</em>, <em>Projetos de pesquisa</em>, <em>Artigos em periódicos</em>, <em>Extrato de
 periódicos por integrante</em>.</p>
-
 <p>Além das informações supracitadas, são gerados três gráficos: relação de
 produção de artigos em periódicos por ano, relação de periódicos por
 qualis, e se há intereção entre os pesquisadores (Figuras 6, 7, e 8).</p>
-
 <figure>
   <img src="/post/pics/20190313_period_dep_year.png" width="530" height="auto"  />
   <figcaption>
       <p>Figure 6: Número de publicações por ano<p>
   </figcaption>
 </figure>
-
 <figure>
   <img src="/post/pics/20190313_period_year_qualis.png" width="530" height="auto"  />
   <figcaption>
       <p>Figure 7: Publicações de periódicos por qualis.<p>
   </figcaption>
 </figure>
-
 <figure>
   <img src="/post/pics/20190313_grapho.png" width="530" height="auto"  />
   <figcaption>
       <p>Figure 7: Grafo de colaboração entre pesquisadores apenas em artigos.<p>
   </figcaption>
 </figure>
-
 <p>O Extrato de periódicos por integrante resume o número de publicação(s)
 por ano e qualis:</p>
-
-<p>Rafael Cesar Tieppo: produção total = 20
+<p>Rafael Cesar Tieppo: produção total = 20</p>
 <table>
 <thead>
 <tr><th style="text-align: right;">  </th><th style="text-align: right;">  YEAR</th><th style="text-align: right;">  A2</th><th style="text-align: right;">  B1</th><th style="text-align: right;">  B2</th><th style="text-align: right;">  B3</th><th style="text-align: right;">  B5</th><th style="text-align: right;">  C </th><th style="text-align: right;">  XX</th></tr>
@@ -568,32 +534,26 @@ por ano e qualis:</p>
 <tr><td style="text-align: right;"> 8</td><td style="text-align: right;">  2019</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
 </tbody>
 </table>
- <hr></p>
-
-<h2 id="considerações">Considerações</h2>
-
+ <hr> 
+<h2 id="consideraes">Considerações</h2>
 <p>Espero que o <code>lucyLattes</code> seja útil de alguma forma, dentro do possível
 estarei melhorando o script na sua funcionalidade.</p>
-
-<p><img src="https://i.gifer.com/QLRN.gif" alt="" /></p>
-
+<p><img src="https://i.gifer.com/QLRN.gif" alt=""></p>
 <h2 id="gostou">Gostou?</h2>
-
 <ul>
-<li>Nos de uma estrela clicando na estrela no topo da página (lado direito) <a href="https://github.com/rafatieppo/lucyLattes" target="_blank">AQUI</a></li>
+<li>Nos de uma estrela clicando na estrela no topo da página (lado direito) <a href="https://github.com/rafatieppo/lucyLattes">AQUI</a></li>
 <li>Deixe um comentário aqui no Blog</li>
 <li>Vc pode doar um café via Paypal ;)</li>
 </ul>
-
-<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=68LAA9FZLABUQ" target="_blank"><img src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" alt="paypal" /></a></p>
-
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=68LAA9FZLABUQ"><img src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" alt="paypal"></a></p>
 <h2 id="notas">Notas</h2>
-
 <blockquote>
 <p>O lucyLattes não tem vínculo com o CNPq. Este programa computacional é fruto de um esforço (independente) realizado com o objetivo de dar suporte às rotinas de análise de dados cadastradas nos Currículos Lattes (publicamente disponíveis).</p>
-
+</blockquote>
+<blockquote>
 <p>Este programa é um software livre; você pode redistribui-lo e/ou modificá-lo dentro dos termos da Licença Pública Geral GNU. Verifique o arquivo LICENSE.txt .</p>
-
+</blockquote>
+<blockquote>
 <p>Este programa é distribuído na esperança que possa ser util, mas SEM NENHUMA GARANTIA; sem uma garantia implicita de ADEQUAÇÂO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Verifique o arquivo LICENSE.txt .</p>
 </blockquote>
 

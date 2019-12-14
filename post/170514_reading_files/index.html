@@ -2,16 +2,18 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.'>
+<meta name='description' content='Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.
+Estudo de caso I Vamos supor que você tenha uma série de arquivos no formato .'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Lendo e armazenando uma série de arquivos • Rafael Tieppo'>
-<meta property='og:description' content='Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.'>
+<meta property='og:description' content='Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.
+Estudo de caso I Vamos supor que você tenha uma série de arquivos no formato .'>
 <meta property='og:url' content='/post/170514_reading_files/'>
 <meta property='og:site_name' content='Rafael Tieppo'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='R'><meta property='article:tag' content='excel'><meta property='article:tag' content='datascience'><meta property='article:tag' content='csv'><meta property='article:published_time' content='2017-05-02T00:00:00Z'/><meta property='article:modified_time' content='2017-05-02T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.61.0" />
 
   <title>Lendo e armazenando uma série de arquivos • Rafael Tieppo</title>
   <link rel='canonical' href='/post/170514_reading_files/'>
@@ -145,6 +147,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/android/' style='font-size:1em'>android</a>
       </li><li>
+        <a href='/tags/avell/' style='font-size:1em'>avell</a>
+      </li><li>
         <a href='/tags/calendar/' style='font-size:1em'>calendar</a>
       </li><li>
         <a href='/tags/column-view/' style='font-size:1em'>column-view</a>
@@ -164,6 +168,8 @@ if (!doNotTrack) {
         <a href='/tags/datetime/' style='font-size:1em'>datetime</a>
       </li><li>
         <a href='/tags/digital-agriculture/' style='font-size:1em'>digital agriculture</a>
+      </li><li>
+        <a href='/tags/distros/' style='font-size:1em'>distros</a>
       </li><li>
         <a href='/tags/emacs/' style='font-size:1.125em'>emacs</a>
       </li><li>
@@ -185,6 +191,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/lattes/' style='font-size:1.125em'>Lattes</a>
       </li><li>
+        <a href='/tags/linux/' style='font-size:1em'>linux</a>
+      </li><li>
         <a href='/tags/list/' style='font-size:1em'>list</a>
       </li><li>
         <a href='/tags/lucylattes/' style='font-size:1em'>lucyLattes</a>
@@ -204,6 +212,8 @@ if (!doNotTrack) {
         <a href='/tags/org-mode/' style='font-size:1em'>org-mode</a>
       </li><li>
         <a href='/tags/planning/' style='font-size:1em'>planning</a>
+      </li><li>
+        <a href='/tags/popos/' style='font-size:1em'>PopOS</a>
       </li><li>
         <a href='/tags/python/' style='font-size:2em'>python</a>
       </li><li>
@@ -311,21 +321,15 @@ if (!doNotTrack) {
   
 
   <div class='container entry-content'>
-  
-
-<h1 id="introdução">Introdução</h1>
-
+  <h1 id="introduo">Introdução</h1>
 <p>Com frequência há necessidade de acessarmos uma série arquivos para
 gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se
 dizer que escrever algumas linhas não demora. Contudo, quando se tem
 mais de três arquivos, seja ele <code>.csv</code>, <code>.dat</code>, etc., gasta-se tempo que
 poderia ser investido em outra ação. Na linguagem <strong>R</strong>, uma das opções
 de se realizar esta operação é a utilização de <em>listas</em>.</p>
-
 <h1 id="estudo-de-caso-i">Estudo de caso I</h1>
-
 <p>Vamos supor que você tenha uma série de arquivos no formato <code>.csv</code></p>
-
 <pre><code>### Criando um data.frame hipotético
 DF &lt;-
     data.frame(BLOCO = rep(seq(1,4), each = 12),
@@ -341,9 +345,7 @@ head(DF)
 ## 4     1   T1   4 30.58861
 ## 5     1   T2   1 30.31546
 ## 6     1   T2   2 28.90498
-</code></pre>
-
-<pre><code>### Gerando uma série de arquivos csv
+</code></pre><pre><code>### Gerando uma série de arquivos csv
 sapply(c(&quot;foo1.csv&quot;, &quot;foo2.csv&quot;, &quot;foo3.csv&quot;, &quot;foo4.csv&quot;, &quot;foo5.csv&quot;),
        function(i){
        write.csv(DF, paste(i))})
@@ -362,25 +364,19 @@ sapply(c(&quot;foo1.csv&quot;, &quot;foo2.csv&quot;, &quot;foo3.csv&quot;, &quot
 ## 
 ## $foo5.csv
 ## NULL
-</code></pre>
-
-<pre><code>### Verifique se os arquivos .csv foram criados
+</code></pre><pre><code>### Verifique se os arquivos .csv foram criados
 dir()
 &gt;
 ## [1] &quot;170514_READING_FILES.md&quot;  &quot;170514_READING_FILES.Rmd&quot;
 ## [3] &quot;foo1.csv&quot;                 &quot;foo2.csv&quot;                
 ## [5] &quot;foo3.csv&quot;                 &quot;foo4.csv&quot;                
 ## [7] &quot;foo5.csv&quot;
-</code></pre>
-
-<pre><code>### Lendo os nomes dos arquivos .csv
+</code></pre><pre><code>### Lendo os nomes dos arquivos .csv
 temp = list.files(pattern=&quot;*.csv&quot;)
 temp
 &gt;
 ## [1] &quot;foo1.csv&quot; &quot;foo2.csv&quot; &quot;foo3.csv&quot; &quot;foo4.csv&quot; &quot;foo5.csv&quot;
-</code></pre>
-
-<pre><code>### Gerando uma lista com os arquivos .csv
+</code></pre><pre><code>### Gerando uma lista com os arquivos .csv
 
 DF_LIST &lt;-
     lapply(seq(1, length(temp)),
@@ -403,39 +399,26 @@ head(DF_LIST_agrup)
 ## 4 4     1   T1   4 30.58861
 ## 5 5     1   T2   1 30.31546
 ## 6 6     1   T2   2 28.90498
-</code></pre>
-
-<pre><code>dim(DF_LIST_agrup)
+</code></pre><pre><code>dim(DF_LIST_agrup)
 &gt;
 ## [1] 240   5
-</code></pre>
-
-<h1 id="estudo-de-caso-ii">Estudo de caso II</h1>
-
+</code></pre><h1 id="estudo-de-caso-ii">Estudo de caso II</h1>
 <p>Quando se tem arquivos <code>.xls</code> ou <code>.xlsx</code> pode-se utilizar o pacote
 <code>readxl</code>.</p>
-
 <pre><code>#library(readxl)
 
 DF1 &lt;- 
 read_excel(&quot;NOME_DO_ARQUIVO.xlsx&quot;)
-</code></pre>
-
-<p>Caso seja necessário ler uma pasta específica do seu arquivo <code>.xls</code> ou
+</code></pre><p>Caso seja necessário ler uma pasta específica do seu arquivo <code>.xls</code> ou
 <code>xlxs</code> basta usar as opções da função.</p>
-
 <pre><code>#library(readxl)
 
 DF2 &lt;-
     read_excel(&quot;NOME_DO_ARQUIVO.xlsx&quot;,
                sheet = &quot;NOME_DA_PASTA&quot;)
-</code></pre>
-
-<h1 id="estudo-de-caso-iii">Estudo de caso III</h1>
-
+</code></pre><h1 id="estudo-de-caso-iii">Estudo de caso III</h1>
 <p>Se seu arquivo <code>.xls</code> ou <code>xlxs</code> tiver uma série de pastas, basta usar a
 mesma lógica do <strong>Estudo de caso I</strong>.</p>
-
 <pre><code>#library(readxl)
 
 LISTA_PASTAS &lt;- c(&quot;PASTA1&quot;,
@@ -454,23 +437,19 @@ DF3_LISTA &lt;-
 
 ### DB ACCOUNT
 DF3_DF &lt;- do.call(rbind.data.frame, DF3_LISTA)
-</code></pre>
-
-<p>Para maiores detalhes sobre ler os dados de arquivos <code>.xls</code> ou <code>.xlsx</code>
+</code></pre><p>Para maiores detalhes sobre ler os dados de arquivos <code>.xls</code> ou <code>.xlsx</code>
 consulte as referências.</p>
-
 <p>[]</p>
-
 <blockquote>
-<p>“Without data, you&rsquo;re just another person with an opinion.”
-* W. Edwards Deming*</p>
+<p>“Without data, you're just another person with an opinion.”</p>
+<ul>
+<li>W. Edwards Deming*</li>
+</ul>
 </blockquote>
-
-<h2 id="referências">Referências</h2>
-
-<p><a href="http://stackoverflow.com/questions/2851327/convert-a-list-of-data-frames-into-one-data-frame" target="_blank">Convert a list of data frames into one data frame</a>
-<a href="https://www.r-bloggers.com/concatenating-a-list-of-data-frames/" target="_blank">Concatenating a list of data frames</a>
-<a href="http://readxl.tidyverse.org/" target="_blank">readxl</a></p>
+<h2 id="referncias">Referências</h2>
+<p><a href="http://stackoverflow.com/questions/2851327/convert-a-list-of-data-frames-into-one-data-frame">Convert a list of data frames into one data frame</a>
+<a href="https://www.r-bloggers.com/concatenating-a-list-of-data-frames/">Concatenating a list of data frames</a>
+<a href="http://readxl.tidyverse.org/">readxl</a></p>
 
 </div>
 

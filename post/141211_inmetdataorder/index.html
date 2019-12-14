@@ -15,7 +15,7 @@ Repare que para cada dia registrado duas linhas são ocupadas.'>
 <meta property='og:site_name' content='Rafael Tieppo'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='R'><meta property='article:tag' content='inmet'><meta property='article:tag' content='meteorologia'><meta property='article:tag' content='dados climáticos'><meta property='article:published_time' content='2014-12-11T00:00:00Z'/><meta property='article:modified_time' content='2014-12-11T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.61.0" />
 
   <title>Ordenar dados INMET • Rafael Tieppo</title>
   <link rel='canonical' href='/post/141211_inmetdataorder/'>
@@ -149,6 +149,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/android/' style='font-size:1em'>android</a>
       </li><li>
+        <a href='/tags/avell/' style='font-size:1em'>avell</a>
+      </li><li>
         <a href='/tags/calendar/' style='font-size:1em'>calendar</a>
       </li><li>
         <a href='/tags/column-view/' style='font-size:1em'>column-view</a>
@@ -168,6 +170,8 @@ if (!doNotTrack) {
         <a href='/tags/datetime/' style='font-size:1em'>datetime</a>
       </li><li>
         <a href='/tags/digital-agriculture/' style='font-size:1em'>digital agriculture</a>
+      </li><li>
+        <a href='/tags/distros/' style='font-size:1em'>distros</a>
       </li><li>
         <a href='/tags/emacs/' style='font-size:1.125em'>emacs</a>
       </li><li>
@@ -189,6 +193,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/lattes/' style='font-size:1.125em'>Lattes</a>
       </li><li>
+        <a href='/tags/linux/' style='font-size:1em'>linux</a>
+      </li><li>
         <a href='/tags/list/' style='font-size:1em'>list</a>
       </li><li>
         <a href='/tags/lucylattes/' style='font-size:1em'>lucyLattes</a>
@@ -208,6 +214,8 @@ if (!doNotTrack) {
         <a href='/tags/org-mode/' style='font-size:1em'>org-mode</a>
       </li><li>
         <a href='/tags/planning/' style='font-size:1em'>planning</a>
+      </li><li>
+        <a href='/tags/popos/' style='font-size:1em'>PopOS</a>
       </li><li>
         <a href='/tags/python/' style='font-size:2em'>python</a>
       </li><li>
@@ -315,42 +323,31 @@ if (!doNotTrack) {
   
 
   <div class='container entry-content'>
-  
-
-<h1 id="introdução">Introdução</h1>
-
+  <h1 id="introduo">Introdução</h1>
 <p>Em algum momento da graduação ou pós-graduação, você já trabalhou com
 séries históricas de clima. No seu estudo, provavelmente você se deparou
 com o desafio de organizar e analisar, arquivos que comumente atingem
 10000 linhas.</p>
-
 <p>Uma das fontes mais comuns para obtenção de dados climáticos é o <a
 href="http://www.inmet.gov.br" target="_blank">INMET</a>. Contudo, os
 arquivos que são obtidos pelo site do INMET, não possuem uma formatação
 das mais práticas (Figura 1).</p>
-
-<p><img src="https://sistemasagricolas.files.wordpress.com/2014/12/inmet_fig_1.png" alt="Figura 1 - Dados importados do INMET" /></p>
-
+<p><img src="https://sistemasagricolas.files.wordpress.com/2014/12/inmet_fig_1.png" alt="Figura 1 - Dados importados do INMET"></p>
 <p>Repare que para cada dia registrado duas linhas são ocupadas. Nessa
 disposição de dados, dependendo do software que você utiliza, obter a
 média ou realizar alguma análise, pode se tornar inviável. Além disso,
 sem ordenar os dados, identificar os dias que não foram registrados é um
 trabalho que onera um tempo considerável.</p>
-
 <p>Para colaborar no processamento dos dados, uma função foi desenvolvida
 no sistema computacional R. Apesar de não ser uma função que oferece
 resultados tão rápidos (como uma similar que poderia ser desenvolvida em
 C), foi a solução mais rápida que encontrei no momento que surgiu o
 problema.</p>
-
 <p>Para obter a função e inserir no seu ambiente R, além de obter as demais
 instruções, acesse o link:</p>
-
-<p><a href="https://github.com/rafatieppo/INMET_DATA_ORDER/blob/master/INMET_DATA_ORDER.r" target="_blank"><a href="https://github.com/rafatieppo/INMET_DATA_ORDER/blob/master/INMET_DATA_ORDER.r" target="_blank">https://github.com/rafatieppo/INMET_DATA_ORDER/blob/master/INMET_DATA_ORDER.r</a></a></p>
-
+<p><a href="https://github.com/rafatieppo/INMET_DATA_ORDER/blob/master/INMET_DATA_ORDER.r" target="_blank"><a href="https://github.com/rafatieppo/INMET_DATA_ORDER/blob/master/INMET_DATA_ORDER.r">https://github.com/rafatieppo/INMET_DATA_ORDER/blob/master/INMET_DATA_ORDER.r</a></a></p>
 <p>Posteriormente, para executar um exemplo do uso da função, basta
 executar o código:</p>
-
 <pre><code>#PASSO 1 - Para ler dados do GITHUB (local dos dados do exemplo)
 library(RCurl)
 #1.1
@@ -373,18 +370,14 @@ edit(EXAMPLE_ONELINE)
 #3.1 Se necessário exporte seus dados
 write.table(EXAMPLE_ONELINE, &quot;EXAMPLE_DONE.csv&quot;, sep=&quot;;&quot;, col.names = TRUE, row.names = FALSE)
 #============================================================
-</code></pre>
-
-<p>Se tudo correu bem, o exemplo que é formado por aproximadamente 500
+</code></pre><p>Se tudo correu bem, o exemplo que é formado por aproximadamente 500
 linhas, foi ordenado em +- 2s. Um arquivo com 25000 linhas levará +- 25
 minutos. Verifique como ficaram os dados após o uso da função:</p>
-
 <p><a
 href="https://sistemasagricolas.files.wordpress.com/2014/12/inmet_fig_2.png"><img
 class="aligncenter size-large wp-image-117"
 src="https://sistemasagricolas.files.wordpress.com/2014/12/inmet_fig_2.png?w=660"
 alt="INMET_FIG_2" width="660" height="432" /></a></p>
-
 <p>Fique a vontade para copiar, alterar e distribuir o código.</p>
 
 </div>

@@ -15,7 +15,7 @@ DF &lt;- data.frame(BLOCO = rep(seq(1,4), each = 12), TRAT=rep(c(&quot;T1&quot;,
 <meta property='og:site_name' content='Rafael Tieppo'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='R'><meta property='article:tag' content='list'><meta property='article:tag' content='dataframe'><meta property='article:tag' content='csv'><meta property='article:published_time' content='2017-05-10T00:00:00Z'/><meta property='article:modified_time' content='2017-05-10T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.61.0" />
 
   <title>Converter lista com data.frame(s) em um data.frame • Rafael Tieppo</title>
   <link rel='canonical' href='/post/170510_bind_rows/'>
@@ -149,6 +149,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/android/' style='font-size:1em'>android</a>
       </li><li>
+        <a href='/tags/avell/' style='font-size:1em'>avell</a>
+      </li><li>
         <a href='/tags/calendar/' style='font-size:1em'>calendar</a>
       </li><li>
         <a href='/tags/column-view/' style='font-size:1em'>column-view</a>
@@ -168,6 +170,8 @@ if (!doNotTrack) {
         <a href='/tags/datetime/' style='font-size:1em'>datetime</a>
       </li><li>
         <a href='/tags/digital-agriculture/' style='font-size:1em'>digital agriculture</a>
+      </li><li>
+        <a href='/tags/distros/' style='font-size:1em'>distros</a>
       </li><li>
         <a href='/tags/emacs/' style='font-size:1.125em'>emacs</a>
       </li><li>
@@ -189,6 +193,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/lattes/' style='font-size:1.125em'>Lattes</a>
       </li><li>
+        <a href='/tags/linux/' style='font-size:1em'>linux</a>
+      </li><li>
         <a href='/tags/list/' style='font-size:1em'>list</a>
       </li><li>
         <a href='/tags/lucylattes/' style='font-size:1em'>lucyLattes</a>
@@ -208,6 +214,8 @@ if (!doNotTrack) {
         <a href='/tags/org-mode/' style='font-size:1em'>org-mode</a>
       </li><li>
         <a href='/tags/planning/' style='font-size:1em'>planning</a>
+      </li><li>
+        <a href='/tags/popos/' style='font-size:1em'>PopOS</a>
       </li><li>
         <a href='/tags/python/' style='font-size:2em'>python</a>
       </li><li>
@@ -315,20 +323,14 @@ if (!doNotTrack) {
   
 
   <div class='container entry-content'>
-  
-
-<h1 id="introdução">Introdução</h1>
-
+  <h1 id="introduo">Introdução</h1>
 <p>Trabalhando com banco de dados, em algum momento torna-se necessária a
 extração de determininados elementos que satisfaçam um dada condição. Na
 linguagem <strong>R</strong>, uma das opções de se realizar esta operação é a
 utilização de <em>listas</em>.</p>
-
 <h1 id="estudo-de-caso">Estudo de caso</h1>
-
 <p>Vamos supor que você tenha um <code>data.frame</code> com três tratamentos e quatro
 repetições</p>
-
 <pre><code>DF &lt;-
     data.frame(BLOCO = rep(seq(1,4), each = 12),
                TRAT=rep(c(&quot;T1&quot;, &quot;T2&quot;, &quot;T3&quot;), each = 4),
@@ -344,12 +346,9 @@ head(DF)
 ## 4     1   T1   4 25.11936
 ## 5     1   T2   1 29.22582
 ## 6     1   T2   2 29.71030
-</code></pre>
-
-<p>Uma vez que o <code>data.frame</code> foi criado, vamos supor que seja
+</code></pre><p>Uma vez que o <code>data.frame</code> foi criado, vamos supor que seja
 necessário separar para cada bloco, os valores de cada tratamento entre
 as repetições 2 e 3. Para isto podemos criar uma lista de <code>data.frames</code>.</p>
-
 <pre><code>LISTOFDATAFRAME  &lt;- vector(mode = &quot;list&quot;, length = 4)
 
 k=1
@@ -436,10 +435,7 @@ head(LISTOFDATAFRAME)
 ##    BLOCO TRAT REP        Z
 ## 46     4   T3   2 28.85554
 ## 47     4   T3   3 31.30958
-</code></pre>
-
-<p>Para unir a lista em um novo <code>data.frame</code> há pelo menos duas opções:</p>
-
+</code></pre><p>Para unir a lista em um novo <code>data.frame</code> há pelo menos duas opções:</p>
 <pre><code>### Primeira opçção:
 
 df1 &lt;-
@@ -470,9 +466,7 @@ df1
 ## T2.31     3   T2   3 32.07944
 ## T3.34     3   T3   2 30.83631
 ## T3.35     3   T3   3 30.51380
-</code></pre>
-
-<pre><code>### Segunda opção, pacote dplyr
+</code></pre><pre><code>### Segunda opção, pacote dplyr
 #library(dplyr)
 
 df2 &lt;- do.call(&quot;bind_rows&quot;, LISTOFDATAFRAME)
@@ -503,22 +497,17 @@ df2
 ## 22     4   T2   3 31.26221
 ## 23     4   T3   2 28.85554
 ## 24     4   T3   3 31.30958
-</code></pre>
-
-<p>Ambas as soluções retornam um <code>data.frame</code> com os dados
+</code></pre><p>Ambas as soluções retornam um <code>data.frame</code> com os dados
 selecionados. Dependendo do tamanho do banco de dados pode haver
 diferença de tempo no processamento, maiores detalhes podem ser
 encontrados nas referências.</p>
-
 <blockquote>
 <p>Sem dados você é apenas mais uma pessoa com uma opinião.
 <em>W. Edwards Deming (1900-1993)</em></p>
 </blockquote>
-
-<h2 id="referências">Referências</h2>
-
-<p><a href="http://stackoverflow.com/questions/2851327/convert-a-list-of-data-frames-into-one-data-frame" target="_blank">Convert a list of data frames into one data frame</a>
-<a href="https://www.r-bloggers.com/concatenating-a-list-of-data-frames/" target="_blank">Concatenating a list of data frames</a></p>
+<h2 id="referncias">Referências</h2>
+<p><a href="http://stackoverflow.com/questions/2851327/convert-a-list-of-data-frames-into-one-data-frame">Convert a list of data frames into one data frame</a>
+<a href="https://www.r-bloggers.com/concatenating-a-list-of-data-frames/">Concatenating a list of data frames</a></p>
 
 </div>
 

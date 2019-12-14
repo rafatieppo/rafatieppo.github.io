@@ -11,7 +11,7 @@
 <meta property='og:site_name' content='Rafael Tieppo'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='emacs'><meta property='article:tag' content='python'><meta property='article:tag' content='google'><meta property='article:tag' content='calendar'><meta property='article:tag' content='org-cal'><meta property='article:published_time' content='2018-02-20T00:00:00Z'/><meta property='article:modified_time' content='2018-02-20T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.61.0" />
 
   <title>Integrating emacs org-mode and google calendar • Rafael Tieppo</title>
   <link rel='canonical' href='/post/2018_02_20_emacs_googlecal/'>
@@ -145,6 +145,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/android/' style='font-size:1em'>android</a>
       </li><li>
+        <a href='/tags/avell/' style='font-size:1em'>avell</a>
+      </li><li>
         <a href='/tags/calendar/' style='font-size:1em'>calendar</a>
       </li><li>
         <a href='/tags/column-view/' style='font-size:1em'>column-view</a>
@@ -164,6 +166,8 @@ if (!doNotTrack) {
         <a href='/tags/datetime/' style='font-size:1em'>datetime</a>
       </li><li>
         <a href='/tags/digital-agriculture/' style='font-size:1em'>digital agriculture</a>
+      </li><li>
+        <a href='/tags/distros/' style='font-size:1em'>distros</a>
       </li><li>
         <a href='/tags/emacs/' style='font-size:1.125em'>emacs</a>
       </li><li>
@@ -185,6 +189,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/lattes/' style='font-size:1.125em'>Lattes</a>
       </li><li>
+        <a href='/tags/linux/' style='font-size:1em'>linux</a>
+      </li><li>
         <a href='/tags/list/' style='font-size:1em'>list</a>
       </li><li>
         <a href='/tags/lucylattes/' style='font-size:1em'>lucyLattes</a>
@@ -204,6 +210,8 @@ if (!doNotTrack) {
         <a href='/tags/org-mode/' style='font-size:1em'>org-mode</a>
       </li><li>
         <a href='/tags/planning/' style='font-size:1em'>planning</a>
+      </li><li>
+        <a href='/tags/popos/' style='font-size:1em'>PopOS</a>
       </li><li>
         <a href='/tags/python/' style='font-size:2em'>python</a>
       </li><li>
@@ -313,44 +321,40 @@ if (!doNotTrack) {
   <summary class='title'>
     <span>Table of Contents</span>
   </summary>
-  
+  <nav id="TableOfContents"></nav>
 </details>
 
 
   <div class='container entry-content'>
-  <p>I am an <a href="https://www.gnu.org/software/emacs/" target="_blank">EMACS</a> user and
+  <p>I am an <a href="https://www.gnu.org/software/emacs/">EMACS</a> user and
 consequently I use the amazing <strong>Org mode</strong> to plan my schedule and to
 manage my projects. However I was boring about how I synchronized the
-<code>.ics</code> file from <a href="https://www.gnu.org/software/emacs/" target="_blank">EMACS</a> and my
+<code>.ics</code> file from <a href="https://www.gnu.org/software/emacs/">EMACS</a> and my
 Google calendar. I spent some minutes in my Google calendar to clear the
 appointments, and import a new file. So, a while ago I improved my
 routine. I did know nothing about it.</p>
-
 <figure>
   <img src="/post/pics/2018_02_20_knownothing.gif">
 </figure>
-
 <p>First of all, I read about
-<a href="https://github.com/myuhe/org-gcal.el" target="_blank">org-cal</a> and
-<a href="https://github.com/dengste/org-caldav" target="_blank">org-caldav</a>. I found a great
-blog <a href="http://cestlaz.github.io/posts/using-emacs-26-gcal/#.Wo1OkeZG3ix" target="_blank">Cestlaz</a>,
-it provided me a good experience. A last topic was about <a href="https://developers.google.com/api-client-library/python/start/installation" target="_blank">Google API
+<a href="https://github.com/myuhe/org-gcal.el">org-cal</a> and
+<a href="https://github.com/dengste/org-caldav">org-caldav</a>. I found a great
+blog <a href="http://cestlaz.github.io/posts/using-emacs-26-gcal/#.Wo1OkeZG3ix">Cestlaz</a>,
+it provided me a good experience. A last topic was about <a href="https://developers.google.com/api-client-library/python/start/installation">Google API
 Client Libraries using  Python I didI</a>.
 I gathered all the information and created (or adapted) a <em>Python</em>
 script to work for me.</p>
-
 <p>The script is quite simple, from shell (I use
-<a href="https://ubuntu-mate.org/" target="_blank">Linux Ubuntu</a>) you just need to run the script. It erases
+<a href="https://ubuntu-mate.org/">Linux Ubuntu</a>) you just need to run the script. It erases
 <strong>all</strong> appointments in <em>Google calendar</em>, and sends the <code>.ics</code>
-file from <a href="https://orgmode.org/" target="_blank">EMACS org mode</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./API_CAL_refresh.py</code></pre></div>
-<p>A weakness in that script is the speed. The appointments are sent one by
+file from <a href="https://orgmode.org/">EMACS org mode</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./API_CAL_refresh.py
+</code></pre></div><p>A weakness in that script is the speed. The appointments are sent one by
 one, regarding the number of the appointments in <code>.ics</code> file, the upload
 may take some minutes. For now it is good enough to me, maybe I will try to
 improve that code.</p>
-
 <p>You can find that script and more information on my
-<a href="https://github.com/rafatieppo/PY_UTILITIES/tree/master/API_GOOGLECAL" target="_blank">Github</a>. Let
+<a href="https://github.com/rafatieppo/utils_py/tree/master/api_googlecal">Github</a>. Let
 me know you have some question, just send me a e-mail.</p>
 
 </div>

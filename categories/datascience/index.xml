@@ -48,7 +48,7 @@ After some months, studying in my free time, I would like to share some code tha
       
       <guid>/post/2018_12_01_juliandate/</guid>
       <description>Introduction The work in data science must be tidy. A simple file name can help you to save a lot of time. For instance, if you have a series of satellite images from LANDSAT 8, the files are ordered by Julian date:
-rt@rt-d5567:~/Documents/$ find -name &#39;*305*.TIF&#39; ./LO82280702018305CUB00_B3.TIF ./LO82280702018305CUB00_B9.TIF ./LO82280702018305CUB00_B5.TIF  If you did not realize, note that after 2018 there are three numbers 305. The number 305 means the 305th day of the year.</description>
+rt@rt-d5567:~/Documents/$ find -name &#39;*305*.TIF&#39; ./LO82280702018305CUB00_B3.TIF ./LO82280702018305CUB00_B9.TIF ./LO82280702018305CUB00_B5.TIF If you did not realize, note that after 2018 there are three numbers 305. The number 305 means the 305th day of the year.</description>
     </item>
     
     <item>
@@ -58,7 +58,7 @@ rt@rt-d5567:~/Documents/$ find -name &#39;*305*.TIF&#39; ./LO82280702018305CUB00
       
       <guid>/post/2018_11_26_barhistpy/</guid>
       <description>Introduction Some people make a small confusion with histogram and barplots. So in this post we intend to provide some points about both of them.
-Let&amp;rsquo;s supose that we have a sample from 200 persons, and we need to check the age distribution, so we can produce a histogram (Figure 1).
+Let&#39;s supose that we have a sample from 200 persons, and we need to check the age distribution, so we can produce a histogram (Figure 1).
 # creating data DF = pd.DataFrame({&amp;#34;A&amp;#34; : np.random.normal(30, 0.75, 200)}) # plot plt.figure(figsize=(8, 5)) plt.hist(DF[&amp;#34;A&amp;#34;], bins = 10, color=&amp;#39;steelblue&amp;#39;, alpha = 0.</description>
     </item>
     
