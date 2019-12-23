@@ -2,12 +2,12 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Introdução Usualmente antes de comprar um novo laptop eu pesquiso muito, pois nos dias de hoje há muitas opções e variações de preços. Todavia, como toda regra tem exceção, uma promoção de black friday colaborou para uma tomada de decisão em que o impulso sobressaiu a razão.
+<meta name='description' content='Introdução Usualmente antes de comprar um novo laptop eu pesquiso, pois nos dias de hoje há muitas opções e variações de preços. Todavia, como toda regra tem exceção, uma promoção de black friday colaborou para uma tomada de decisão em que o impulso venceu a razão.
 Para ir direto ao assunto, adquiri um laptop da Avell, e como uso linux, apesar de no momento da compra ter verificado a compatibilidade da placa de vídeo, algumas surpresas surgiram (detalhes do laptop aqui).'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Minha experiência com Avell e Linux • Rafael Tieppo'>
-<meta property='og:description' content='Introdução Usualmente antes de comprar um novo laptop eu pesquiso muito, pois nos dias de hoje há muitas opções e variações de preços. Todavia, como toda regra tem exceção, uma promoção de black friday colaborou para uma tomada de decisão em que o impulso sobressaiu a razão.
+<meta property='og:description' content='Introdução Usualmente antes de comprar um novo laptop eu pesquiso, pois nos dias de hoje há muitas opções e variações de preços. Todavia, como toda regra tem exceção, uma promoção de black friday colaborou para uma tomada de decisão em que o impulso venceu a razão.
 Para ir direto ao assunto, adquiri um laptop da Avell, e como uso linux, apesar de no momento da compra ter verificado a compatibilidade da placa de vídeo, algumas surpresas surgiram (detalhes do laptop aqui).'>
 <meta property='og:url' content='/post/2019_12_12_avell_linux/'>
 <meta property='og:site_name' content='Rafael Tieppo'>
@@ -307,7 +307,7 @@ if (!doNotTrack) {
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-3 mins read
+4 mins read
 </span>
 
 
@@ -327,7 +327,7 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#introduo">Introdução</a></li>
     <li><a href="#instalao-problemas-e-soluo">Instalação, problemas e solução</a></li>
-    <li><a href="#opinies-sobre-distro">Opiniões sobre distro</a></li>
+    <li><a href="#sobre-distro">Sobre distro</a></li>
     <li><a href="#opinies-sobre-mquina">Opiniões sobre máquina</a></li>
     <li><a href="#consideraes-finais">Considerações finais</a></li>
   </ul>
@@ -337,10 +337,10 @@ if (!doNotTrack) {
 
   <div class='container entry-content'>
   <h2 id="introduo">Introdução</h2>
-<p>Usualmente antes de comprar um novo laptop eu pesquiso muito, pois nos
+<p>Usualmente antes de comprar um novo laptop eu pesquiso, pois nos
 dias de hoje há muitas opções e variações de preços. Todavia, como toda
 regra tem exceção, uma promoção de <em>black friday</em> colaborou para uma
-tomada de decisão em que o impulso sobressaiu a razão.</p>
+tomada de decisão em que o impulso venceu a razão.</p>
 <p>Para ir direto ao assunto, adquiri um laptop da
 <a href="https://avell.com.br">Avell</a>, e como uso linux, apesar de no momento da
 compra ter verificado a compatibilidade da placa de vídeo, algumas
@@ -350,42 +350,56 @@ surpresas surgiram (detalhes do laptop
 <p>A distro que uso é a <a href="http://www.debian.org/">Debian</a>, fiz um breve post
 <a href="https://www.linuxdescomplicado.com.br/2019/08/como-escolhi-minha-distribuicao-linux.html">AQUI</a>
 de como escolhi uma distro. Iniciei a instalação do sistema e tudo
-funcionou perfeitamente. Quando fiz o login veio a surpresa.</p>
+funcionou bem. Quando fiz o login veio a surpresa.</p>
 <p>Após o carregamento da interface gráfica (Gnome) ocorria um congelamento
-da tela. Após algumas pesquisas, os resultados mais encontrados para
+da tela. Após algumas pesquisas, o resultado mais encontrado para
 justificar o congelamento da tela é um problema com o &ldquo;driver&rdquo;
 Noveau. Tentei entrar modo de segurança e instalar o &ldquo;driver&rdquo;
 recomendado para o <a href="http://www.debian.org/">Debian</a>, e nada.</p>
-<p>Como alternativa tentei o <a href="https://www.opensuse.org/">OpeSUSE</a>, não
-consegui iniciar nem a <em>grub</em>. Reiniciei a pesquisa, vi um pessoal com
-<a href="https://www.archlinux.org/">ArchLinux</a> que obtiveram sucesso, mas como
-não tenho experiência com a referida distro, e queria um distro <em>LTS</em>,
-abortei a ideia.</p>
-<p>Após algumas horas pesquisando, encontrei o salvador, o
+<p>Como não queria retornar ao <a href="https://ubuntu.com/">Ubuntu</a>, testei  como
+alternativa tentei o <a href="https://www.opensuse.org/">OpeSUSE</a>, não
+consegui iniciar nem a <em>grub</em>. Reiniciei a pesquisa, encontrei <em>posts</em>
+que relatavam sucesso com o <a href="https://www.archlinux.org/">ArchLinux</a>, mas
+como não tenho experiência com a referida distro, e queria um distro
+<em>LTS</em>, abortei a ideia.</p>
+<p>Após algumas horas pesquisando, encontrei uma opção que indiretamente
+me direcionou ao <a href="https://ubuntu.com/">Ubuntu</a>, resolvi testar  o
 <a href="https://system76.com/pop">Pop!_OS</a>. A instalação foi tranquila, em modo
 UEFI, com reconhecimento da GPU, wifi, etc. Com o sistema funcionando
 iniciei a instalação dos softwares.</p>
-<h2 id="opinies-sobre-distro">Opiniões sobre distro</h2>
-<p>Não tenho do que reclamar, pois cumpre o prometido. Como observação,
-destaco que os atalhos para gerenciamento das janelas e <em>workspaces</em> são
-diferentes do Gnome do <a href="http://www.debian.org/">Debian</a> ou do
-<a href="https://ubuntu.com/">Ubuntu</a>, mas nada que não se possa configurar ou
-se adaptar.</p>
-<p>A distro <a href="https://system76.com/pop">Pop!_OS</a> usa a base e o repositório do
-<a href="https://ubuntu.com/">Ubuntu</a>, dessa forma basicamente todos os pacotes
-que uso foram encontrados com facilidade. A &ldquo;loja&rdquo; de aplicativos do
-<a href="https://system76.com/pop">Pop!_OS</a> é bem legal, e tem aplicativos como
-o <em>spotify</em>, <em>telegram</em>, etc.</p>
-<p>Se alguém me perguntar se eu recomendo a distro
-<a href="https://system76.com/pop">Pop!_OS</a>, a resposta é <strong>sim</strong>, <strong>sem
-dúvida</strong>.</p>
+<h2 id="sobre-distro">Sobre distro</h2>
+<p>O ambiente gráfico padrão é o <em>Gnome</em>, contudo os atalhos para
+gerenciamento das janelas e <em>workspaces</em> são diferentes do Gnome do
+<a href="http://www.debian.org/">Debian</a> ou do <a href="https://ubuntu.com/">Ubuntu</a>,
+mas nada que não se possa configurar ou se adaptar. Os ícones e detalhes
+das janelas são interessantes, além disso, há alguns temas bem
+trabalhados para se escolher. De modo geral a aparência é agradável.</p>
+<p>Quanto a repositórios, a distro <a href="https://system76.com/pop">Pop!_OS</a> usa
+a base do <a href="https://ubuntu.com/">Ubuntu</a>, dessa forma, basicamente todos
+os pacotes que uso foram encontrados com facilidade. A &ldquo;loja&rdquo; de
+aplicativos do <a href="https://system76.com/pop">Pop!_OS</a> é bem legal, e tem
+aplicativos como o <em>spotify</em>, <em>telegram</em>, etc. Comparando com a loja do
+<a href="https://ubuntu.com/">Ubuntu</a>, a loja de aplicativos do
+<a href="https://system76.com/pop">Pop!_OS</a> é superior.</p>
+<p>O que achei interessante de mais interessante na distro foi o suporte à
+<em>GPU</em>. Já no instante em que se vai fazer o download da <code>iso</code> é possível
+escolher entre um instalador dedicado à <em>Radeon</em> ou <em>Nvidia</em>. A distro
+também oferece uma interface para alternar entre a placa dedicada
+(<em>nvidia</em> ou <em>Radeon</em>) e <em>intel</em>. Trata-se de uma distro para um usuário
+que busca algo pronto, que funcione <em>out of box</em>, seja para o trabalho
+do dia a dia (escritório, estudo, desenvolvimento, data science), ou até
+mesmo para jogos. Se você busca uma distro para estudar o <strong>Linux</strong>, ou
+entender melhor o sistema operacional, sugiro outras opções.</p>
+<p>A distro <a href="https://system76.com/pop">Pop!_OS</a> oferece um fluxo de
+trabalho bem interessante, e se alguém me perguntar se eu recomendo, a
+resposta é <strong>sim</strong>, <strong>sem dúvida</strong>.</p>
 <h2 id="opinies-sobre-mquina">Opiniões sobre máquina</h2>
-<p>Ainda não testei nada de muito pesado na máquina, apenas abri algumas imagens
-de satélite, então em questão de desempenho não posso opinar. No geral
-não posso reclamar. Tratando-se de uma  máquina com foco em games,
-considero que a mesma é relativamente silenciosa.</p>
-<p>O monitor é muito bom, contraste, brilho e nitidez excelentes. A minhas
-observações ficam para o teclado:</p>
+<p>Ainda não testei nada de muito pesado na máquina, apenas abri algumas
+imagens (com mais de 500 MB), então em questão de desempenho não posso
+opinar. No geral, não posso reclamar. Tratando-se de uma máquina com
+foco em games, considero que a mesma é relativamente silenciosa.</p>
+<p>Em relação ao monitor, o mesmo tem, contraste, brilho e nitidez
+excelentes. As minhas observações ficam para o teclado:</p>
 <p><strong>1.</strong> a retro iluminação fica com várias cores, pois a
 <a href="https://avell.com.br">Avell</a> não tem suporte para <em>Linux</em>, dessa forma
 não há um recurso oficial para controle da cores e intensidade. O
@@ -413,8 +427,11 @@ suporte para <em>Linux</em>.</p>
 <p>Quem obter um Avell e quiser mais personalização do teclado, tem um
 tutorial
 <a href="https://www.vivaolinux.com.br/dica/Teclado-Retroiluminado-Backlight-Notebook-Avell-Clevo-no-Linux-Mint-ou-Ubuntu-Configuracao">AQUI</a>,
-não testei, então não posso opinar.</p>
-<p>Futuramente vou tentar estudar um pouco mais sobre o assunto para tentar
+não testei esta solução. Para resolver o conflito com o teclado colorido
+testei um pacote <em>Python</em>, diponível
+<a href="https://github.com/petryx/avell-a52-lights">AQUI</a>, basta seguir as
+instruções de instalação e uso (testei e funcionou).</p>
+<p>Futuramente vou tentar estudar um pouco mais sobre <em>GPU</em>  para tentar
 instalar o <a href="http://www.debian.org/">Debian</a>.</p>
 <p>Alguns sites sobre GPU em linux (há muitos outros):</p>
 <ul>
