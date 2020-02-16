@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on Rafael Tieppo</title>
+    <link>/tags/android/</link>
+    <description>Recent content in android on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 11 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>APP PEESA SPRAYING</title>
+      <link>/portfolio/2017-09-09-portfolio_03_peesaspray/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/2017-09-09-portfolio_03_peesaspray/</guid>
+      <description>O PE2SA Spraying é um software de uso livre para ANDROID, sem garantia alguma, que visa o auxílio na calibração de pulverizadores. Este aplicativo é parte do PE2SA (Projeto de Extensão em Engeharia de Sistemas Agrícolas) da UNEMAT. Para saber mais sobre o autor Clique aqui!
+ Download na Google Play (Android 5 ou +)  </description>
+    </item>
+    
+  </channel>
+</rss>

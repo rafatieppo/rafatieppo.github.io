@@ -1,0 +1,21 @@
+{{ partial "header" . }}
+
+{{ partial "nav/entry_nav" . }}
+<hr>
+<p>
+<h1>{{ .Title }}</h1>
+
+{{ range (where .Data.Pages "Type" "blog").GroupByDate "2006" }}
+<h5><p class="container list-container">{{ .Key }}</p></h5>
+{{ range .Pages }}
+<article class="list taxonomy-cloud">
+        {{ .Date.Format "Jan 02, 2006" }} >>>
+        <a href="{{ .Permalink }}" class="archive-item-link">{{ .Title }}</a>
+
+</article>
+{{ end }}
+{{ end }}
+
+{{ partial "entry/comments" . }}
+
+{{ partial "footer" . }}

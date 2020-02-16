@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Rafael Tieppo</title>
+    <link>/categories/r/</link>
+    <description>Recent content in R on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 10 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Converter lista com data.frame(s) em um data.frame</title>
+      <link>/post/170510_bind_rows/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/170510_bind_rows/</guid>
+      <description>Introdução Trabalhando com banco de dados, em algum momento torna-se necessária a extração de determininados elementos que satisfaçam um dada condição. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.
+Estudo de caso Vamos supor que você tenha um data.frame com três tratamentos e quatro repetições
+DF &amp;lt;- data.frame(BLOCO = rep(seq(1,4), each = 12), TRAT=rep(c(&amp;quot;T1&amp;quot;, &amp;quot;T2&amp;quot;, &amp;quot;T3&amp;quot;), each = 4), REP = seq(1,4), Z = rnorm(48, 30, 2.</description>
+    </item>
+    
+    <item>
+      <title>Reading and storing several files using R</title>
+      <link>/post/2017_05_08_reading_several_files/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2017_05_08_reading_several_files/</guid>
+      <description>Introduction Usually we need to read several files to create a data bank (data frame with all data). If you have two or three files it is simple. However, if you have five or more files like .csv, .dat, etc, it can demand more time. Using R, one of the options to solve it is the list object, we will show how to handle with.
+Case I - reading several files Supposing you have some .</description>
+    </item>
+    
+    <item>
+      <title>Lendo e armazenando uma série de arquivos</title>
+      <link>/post/170514_reading_files/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/170514_reading_files/</guid>
+      <description>Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.
+Estudo de caso I Vamos supor que você tenha uma série de arquivos no formato .</description>
+    </item>
+    
+  </channel>
+</rss>

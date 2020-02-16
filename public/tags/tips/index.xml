@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tips on Rafael Tieppo</title>
+    <link>/tags/tips/</link>
+    <description>Recent content in tips on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 16 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python beginner tips</title>
+      <link>/post/2018_12_16_pythontips/</link>
+      <pubDate>Sun, 16 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018_12_16_pythontips/</guid>
+      <description>Introduction I spent around 4 years working with R, and I can say that R is amazing. However, I decided to start a new stage in my professional life, and a need came, a multi proposal language. My option was Python, because It provides have data science tools, and has a huge support for others applications.
+After some months, studying in my free time, I would like to share some code that I learned (from several sources).</description>
+    </item>
+    
+  </channel>
+</rss>

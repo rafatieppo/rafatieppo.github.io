@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>simplex on Rafael Tieppo</title>
+    <link>/tags/simplex/</link>
+    <description>Recent content in simplex on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 11 Dec 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/simplex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Software FOS</title>
+      <link>/portfolio/2010-06-01-portfolio_01_fos/</link>
+      <pubDate>Sat, 11 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/2010-06-01-portfolio_01_fos/</guid>
+      <description>A adubação é uma das práticas agrícolas que mais onera o custo de produção das culturas comerciais. Deste modo, a otimização no uso de fertilizantes pode reduzir os custos de produção e elevar o lucro do produtor. Em lavouras comerciais, na compra das formulações mistas, o produtor pode reduzir o custo de aquisição ao optar por fontes de nutrientes que atendam as necessidades agronômicas ao menor custo e com o maior nível de concentração.</description>
+    </item>
+    
+  </channel>
+</rss>
