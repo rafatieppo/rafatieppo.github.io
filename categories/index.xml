@@ -5,10 +5,19 @@
     <link>/categories/</link>
     <description>Recent content in Categories on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 12 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>datascience</title>
+      <link>/categories/datascience/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/datascience/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>computer and eletronics</title>
@@ -16,15 +25,6 @@
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/computer-and-eletronics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>datascience</title>
-      <link>/categories/datascience/</link>
-      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/datascience/</guid>
       <description></description>
     </item>
     

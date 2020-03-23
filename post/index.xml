@@ -5,10 +5,20 @@
     <link>/post/</link>
     <description>Recent content in Posts on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 12 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PCA analysis and tidy data</title>
+      <link>/post/2020_03_21_tidypca/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020_03_21_tidypca/</guid>
+      <description>Introduction PCA (principal components analysis) is multivariate statistical method that concerned with examination of several variables simultaneously. The idea is provide a dimensionality reduction of data sets, finding the most representative variables to explain some phenomenon. Thus the PCA analyses inter-relation among variables and explains them by its inherent dimensions (components). If there is NO correlation among the variables, PCA analysis will not be useful.
+This post is divided in two section.</description>
+    </item>
     
     <item>
       <title>Minha experiência com Avell e Linux</title>
