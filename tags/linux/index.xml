@@ -5,17 +5,27 @@
     <link>/tags/linux/</link>
     <description>Recent content in linux on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 12 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Entendendo java (VM) para instalação do programa IRPF</title>
+      <link>/post/2020_04_25_javairpf/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020_04_25_javairpf/</guid>
+      <description>Introdução Para fazer sua declararação de imposto de renda, além de precisar de toda a documentação, uma das etapas é a instalação do programa IRPF. Antes de realizar a instalação em sim, é necessário fazer o download do programa IRPF, e na página da receita, abaixo do link de download há uma mensagem com o seguinte aviso ao usuário:
+ ATENÇÃO! Caso necessário, atualize a versão JAVA neste computador. Por favor, clique aqui e prossiga com a instalação.</description>
+    </item>
+    
+    <item>
       <title>Minha experiência com Avell e Linux</title>
-      <link>/post/2019_12_12_avell_linux/</link>
+      <link>/post/2019_12_12_avelllinux/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/2019_12_12_avell_linux/</guid>
+      <guid>/post/2019_12_12_avelllinux/</guid>
       <description>Introdução Usualmente antes de comprar um novo laptop eu pesquiso, pois nos dias de hoje há muitas opções e variações de preços. Todavia, como toda regra tem exceção, uma promoção de black friday colaborou para uma tomada de decisão em que o impulso venceu a razão.
 Para ir direto ao assunto, adquiri um laptop da Avell, e como uso linux, apesar de no momento da compra ter verificado a compatibilidade da placa de vídeo, algumas surpresas surgiram (detalhes do laptop aqui).</description>
     </item>
