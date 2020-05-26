@@ -5,10 +5,29 @@
     <link>/</link>
     <description>Recent content on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Debian buster vs GPU hybrid card</title>
+      <link>/post/2020_05_25_debian_nvidia/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020_05_25_debian_nvidia/</guid>
+      <description>The case I was trying to record the screen and sound with a laptop Avell (Clevo in Brazil). This laptop has I5 processor, and a hybrid video card (intel and Nvidia 1050), with Pop!_OS Linux distro and Gnome. All was quite fine for while, but after install Kazam (it is a great Software) I could not run it. Why? Because the icon systray was removed from Gnome and the plugin Top icon did not work.</description>
+    </item>
+    
+    <item>
+      <title>Livro Mapas de Produtividade em AP com QGIS</title>
+      <link>/portfolio/2020-05-22-portfolio_05_bookyieldmap/</link>
+      <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/2020-05-22-portfolio_05_bookyieldmap/</guid>
+      <description>Antes de iniciar a leitura deste material, acho no mínimo interessante você saber o porquê está fazendo isto. Qual seria a importância de aprender a processar, gerar e analisar dados de mapas de produtividade de grãos?
+Se você se interessou por este material, provavelmente é um profissional ligado à agricultura, um entusiasta, ou ainda um possível curioso (no bom sentido), e talvez não tenha clareza do assunto em questão. Para iniciarmos as justificativas do porquê ler este material, vamos iniciar com conceitos.</description>
+    </item>
     
     <item>
       <title>Entendendo java (VM) para instalação do programa IRPF</title>
@@ -98,7 +117,7 @@ rt@rt-d5567:~/Documents/$ find -name &#39;*305*.TIF&#39; ./LO82280702018305CUB00
       
       <guid>/post/2018_11_26_barhistpy/</guid>
       <description>Introduction Some people make a small confusion with histogram and barplots. So in this post we intend to provide some points about both of them.
-Let&#39;s supose that we have a sample from 200 persons, and we need to check the age distribution, so we can produce a histogram (Figure 1).
+Let&amp;rsquo;s supose that we have a sample from 200 persons, and we need to check the age distribution, so we can produce a histogram (Figure 1).
 # creating data DF = pd.DataFrame({&amp;#34;A&amp;#34; : np.random.normal(30, 0.75, 200)}) # plot plt.figure(figsize=(8, 5)) plt.hist(DF[&amp;#34;A&amp;#34;], bins = 10, color=&amp;#39;steelblue&amp;#39;, alpha = 0.</description>
     </item>
     

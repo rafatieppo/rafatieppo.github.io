@@ -13,7 +13,7 @@ Para ir direto ao assunto, adquiri um laptop da Avell, e como uso linux, apesar 
 <meta property='og:site_name' content='Rafael Tieppo'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='avell'><meta property='article:tag' content='linux'><meta property='article:tag' content='distros'><meta property='article:tag' content='PopOS'><meta property='article:published_time' content='2019-12-12T00:00:00Z'/><meta property='article:modified_time' content='2019-12-12T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.61.0" />
+<meta name="generator" content="Hugo 0.71.0" />
 
   <title>Minha experiência com Avell e Linux • Rafael Tieppo</title>
   <link rel='canonical' href='/post/2019_12_12_avelllinux/'>
@@ -143,6 +143,8 @@ if (!doNotTrack) {
 
   <div class='container list-container'>
   <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/agricultura-de-precis%C3%A3o/' style='font-size:1em'>agricultura de precisão</a>
+      </li><li>
         <a href='/tags/agriculture/' style='font-size:1em'>agriculture</a>
       </li><li>
         <a href='/tags/android/' style='font-size:1em'>android</a>
@@ -167,6 +169,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/datetime/' style='font-size:1em'>datetime</a>
       </li><li>
+        <a href='/tags/debian/' style='font-size:1em'>Debian</a>
+      </li><li>
         <a href='/tags/digital-agriculture/' style='font-size:1em'>digital agriculture</a>
       </li><li>
         <a href='/tags/distros/' style='font-size:1em'>distros</a>
@@ -179,6 +183,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/frequency/' style='font-size:1em'>frequency</a>
       </li><li>
+        <a href='/tags/gis/' style='font-size:1em'>GIS</a>
+      </li><li>
         <a href='/tags/google/' style='font-size:1em'>google</a>
       </li><li>
         <a href='/tags/grass/' style='font-size:1em'>grass</a>
@@ -189,19 +195,23 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/inmet/' style='font-size:1em'>inmet</a>
       </li><li>
+        <a href='/tags/intel/' style='font-size:1em'>Intel</a>
+      </li><li>
         <a href='/tags/irpf/' style='font-size:1em'>irpf</a>
       </li><li>
         <a href='/tags/java/' style='font-size:1em'>java</a>
       </li><li>
         <a href='/tags/lattes/' style='font-size:1.1111111111111112em'>Lattes</a>
       </li><li>
-        <a href='/tags/linux/' style='font-size:1.1111111111111112em'>linux</a>
+        <a href='/tags/linux/' style='font-size:1.2222222222222223em'>linux</a>
       </li><li>
         <a href='/tags/list/' style='font-size:1em'>list</a>
       </li><li>
         <a href='/tags/lucylattes/' style='font-size:1em'>lucyLattes</a>
       </li><li>
         <a href='/tags/machinery/' style='font-size:1em'>machinery</a>
+      </li><li>
+        <a href='/tags/mapa-de-produtividade/' style='font-size:1em'>mapa de produtividade</a>
       </li><li>
         <a href='/tags/matplotlib/' style='font-size:1em'>matplotlib</a>
       </li><li>
@@ -210,6 +220,8 @@ if (!doNotTrack) {
         <a href='/tags/meteorology/' style='font-size:1em'>meteorology</a>
       </li><li>
         <a href='/tags/mineira%C3%A7%C3%A3o/' style='font-size:1em'>mineiração</a>
+      </li><li>
+        <a href='/tags/nvidia/' style='font-size:1em'>Nvidia</a>
       </li><li>
         <a href='/tags/org-cal/' style='font-size:1em'>org-cal</a>
       </li><li>
@@ -222,6 +234,8 @@ if (!doNotTrack) {
         <a href='/tags/popos/' style='font-size:1em'>PopOS</a>
       </li><li>
         <a href='/tags/python/' style='font-size:2em'>python</a>
+      </li><li>
+        <a href='/tags/qgis/' style='font-size:1em'>QGIS</a>
       </li><li>
         <a href='/tags/r/' style='font-size:1.4444444444444444em'>R</a>
       </li><li>
@@ -333,18 +347,18 @@ if (!doNotTrack) {
   </summary>
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#introduo">Introdução</a></li>
-    <li><a href="#instalao-problemas-e-soluo">Instalação, problemas e solução</a></li>
+    <li><a href="#introdução">Introdução</a></li>
+    <li><a href="#instalação-problemas-e-solução">Instalação, problemas e solução</a></li>
     <li><a href="#sobre-distro">Sobre distro</a></li>
-    <li><a href="#opinies-sobre-mquina">Opiniões sobre máquina</a></li>
-    <li><a href="#consideraes-finais">Considerações finais</a></li>
+    <li><a href="#opiniões-sobre-máquina">Opiniões sobre máquina</a></li>
+    <li><a href="#considerações-finais">Considerações finais</a></li>
   </ul>
 </nav>
 </details>
 
 
   <div class='container entry-content'>
-  <h2 id="introduo">Introdução</h2>
+  <h2 id="introdução">Introdução</h2>
 <p>Usualmente antes de comprar um novo laptop eu pesquiso, pois nos
 dias de hoje há muitas opções e variações de preços. Todavia, como toda
 regra tem exceção, uma promoção de <em>black friday</em> colaborou para uma
@@ -354,7 +368,7 @@ tomada de decisão em que o impulso venceu a razão.</p>
 compra ter verificado a compatibilidade da placa de vídeo, algumas
 surpresas surgiram (detalhes do laptop
 <a href="https://avell.com.br/a52-muv-5-bs">aqui</a>).</p>
-<h2 id="instalao-problemas-e-soluo">Instalação, problemas e solução</h2>
+<h2 id="instalação-problemas-e-solução">Instalação, problemas e solução</h2>
 <p>A distro que uso é a <a href="http://www.debian.org/">Debian</a>, fiz um breve post
 <a href="https://www.linuxdescomplicado.com.br/2019/08/como-escolhi-minha-distribuicao-linux.html">AQUI</a>
 de como escolhi uma distro. Iniciei a instalação do sistema e tudo
@@ -401,7 +415,7 @@ entender melhor o sistema operacional, sugiro outras opções.</p>
 <p>A distro <a href="https://system76.com/pop">Pop!_OS</a> oferece um fluxo de
 trabalho bem interessante, e se alguém me perguntar se eu recomendo, a
 resposta é <strong>sim</strong>, <strong>sem dúvida</strong>.</p>
-<h2 id="opinies-sobre-mquina">Opiniões sobre máquina</h2>
+<h2 id="opiniões-sobre-máquina">Opiniões sobre máquina</h2>
 <p>Ainda não testei nada de muito pesado na máquina, apenas abri algumas
 imagens (com mais de 500 MB), então em questão de desempenho não posso
 opinar. No geral, não posso reclamar. Tratando-se de uma máquina com
@@ -426,7 +440,7 @@ um pouco maiores.</p>
 </figure>
 <p>No mais o teclado é muito bom (pelo menos para mim). Quanto a disposição
 das teclas, acredito que é questão de se adaptar.</p>
-<h2 id="consideraes-finais">Considerações finais</h2>
+<h2 id="considerações-finais">Considerações finais</h2>
 <p>Recomendo a compra, mas de qualquer forma faça uma boa pesquisa de preço
 nos concorrentes. O atendimento de vendas da
 <a href="https://avell.com.br">Avell</a> é fenomenal, muito superior ao da
