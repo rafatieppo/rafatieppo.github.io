@@ -2,18 +2,20 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Introdução Para fazer sua declararação de imposto de renda, além de precisar de toda a documentação, uma das etapas é a instalação do programa IRPF. Antes de realizar a instalação em sim, é necessário fazer o download do programa IRPF, e na página da receita, abaixo do link de download há uma mensagem com o seguinte aviso ao usuário:
- ATENÇÃO! Caso necessário, atualize a versão JAVA neste computador. Por favor, clique aqui e prossiga com a instalação.'>
+<meta name='description' content='Introdução Para fazer declararação de imposto de renda vc necessita reunir a documentação e instalar o programa IRPF. Para obter arquivo de instalação basta acessar a página da receita. O detalhe é que abaixo do link de download há uma mensagem com o seguinte aviso ao usuário:
+ ATENÇÃO! Caso necessário, atualize a versão JAVA neste computador. Por favor, clique aqui e prossiga com a instalação.
+ Dependendo de qual é o seu sistema operacional (Windows, Linux, Solaris, etc) a instalação do JAVA pode se tornar um pouco chata.'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Entendendo java (VM) para instalação do programa IRPF • Rafael Tieppo'>
-<meta property='og:description' content='Introdução Para fazer sua declararação de imposto de renda, além de precisar de toda a documentação, uma das etapas é a instalação do programa IRPF. Antes de realizar a instalação em sim, é necessário fazer o download do programa IRPF, e na página da receita, abaixo do link de download há uma mensagem com o seguinte aviso ao usuário:
- ATENÇÃO! Caso necessário, atualize a versão JAVA neste computador. Por favor, clique aqui e prossiga com a instalação.'>
+<meta property='og:description' content='Introdução Para fazer declararação de imposto de renda vc necessita reunir a documentação e instalar o programa IRPF. Para obter arquivo de instalação basta acessar a página da receita. O detalhe é que abaixo do link de download há uma mensagem com o seguinte aviso ao usuário:
+ ATENÇÃO! Caso necessário, atualize a versão JAVA neste computador. Por favor, clique aqui e prossiga com a instalação.
+ Dependendo de qual é o seu sistema operacional (Windows, Linux, Solaris, etc) a instalação do JAVA pode se tornar um pouco chata.'>
 <meta property='og:url' content='/post/2020_04_25_javairpf/'>
 <meta property='og:site_name' content='Rafael Tieppo'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='linux'><meta property='article:tag' content='java'><meta property='article:tag' content='irpf'><meta property='article:published_time' content='2020-04-25T00:00:00Z'/><meta property='article:modified_time' content='2020-04-25T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.71.0" />
+<meta name="generator" content="Hugo 0.61.0" />
 
   <title>Entendendo java (VM) para instalação do programa IRPF • Rafael Tieppo</title>
   <link rel='canonical' href='/post/2020_04_25_javairpf/'>
@@ -347,8 +349,8 @@ if (!doNotTrack) {
   </summary>
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#introdução">Introdução</a></li>
-    <li><a href="#o-que-é-java">O que é JAVA?</a></li>
+    <li><a href="#introduo">Introdução</a></li>
+    <li><a href="#o-que--java">O que é JAVA?</a></li>
     <li><a href="#qual-java-instalar-para-rodar-o-programa-do-irpf">Qual JAVA instalar para rodar o programa do IRPF?</a></li>
     <li><a href="#como-instalar-o-java-no-linux-para-rodar-o-programa-irpf">Como instalar o JAVA no Linux para rodar o programa IRPF</a></li>
     <li><a href="#references">References</a></li>
@@ -358,30 +360,29 @@ if (!doNotTrack) {
 
 
   <div class='container entry-content'>
-  <h2 id="introdução">Introdução</h2>
-<p>Para fazer sua declararação de imposto de renda, além de precisar de
-toda a documentação, uma das etapas é a instalação do programa
-IRPF. Antes de realizar a instalação em sim, é necessário fazer o
-download do programa IRPF, e na <a href="http://receita.economia.gov.br/interface/cidadao/irpf/2020/download/multiplataforma-zip">página da
-receita</a>,
-abaixo do link de download há uma mensagem com o seguinte aviso ao
-usuário:</p>
+  <h2 id="introduo">Introdução</h2>
+<p>Para fazer declararação de imposto de renda vc necessita reunir a
+documentação e instalar o programa IRPF. Para obter arquivo de
+instalação basta acessar a <a href="http://receita.economia.gov.br/interface/cidadao/irpf/2020/download/multiplataforma-zip">página da
+receita</a>.
+O <strong>detalhe</strong> é que abaixo do link de download há uma mensagem com o
+seguinte aviso ao usuário:</p>
 <blockquote>
 <p>ATENÇÃO! Caso necessário, atualize a versão <em>JAVA</em> neste computador. Por
 favor, <a href="http://www.java.com/pt_BR/download/manual.jsp">clique aqui</a> e
 prossiga com a instalação.</p>
 </blockquote>
-<p>Dependendo da atualização do seu sistema operacional (Windows, Linux,
-Solaris, etc), a instalação do <em>JAVA</em> pode se tornar um pouco chata. Se
-você usar <em>Windows</em>, acredito que em condições normais você não terá
-maiores problemas. Pois basta acessar o
+<p>Dependendo de qual é o seu sistema operacional (Windows, Linux, Solaris,
+etc) a instalação do <em>JAVA</em> pode se tornar um pouco chata. Se você usar
+<em>Windows</em>, acredito que em condições normais você não terá maiores
+problemas. Pois basta acessar o
 <a href="http://www.java.com/pt_BR/download/manual.jsp">site</a> e seguir as
 instruções.</p>
 <p>Caso você use Linux (meu caso), há mais de uma opção para instalação do
 <em>JAVA</em>, o que pode causar algumas confusões. Na tentativa de auxiliar na
 compreensão de como proceder a instalação do <em>JAVA</em>, resolvi escrever
 este post.</p>
-<h2 id="o-que-é-java">O que é JAVA?</h2>
+<h2 id="o-que--java">O que é JAVA?</h2>
 <p>Para deixar claro, vamos especificar quem é quem:</p>
 <ul>
 <li><strong>java script</strong>: é uma linguagem de programação mas é diferente de JAVA ;</li>

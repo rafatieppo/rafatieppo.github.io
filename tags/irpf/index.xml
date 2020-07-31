@@ -16,8 +16,9 @@
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/2020_04_25_javairpf/</guid>
-      <description>Introdução Para fazer sua declararação de imposto de renda, além de precisar de toda a documentação, uma das etapas é a instalação do programa IRPF. Antes de realizar a instalação em sim, é necessário fazer o download do programa IRPF, e na página da receita, abaixo do link de download há uma mensagem com o seguinte aviso ao usuário:
- ATENÇÃO! Caso necessário, atualize a versão JAVA neste computador. Por favor, clique aqui e prossiga com a instalação.</description>
+      <description>Introdução Para fazer declararação de imposto de renda vc necessita reunir a documentação e instalar o programa IRPF. Para obter arquivo de instalação basta acessar a página da receita. O detalhe é que abaixo do link de download há uma mensagem com o seguinte aviso ao usuário:
+ ATENÇÃO! Caso necessário, atualize a versão JAVA neste computador. Por favor, clique aqui e prossiga com a instalação.
+ Dependendo de qual é o seu sistema operacional (Windows, Linux, Solaris, etc) a instalação do JAVA pode se tornar um pouco chata.</description>
     </item>
     
   </channel>

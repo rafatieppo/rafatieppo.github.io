@@ -11,7 +11,7 @@
 <meta property='og:site_name' content='Rafael Tieppo'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='linux'><meta property='article:tag' content='Debian'><meta property='article:tag' content='Nvidia'><meta property='article:tag' content='Intel'><meta property='article:published_time' content='2020-05-25T00:00:00Z'/><meta property='article:modified_time' content='2020-05-25T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.71.0" />
+<meta name="generator" content="Hugo 0.61.0" />
 
   <title>Debian buster vs GPU hybrid card • Rafael Tieppo</title>
   <link rel='canonical' href='/post/2020_05_25_debian_nvidia/'>
@@ -438,7 +438,7 @@ execute the above installed nvidia-detect command: <code>nvidia-detect</code></l
 <p>Another attempt was <code>xrandr</code>, <strong>IT WORKS!</strong>.</p>
 <ol>
 <li>Ensure xrandr is installed and available: <code>apt-get install x11-xserver-utils</code></li>
-<li>Modify or create (if one doesn&rsquo;t exist) an <code>xorg.conf</code> under
+<li>Modify or create (if one doesn't exist) an <code>xorg.conf</code> under
 <code>/etc/X11/xorg.conf</code>; add the following:</li>
 </ol>
 <pre><code>Section &quot;Module&quot;
@@ -476,7 +476,7 @@ xrandr --dpi 96
 display setup. In my case was <strong>LightDM</strong>.</p>
 </li>
 <li>
-<p>Modify lightdm&rsquo;s configuration and add (if one doesn&rsquo;t already exist)
+<p>Modify lightdm's configuration and add (if one doesn't already exist)
 a SeatDefaults section &amp; script config. For Debian, lightdm config file
 is in <code>/etc/lightdm/lightdm.conf</code></p>
 </li>

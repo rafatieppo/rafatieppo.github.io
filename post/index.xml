@@ -25,8 +25,9 @@
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/2020_04_25_javairpf/</guid>
-      <description>Introdução Para fazer sua declararação de imposto de renda, além de precisar de toda a documentação, uma das etapas é a instalação do programa IRPF. Antes de realizar a instalação em sim, é necessário fazer o download do programa IRPF, e na página da receita, abaixo do link de download há uma mensagem com o seguinte aviso ao usuário:
- ATENÇÃO! Caso necessário, atualize a versão JAVA neste computador. Por favor, clique aqui e prossiga com a instalação.</description>
+      <description>Introdução Para fazer declararação de imposto de renda vc necessita reunir a documentação e instalar o programa IRPF. Para obter arquivo de instalação basta acessar a página da receita. O detalhe é que abaixo do link de download há uma mensagem com o seguinte aviso ao usuário:
+ ATENÇÃO! Caso necessário, atualize a versão JAVA neste computador. Por favor, clique aqui e prossiga com a instalação.
+ Dependendo de qual é o seu sistema operacional (Windows, Linux, Solaris, etc) a instalação do JAVA pode se tornar um pouco chata.</description>
     </item>
     
     <item>
@@ -97,7 +98,7 @@ rt@rt-d5567:~/Documents/$ find -name &#39;*305*.TIF&#39; ./LO82280702018305CUB00
       
       <guid>/post/2018_11_26_barhistpy/</guid>
       <description>Introduction Some people make a small confusion with histogram and barplots. So in this post we intend to provide some points about both of them.
-Let&amp;rsquo;s supose that we have a sample from 200 persons, and we need to check the age distribution, so we can produce a histogram (Figure 1).
+Let&#39;s supose that we have a sample from 200 persons, and we need to check the age distribution, so we can produce a histogram (Figure 1).
 # creating data DF = pd.DataFrame({&amp;#34;A&amp;#34; : np.random.normal(30, 0.75, 200)}) # plot plt.figure(figsize=(8, 5)) plt.hist(DF[&amp;#34;A&amp;#34;], bins = 10, color=&amp;#39;steelblue&amp;#39;, alpha = 0.</description>
     </item>
     
