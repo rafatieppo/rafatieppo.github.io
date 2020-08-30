@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>datascience on Rafael Tieppo</title>
+    <link>/tags/datascience/</link>
+    <description>Recent content in datascience on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 21 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/datascience/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PCA analysis and tidy data</title>
+      <link>/post/2020_03_21_tidypca/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020_03_21_tidypca/</guid>
+      <description>Introduction PCA (principal components analysis) is multivariate statistical method that concerned with examination of several variables simultaneously. The idea is provide a dimensionality reduction of data sets, finding the most representative variables to explain some phenomenon. Thus the PCA analyses inter-relation among variables and explains them by its inherent dimensions (components). If there is NO correlation among the variables, PCA analysis will not be useful.
+This post is divided in two section.</description>
+    </item>
+    
+    <item>
+      <title>Filtering objects from a workdir</title>
+      <link>/post/2019_07_08_filterobje/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019_07_08_filterobje/</guid>
+      <description>Introduction Usually, if you work with in data science field, you need to create several objects, like list, DataFrame, matrix, etc. Besides, you have to handle some files to read and make copies. For that and other actions, sometime you have to select some objects from your workdir.
+The goal in this post is to show some options about how to filter objects from your workdir.
+Listing and Filtering your objects There are several options to list the objects from a workdir.</description>
+    </item>
+    
+    <item>
+      <title>lucyLattes um script para manipular dados da plataforma Lattes</title>
+      <link>/post/2019_03_13_lucylattes/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019_03_13_lucylattes/</guid>
+      <description>Introdução Historicamente o CNPq gerencia uma base dados sobre pesquisadores em C&amp;amp;T para diversos fins, cita-se como exemplo a avaliação de programas de pós-graduação, seleção de bolsas para pesquisadores, entre outros. Esta base dados é denominada Plataforma Lattes.
+Devido esta referida plataforma ser amplamente utilizada, tornou-se padrão em universidades, órgãos de pesquisa, etc. Nesta plataforma é possível encontrar desde a formação acadêmica do profissional, as empresas que trabalhou, até sua produção científica, e artística, etc.</description>
+    </item>
+    
+    <item>
+      <title>Python beginner tips</title>
+      <link>/post/2018_12_16_pythontips/</link>
+      <pubDate>Sun, 16 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018_12_16_pythontips/</guid>
+      <description>Introduction I spent around 4 years working with R, and I can say that R is amazing. However, I decided to start a new stage in my professional life, and a need came, a multi proposal language. My option was Python, because It provides have data science tools, and has a huge support for others applications.
+After some months, studying in my free time, I would like to share some code that I learned (from several sources).</description>
+    </item>
+    
+    <item>
+      <title>Lendo e armazenando uma série de arquivos</title>
+      <link>/post/170514_reading_files/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/170514_reading_files/</guid>
+      <description>Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.
+Estudo de caso I Vamos supor que você tenha uma série de arquivos no formato .</description>
+    </item>
+    
+  </channel>
+</rss>

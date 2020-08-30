@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dataframe on Rafael Tieppo</title>
+    <link>/tags/dataframe/</link>
+    <description>Recent content in dataframe on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 10 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/dataframe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Converter lista com data.frame(s) em um data.frame</title>
+      <link>/post/170510_bind_rows/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/170510_bind_rows/</guid>
+      <description>Introdução Trabalhando com banco de dados, em algum momento torna-se necessária a extração de determininados elementos que satisfaçam um dada condição. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.
+Estudo de caso Vamos supor que você tenha um data.frame com três tratamentos e quatro repetições
+DF &amp;lt;- data.frame(BLOCO = rep(seq(1,4), each = 12), TRAT=rep(c(&amp;quot;T1&amp;quot;, &amp;quot;T2&amp;quot;, &amp;quot;T3&amp;quot;), each = 4), REP = seq(1,4), Z = rnorm(48, 30, 2.</description>
+    </item>
+    
+  </channel>
+</rss>

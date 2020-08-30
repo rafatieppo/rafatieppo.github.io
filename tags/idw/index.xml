@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>idw on Rafael Tieppo</title>
+    <link>/tags/idw/</link>
+    <description>Recent content in idw on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 27 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/idw/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Inverse Distance Weighting (IDW) Interpolation</title>
+      <link>/post/2018_07_27_idw2pyr/</link>
+      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018_07_27_idw2pyr/</guid>
+      <description>Introduction If you want to predict the amount of rainfall, yield crops, or other attribute , you may need to learn about the interpolation methods like inverse distance weighted (IDW).
+IDW is a deterministic method for interpolation, once you have a set of know points, you can use IDW to estimate values for unknown points. For instance, you have 6 know points with rainfall attribute, and you need to predict the rainfall for a 7th point (Figure 1).</description>
+    </item>
+    
+  </channel>
+</rss>

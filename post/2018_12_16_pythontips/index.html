@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Introduction I spent around 4 years working with R, and I can say that R is amazing. However, I decided to start a new stage in my professional life, and a need came, a multi proposal language. My option was Python, because It provides have data science tools, and has a huge support for others applications.
+After some months, studying in my free time, I would like to share some code that I learned (from several sources).'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Python beginner tips • Rafael Tieppo'>
+<meta property='og:description' content='Introduction I spent around 4 years working with R, and I can say that R is amazing. However, I decided to start a new stage in my professional life, and a need came, a multi proposal language. My option was Python, because It provides have data science tools, and has a huge support for others applications.
+After some months, studying in my free time, I would like to share some code that I learned (from several sources).'>
+<meta property='og:url' content='/post/2018_12_16_pythontips/'>
+<meta property='og:site_name' content='Rafael Tieppo'>
+<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='python'><meta property='article:tag' content='tips'><meta property='article:tag' content='datascience'><meta property='article:published_time' content='2018-12-16T00:00:00Z'/><meta property='article:modified_time' content='2018-12-16T00:00:00Z'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.72.0" />
+
+  <title>Python beginner tips • Rafael Tieppo</title>
+  <link rel='canonical' href='/post/2018_12_16_pythontips/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-33432733-8', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+
+
+<body class='page type-blog has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo_rt.svg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      Rafael Tieppo
+      </a>
+    </h2>
+    <div class='desc'>
+    Agricultural Engineering, Emacs user, and improving as Data Scientist, works with Python and R
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/rafatieppo' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="fab fa-github"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/rafatieppo' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="fab fa-twitter"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:rafaeltieppo@yahoo.com.br' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="far fa-envelope"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/rafaeltieppo' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="fab fa-linkedin-in"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://scholar.google.com/citations?user=ClN1Q6AAAAAJ' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Google_scholar account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21.328 2.002v9.2M8.695 7.85c.014-.787-.11-2.236.28-2.89.623-1.045.856-1.39 1.797-1.989 1.953-.988 4.296.692 4.296.692.803.564 1.672 2.1 1.672 2.1l1.368-1.824-5.444-1.754-3.515 1.34L6.08 7.681m9.109 3.42s.65-.633 1.168-1.085c.461-.402.516-.714.6-.914.18-.426.268-.909.268-1.446 0-.7-.131-1.274-.388-1.735-.031-.053 0 0-.097-.157l4.588-3.762H10.32L3.672 7.85l5.023-.024c.23 1.237.619 1.575 1.019 2.222.744.719 1.13 1.194 2.215 1.194.254 0 2.6-.057 2.842-.09 0 0 .546 1.199-.133 1.71-.41.31.576 1.304.576 1.304s-5.577.831-6.523 1.427a4.13 4.13 0 0 0-1.306 1.277 3.034 3.034 0 0 0-.493 1.665c0 .502.106.955.32 1.357.214.403.493.733.84.99.345.258.744.473 1.194.649.45.174.896.297 1.342.367a8.348 8.348 0 0 0 3.41-.166 7.754 7.754 0 0 0 1.964-.807 4.28 4.28 0 0 0 1.49-1.443c.38-.609.57-1.292.57-2.049 0-.574-.116-1.096-.347-1.57a3.755 3.755 0 0 0-.847-1.164c-.335-.302-2.19-1.837-2.19-1.837"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://www.researchgate.net/profile/rafael_tieppo' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Researchgate account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="fab fa-researchgate"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='http://orcid.org/0000-0001-8132-4813' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Orcid account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="ai ai-orcid-square ai-1x"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://www.stackoverflow.com/users/3109019/rafa' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Stackoverflow account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="fab fa-stack-overflow"></i>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/agricultura-de-precis%C3%A3o/' style='font-size:1em'>agricultura de precisão</a>
+      </li><li>
+        <a href='/tags/agriculture/' style='font-size:1em'>agriculture</a>
+      </li><li>
+        <a href='/tags/android/' style='font-size:1em'>android</a>
+      </li><li>
+        <a href='/tags/avell/' style='font-size:1em'>avell</a>
+      </li><li>
+        <a href='/tags/calendar/' style='font-size:1em'>calendar</a>
+      </li><li>
+        <a href='/tags/column-view/' style='font-size:1em'>column-view</a>
+      </li><li>
+        <a href='/tags/cost/' style='font-size:1em'>cost</a>
+      </li><li>
+        <a href='/tags/csv/' style='font-size:1.1111111111111112em'>csv</a>
+      </li><li>
+        <a href='/tags/dados-clim%C3%A1ticos/' style='font-size:1em'>dados climáticos</a>
+      </li><li>
+        <a href='/tags/data-mining/' style='font-size:1em'>data mining</a>
+      </li><li>
+        <a href='/tags/dataframe/' style='font-size:1em'>dataframe</a>
+      </li><li>
+        <a href='/tags/datascience/' style='font-size:1.4444444444444444em'>datascience</a>
+      </li><li>
+        <a href='/tags/datetime/' style='font-size:1em'>datetime</a>
+      </li><li>
+        <a href='/tags/debian/' style='font-size:1em'>Debian</a>
+      </li><li>
+        <a href='/tags/digital-agriculture/' style='font-size:1em'>digital agriculture</a>
+      </li><li>
+        <a href='/tags/distros/' style='font-size:1em'>distros</a>
+      </li><li>
+        <a href='/tags/emacs/' style='font-size:1.1111111111111112em'>emacs</a>
+      </li><li>
+        <a href='/tags/ensino/' style='font-size:1em'>ensino</a>
+      </li><li>
+        <a href='/tags/excel/' style='font-size:1.2222222222222223em'>excel</a>
+      </li><li>
+        <a href='/tags/filter/' style='font-size:1em'>filter</a>
+      </li><li>
+        <a href='/tags/frequency/' style='font-size:1em'>frequency</a>
+      </li><li>
+        <a href='/tags/gis/' style='font-size:1em'>GIS</a>
+      </li><li>
+        <a href='/tags/google/' style='font-size:1em'>google</a>
+      </li><li>
+        <a href='/tags/grass/' style='font-size:1em'>grass</a>
+      </li><li>
+        <a href='/tags/idw/' style='font-size:1em'>idw</a>
+      </li><li>
+        <a href='/tags/idw2/' style='font-size:1em'>idw2</a>
+      </li><li>
+        <a href='/tags/inmet/' style='font-size:1em'>inmet</a>
+      </li><li>
+        <a href='/tags/intel/' style='font-size:1em'>Intel</a>
+      </li><li>
+        <a href='/tags/irpf/' style='font-size:1em'>irpf</a>
+      </li><li>
+        <a href='/tags/java/' style='font-size:1em'>java</a>
+      </li><li>
+        <a href='/tags/lattes/' style='font-size:1.1111111111111112em'>Lattes</a>
+      </li><li>
+        <a href='/tags/linux/' style='font-size:1.3333333333333333em'>linux</a>
+      </li><li>
+        <a href='/tags/list/' style='font-size:1em'>list</a>
+      </li><li>
+        <a href='/tags/lucylattes/' style='font-size:1em'>lucyLattes</a>
+      </li><li>
+        <a href='/tags/machinery/' style='font-size:1em'>machinery</a>
+      </li><li>
+        <a href='/tags/mapa-de-produtividade/' style='font-size:1em'>mapa de produtividade</a>
+      </li><li>
+        <a href='/tags/matplotlib/' style='font-size:1em'>matplotlib</a>
+      </li><li>
+        <a href='/tags/meteorologia/' style='font-size:1em'>meteorologia</a>
+      </li><li>
+        <a href='/tags/meteorology/' style='font-size:1em'>meteorology</a>
+      </li><li>
+        <a href='/tags/mineira%C3%A7%C3%A3o/' style='font-size:1em'>mineiração</a>
+      </li><li>
+        <a href='/tags/nvidia/' style='font-size:1em'>Nvidia</a>
+      </li><li>
+        <a href='/tags/open-source/' style='font-size:1em'>open source</a>
+      </li><li>
+        <a href='/tags/org-cal/' style='font-size:1em'>org-cal</a>
+      </li><li>
+        <a href='/tags/org-mode/' style='font-size:1em'>org-mode</a>
+      </li><li>
+        <a href='/tags/pca/' style='font-size:1em'>pca</a>
+      </li><li>
+        <a href='/tags/planning/' style='font-size:1em'>planning</a>
+      </li><li>
+        <a href='/tags/popos/' style='font-size:1em'>PopOS</a>
+      </li><li>
+        <a href='/tags/python/' style='font-size:2em'>python</a>
+      </li><li>
+        <a href='/tags/qgis/' style='font-size:1em'>QGIS</a>
+      </li><li>
+        <a href='/tags/r/' style='font-size:1.4444444444444444em'>R</a>
+      </li><li>
+        <a href='/tags/remote-sensing/' style='font-size:1em'>remote sensing</a>
+      </li><li>
+        <a href='/tags/scraping/' style='font-size:1em'>scraping</a>
+      </li><li>
+        <a href='/tags/seaborn/' style='font-size:1em'>seaborn</a>
+      </li><li>
+        <a href='/tags/simplex/' style='font-size:1em'>simplex</a>
+      </li><li>
+        <a href='/tags/spraying/' style='font-size:1em'>spraying</a>
+      </li><li>
+        <a href='/tags/stats/' style='font-size:1em'>stats</a>
+      </li><li>
+        <a href='/tags/tidy/' style='font-size:1em'>tidy</a>
+      </li><li>
+        <a href='/tags/tips/' style='font-size:1em'>tips</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/teaching/'>Teaching</a>
+      </li><li class='item'>
+        <a href='/post/'>Blog</a>
+      </li><li class='item'>
+        <a href='/portfolio/'>Portfolio</a>
+      </li><li class='item'>
+        <a href='/about/'>About</a>
+      </li></ul>
+  </div>
+</nav>
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Python beginner tips</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-12-16T00:00:00Z'>2018, Dec 16</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+4 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#getting-values-from-dictionary">Getting values from dictionary</a></li>
+    <li><a href="#conditional">Conditional</a></li>
+    <li><a href="#loop">Loop</a></li>
+    <li><a href="#functions-in-one-line">Functions in one line</a></li>
+  </ul>
+</nav>
+</details>
+
+
+  <div class='container entry-content'>
+  <h2 id="introduction">Introduction</h2>
+<p>I spent around 4 years working with R, and I can say that R is
+amazing. However, I decided to start a new stage in my professional
+life, and a need came, a multi proposal language. My option was
+<strong>Python</strong>, because It provides have data science tools, and has a huge support
+for others applications.</p>
+<p>After some months, studying in my free time, I would like to share some
+code that I learned (from several sources). Moreover, to write a blog is
+a way to improve my learning.</p>
+<h2 id="getting-values-from-dictionary">Getting values from dictionary</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> dic <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Mary&#39;</span>: <span style="color:#e6db74">&#39;1235&#39;</span>}
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">try</span>:
+        V <span style="color:#f92672">=</span> dic[<span style="color:#e6db74">&#39;some&#39;</span>]
+    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyError</span>:
+        V <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;error&#39;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> V
+<span style="color:#e6db74">&#39;error&#39;</span>
+</code></pre></div><p>Instead, You can try it</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> V <span style="color:#f92672">=</span> dic<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Mary&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> V
+<span style="color:#e6db74">&#39;1235&#39;</span>
+</code></pre></div><p>Or for a second parameter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> V <span style="color:#f92672">=</span> dic<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;some&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">99</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> V
+<span style="color:#f92672">-</span><span style="color:#ae81ff">99</span>
+</code></pre></div><h2 id="conditional">Conditional</h2>
+<p><strong>For some values</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a, b, c, d <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> a <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> b <span style="color:#f92672">==</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">and</span> c <span style="color:#f92672">==</span> <span style="color:#ae81ff">30</span> <span style="color:#f92672">and</span> d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>:
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;all True!&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> all True<span style="color:#960050;background-color:#1e0010">!</span>
+
+</code></pre></div><p>We can simplify, let&rsquo;s try:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> cond1 <span style="color:#f92672">=</span> [a <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>,
+             b <span style="color:#f92672">==</span> <span style="color:#ae81ff">20</span>,
+             c <span style="color:#f92672">==</span> <span style="color:#ae81ff">30</span>,
+             d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>]
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> all(cond1):
+       <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;All is true&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> All <span style="color:#f92672">is</span> true
+
+<span style="color:#75715e"># if we change the conditions</span>
+
+cond2 <span style="color:#f92672">=</span> [
+    a <span style="color:#f92672">==</span> <span style="color:#ae81ff">910</span>,
+    b <span style="color:#f92672">==</span> <span style="color:#ae81ff">920</span>,
+    c <span style="color:#f92672">==</span> <span style="color:#ae81ff">930</span>,
+    d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>]
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> any(cond2):
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;one is true at least&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> one <span style="color:#f92672">is</span> true at least
+
+</code></pre></div><p>A more complex example. For instance you have cars sells, for 3 sellers
+in 3 months. You would like to know for <em>March</em> what seller achieved the
+goal. The goal is more than 3 cars in march and a profit greater than
+0.25.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#75715e"># import packs</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#75715e"># data frame</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> DF <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;MONTH&#34;</span>: np<span style="color:#f92672">.</span>repeat([<span style="color:#e6db74">&#39;Jan&#39;</span>, <span style="color:#e6db74">&#39;Fev&#39;</span>, <span style="color:#e6db74">&#39;Mar&#39;</span>], <span style="color:#ae81ff">3</span>),
+        <span style="color:#e6db74">&#34;SELLER&#34;</span>: np<span style="color:#f92672">.</span>tile([<span style="color:#e6db74">&#39;Max&#39;</span>, <span style="color:#e6db74">&#39;Ted&#39;</span>, <span style="color:#e6db74">&#39;Saul&#39;</span>], <span style="color:#ae81ff">3</span>),
+        <span style="color:#e6db74">&#34;CARSOLD&#34;</span>: [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>],
+        <span style="color:#e6db74">&#34;PROFIT&#34;</span>: [<span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.4</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.1</span>, <span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.3</span>]})
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> DF
+  MONTH SELLER  CARSOLD  PROFIT
+<span style="color:#ae81ff">0</span>   Jan    Max        <span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">0.30</span>
+<span style="color:#ae81ff">1</span>   Jan    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>
+<span style="color:#ae81ff">2</span>   Jan   Saul        <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">0.20</span>
+<span style="color:#ae81ff">3</span>   Fev    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.40</span>
+<span style="color:#ae81ff">4</span>   Fev    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>
+<span style="color:#ae81ff">5</span>   Fev   Saul        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.10</span>
+<span style="color:#ae81ff">6</span>   Mar    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.25</span>
+<span style="color:#ae81ff">7</span>   Mar    Ted        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>
+<span style="color:#ae81ff">8</span>   Mar   Saul        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>
+
+<span style="color:#75715e"># numpy can help us </span>
+<span style="color:#75715e"># condition</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> cond3 <span style="color:#f92672">=</span> [
+    (DF[<span style="color:#e6db74">&#39;MONTH&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Mar&#39;</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;PROFIT&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0.25</span>),
+    (DF[<span style="color:#e6db74">&#39;MONTH&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Mar&#39;</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;PROFIT&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.25</span>)
+    ]
+<span style="color:#f92672">&gt;&gt;&gt;</span> choices <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;reward&#39;</span>, <span style="color:#e6db74">&#39;regular&#39;</span>]
+<span style="color:#75715e"># running, note that np.select provide a standard value &#39;nomatch&#39; </span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> DF[<span style="color:#e6db74">&#39;RESULT&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>select(cond3, choices, <span style="color:#e6db74">&#39;nomatch&#39;</span>)
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> DF
+  MONTH SELLER  CARSOLD  PROFIT   RESULT
+<span style="color:#ae81ff">0</span>   Jan    Max        <span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">0.30</span>  nomatch
+<span style="color:#ae81ff">1</span>   Jan    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>  nomatch
+<span style="color:#ae81ff">2</span>   Jan   Saul        <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">0.20</span>  nomatch
+<span style="color:#ae81ff">3</span>   Fev    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.40</span>  nomatch
+<span style="color:#ae81ff">4</span>   Fev    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>  nomatch
+<span style="color:#ae81ff">5</span>   Fev   Saul        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.10</span>  nomatch
+<span style="color:#ae81ff">6</span>   Mar    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.25</span>  nomatch
+<span style="color:#ae81ff">7</span>   Mar    Ted        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>   reward
+<span style="color:#ae81ff">8</span>   Mar   Saul        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>   reward
+
+</code></pre></div><h2 id="loop">Loop</h2>
+<p>Usually:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+
+<span style="color:#75715e"># a math operation</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> l1_new <span style="color:#f92672">=</span> []
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> l1:
+        l1_new<span style="color:#f92672">.</span>append(x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> l1_new
+[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+</code></pre></div><p>All in one line:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l1_new  <span style="color:#f92672">=</span> [x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> l1]
+<span style="color:#f92672">&gt;&gt;&gt;</span> l1_new
+[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+</code></pre></div><h2 id="functions-in-one-line">Functions in one line</h2>
+<p>When We need to replace a value in a list, we can use several tools, but
+now, We want use a function. If We have a list with some letters, and We
+need to replace by numbers:</p>
+<ul>
+<li>x = 0</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l2 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
+
+<span style="color:#75715e"># function</span>
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">replace_value</span>(alist):
+        new_list <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> alist:
+            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span>:
+                new_list<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0</span>)
+            <span style="color:#66d9ef">else</span>:
+                new_list<span style="color:#f92672">.</span>append(i)
+        <span style="color:#66d9ef">return</span>(new_list)
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> replace_value(l2)
+[<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
+
+</code></pre></div><p>We can decrease the code size:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#75715e"># function</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">replace_v</span>(i):
+        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">return</span> i
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> l2_new <span style="color:#f92672">=</span> []
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> l2:
+        l2_new<span style="color:#f92672">.</span>append(replace_v(i))
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> l2_new
+[<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
+</code></pre></div><p>A little bit smaller:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># function</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> repl <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> i: <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#66d9ef">else</span> i
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> l2_new <span style="color:#f92672">=</span> []
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> l2:
+        l2_new<span style="color:#f92672">.</span>append(repl(i))
+<span style="color:#f92672">&gt;&gt;&gt;</span> l2_new
+[<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
+</code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>Python provides several ways to do the same thing. In my opinion, at the begin, you should not worry about
+the size of your code. First of all, your code must work correctly,
+after that you can think about processing speed, and for last one
+action, you can think about the size of your code.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/datascience/'>datascience</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/python/'>python</a>, <a class='tag' href='/tags/tips/'>tips</a>, <a class='tag' href='/tags/datascience/'>datascience</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/2018_12_01_juliandate/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Julian date with python 3</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/post/2019_03_13_lucylattes/'>
+        <span class='screen-reader-text'>Next post: </span>lucyLattes um script para manipular dados da plataforma Lattes<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-rafatieppo-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  </div>
+</section>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p> &copy; 2016-2020 Rafael Tieppo 
+Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://themes.gohugo.io//theme/minimo/">Minimo</a></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

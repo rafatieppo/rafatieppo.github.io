@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>avell on Rafael Tieppo</title>
+    <link>/tags/avell/</link>
+    <description>Recent content in avell on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 12 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/avell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Minha experiência com Avell e Linux</title>
+      <link>/post/2019_12_12_avelllinux/</link>
+      <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019_12_12_avelllinux/</guid>
+      <description>Introdução Usualmente antes de comprar um novo laptop eu pesquiso, pois nos dias de hoje há muitas opções e variações de preços. Todavia, como toda regra tem exceção, uma promoção de black friday colaborou para uma tomada de decisão em que o impulso venceu a razão.
+Para ir direto ao assunto, adquiri um laptop da Avell, e como uso linux, apesar de no momento da compra ter verificado a compatibilidade da placa de vídeo, algumas surpresas surgiram (detalhes do laptop aqui).</description>
+    </item>
+    
+  </channel>
+</rss>

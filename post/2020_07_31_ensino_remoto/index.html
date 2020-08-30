@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Contextualização Como é de conhecimento de tod@s, a pandemia (COVID-19) promoveu mudanças em aspectos sociais, econômicos, ambientais do nosso cotidiano. As referidas mudanças não foram gradativas, mas sim de modo abrupto, fazendo com que vários setores se adaptassem à situação.
+Na educação não foi diferente. Passamos mais de um ano discutindo sobre as vantagens e desvantagens do ensino remoto ou à distância (EAD), e de repente, do dia para noite, tivemos que suspender o ensino presencial e adotar o EAD.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Ensino remoto e tecnologia • Rafael Tieppo'>
+<meta property='og:description' content='Contextualização Como é de conhecimento de tod@s, a pandemia (COVID-19) promoveu mudanças em aspectos sociais, econômicos, ambientais do nosso cotidiano. As referidas mudanças não foram gradativas, mas sim de modo abrupto, fazendo com que vários setores se adaptassem à situação.
+Na educação não foi diferente. Passamos mais de um ano discutindo sobre as vantagens e desvantagens do ensino remoto ou à distância (EAD), e de repente, do dia para noite, tivemos que suspender o ensino presencial e adotar o EAD.'>
+<meta property='og:url' content='/post/2020_07_31_ensino_remoto/'>
+<meta property='og:site_name' content='Rafael Tieppo'>
+<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='linux'><meta property='article:tag' content='open source'><meta property='article:tag' content='ensino'><meta property='article:published_time' content='2020-08-01T00:00:00Z'/><meta property='article:modified_time' content='2020-08-01T00:00:00Z'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.72.0" />
+
+  <title>Ensino remoto e tecnologia • Rafael Tieppo</title>
+  <link rel='canonical' href='/post/2020_07_31_ensino_remoto/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-33432733-8', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+
+
+<body class='page type-blog has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo_rt.svg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      Rafael Tieppo
+      </a>
+    </h2>
+    <div class='desc'>
+    Agricultural Engineering, Emacs user, and improving as Data Scientist, works with Python and R
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/rafatieppo' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="fab fa-github"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/rafatieppo' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="fab fa-twitter"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:rafaeltieppo@yahoo.com.br' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="far fa-envelope"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/rafaeltieppo' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="fab fa-linkedin-in"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://scholar.google.com/citations?user=ClN1Q6AAAAAJ' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Google_scholar account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21.328 2.002v9.2M8.695 7.85c.014-.787-.11-2.236.28-2.89.623-1.045.856-1.39 1.797-1.989 1.953-.988 4.296.692 4.296.692.803.564 1.672 2.1 1.672 2.1l1.368-1.824-5.444-1.754-3.515 1.34L6.08 7.681m9.109 3.42s.65-.633 1.168-1.085c.461-.402.516-.714.6-.914.18-.426.268-.909.268-1.446 0-.7-.131-1.274-.388-1.735-.031-.053 0 0-.097-.157l4.588-3.762H10.32L3.672 7.85l5.023-.024c.23 1.237.619 1.575 1.019 2.222.744.719 1.13 1.194 2.215 1.194.254 0 2.6-.057 2.842-.09 0 0 .546 1.199-.133 1.71-.41.31.576 1.304.576 1.304s-5.577.831-6.523 1.427a4.13 4.13 0 0 0-1.306 1.277 3.034 3.034 0 0 0-.493 1.665c0 .502.106.955.32 1.357.214.403.493.733.84.99.345.258.744.473 1.194.649.45.174.896.297 1.342.367a8.348 8.348 0 0 0 3.41-.166 7.754 7.754 0 0 0 1.964-.807 4.28 4.28 0 0 0 1.49-1.443c.38-.609.57-1.292.57-2.049 0-.574-.116-1.096-.347-1.57a3.755 3.755 0 0 0-.847-1.164c-.335-.302-2.19-1.837-2.19-1.837"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://www.researchgate.net/profile/rafael_tieppo' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Researchgate account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="fab fa-researchgate"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='http://orcid.org/0000-0001-8132-4813' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Orcid account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="ai ai-orcid-square ai-1x"></i>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://www.stackoverflow.com/users/3109019/rafa' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Stackoverflow account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+<i class="fab fa-stack-overflow"></i>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/agricultura-de-precis%C3%A3o/' style='font-size:1em'>agricultura de precisão</a>
+      </li><li>
+        <a href='/tags/agriculture/' style='font-size:1em'>agriculture</a>
+      </li><li>
+        <a href='/tags/android/' style='font-size:1em'>android</a>
+      </li><li>
+        <a href='/tags/avell/' style='font-size:1em'>avell</a>
+      </li><li>
+        <a href='/tags/calendar/' style='font-size:1em'>calendar</a>
+      </li><li>
+        <a href='/tags/column-view/' style='font-size:1em'>column-view</a>
+      </li><li>
+        <a href='/tags/cost/' style='font-size:1em'>cost</a>
+      </li><li>
+        <a href='/tags/csv/' style='font-size:1.1111111111111112em'>csv</a>
+      </li><li>
+        <a href='/tags/dados-clim%C3%A1ticos/' style='font-size:1em'>dados climáticos</a>
+      </li><li>
+        <a href='/tags/data-mining/' style='font-size:1em'>data mining</a>
+      </li><li>
+        <a href='/tags/dataframe/' style='font-size:1em'>dataframe</a>
+      </li><li>
+        <a href='/tags/datascience/' style='font-size:1.4444444444444444em'>datascience</a>
+      </li><li>
+        <a href='/tags/datetime/' style='font-size:1em'>datetime</a>
+      </li><li>
+        <a href='/tags/debian/' style='font-size:1em'>Debian</a>
+      </li><li>
+        <a href='/tags/digital-agriculture/' style='font-size:1em'>digital agriculture</a>
+      </li><li>
+        <a href='/tags/distros/' style='font-size:1em'>distros</a>
+      </li><li>
+        <a href='/tags/emacs/' style='font-size:1.1111111111111112em'>emacs</a>
+      </li><li>
+        <a href='/tags/ensino/' style='font-size:1em'>ensino</a>
+      </li><li>
+        <a href='/tags/excel/' style='font-size:1.2222222222222223em'>excel</a>
+      </li><li>
+        <a href='/tags/filter/' style='font-size:1em'>filter</a>
+      </li><li>
+        <a href='/tags/frequency/' style='font-size:1em'>frequency</a>
+      </li><li>
+        <a href='/tags/gis/' style='font-size:1em'>GIS</a>
+      </li><li>
+        <a href='/tags/google/' style='font-size:1em'>google</a>
+      </li><li>
+        <a href='/tags/grass/' style='font-size:1em'>grass</a>
+      </li><li>
+        <a href='/tags/idw/' style='font-size:1em'>idw</a>
+      </li><li>
+        <a href='/tags/idw2/' style='font-size:1em'>idw2</a>
+      </li><li>
+        <a href='/tags/inmet/' style='font-size:1em'>inmet</a>
+      </li><li>
+        <a href='/tags/intel/' style='font-size:1em'>Intel</a>
+      </li><li>
+        <a href='/tags/irpf/' style='font-size:1em'>irpf</a>
+      </li><li>
+        <a href='/tags/java/' style='font-size:1em'>java</a>
+      </li><li>
+        <a href='/tags/lattes/' style='font-size:1.1111111111111112em'>Lattes</a>
+      </li><li>
+        <a href='/tags/linux/' style='font-size:1.3333333333333333em'>linux</a>
+      </li><li>
+        <a href='/tags/list/' style='font-size:1em'>list</a>
+      </li><li>
+        <a href='/tags/lucylattes/' style='font-size:1em'>lucyLattes</a>
+      </li><li>
+        <a href='/tags/machinery/' style='font-size:1em'>machinery</a>
+      </li><li>
+        <a href='/tags/mapa-de-produtividade/' style='font-size:1em'>mapa de produtividade</a>
+      </li><li>
+        <a href='/tags/matplotlib/' style='font-size:1em'>matplotlib</a>
+      </li><li>
+        <a href='/tags/meteorologia/' style='font-size:1em'>meteorologia</a>
+      </li><li>
+        <a href='/tags/meteorology/' style='font-size:1em'>meteorology</a>
+      </li><li>
+        <a href='/tags/mineira%C3%A7%C3%A3o/' style='font-size:1em'>mineiração</a>
+      </li><li>
+        <a href='/tags/nvidia/' style='font-size:1em'>Nvidia</a>
+      </li><li>
+        <a href='/tags/open-source/' style='font-size:1em'>open source</a>
+      </li><li>
+        <a href='/tags/org-cal/' style='font-size:1em'>org-cal</a>
+      </li><li>
+        <a href='/tags/org-mode/' style='font-size:1em'>org-mode</a>
+      </li><li>
+        <a href='/tags/pca/' style='font-size:1em'>pca</a>
+      </li><li>
+        <a href='/tags/planning/' style='font-size:1em'>planning</a>
+      </li><li>
+        <a href='/tags/popos/' style='font-size:1em'>PopOS</a>
+      </li><li>
+        <a href='/tags/python/' style='font-size:2em'>python</a>
+      </li><li>
+        <a href='/tags/qgis/' style='font-size:1em'>QGIS</a>
+      </li><li>
+        <a href='/tags/r/' style='font-size:1.4444444444444444em'>R</a>
+      </li><li>
+        <a href='/tags/remote-sensing/' style='font-size:1em'>remote sensing</a>
+      </li><li>
+        <a href='/tags/scraping/' style='font-size:1em'>scraping</a>
+      </li><li>
+        <a href='/tags/seaborn/' style='font-size:1em'>seaborn</a>
+      </li><li>
+        <a href='/tags/simplex/' style='font-size:1em'>simplex</a>
+      </li><li>
+        <a href='/tags/spraying/' style='font-size:1em'>spraying</a>
+      </li><li>
+        <a href='/tags/stats/' style='font-size:1em'>stats</a>
+      </li><li>
+        <a href='/tags/tidy/' style='font-size:1em'>tidy</a>
+      </li><li>
+        <a href='/tags/tips/' style='font-size:1em'>tips</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/teaching/'>Teaching</a>
+      </li><li class='item'>
+        <a href='/post/'>Blog</a>
+      </li><li class='item'>
+        <a href='/portfolio/'>Portfolio</a>
+      </li><li class='item'>
+        <a href='/about/'>About</a>
+      </li></ul>
+  </div>
+</nav>
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Ensino remoto e tecnologia</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2020-08-01T00:00:00Z'>2020, Aug 01</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+6 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#contextualização">Contextualização</a></li>
+    <li><a href="#preparação-de-aulas">Preparação de aulas</a></li>
+    <li><a href="#resultados-e-melhorias">Resultados e melhorias</a></li>
+    <li><a href="#links-úteis">Links úteis</a></li>
+  </ul>
+</nav>
+</details>
+
+
+  <div class='container entry-content'>
+  <h2 id="contextualização">Contextualização</h2>
+<p>Como é de conhecimento de tod@s, a pandemia (COVID-19) promoveu mudanças
+em aspectos sociais, econômicos, ambientais do nosso cotidiano. As
+referidas mudanças não foram gradativas, mas sim de modo abrupto,
+fazendo com que vários setores se adaptassem à situação.</p>
+<p>Na educação não foi diferente. Passamos mais de um ano discutindo sobre
+as vantagens e desvantagens do ensino remoto ou à distância (EAD), e de
+repente, do dia para noite, tivemos que suspender o ensino presencial e
+adotar o EAD. Como adendo, o conceito de EAD e ensino remoto são
+distintos, mas durante o texto é usado o termo EAD por conveniência.</p>
+<p>Pelo exposto, decidi compartilhar minha experiência nesse novo desafio,
+ou adaptação. Como a teoria da evolução já constatou:</p>
+<blockquote>
+<p>Quem sobrevive não é o mais forte, mas sim aquele que melhor se adapta.</p>
+</blockquote>
+<p>Os tópicos abordados são:</p>
+<ol>
+<li>preparação de aulas</li>
+<li>resultados e melhorias</li>
+<li>reflexões</li>
+</ol>
+<h2 id="preparação-de-aulas">Preparação de aulas</h2>
+<p>Por mais que se tenha conhecimento sobre um determinado assunto, o modo
+de abordá-lo é diferente quando se trata do EAD. Especificamente em aulas
+assíncronas, o conteúdo deve ser apresentado de forma não prolixa, com
+definições objetivas e exemplos diretos. Estas ações minimizam a perda de
+interesse do aluno sobre conteúdo, e torna o vídeo mais dinâmico.</p>
+<p>O uso de imagens, gifs são de grande valia, pois prendem a atenção do
+expectador. Também há possibilidade de usar animações mais sofisticadas,
+porém demanda mais tempo para produção e conhecimento específico do
+professor.</p>
+<p>Uma sugestão para que o vídeo tenha mais fluidez é o uso de um roteiro,
+mesmo que seja simples. Dessa forma evita-se que o locutor desvie o
+assunto programado para aula.</p>
+<p>Para que o material fique com o mínimo de falhas possível, a edição do
+vídeo é um dos recursos que não pode faltar. Há diversos softwares
+disponíveis, mas listo apenas alguns que são utilizados na minha rotina:</p>
+<ul>
+<li>Software para Screencast (gravar tela)
+<ul>
+<li><a href="https://launchpad.net/kazam">Kazam</a></li>
+<li><a href="https://linuxecke.volkoh.de/vokoscreen/vokoscreen.html">Vokoscreen</a></li>
+</ul>
+</li>
+<li>Editor de Video (recortes, efeitos e renderização)
+<ul>
+<li><a href="https://kdenlive.org/en/">KDElive</a></li>
+<li><a href="https://www.blender.org/">Blender</a></li>
+</ul>
+</li>
+<li>Editor de áudio
+<ul>
+<li><a href="https://www.audacityteam.org/">Audacity</a></li>
+</ul>
+</li>
+</ul>
+<p>Configurações de vídeo:
+- Resolução: HD 720 x 1280 (19:1) ou HD 720 x 1080
+- frames: 30 fps
+- formato: mp4</p>
+<h2 id="resultados-e-melhorias">Resultados e melhorias</h2>
+<ul>
+<li>
+<p>Em relação à voz: no início do processo ouvir a voz não foi agradável,
+o que tornou o processo relativamente chato. Todavia, ouvir a sua
+própria fala e aceitar as falhas de dicção, no meu caso, foi útil para
+buscar correções e tentar ao longo do tempo melhorar o material produzido.</p>
+</li>
+<li>
+<p>Em relação ao processo de gravação: uma melhor dicção auxilia na
+redução de erros durante a gravação, pois há necessidade de acelerar a
+fala para tentar reduzir o tempo de duração do vídeo. Como técnica, em
+momentos em que ocorre erro, seja por palavras erradas, inversão de
+raciocínio, entre outros, torna-se interessante deixar intervalos
+com aproximadamente 8 segundos para facilitar os cortes de
+edição. Outra técnica para auxiliar na sincronização de áudio e vídeo
+(situações em que se grava áudio e vídeos em dispositivos distintos) é
+o uso de barulhos específicos, como palmas, assovios, etc.</p>
+</li>
+<li>
+<p>Síntese de conteúdo: como trata-se de vídeos que tem propósito o
+ensino, por mais que a explicação deva ser direta e sucinta, alguns
+conteúdos demandam mais tempo. Como solução, acredito que dividir o
+conteúdo em 2 ou mais vídeos é útil.</p>
+</li>
+</ul>
+<h2 id="links-úteis">Links úteis</h2>
+<p>Segue uma relação de material e seus respectivos links disponibilizados
+pela professora <a href="http://lattes.cnpq.br/7661737809414762">Patricia Behar</a>, UFRGS, durante a semana
+pedagógica 2020/03.</p>
+<h3>Produção de Vídeos</h3>
+<ul>
+    <li><a rel="noreferrer noopener noreferrer" href="https://www.screencastify.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.screencastify.com/&amp;source=gmail&amp;ust=1598710549791000&amp;usg=AFQjCNEKLa8p-1Q4gXQGE5Zxii2dpe3G9w">Screencastify</a>&nbsp;–
+        software on-line que possibilita a edição de vídeos</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://obsproject.com/pt-br" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://obsproject.com/pt-br&amp;source=gmail&amp;ust=1598710549791000&amp;usg=AFQjCNG18xrsvuhbHLRKvXWHcMt4jG45hQ">Open
+            Broadcaster Software (OBS)</a>&nbsp;– programa de <em>streaming </em>e
+        gravação</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://www.loom.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.loom.com/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNGq255Xbyg6fOj3c4EIN7HBjQhWlg">Loom</a>&nbsp;– software on-line que
+        possibilita&nbsp;gravar vídeos compartilhando a tela e mostrando a
+        imagem da webcam ao mesmo tempo</li>
+    <li>Tutorial sobre&nbsp;<a rel="noreferrer noopener noreferrer" href="http://www.ufrgs.br/sead/ensino-remoto/material-de-apoio/como-gravar-uma-apresentacao-com-narracao-no-power-point" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.ufrgs.br/sead/ensino-remoto/material-de-apoio/como-gravar-uma-apresentacao-com-narracao-no-power-point&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNEmU22YZqYBQGlRikDdr0FXjAyKWw">Como gravar uma apresentação com narração no
+            Power Point</a></li>
+    <li>Tutorial em vídeo sobre <a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=ILFyoZIXYvE&amp;t=35s" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DILFyoZIXYvE%26t%3D35s&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNGca_Rh81_UZvyDKV5Oh_YUaN0stQ">Produção de vídeos com smarthphone e
+            computador</a></li>
+    <li>Curso on-line&nbsp;<a rel="noreferrer noopener noreferrer" href="https://lumina.ufrgs.br/course/view.php?id=45" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://lumina.ufrgs.br/course/view.php?id%3D45&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNEyX4wWCKu_yIET40CcQVgjkBT9WA">Como produzir vídeos com celulares e tablets</a></li>
+    <li>Tutorial de&nbsp;<a rel="noreferrer noopener noreferrer" href="http://www.ufrgs.br/sead/ensino-remoto/material-de-apoio/tutorial-como-criar-um-canal-do-youtube" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.ufrgs.br/sead/ensino-remoto/material-de-apoio/tutorial-como-criar-um-canal-do-youtube&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNHjywrCRrjaAkCcl7Tlohi75KT-Gg">Como criar conta no Gmail e um canal no
+            Youtube</a></li>
+</ul>
+<h3>Ferramentas Alternativas</h3>
+<ul>
+    <li><a rel="noreferrer noopener noreferrer" href="https://chasquebox.ufrgs.br/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://chasquebox.ufrgs.br/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNFOO9YdttUJBzwF5QYGX-DWcvI47g">Chasquebox</a>&nbsp;–
+        espaço virtual para armazenamento e compartilhamento de arquivos
+        pessoais</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://filesender.rnp.br/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://filesender.rnp.br/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNFZc6qnbK4zdyjSqVC7aTj9pcrRDw">Filesender RNP</a>&nbsp;– um modo seguro de
+        compartilhar arquivos</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://pt-br.padlet.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://pt-br.padlet.com/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNEbyMCHEQr1_74waEgFCCjSS_Hu2w">Padlet</a>&nbsp;– ferramenta on-line que permite a
+        criação de um mural virtual dinâmico e interativo para
+        registrar, guardar e partilhar conteúdos</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://www.mural.co/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.mural.co/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNFfO7TbBZri-sq-LKH9tQpKL033RA">Mural</a>&nbsp;– ferramenta que simula um espaço de
+        trabalho digital para colaboração visual</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://www.mentimeter.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.mentimeter.com/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNHq6S3nONllW9CS7fmLu0rdbvrr_A">Mentimeter</a>&nbsp;–
+        ferramenta&nbsp;usada para criar apresentações interativas podendo
+        obter feedback em tempo real</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://kahoot.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://kahoot.com/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNHfdeBDK3cMgUUhKedQkUwjz061QQ">Kahoot!</a>&nbsp;– aplicativo para a realização de
+        questionários online em formato de jogo</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://prezi.com/pt/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://prezi.com/pt/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNEZwXyLd6e8bSNZEfhPy3pRxe2SNg">Prezi</a>&nbsp;– software para a criação de
+        apresentações não lineares</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://www.canva.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.canva.com/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNFYCENJH23gR0-C7cFoW7BpXXYN-A">Canva</a>&nbsp;– plataforma de design gráfico que
+        permite criar gráficos de mídia social, apresentações, pôsteres
+        e outros conteúdos visuais</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://www.audacityteam.org/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.audacityteam.org/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNF43WGj8Uhl7mGd7ScvRlTZJWkTcA">Audacity</a>&nbsp;–
+        software livre de edição digital de áudio.&nbsp;<a rel="noreferrer
+                                                           noopener noreferrer" href="https://www.youtube.com/watch?v=LHatC9iQZQw&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DLHatC9iQZQw%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNFW1TrxKvT6P00ivTY5WusKQ0svmA">Clique aqui</a>&nbsp;para assistir um vídeo sobre
+        como criar podcasts usando o software- e-book&nbsp;<a rel="noreferrer
+                                                              noopener noreferrer" href="http://materiais.parabolaeditorial.com.br/ebookingles" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://materiais.parabolaeditorial.com.br/ebookingles&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNEig3eAN-6B_FSmyFwpGQZdpX8pvg">Mãos da Massa: ferramentas para aprender e
+            ensinar</a></li>
+    <li>e-book&nbsp;<a rel="noreferrer noopener noreferrer" href="https://unesdoc.unesco.org/ark:/48223/pf0000219641" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://unesdoc.unesco.org/ark:/48223/pf0000219641&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNGVg7Wz-0m0FJlKTt1QnQ_uLrBZow">UNESCO Policy guidelines&nbsp;for mobile learning</a></li>
+    <li>
+        <h3>Portais de Conteúdo</h3>
+    </li>
+    <li>Vídeo sobre <a href="https://www.youtube.com/watch?v=D2ua2Lzkzro&amp;t=3s" rel="noreferrer noopener noreferrer" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DD2ua2Lzkzro%26t%3D3s&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNFOOrtUL0NHWYPCOhb9cMSTRO1B9g">O que são Portais de
+            Conteúdo</a></li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://lume.ufrgs.br/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://lume.ufrgs.br/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNF2UsITxahFHhY07HdacpWX9ZwE5Q">Lume</a>&nbsp;– repositório digital da UFRGS</li>
+    <li><a rel="noreferrer noopener noreferrer" href="http://objetoseducacionais.mec.gov.br/#/inicio" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://objetoseducacionais.mec.gov.br/%23/inicio&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNFOS73zDR-4zcWLEXULpnZd3lolww">Banco Internacional de Objetos Educacionais
+            (BIOE)</a>&nbsp;– site com objetos educacionais para o níveis de
+        educação infantil a superior</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://educapes.capes.gov.br/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://educapes.capes.gov.br/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNEZxMNH5Jo_xGteADrSIWl_rOShug">eduCAPES</a>&nbsp;–&nbsp;portal
+        de objetos educacionais abertos da CAPES</li>
+    <li><a rel="noreferrer noopener noreferrer" href="http://eaulas.usp.br/portal/home" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://eaulas.usp.br/portal/home&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNFpXdSBF6uQpMqZ-Su-VTy5O4Tmvw">e-Aulas
+            da USP</a>&nbsp;– portal de videoaulas da Universidade de São Paulo</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://www.ufrgs.br/luminapodcasts/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.ufrgs.br/luminapodcasts/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNFvhvD8Tb7RbOnNUn1Ug7W9wRRAgQ">Lúmina
+            Podcast</a>&nbsp;– site que&nbsp;agrega os podcasts produzidos na UFRGS</li>
+    <li><a rel="noreferrer noopener noreferrer" href="https://www.unasus.gov.br/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.unasus.gov.br/&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNE-UTs45YXry2GNucYdQj2IDHI0OA">UNA-SUS</a>&nbsp;– portal do&nbsp;Sistema Universidade
+        Aberta do SUS com cursos e recursos educacionais da área de
+        saúde</li>
+</ul>
+<h3>Estratégias Pedágogicas</h3>
+<ul>
+    <li>Organize a Atividade de Ensino no Ambiente Virtual
+        considerando seus objetivos pedagógicos. Conheça algumas&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=PV26GJz4Yng&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DPV26GJz4Yng%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNFHfP_b6U-1Icy-M_kKi_mkzMrYYw">possibilidades de organização no Moodle da
+            UFRGS</a></li>
+    <li>Disponibilize o Plano de Ensino e as orientações para os
+        alunos no Ambiente Virtual.&nbsp; Saiba como&nbsp;<a rel="noreferrer
+                                                             noopener noreferrer" href="https://www.youtube.com/watch?v=XmYZFhFUKCQ&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DXmYZFhFUKCQ%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549792000&amp;usg=AFQjCNHtBVaQdN4wzn_Q1dJwm4SfnEytfw">adicionar um Arquivo no Moodle</a>&nbsp;e como&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=hKrvn4b5a7E&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DhKrvn4b5a7E%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNGB-mDN3xXdUhd_A5d20fj40nKFmA">criar uma Página no Moodle</a></li>
+    <li>Entenda quais são os conhecimentos prévios dos alunos sobre um
+        determinado assunto para organizar suas aulas. Para isso é
+        possível&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=E0hrZ97dX2U&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DE0hrZ97dX2U%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNFdt3t9If2zikQ9oIoqMd32tSLPOA">utilizar a&nbsp;Pesquisa</a>&nbsp;ou&nbsp;<a rel="noreferrer
+                                                                                                                                                                                                                                                                                                                                                                                                               noopener noreferrer" href="https://www.youtube.com/watch?v=0xra1YR81_c&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3D0xra1YR81_c%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNHBXBKZKsqW5_3rA30fVbWvzmuKDw">Questionário do Moodle</a></li>
+    <li>Utilize dinâmicas diferenciadas no Fórum para “quebrar o gelo”
+        na apresentação da turma. Conheça o&nbsp;<a rel="noreferrer noopener noreferrer" href="https://lume-re-demonstracao.ufrgs.br/quem-sou-eu-2/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://lume-re-demonstracao.ufrgs.br/quem-sou-eu-2/index.html&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNEgTcwEDaEbBwYc2UkmbBqjAWqZWA">recurso educacional&nbsp;Quem sou Eu?</a>, que pode
+        ser utilizado e saiba como&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.ufrgs.br/ajudamoodle/professor/visualizacao/botoes-de-audio-e-video.php" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.ufrgs.br/ajudamoodle/professor/visualizacao/botoes-de-audio-e-video.php&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNGWSJjfeFHSREByzPC9-_iGoQUQAw">gravar um pequeno vídeo diretamente no Moodle</a></li>
+    <li>Proponha casos, situações-problemas ou questões que fomentem a
+        discussão para promover a interação da turma no Fórum. Conheça
+        os&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.ufrgs.br/ajudamoodle/professor/visualizacao/botoes-de-audio-e-video.php" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.ufrgs.br/ajudamoodle/professor/visualizacao/botoes-de-audio-e-video.php&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNGWSJjfeFHSREByzPC9-_iGoQUQAw">tipos de Fórum disponíveis no Moodle</a></li>
+    <li>Ofereça espaços privados entre docente e aluno para que ele
+        registre suas aprendizagens, reflexões e sentimentos. No Moodle
+        é possível&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=CZQLOXNBzSw&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DCZQLOXNBzSw%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNHT6rKOYuQ-MGivIJpWuxC9SC8S9Q">utilizar o Diário</a> </li>
+    <li>Crie suas videoaulas diversificando o formato de apresentação
+        do conteúdo. Veja o tópico sobre Produção de vídeos acima. E
+        saiba como<a rel="noreferrer noopener noreferrer" href="https://www.ufrgs.br/ajudamoodle/professor/recursos/incorporar-video.php" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.ufrgs.br/ajudamoodle/professor/recursos/incorporar-video.php&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNHMwmKcgxRVgMIUPnY4FyjYVoasMg">&nbsp;incorporar um vídeo do Youtube no Moodle</a></li>
+    <li>Grave seus podcasts ou arquivos de áudio para fornecer
+        orientações e explicações para os alunos.&nbsp;<a rel="noreferrer
+                                                          noopener noreferrer" href="https://www.youtube.com/watch?v=LHatC9iQZQw&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DLHatC9iQZQw%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNGDlr8ig2yoe4dt9r7K6ME-CcCrLA">Assista um vídeo</a>&nbsp;sobre como criar podcasts
+        usando o software Audacity</li>
+    <li>Insira materiais com licenças livres no Ambiente Virtual,
+        tomando cuidado com aqueles protegidos por direitos autorais.
+        Veja o tópico Portais de Conteúdo acima sobre materiais com
+        licenças livres. E saiba como&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=kQkm_2SM-Ro&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DkQkm_2SM-Ro%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNHhBck6X7M399B8Ao_XGVi4tVHUVA">inserir URLs</a>&nbsp;ou&nbsp;<a rel="noreferrer
+                                                                                                                                                                                                                                                                                                                                                                                                                        noopener noreferrer" href="https://www.youtube.com/watch?v=XmYZFhFUKCQ&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DXmYZFhFUKCQ%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNHKp0IHVenUTdwVY3VaX2owFr1xzg">arquivos no Moodle</a></li>
+    <li>Saiba como&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.ufrgs.br/bibliotecas/pesquisa/bibliografia-eletronica/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.ufrgs.br/bibliotecas/pesquisa/bibliografia-eletronica/&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNGuRLbLY5BitDFLDWkDKHMk_1HdZQ">buscar e utilizar bibliografias eletrônicas
+            para o ensino remoto emergencial</a>&nbsp;e incluí-las no Moodle</li>
+    <li>Desafie o aluno a construir textos colaborativos. No Moodle é
+        possível&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=EFRVOT62krU&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DEFRVOT62krU%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNFoJiuBOCsFrim10vju7Wp_NIOtjg">utilizar a&nbsp;Wiki</a>&nbsp;para esse tipo de
+        atividade</li>
+    <li>Crie seus questionários no Ambiente Virtual. É possível&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=0xra1YR81_c&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3D0xra1YR81_c%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNHBXBKZKsqW5_3rA30fVbWvzmuKDw">utilizar o&nbsp;Questionário</a>&nbsp;para isso-&nbsp;Receba
+        as atividades avaliativas no Ambiente Virtual Institucional. É
+        possível&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=nveW0R33uIA&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DnveW0R33uIA%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNHYBSGjW3eol67LxaQFTtOdJWM0XA">utilizar a Tarefa</a>&nbsp;no Moodle. E saiba como&nbsp;<a rel="noreferrer noopener noreferrer" href="http://www.ufrgs.br/sead/ensino-remoto/material-de-apoio/correcao-de-tarefa" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.ufrgs.br/sead/ensino-remoto/material-de-apoio/correcao-de-tarefa&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNGb9k4pHKmUu6_l7SAWpVW3aaAV3g">avaliar a Tarefa on-line</a></li>
+    <li>Crie com seus alunos glossários colaborativos de conceitos ou
+        termos para a disciplina. Veja como&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=L7LrE7q2iYw&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DL7LrE7q2iYw%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNGlFjIAf8Wf45nxBsR1s1ftes5cVA">utilizar o Glossário do Moodle</a></li>
+    <li>Proponha aulas síncronas por webconferência</li>
+    <li>Configure o registro das avaliações no Ambiente Virtual
+        conforme seu planejamento no Plano de Ensino. Veja como&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=nk4nMqK7xM0&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3Dnk4nMqK7xM0%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNHxvrEEt-RndDs7lcUXu5S2bpyXgQ">funcionam as Notas no Moodle</a>&nbsp;e saiba como&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=mTElmKrU9bk&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DmTElmKrU9bk%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNFRTOLLJsCp1ZmUr9cFI-PtUG3g0w">configurar o Livro de Notas</a></li>
+    <li>Acompanhe a realização das atividades no Ambiente Virtual. No
+        Moodle há o recurso para o&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=pxyE_g4piQk&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DpxyE_g4piQk%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNGDFYaE42HAzaGk8SW0rgWy-Kq4Rg">Acompanhamento de conclusão</a>. Conheça
+        também outros&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=Fv3s6y0B8oc&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DFv3s6y0B8oc%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNG87E88JWCjOCEUJ4XmjfG4sgwnWA">Relatórios que o Moodle</a>&nbsp;disponibiliza</li>
+    <li>Solicite feedback dos alunos sobre a disciplina. No Moodle é
+        possível&nbsp;<a rel="noreferrer noopener noreferrer" href="https://www.youtube.com/watch?v=E0hrZ97dX2U&amp;feature=youtu.be" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DE0hrZ97dX2U%26feature%3Dyoutu.be&amp;source=gmail&amp;ust=1598710549793000&amp;usg=AFQjCNFdt3t9If2zikQ9oIoqMd32tSLPOA">utilizar a&nbsp;Pesquisa</a>&nbsp;para receber esses
+        feedbacks</li>
+    <li>Esteja presente no Ambiente Virtual, acompanhe seus alunos,
+        acolha suas dúvidas, fomente as discussões e as trocas entre o
+        grupo, forneça feedbacks construtivos, faça intervenções
+        pedagógicas, desafie-os!</li>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/computer-and-eletronics/'>computer and eletronics</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/linux/'>linux</a>, <a class='tag' href='/tags/open-source/'>open source</a>, <a class='tag' href='/tags/ensino/'>ensino</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/2020_05_25_debian_nvidia/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Debian buster vs GPU hybrid card</a>
+    </div></div>
+</nav>
+
+
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-rafatieppo-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  </div>
+</section>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p> &copy; 2016-2020 Rafael Tieppo 
+Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://themes.gohugo.io//theme/minimo/">Minimo</a></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

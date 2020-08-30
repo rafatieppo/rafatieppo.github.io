@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>computer and eletronics on Rafael Tieppo</title>
+    <link>/categories/computer-and-eletronics/</link>
+    <description>Recent content in computer and eletronics on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/computer-and-eletronics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ensino remoto e tecnologia</title>
+      <link>/post/2020_07_31_ensino_remoto/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020_07_31_ensino_remoto/</guid>
+      <description>Contextualização Como é de conhecimento de tod@s, a pandemia (COVID-19) promoveu mudanças em aspectos sociais, econômicos, ambientais do nosso cotidiano. As referidas mudanças não foram gradativas, mas sim de modo abrupto, fazendo com que vários setores se adaptassem à situação.
+Na educação não foi diferente. Passamos mais de um ano discutindo sobre as vantagens e desvantagens do ensino remoto ou à distância (EAD), e de repente, do dia para noite, tivemos que suspender o ensino presencial e adotar o EAD.</description>
+    </item>
+    
+    <item>
+      <title>Debian buster vs GPU hybrid card</title>
+      <link>/post/2020_05_25_debian_nvidia/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020_05_25_debian_nvidia/</guid>
+      <description>The case I was trying to record the screen and sound with a laptop Avell (Clevo in Brazil). This laptop has I5 processor, and a hybrid video card (intel and Nvidia 1050), with Pop!_OS Linux distro and Gnome. All was quite fine for while, but after install Kazam (it is a great Software) I could not run it. Why? Because the icon systray was removed from Gnome and the plugin Top icon did not work.</description>
+    </item>
+    
+    <item>
+      <title>Entendendo java (VM) para instalação do programa IRPF</title>
+      <link>/post/2020_04_25_javairpf/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020_04_25_javairpf/</guid>
+      <description>Introdução Para fazer declararação de imposto de renda vc necessita reunir a documentação e instalar o programa IRPF. Para obter arquivo de instalação basta acessar a página da receita. O detalhe é que abaixo do link de download há uma mensagem com o seguinte aviso ao usuário:
+ ATENÇÃO! Caso necessário, atualize a versão JAVA neste computador. Por favor, clique aqui e prossiga com a instalação.
+ Dependendo de qual é o seu sistema operacional (Windows, Linux, Solaris, etc) a instalação do JAVA pode se tornar um pouco chata.</description>
+    </item>
+    
+    <item>
+      <title>Minha experiência com Avell e Linux</title>
+      <link>/post/2019_12_12_avelllinux/</link>
+      <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019_12_12_avelllinux/</guid>
+      <description>Introdução Usualmente antes de comprar um novo laptop eu pesquiso, pois nos dias de hoje há muitas opções e variações de preços. Todavia, como toda regra tem exceção, uma promoção de black friday colaborou para uma tomada de decisão em que o impulso venceu a razão.
+Para ir direto ao assunto, adquiri um laptop da Avell, e como uso linux, apesar de no momento da compra ter verificado a compatibilidade da placa de vídeo, algumas surpresas surgiram (detalhes do laptop aqui).</description>
+    </item>
+    
+  </channel>
+</rss>
