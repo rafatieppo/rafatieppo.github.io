@@ -5,10 +5,37 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ensino</title>
+      <link>/tags/ensino/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ensino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open source</title>
+      <link>/tags/open-source/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/open-source/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Debian</title>
@@ -25,15 +52,6 @@
       <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/intel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>/tags/linux/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/linux/</guid>
       <description></description>
     </item>
     

@@ -11,7 +11,7 @@
 <meta property='og:site_name' content='Rafael Tieppo'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='linux'><meta property='article:tag' content='Debian'><meta property='article:tag' content='Nvidia'><meta property='article:tag' content='Intel'><meta property='article:published_time' content='2020-05-25T00:00:00Z'/><meta property='article:modified_time' content='2020-05-25T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.61.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
   <title>Debian buster vs GPU hybrid card • Rafael Tieppo</title>
   <link rel='canonical' href='/post/2020_05_25_debian_nvidia/'>
@@ -175,6 +175,8 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/emacs/' style='font-size:1.1111111111111112em'>emacs</a>
       </li><li>
+        <a href='/tags/ensino/' style='font-size:1em'>ensino</a>
+      </li><li>
         <a href='/tags/excel/' style='font-size:1.2222222222222223em'>excel</a>
       </li><li>
         <a href='/tags/filter/' style='font-size:1em'>filter</a>
@@ -201,7 +203,7 @@ if (!doNotTrack) {
       </li><li>
         <a href='/tags/lattes/' style='font-size:1.1111111111111112em'>Lattes</a>
       </li><li>
-        <a href='/tags/linux/' style='font-size:1.2222222222222223em'>linux</a>
+        <a href='/tags/linux/' style='font-size:1.3333333333333333em'>linux</a>
       </li><li>
         <a href='/tags/list/' style='font-size:1em'>list</a>
       </li><li>
@@ -220,6 +222,8 @@ if (!doNotTrack) {
         <a href='/tags/mineira%C3%A7%C3%A3o/' style='font-size:1em'>mineiração</a>
       </li><li>
         <a href='/tags/nvidia/' style='font-size:1em'>Nvidia</a>
+      </li><li>
+        <a href='/tags/open-source/' style='font-size:1em'>open source</a>
       </li><li>
         <a href='/tags/org-cal/' style='font-size:1em'>org-cal</a>
       </li><li>
@@ -438,7 +442,7 @@ execute the above installed nvidia-detect command: <code>nvidia-detect</code></l
 <p>Another attempt was <code>xrandr</code>, <strong>IT WORKS!</strong>.</p>
 <ol>
 <li>Ensure xrandr is installed and available: <code>apt-get install x11-xserver-utils</code></li>
-<li>Modify or create (if one doesn't exist) an <code>xorg.conf</code> under
+<li>Modify or create (if one doesn&rsquo;t exist) an <code>xorg.conf</code> under
 <code>/etc/X11/xorg.conf</code>; add the following:</li>
 </ol>
 <pre><code>Section &quot;Module&quot;
@@ -476,7 +480,7 @@ xrandr --dpi 96
 display setup. In my case was <strong>LightDM</strong>.</p>
 </li>
 <li>
-<p>Modify lightdm's configuration and add (if one doesn't already exist)
+<p>Modify lightdm&rsquo;s configuration and add (if one doesn&rsquo;t already exist)
 a SeatDefaults section &amp; script config. For Debian, lightdm config file
 is in <code>/etc/lightdm/lightdm.conf</code></p>
 </li>
@@ -562,6 +566,16 @@ EndSection
 </svg>
  Previous</span>
         <span class='screen-reader-text'>Previous post: </span>Entendendo java (VM) para instalação do programa IRPF</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/post/2020_07_31_ensino_remoto/'>
+        <span class='screen-reader-text'>Next post: </span>Ensino remoto e tecnologia<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
     </div></div>
 </nav>
 
