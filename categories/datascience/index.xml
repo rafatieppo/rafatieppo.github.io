@@ -5,10 +5,20 @@
     <link>/categories/datascience/</link>
     <description>Recent content in datascience on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 21 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/datascience/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Heat map para diferença de preço médio mensal e anual </title>
+      <link>/post/2020_12_17_stocks_diff_yavr_mavr/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020_12_17_stocks_diff_yavr_mavr/</guid>
+      <description>Nota Este post tem como finalidade APENAS o estudo de análises de variação de preços para fins didáticos. Não trata-se de recomendação ou indicação de investimento. Salienta-se que o código não foi revisado e há possibilidade de haver erros.
+Motivação Em ciências de dados obter e analisar dados é rotina de trabalho. Com finalidade de fixar conteúdo e praticas uma análise simples, este estudo teve como objetivo calcular a diferença entre variação de preço médio mensal e a anual de um ativo.</description>
+    </item>
     
     <item>
       <title>PCA analysis and tidy data</title>
