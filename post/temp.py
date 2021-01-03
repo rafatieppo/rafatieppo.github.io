@@ -1,5 +1,8 @@
 
 
+import numpy as np
+import pandas as pd
+
 dic = {'Mary': '1235'}
 
 try:
@@ -31,8 +34,6 @@ if all(cond1):
 if any(cond2):
     print('one is true at least')
 
-import pandas as pd
-import numpy as np
 
 DF = pd.DataFrame({"MONTH": np.repeat(['Jan', 'Fev', 'Mar'], 3),
                    "SELLER": np.tile(['Max', 'Ted', 'Saul'], 3),
@@ -66,3 +67,50 @@ l1_new
 
 l1_new = [x + 1 for x in l1]
 l1_new
+
+# diif
+
+
+df = pd.DataFrame({"DAY": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                   "RAIN": [6, 0, 0, 20, 30, 40, 0, 0, 10, 15]})
+df['RAIN'].cumsum()
+
+
+df['RAIN'].diff()[1:]
+
+df
+
+df['RAIN'].rolling(2).mean()
+
+for i in range(1, len(df)):
+    cc = df['RAIN'].iloc[i-1:i+1].mean()
+    print(cc)
+
+
+df
+df['RAIN'].iloc[i-1:2].mean()
+
+arr = np.empty(shape=(3, 5))
+arr[:] = np.NaN
+arr
+
+x = 7
+
+
+df_a = pd.DataFrame({'NAME': ['Joe', 'Mary', 'Paul'],
+                     'AGE': [25, 35, 46]})
+df_b = df_a.copy()
+df_a
+df_b
+df_a.iloc[2, 1] = 99
+
+
+arr = np.empty(shape=(3, 5))
+arr[:] = np.NaN
+arr
+
+arr[0] = np.random.randint(0, 20, 5)
+arr[1] = np.random.randint(0, 20, 5)
+arr[2] = np.random.randint(0, 20, 5)
+arr.mean(axis=0)
+arr.mean(axis=1)

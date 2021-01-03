@@ -5,10 +5,31 @@
     <link>/tags/datascience/</link>
     <description>Recent content in datascience on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 21 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/datascience/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Changes in python objects</title>
+      <link>/post/2020_12_31_pythonchanges/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020_12_31_pythonchanges/</guid>
+      <description>I am enthusiast programmer, thus I am no a professional. I wanna getting better and some times I write some notes to improve my English and programming skills. Certainly you will find some mistakes in the text and programming concepts in this post, I am sorry, I am trying.
+Lets go to what matter now!
+The word change is ambiguous in Python, it means that we have two distinct types of &amp;ldquo;change&amp;rdquo; in Python.</description>
+    </item>
+    
+    <item>
+      <title>Tips for Python - Numpy and Pandas library</title>
+      <link>/post/2020_12_30_pandas_tips/</link>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020_12_30_pandas_tips/</guid>
+      <description>Introduction Saving time for cleaning, tidying and processing data is quite useful in data science. It means that you can get more time to analyses and think about solutions.
+If I working Data Science with Python, usually I am using Pandas and Numpy library. It is a great library with a lot smart functions. However, sometimes I forget some functions and write my own functions to solve calculations. For practicing it is cool, but it spends some time.</description>
+    </item>
     
     <item>
       <title>PCA analysis and tidy data</title>
