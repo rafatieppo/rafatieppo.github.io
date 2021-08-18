@@ -5,11 +5,9 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 26 Jul 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 26 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>programming, pyvenv</title>
       <link>/tags/programming-pyvenv/</link>
@@ -272,7 +270,7 @@
     </item>
     
     <item>
-      <title>Lattes</title>
+      <title>lattes</title>
       <link>/tags/lattes/</link>
       <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
       

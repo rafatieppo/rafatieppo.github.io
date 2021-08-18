@@ -5,11 +5,9 @@
     <link>/tags/pandas/</link>
     <description>Recent content in pandas on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/pandas/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/pandas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Changes in python objects</title>
       <link>/post/2020_12_31_pythonchanges/</link>

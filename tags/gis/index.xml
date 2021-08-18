@@ -5,17 +5,15 @@
     <link>/tags/gis/</link>
     <description>Recent content in GIS on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 19 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/gis/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 19 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/gis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Livro Mapas de Produtividade em AP com QGIS</title>
-      <link>/portfolio/2020-05-22-portfolio_05_bookyieldmap/</link>
+      <link>/project/2020-05-22-portfolio_05_bookyieldmap/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/portfolio/2020-05-22-portfolio_05_bookyieldmap/</guid>
+      <guid>/project/2020-05-22-portfolio_05_bookyieldmap/</guid>
       <description>Antes de iniciar a leitura deste material, acho no mínimo interessante você saber o porquê está fazendo isto. Qual seria a importância de aprender a processar, gerar e analisar dados de mapas de produtividade de grãos?
 Se você se interessou por este material, provavelmente é um profissional ligado à agricultura, um entusiasta, ou ainda um possível curioso (no bom sentido), e talvez não tenha clareza do assunto em questão. Para iniciarmos as justificativas do porquê ler este material, vamos iniciar com conceitos.</description>
     </item>

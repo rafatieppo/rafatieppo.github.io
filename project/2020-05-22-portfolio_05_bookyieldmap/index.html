@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.1" />
+
+  <title>Livro Mapas de Produtividade em AP com QGIS &middot; Rafael Tieppo</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">RafaTieppo</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/project/"><i class='fa fa-briefcase fa-fw'></i>Project</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/teaching/"><i class='fa fa-graduation-cap fa-fw'></i>Teaching</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/rafaeltieppo" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://researchgate.net/profile/Rafael-Tieppo" rel="me" target="_blank"><i class="ai ai-researchgate-square ai-1x"></i>researchgate</a>
+    </li>
+    
+    
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://orcid.org/0000-0001-8132-4813" rel="me" target="_blank"><i class="ai ai-orcid-square ai-1x"></i>orcid</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://scholar.google.com/citations?user=ClN1Q6AAAAAJ" rel="me" target="_blank"><i class="ai ai-google-scholar ai-1x"></i>google-scholar</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/3109019/rafa" rel="me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2021 <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Licensed CC:By-NC-SA</a></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Livro Mapas de Produtividade em AP com QGIS</h1>
+  <h2></h2>
+</div>
+<div class="content">
+  <p>Antes de iniciar a leitura deste material, acho no mínimo interessante
+você saber o porquê está fazendo isto. Qual seria a importância de
+aprender a processar, gerar e analisar dados de mapas de produtividade
+de grãos?</p>
+<p>Se você se interessou por este material, provavelmente é um profissional
+ligado à agricultura, um entusiasta, ou ainda um possível curioso (no
+bom sentido), e talvez não tenha clareza do assunto em questão. Para
+iniciarmos as justificativas do porquê ler este material, vamos iniciar
+com conceitos. Os mapas de produtividade de uma cultura refletem as
+consequências dos processos do sistema de produção até a colheita. Dessa
+forma, em um determinado talhão, muitas plantas passaram pelos mesmos
+tratamentos e mesmas intempéries. Contudo, provavelmente as plantas não
+apresentarão a mesma produtividade.</p>
+<p>Por que não apresentarão a mesma produtividade? Assumindo que não houve
+a presença de nenhum agente externo no talhão (entenda como agentes
+externos emas, capivaras, queixadas, etc), as diferentes produtividades
+serão consequências da variabilidade espacial que ocorre no
+solo. Portanto, com o uso do mapa de produtividade, torna-se possível
+identificar regiões com possíveis problemas, e é claro, as regiões que a
+princípio estão dentro do esperado.</p>
+<p>Entretanto, você pode estar se perguntando: <em>ok, mas os monitores de
+produtividade já fornecem um mapa de produtividade que posso acompanhar
+durante e após a colheita, por que processar?</em> Para responder de forma
+sucinta, (1) sabemos que os dados brutos dos monitores de produtividade
+apresentam erros (serão apresentados no livro), (2) apenas observar o
+computador de bordo não permite realizar uma análise mais complexa do
+dados (e.g. agrupamento) (3) se deixar os dados no computador de bordo
+provavelmente os mesmos serão perdidos, e consequentemente a criação de
+um banco de dados com o histórico de produtividade não ocorrerá, (4)
+alguém registra de alguma forma as informações do computador de bordo
+durante a colheita?</p>
+<p>Caso você esteja iniciando uma carreira, ou até mesmo querendo se
+aperfeiçoar, lembre-se que para um profissional qualificado e que faz a
+diferença em uma empresa, oportunidades de empregos usualmente
+aparecerão, ocorrendo o oposto para profissionais que não estejam
+preparados para o momento. Esta condição se aplica ainda mais em
+momentos de crises econômicas, em que tudo o que não é necessário é
+cortado por redução de custos.</p>
+<p>Com o intuito de contribuir no sistema de produção, promover um
+incremento do uso da tecnologia, e até mesmo contribuir de alguma forma
+para a formação de profissionais. Este livro aborda os seguintes temas:
+<em>Agricultura de Precisão, Mapas de produtividade, Processamento e
+filtragem de dados, Análise dos dados</em>.</p>
+<p><em>Este material está em desenvolvimento contínuo, mas não de forma
+linear. Sempre que possível ou necessário, nas revisões futuras, as
+funções utilizadas nas análises serão modificadas em função da versão do
+QGIS. Agradece-se antecipadamente àqueles que, em caso de dúvidas,
+sugestões e/ou contribuições, entrarem em contato com o autor. Todo
+suporte é bem vindo</em></p>
+<p>Rafael C. Tieppo</p>
+<ul>
+<li><a href="https://sites.google.com/a/unemat.br/biossistemas/home/site_git/yieldmap_book_preambulo.pdf?attredirects=0&amp;d=1">Download aqui.</a></li>
+</ul>
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+<script src="/js/menus.js"></script>
+
+
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-33432733-8', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+

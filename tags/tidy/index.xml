@@ -5,11 +5,9 @@
     <link>/tags/tidy/</link>
     <description>Recent content in tidy on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/tidy/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tidy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Julian date with python 3</title>
       <link>/post/2018_12_01_juliandate/</link>

@@ -5,11 +5,9 @@
     <link>/tags/meteorologia/</link>
     <description>Recent content in meteorologia on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 11 Dec 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/meteorologia/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 11 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="/tags/meteorologia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ordenar dados INMET</title>
       <link>/post/141211_inmetdataorder/</link>
