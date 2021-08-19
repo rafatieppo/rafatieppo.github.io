@@ -16,7 +16,7 @@
       <guid>/project/2018-07-06-portfolio_05_sebal/</guid>
       <description>SEBAL model by means GRASS and PYTHON 
 O modelo SEBAL ((Surface Energy Balance Algorithm for Land) utiliza o balanço de energia da superfície terrestre para a realizar a predição de algumas características hidrológicas (evapotranspiração, deficit de água, etc)). O principal criador do referido modelo é o Professor Wim G. M. Bastiaanssen (Bastiaanssen et al., 1998).
-Para maiores detalhes e download, acesse a página do código em: https://rafatieppo.github.io/SEBAL/.</description>
+Para maiores detalhes e download, acesse a página do código em: https://rafatieppo.github.io/sebal/.</description>
     </item>
     
   </channel>

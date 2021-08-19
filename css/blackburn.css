@@ -102,3 +102,33 @@ th {
 	color: white;
 	text-align: center;
 }
+
+.rrr {
+/*  background: #2c3e50;*/
+  -webkit-columns: 100px 2;
+  -moz-columns: 100px 2;
+  columns: 300px 2;
+  -webkit-column-gap: 1;
+  -moz-column-gap: 1;
+  column-gap: 1;
+  -webkit-column-rule: 0px solid #1a242f;
+  -moz-column-rule: 0px solid #1a242f;
+  column-rule: 1px solid #1a242f;
+  text-align: justify;
+}
+
+.rrr a {
+  text-decoration: none;
+  color: #233140;
+  display: block;
+  padding: 1em;
+  text-align: center;
+/*  border-bottom: 1px solid #1a242f;*/
+
+}
+.rrr a:hover {
+/*  background: #1a242f;*/
+}
+
+
+
