@@ -30,7 +30,7 @@ from osgeo import ogr, osr, gdal Leitura do arquivo vetorial Para abrir o arquiv
     </item>
     
     <item>
-      <title>The power of GDAL and OGR: Leitura, edição e gravação de arquivo vetorial (shape)</title>
+      <title>The power of GDAL and OGR</title>
       <link>/post/2021_08_24_powergdalogr_m01/</link>
       <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
       
