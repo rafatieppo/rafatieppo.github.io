@@ -7,7 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 26 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The power of GDAL and OGR: Conversão de arquivos vetoriais (e.g. shape para GeoPackage)</title>
+      <link>/post/2021_08_26_powergdalogr_m03/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021_08_26_powergdalogr_m03/</guid>
+      <description>Introdução Uma dos métodos para conversão dos arquivos vetoriais para outros formatos é utilizar o ogr2ogr. O referido programa é uma ferramenta em linha de comando (CLI) que acompanha o GDAL (Geospatial Data Abstraction Library). Como trata-se de um recurso de linha de comando é possível utilizá-lo diretamente via terminal. Todavia, prefiro fazer um &amp;ldquo;intermédio&amp;rdquo; via script Python. Salienta-se que é possível reaproveitar (adaptar) os códigos apresentados aqui para usar diretamente no terminal.</description>
+    </item>
+    
+    <item>
+      <title>The power of GDAL and OGR: Leitura de arquivo (shape) e reprojeção (CRS)</title>
+      <link>/post/2021_08_25_powergdalogr_m02/</link>
+      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021_08_25_powergdalogr_m02/</guid>
+      <description>Objetivo A partir de um arquivo vetorial (shape), realizar a reprojeção para outro CRS (DATUM).
+Módulo 02 Leitura de arquivo (shape) e reprojeção Importação dos pacotes Inicialmente importar os pacotes
+from osgeo import ogr, osr, gdal Leitura do arquivo vetorial Para abrir o arquivo vetorial, define-se o caminho e o parâmetro 0 ou 1:
+# reading shape shapePath = &amp;#39;./shape/mt_municipios_2020.shp&amp;#39; ds = ogr.Open(shapePath, 1) # 0 means read-only. 1 means writeable # Check to see if shapefile was found.</description>
+    </item>
+    
+    <item>
+      <title>The power of GDAL and OGR: Leitura, edição e gravação de arquivo vetorial (shape)</title>
+      <link>/post/2021_08_24_powergdalogr_m01/</link>
+      <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021_08_24_powergdalogr_m01/</guid>
+      <description>Introdução GDAL é um biblioteca licenciada pela OSGeo (Open Source Geospatial Foundation), desenvolvida em C++, que permite manipular mais de 200 formatos de aquivos matricial (raster) e vetorial. Tratando-se de uma biblioteca, a mesma apresenta um modelo de dados para abstração de arquivos raster e outra para arquivo vetorial, oferecendo uma série de comandos linha (comandos via terminal) para processamento de dados. Ainda como se não fosse suficiente, possui API para diversas linguagens de programação como: C, C++, Python, Perl, C# and Java.</description>
+    </item>
+    
     <item>
       <title>Ambiente virtual em Python</title>
       <link>/post/2021_07_27_python_env/</link>

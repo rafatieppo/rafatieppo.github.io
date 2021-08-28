@@ -2,28 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/post/2021_07_27_python_env/</loc>
-    <lastmod>2021-07-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/categories/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/gdal/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/geoprocessing/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/geoprocessing/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ogr/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/python/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/2021_08_26_powergdalogr_m03/</loc>
+    <lastmod>2021-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/2021_08_25_powergdalogr_m02/</loc>
+    <lastmod>2021-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/2021_08_24_powergdalogr_m01/</loc>
+    <lastmod>2021-08-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/2021_07_27_python_env/</loc>
     <lastmod>2021-07-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/datascience/</loc>
     <lastmod>2021-07-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
-    <lastmod>2021-07-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/programming-pyvenv/</loc>
-    <lastmod>2021-07-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/python/</loc>
-    <lastmod>2021-07-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2021-07-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2021-07-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/tips/</loc>
@@ -87,9 +108,6 @@
     <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/agricultura-de-precis%C3%A3o/</loc>
-    <lastmod>2020-05-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/geoprocessing/</loc>
     <lastmod>2020-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/gis/</loc>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.1" />
+
+  <title>The power of GDAL and OGR: Conversão de arquivos vetoriais (e.g. shape para GeoPackage) &middot; Rafael Tieppo</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">RafaTieppo</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/project/"><i class='fa fa-briefcase fa-fw'></i>Project</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/teaching/"><i class='fa fa-graduation-cap fa-fw'></i>Teaching</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/rafaeltieppo" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://researchgate.net/profile/Rafael-Tieppo" rel="me" target="_blank"><i class="ai ai-researchgate-square ai-1x"></i>researchgate</a>
+    </li>
+    
+    
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://orcid.org/0000-0001-8132-4813" rel="me" target="_blank"><i class="ai ai-orcid-square ai-1x"></i>orcid</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://scholar.google.com/citations?user=ClN1Q6AAAAAJ" rel="me" target="_blank"><i class="ai ai-google-scholar ai-1x"></i>google-scholar</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/3109019/rafa" rel="me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2021 <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Licensed CC:By-NC-SA</a></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>The power of GDAL and OGR: Conversão de arquivos vetoriais (e.g. shape para GeoPackage)</h1>
+  <h2></h2>
+</div>
+<div class="content">
+  <h1 id="introdução">Introdução</h1>
+<p>Uma dos métodos para conversão dos arquivos vetoriais para outros formatos é utilizar o <code>ogr2ogr</code>. O referido programa é uma ferramenta em linha de comando (CLI) que acompanha o <a href="https://gdal.org/">GDAL</a> (Geospatial Data Abstraction Library). Como trata-se de um recurso de linha de comando é possível utilizá-lo diretamente via terminal. Todavia, prefiro fazer um &ldquo;intermédio&rdquo; via script <a href="https://www.python.org/">Python</a>. Salienta-se que é possível reaproveitar (adaptar) os códigos apresentados aqui para usar diretamente no terminal.</p>
+<h1 id="objetivo">Objetivo</h1>
+<p>A partir de um arquivo vetorial (shape), realizar a conversão para outro formato (GeoPackage).</p>
+<h1 id="módulo-03">Módulo 03</h1>
+<h2 id="transforar-o-arquivo-para-outro-formato-geopackage">Transforar o arquivo para outro formato (GeoPackage)</h2>
+<h3 id="importação-dos-pacotes">Importação dos pacotes</h3>
+<p>Neste exemplo usaremos apenas o pacote <code>os</code> que vem por padrão.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> os
+</code></pre></div><h3 id="extraindo-informações-do-arquivo">Extraindo informações do arquivo</h3>
+<p>A ideia aqui é executar comandos do terminal via script. Para que seja possível ter sucesso na execução é fundamental que teha-se conhecimento do caminho do diretório (pasta) de trabalho, e qual o diretório que o <code>python</code> está reconhecendo como origem. Para os ajustes necessários a biblioteca <code>os</code> é suficiente.</p>
+<p>Primeiro verifica-se o caminho que o <code>python</code> está reconhecendo como origem:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>getcwd()
+<span style="color:#e6db74">&#39;/home/rafatieppo/Documents/&#39;</span>
+</code></pre></div><p>Neste caso a pasta de origem é a <code>Documents</code>. Dessa forma, é a partir deste diretório que os <code>caminhos</code> serão buscados. Para deixar as coisas mais práticas, preferi deixar o diretório inicial em uma subpasta:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>chdir(<span style="color:#e6db74">&#39;/home/rafatieppo/Documents/blog_gdal&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>getcwd()
+<span style="color:#e6db74">&#39;/home/rafatieppo/Documents/blog_gdal&#39;</span>
+</code></pre></div><p>Note que agora o diretório de origem é o <code>blog_gdal</code>.</p>
+<p>Neste exemplo, para executar os comandos do terminal via Python,  é utilizado o método <code>os.system()</code>. Basicamente, insere-se o comando de linha desejado e o mesmo é executado, obtendo como resposta a saída do terminal (Linux). Inicialmente, com o intuito de verificar o conteúdo do diretório de origem, vamos usar o comando <code>ls</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#39;ls&#39;</span>)
+blog_ogrgdal_00<span style="color:#f92672">.</span>py   blog_ogrgdal_m02<span style="color:#f92672">.</span>py       blog_ogrgdal_m03<span style="color:#f92672">.</span>py  raster
+blog_ogrgdal_m01<span style="color:#f92672">.</span>py  blog_ogrgdal_m02_qgis<span style="color:#f92672">.</span>py  csv		    shape
+</code></pre></div><p>Note que o comando <code>ls</code> é um parâmetro do método <code>os.system()</code>. Agora vamos verificar o conteúdo da pasta <code>shape</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#39;ls ./shape/&#39;</span>)
+mt_municipios_2020<span style="color:#f92672">.</span>cpg	mt_municipios_2020<span style="color:#f92672">.</span>prj	mt_municipios_2020<span style="color:#f92672">.</span>shx
+mt_municipios_2020<span style="color:#f92672">.</span>dbf	mt_municipios_2020<span style="color:#f92672">.</span>shp
+</code></pre></div><p>Observa-se que na pasta <code>shape</code> há o arquivo <code>mt_municipios_2020.shp</code> e seus arquivos complementares. O referido arquivo é o que será convertido para o formato <code>GeoPackage</code>. Antes de realizar a conversão, é interessante obter algumas informações:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#39;ogrinfo ./shape/mt_municipios_2020.shp&#39;</span>)
+INFO: Open of <span style="color:#960050;background-color:#1e0010">`</span><span style="color:#f92672">./</span>shape<span style="color:#f92672">/</span>mt_municipios_2020<span style="color:#f92672">.</span>shp<span style="color:#e6db74">&#39;</span>
+      using driver <span style="color:#960050;background-color:#1e0010">`</span>ESRI Shapefile<span style="color:#e6db74">&#39; successful.</span>
+<span style="color:#ae81ff">1</span>: mt_municipios_2020 (Polygon)
+</code></pre></div><p>Nota-se que o arquivo é do tipo <code>shape</code> e possui uma camada (layer) do tipo <code>Polygon</code> denominada <code>mt_municipios_2020</code>. Para obter informações desta:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#39;ogrinfo -so ./shape/mt_municipios_2020.shp mt_municipios_2020&#39;</span>)
+INFO: Open of <span style="color:#960050;background-color:#1e0010">`</span><span style="color:#f92672">./</span>shape<span style="color:#f92672">/</span>mt_municipios_2020<span style="color:#f92672">.</span>shp<span style="color:#e6db74">&#39;</span>
+      using driver <span style="color:#960050;background-color:#1e0010">`</span>ESRI Shapefile<span style="color:#e6db74">&#39; successful.</span>
+
+Layer name: mt_municipios_2020
+Metadata:
+  DBF_DATE_LAST_UPDATE<span style="color:#f92672">=</span><span style="color:#ae81ff">2021</span><span style="color:#f92672">-</span><span style="color:#ae81ff">08</span><span style="color:#f92672">-</span><span style="color:#ae81ff">25</span>
+Geometry: Polygon
+Feature Count: <span style="color:#ae81ff">141</span>
+Extent: (<span style="color:#f92672">-</span><span style="color:#ae81ff">61.633383</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">18.041598</span>) <span style="color:#f92672">-</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">50.224806</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">7.349028</span>)
+Layer SRS WKT:
+GEOGCS[<span style="color:#e6db74">&#34;SIRGAS 2000&#34;</span>,
+    DATUM[<span style="color:#e6db74">&#34;Sistema_de_Referencia_Geocentrico_para_las_AmericaS_2000&#34;</span>,
+        SPHEROID[<span style="color:#e6db74">&#34;GRS 1980&#34;</span>,<span style="color:#ae81ff">6378137</span>,<span style="color:#ae81ff">298.257222101</span>,
+            AUTHORITY[<span style="color:#e6db74">&#34;EPSG&#34;</span>,<span style="color:#e6db74">&#34;7019&#34;</span>]],
+        TOWGS84[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>],
+        AUTHORITY[<span style="color:#e6db74">&#34;EPSG&#34;</span>,<span style="color:#e6db74">&#34;6674&#34;</span>]],
+    PRIMEM[<span style="color:#e6db74">&#34;Greenwich&#34;</span>,<span style="color:#ae81ff">0</span>,
+        AUTHORITY[<span style="color:#e6db74">&#34;EPSG&#34;</span>,<span style="color:#e6db74">&#34;8901&#34;</span>]],
+    UNIT[<span style="color:#e6db74">&#34;degree&#34;</span>,<span style="color:#ae81ff">0.0174532925199433</span>,
+        AUTHORITY[<span style="color:#e6db74">&#34;EPSG&#34;</span>,<span style="color:#e6db74">&#34;9122&#34;</span>]],
+    AUTHORITY[<span style="color:#e6db74">&#34;EPSG&#34;</span>,<span style="color:#e6db74">&#34;4674&#34;</span>]]
+CD_MUN: String (<span style="color:#ae81ff">7.0</span>)
+NM_MUN: String (<span style="color:#ae81ff">60.0</span>)
+SIGLA_UF: String (<span style="color:#ae81ff">2.0</span>)
+AREA_KM2: Real (<span style="color:#ae81ff">10.3</span>)
+AREA_ha: Real (<span style="color:#ae81ff">11.3</span>)
+Area_m2: Real (<span style="color:#ae81ff">16.1</span>)
+</code></pre></div><p>Conforme saída dos dados observa-se que há 141 feições, no CRS EPSG-4674, e 6 campos (atributos).</p>
+<h3 id="converter-aquivo">Converter aquivo</h3>
+<p>Para saber os possíveis formatos para conversão de arquivo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#39;ogr2ogr --formats&#39;</span>)
+Supported Formats:
+  PCIDSK <span style="color:#f92672">-</span>raster,vector<span style="color:#f92672">-</span> (rw<span style="color:#f92672">+</span>v): PCIDSK Database File
+  netCDF <span style="color:#f92672">-</span>raster,vector<span style="color:#f92672">-</span> (rw<span style="color:#f92672">+</span>s): Network Common Data Format
+  <span style="color:#f92672">...</span>
+  KML <span style="color:#f92672">-</span>vector<span style="color:#f92672">-</span> (rw<span style="color:#f92672">+</span>v): Keyhole Markup Language (KML)
+  GeoJSON <span style="color:#f92672">-</span>vector<span style="color:#f92672">-</span> (rw<span style="color:#f92672">+</span>v): GeoJSON
+  GeoJSONSeq <span style="color:#f92672">-</span>vector<span style="color:#f92672">-</span> (rw<span style="color:#f92672">+</span>v): GeoJSON Sequence
+  ESRIJSON <span style="color:#f92672">-</span>vector<span style="color:#f92672">-</span> (rov): ESRIJSON
+  TopoJSON <span style="color:#f92672">-</span>vector<span style="color:#f92672">-</span> (rov): TopoJSON
+  Interlis <span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span>vector<span style="color:#f92672">-</span> (rw<span style="color:#f92672">+</span>v): Interlis <span style="color:#ae81ff">1</span>
+  Interlis <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span>vector<span style="color:#f92672">-</span> (rw<span style="color:#f92672">+</span>v): Interlis <span style="color:#ae81ff">2</span>
+  OGR_GMT <span style="color:#f92672">-</span>vector<span style="color:#f92672">-</span> (rw<span style="color:#f92672">+</span>v): GMT ASCII Vectors (<span style="color:#f92672">.</span>gmt)
+  GPKG <span style="color:#f92672">-</span>raster,vector<span style="color:#f92672">-</span> (rw<span style="color:#f92672">+</span>vs): GeoPackage
+  SQLite <span style="color:#f92672">-</span>vector<span style="color:#f92672">-</span> (rw<span style="color:#f92672">+</span>v): SQLite <span style="color:#f92672">/</span> Spatialite
+</code></pre></div><p>O processo de conversão do arquivo é relativamente simples. O comando <code>ogr2ogr</code> é chamado e na sequência o argumento <code>-f</code> é inserido para indicar o formato desejado, no caso é <code>-f GPKG</code>. Após é necessário especificar o caminho e nome do arquivo a ser criado <code>./shape/mt_municipios_2020.GPKG</code> e do arquivo de origem:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">os<span style="color:#f92672">.</span>system(
+    <span style="color:#e6db74">&#39;ogr2ogr -f GPKG ./shape/mt_municipios_2020.GPKG ./shape/mt_municipios_2020.shp&#39;</span>)
+<span style="color:#ae81ff">0</span>
+</code></pre></div><p>Ao listar novamente a pasta <code>shape</code> é possível notar o arquivo <code>mt_municipios_2020.GPKG</code> que foi criado.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">
+<span style="color:#f92672">&gt;&gt;&gt;</span> os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#39;ls ./shape/&#39;</span>)
+mt_municipios_2020<span style="color:#f92672">.</span>cpg	 mt_municipios_2020<span style="color:#f92672">.</span>prj
+mt_municipios_2020<span style="color:#f92672">.</span>dbf	 mt_municipios_2020<span style="color:#f92672">.</span>shp
+mt_municipios_2020<span style="color:#f92672">.</span>GPKG  mt_municipios_2020<span style="color:#f92672">.</span>shx
+<span style="color:#ae81ff">0</span>
+</code></pre></div><p>Veja os demais argumentos e detalhes do <code>ogr2ogr</code> em <a href="https://gdal.org/programs/ogr2ogr.html">https://gdal.org/programs/ogr2ogr.html</a>.</p>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://gdal.org/programs/ogr2ogr.html">ogr2ogr</a></li>
+<li><a href="https://pcjericks.github.io/py-gdalogr-cookbook/projection.html">Python GDAL/OGR Cookbook 1.0 documentation</a></li>
+<li><a href="https://www.osgeo.org/projects/gdal/">GDAL/OGR</a></li>
+<li><a href="https://www.python.org/">PYTHON</a></li>
+<li><a href="https://gdal.org/python/index.html">GDAL API Python</a></li>
+<li></li>
+</ul>
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+<script src="/js/menus.js"></script>
+
+
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-33432733-8', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+

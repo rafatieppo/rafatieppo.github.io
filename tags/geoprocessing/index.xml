@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>geoprocessing on Rafael Tieppo</title>
-    <link>/categories/geoprocessing/</link>
+    <link>/tags/geoprocessing/</link>
     <description>Recent content in geoprocessing on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 26 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/geoprocessing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/geoprocessing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The power of GDAL and OGR: Conversão de arquivos vetoriais (e.g. shape para GeoPackage)</title>
       <link>/post/2021_08_26_powergdalogr_m03/</link>
@@ -36,37 +36,6 @@ from osgeo import ogr, osr, gdal Leitura do arquivo vetorial Para abrir o arquiv
       
       <guid>/post/2021_08_24_powergdalogr_m01/</guid>
       <description>Introdução GDAL é um biblioteca licenciada pela OSGeo (Open Source Geospatial Foundation), desenvolvida em C++, que permite manipular mais de 200 formatos de aquivos matricial (raster) e vetorial. Tratando-se de uma biblioteca, a mesma apresenta um modelo de dados para abstração de arquivos raster e outra para arquivo vetorial, oferecendo uma série de comandos linha (comandos via terminal) para processamento de dados. Ainda como se não fosse suficiente, possui API para diversas linguagens de programação como: C, C++, Python, Perl, C# and Java.</description>
-    </item>
-    
-    <item>
-      <title>Livro Mapas de Produtividade em AP com QGIS</title>
-      <link>/project/2020-05-22-portfolio_05_bookyieldmap/</link>
-      <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/project/2020-05-22-portfolio_05_bookyieldmap/</guid>
-      <description>Antes de iniciar a leitura deste material, acho no mínimo interessante você saber o porquê está fazendo isto. Qual seria a importância de aprender a processar, gerar e analisar dados de mapas de produtividade de grãos?
-Se você se interessou por este material, provavelmente é um profissional ligado à agricultura, um entusiasta, ou ainda um possível curioso (no bom sentido), e talvez não tenha clareza do assunto em questão. Para iniciarmos as justificativas do porquê ler este material, vamos iniciar com conceitos.</description>
-    </item>
-    
-    <item>
-      <title>Inverse Distance Weighting (IDW) Interpolation</title>
-      <link>/post/2018_07_27_idw2pyr/</link>
-      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018_07_27_idw2pyr/</guid>
-      <description>Introduction If you want to predict the amount of rainfall, yield crops, or other attribute , you may need to learn about the interpolation methods like inverse distance weighted (IDW).
-IDW is a deterministic method for interpolation, once you have a set of know points, you can use IDW to estimate values for unknown points. For instance, you have 6 know points with rainfall attribute, and you need to predict the rainfall for a 7th point (Figure 1).</description>
-    </item>
-    
-    <item>
-      <title>SEBAL model by means GRASS and PYTHON</title>
-      <link>/project/2018-07-06-portfolio_05_sebal/</link>
-      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/project/2018-07-06-portfolio_05_sebal/</guid>
-      <description>SEBAL model by means GRASS and PYTHON 
-O modelo SEBAL ((Surface Energy Balance Algorithm for Land) utiliza o balanço de energia da superfície terrestre para a realizar a predição de algumas características hidrológicas (evapotranspiração, deficit de água, etc)). O principal criador do referido modelo é o Professor Wim G. M. Bastiaanssen (Bastiaanssen et al., 1998).
-Para maiores detalhes e download, acesse a página do código em: https://rafatieppo.github.io/sebal/.</description>
     </item>
     
   </channel>

@@ -7,22 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 26 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>programming, pyvenv</title>
-      <link>/tags/programming-pyvenv/</link>
-      <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
+      <title>gdal</title>
+      <link>/tags/gdal/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/programming-pyvenv/</guid>
+      <guid>/tags/gdal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>geoprocessing</title>
+      <link>/tags/geoprocessing/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/geoprocessing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ogr</title>
+      <link>/tags/ogr/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ogr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
       <link>/tags/python/</link>
-      <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming, pyvenv</title>
+      <link>/tags/programming-pyvenv/</link>
+      <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/programming-pyvenv/</guid>
       <description></description>
     </item>
     
