@@ -131,4 +131,12 @@ th {
 }
 
 
+#disqus_thread {
+    position: relative;
+    display:block;
+    margin: 0 0 10px 0;
+    padding-left: 20%;
+    padding-right:20%;
+    line-height: 1.5;
+}
 
