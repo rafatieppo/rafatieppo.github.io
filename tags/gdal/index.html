@@ -291,7 +291,7 @@
   </header>
 
   <p>
-  Introdução Uma dos métodos para conversão dos arquivos vetoriais para outros formatos é utilizar o ogr2ogr. O referido programa é uma ferramenta em linha de comando (CLI) que acompanha o GDAL (Geospatial Data Abstraction Library). Como trata-se de um recurso de linha de comando é possível utilizá-lo diretamente via terminal. Todavia, prefiro fazer um &ldquo;intermédio&rdquo; via script Python. Salienta-se que é possível reaproveitar (adaptar) os códigos apresentados aqui para usar diretamente no terminal.
+  Módulo 03 Introdução Uma dos métodos para conversão dos arquivos vetoriais para outros formatos é utilizar o ogr2ogr. O referido programa é uma ferramenta em linha de comando (CLI) que acompanha o GDAL (Geospatial Data Abstraction Library). Como trata-se de um recurso de linha de comando é possível utilizá-lo diretamente via terminal. Todavia, prefiro fazer um &ldquo;intermédio&rdquo; via script Python. Salienta-se que é possível reaproveitar (adaptar) os códigos apresentados aqui para usar diretamente no terminal.
   </p>
 
   
@@ -340,8 +340,8 @@
   </header>
 
   <p>
-  Objetivo A partir de um arquivo vetorial (shape), realizar a reprojeção para outro CRS (DATUM).
-Módulo 02 Leitura de arquivo (shape) e reprojeção Importação dos pacotes Inicialmente importar os pacotes
+  Módulo 02 Objetivo A partir de um arquivo vetorial (shape), realizar a reprojeção para outro CRS (DATUM).
+Leitura de arquivo (shape) e reprojeção Importação dos pacotes Inicialmente importar os pacotes
 from osgeo import ogr, osr, gdal Leitura do arquivo vetorial Para abrir o arquivo vetorial, define-se o caminho e o parâmetro 0 ou 1:
 # reading shape shapePath = &#39;./shape/mt_municipios_2020.shp&#39; ds = ogr.Open(shapePath, 1) # 0 means read-only. 1 means writeable # Check to see if shapefile was found.
   </p>
@@ -392,12 +392,63 @@ from osgeo import ogr, osr, gdal Leitura do arquivo vetorial Para abrir o arquiv
   </header>
 
   <p>
-  Introdução GDAL é um biblioteca licenciada pela OSGeo (Open Source Geospatial Foundation), desenvolvida em C++, que permite manipular mais de 200 formatos de aquivos matricial (raster) e vetorial. Tratando-se de uma biblioteca, a mesma apresenta um modelo de dados para abstração de arquivos raster e outra para arquivo vetorial, oferecendo uma série de comandos linha (comandos via terminal) para processamento de dados. Ainda como se não fosse suficiente, possui API para diversas linguagens de programação como: C, C++, Python, Perl, C# and Java.
+  Módulo 01 Objetivo Ler, editar e gravar arquivo vetorial (shape).
+Material e métodos  Linux Debian Buster GDAL 2.4.0, released 2018/12/14  Na manipulação e processamento de aquivo vetorial, utilizaremos um arquivo shape com os municípios do estado de MT (Figura 1).
+  Figura 1: Arquivo shape do estado de MT com Tabela de Atributos   Leitura e gravação de arquivo vetorial (shape) Importação dos pacotes Inicialmente importar os pacotes
   </p>
 
   
   <footer>
     <a href="/post/2021_08_24_powergdalogr_m01/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="/post/2021_08_20_powergdalogr_m00/">The power of GDAL and OGR</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>2021-08-20</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/ogr">ogr</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/gdal">gdal</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/geoprocessing">geoprocessing</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Módulo 00 Introdução GDAL é um biblioteca licenciada pela OSGeo (Open Source Geospatial Foundation), desenvolvida em C++, que permite manipular mais de 200 formatos de aquivos matricial (raster) e vetorial. Tratando-se de uma biblioteca, a mesma apresenta um modelo de dados para abstração de arquivos raster e outra para arquivo vetorial, oferecendo uma série de comandos de linha (comandos via terminal) para processamento de dados. Ainda como se não fosse suficiente, possui API para diversas linguagens de programação como: C, C++, Python, Perl, R, C# and Java.
+  </p>
+
+  
+  <footer>
+    <a href="/post/2021_08_20_powergdalogr_m00/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

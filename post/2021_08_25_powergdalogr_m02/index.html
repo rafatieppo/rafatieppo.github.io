@@ -276,14 +276,14 @@
 
 </div>
 
-  <h1 id="objetivo">Objetivo</h1>
+  <h1 id="módulo-02">Módulo 02</h1>
+<h3 id="objetivo">Objetivo</h3>
 <p>A partir de um arquivo vetorial (shape), realizar a reprojeção para outro CRS (DATUM).</p>
-<h1 id="módulo-02">Módulo 02</h1>
-<h2 id="leitura-de-arquivo-shape-e-reprojeção">Leitura de arquivo (shape) e reprojeção</h2>
-<h3 id="importação-dos-pacotes">Importação dos pacotes</h3>
+<h3 id="leitura-de-arquivo-shape-e-reprojeção">Leitura de arquivo (shape) e reprojeção</h3>
+<h4 id="importação-dos-pacotes">Importação dos pacotes</h4>
 <p>Inicialmente importar os pacotes</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> osgeo <span style="color:#f92672">import</span> ogr, osr, gdal
-</code></pre></div><h3 id="leitura-do-arquivo-vetorial">Leitura do arquivo vetorial</h3>
+</code></pre></div><h4 id="leitura-do-arquivo-vetorial">Leitura do arquivo vetorial</h4>
 <p>Para abrir o arquivo vetorial, define-se o caminho e o parâmetro 0 ou 1:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># reading shape</span>
 shapePath <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./shape/mt_municipios_2020.shp&#39;</span>
@@ -299,7 +299,7 @@ ds <span style="color:#f92672">=</span> ogr<span style="color:#f92672">.</span>O
     print(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#e6db74">&#39; has been opened&#39;</span> <span style="color:#f92672">%</span> (shapePath))
     layer <span style="color:#f92672">=</span> ds<span style="color:#f92672">.</span>GetLayer()
 </code></pre></div><p>Nesse bloco foi especificado o caminho que o arquivo encontra-se, e o método <code>Open</code> da classe OGR é executado com o argumento <code>1</code> para possibilitar a edição do arquivo. Na sequência, criou-se uma verificação da leitura do arquivo. Se o arquivo foi aberto com sucesso, o objeto layer recebe a classe <code>Layer</code> via <code>ds.GetLayer()</code>. Verifique aqui todos os métodos disponíveis na classe <code>Layer</code> <a href="https://gdal.org/python/index.html">aqui</a></p>
-<h3 id="reprojeção-do-arquivo">Reprojeção do arquivo</h3>
+<h4 id="reprojeção-do-arquivo">Reprojeção do arquivo</h4>
 <p>Como já comentado, é possível GDAL abrir mais de 200 tipos de arquivos vetoriais e raster, para saber quais são os drivers disponíveis é possível usar o seguinte código:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># ------------------------------------------------------------</span>
 <span style="color:#75715e"># Drivers in gdal</span>
@@ -384,7 +384,7 @@ inFeature <span style="color:#f92672">=</span> layer<span style="color:#f92672">
 
 <span style="color:#75715e"># Save and close the shapefiles</span>
 inDataSet <span style="color:#f92672">=</span> outDs <span style="color:#f92672">=</span> outFeature <span style="color:#f92672">=</span> inFeature <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
-</code></pre></div><h1 id="references">References</h1>
+</code></pre></div><h2 id="references">References</h2>
 <ul>
 <li><a href="https://pcjericks.github.io/py-gdalogr-cookbook/projection.html">Python GDAL/OGR Cookbook 1.0 documentation</a></li>
 <li><a href="https://www.osgeo.org/projects/gdal/">GDAL/OGR</a></li>

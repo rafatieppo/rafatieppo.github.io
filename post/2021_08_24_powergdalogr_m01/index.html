@@ -276,38 +276,21 @@
 
 </div>
 
-  <h1 id="introdução">Introdução</h1>
-<p>GDAL é um biblioteca licenciada pela <a href="https://www.osgeo.org/">OSGeo</a> (Open Source Geospatial Foundation), desenvolvida em C++, que permite manipular mais  de 200 formatos de aquivos matricial (raster) e vetorial. Tratando-se de uma biblioteca, a mesma apresenta um modelo de dados para abstração de arquivos raster e outra para arquivo vetorial, oferecendo uma série de comandos linha (comandos via terminal) para processamento de dados. Ainda como se não fosse suficiente, possui API para diversas linguagens de programação como: C, C++, Python, Perl, C# and Java.</p>
-<p>Entre as principais características, segunda a OSGeo, destaca-se:</p>
+  <h1 id="módulo-01">Módulo 01</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Ler, editar e gravar arquivo vetorial (shape).</p>
+<h2 id="material-e-métodos">Material e métodos</h2>
 <ul>
-<li>Leitura e gravação de arquivos raster e vetorial;</li>
-<li>Geoprocessamento: subsetting, image warping, reprojection, mosaicing, tiling, DEM.</li>
+<li>Linux Debian Buster</li>
+<li>GDAL 2.4.0, released 2018/12/14</li>
 </ul>
-<p>Para saber mais acesse o site da <a href="https://www.osgeo.org/">OSGeo</a></p>
-<h1 id="objetivos">Objetivos</h1>
-<p>Entre as diferentes formas de acessar e usar a biblioteca GDAL (QGIS, GRASS, etc.), o objetivo neste post é estudar algumas formas de manipular e processar arquivos raster e vetorial pela API para <a href="https://www.python.org/">Python</a>.</p>
-<h1 id="material-e-métodos">Material e métodos</h1>
-<p>Em todos os posts, os exemplos são executados utilizando o sistema operacional Linux.</p>
-<p>Para instalar o pacote da API para python verifique <a href="https://pypi.org/project/GDAL/">aqui</a> para instalar via PIP, ou <a href="https://anaconda.org/conda-forge/gdal">aqui</a> via Conda. Toda a documentação para API <a href="https://www.python.org/">Python</a> está disponível <a href="https://gdal.org/python/index.html">aqui</a>.</p>
-<p>Outra opção para acessar GDAL e OGR é via OGR (<a href="https://gdal.org/api/python.html#usage">aqui</a>).</p>
-<p>Na manipulação e processamento de aquivo vetorial utilizaremos um arquivo <code>shape</code> com o municípios do estado de MT (Figura 1).</p>
+<p>Na manipulação e processamento de aquivo vetorial, utilizaremos um arquivo <code>shape</code> com os municípios do estado de MT (Figura 1).</p>
  <figure>
     <img src="/post/pics/20210824_shapemt.png" alt="" width="130%"/>
   <figcaption>
       <p>Figura 1: Arquivo shape do estado de MT com Tabela de Atributos<p>
   </figcaption>
 </figure>
-<p>A manipulação e processamento foi está dividida em módulos, que serão disponibilizados em posts separados:</p>
-<ul>
-<li>M01 -&gt; Leitura, edição e gravação de arquivo vetorial (shape)</li>
-<li>M02 -&gt; Leitura de arquivo (shape) e reprojeção (CRS)</li>
-<li>M03 -&gt; Conversão de arquivos para outro formato (shape para GeoPackage)</li>
-<li>Leitura, edição e gravação de arquivo raster</li>
-<li>Reprojeção, reamostragem (resampling) e recorte (clip)</li>
-<li>Merge (união) de arquivos raster</li>
-<li>Abrir aquivo CSV (valor separado por vírgula ) e converter em vetorial (shape)</li>
-</ul>
-<h1 id="módulo-01">Módulo 01</h1>
 <h2 id="leitura-e-gravação-de-arquivo-vetorial-shape">Leitura e gravação de arquivo vetorial (shape)</h2>
 <h3 id="importação-dos-pacotes">Importação dos pacotes</h3>
 <p>Inicialmente importar os pacotes</p>
@@ -481,13 +464,13 @@ Posteriormente o referido campo é preenchido com os valores da área em m<sup>2
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="/post/2021_07_27_python_env/"><i class="fa fa-chevron-left"></i></a>
+    <a href="/post/2021_08_20_powergdalogr_m00/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="/post/2021_07_27_python_env/">Ambiente virtual em Python</a>
+      <a href="/post/2021_08_20_powergdalogr_m00/">The power of GDAL and OGR</a>
     </nav>
     
   </div>
