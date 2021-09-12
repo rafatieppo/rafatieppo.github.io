@@ -325,7 +325,8 @@ GEOGCS[<span style="color:#e6db74">&#34;SIRGAS 2000&#34;</span>,
         AUTHORITY[<span style="color:#e6db74">&#34;EPSG&#34;</span>,<span style="color:#e6db74">&#34;9122&#34;</span>]],
     AUTHORITY[<span style="color:#e6db74">&#34;EPSG&#34;</span>,<span style="color:#e6db74">&#34;4674&#34;</span>]]
 </code></pre></div><p>Conforme o código acima, verifica-se que o CRS do arquivo em questão é o <code>EPSG:4674</code> (&ldquo;SIRGAS 2000&rdquo;). Neste exercício faremos a reprojeção para o CRS <code>EPSG:5880</code> (&ldquo;SIRGAS 2000 / Brazil Polyconic&rdquo;).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> sourceCrs <span style="color:#f92672">=</span> osr<span style="color:#f92672">.</span>SpatialReference()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># create a sourceCrs and a targetCrs</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> sourceCrs <span style="color:#f92672">=</span> osr<span style="color:#f92672">.</span>SpatialReference()
 <span style="color:#f92672">&gt;&gt;&gt;</span> sourceCrs<span style="color:#f92672">.</span>ImportFromEPSG(<span style="color:#ae81ff">4674</span>)
 <span style="color:#ae81ff">0</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> targetCrs <span style="color:#f92672">=</span> osr<span style="color:#f92672">.</span>SpatialReference()
@@ -334,12 +335,6 @@ GEOGCS[<span style="color:#e6db74">&#34;SIRGAS 2000&#34;</span>,
 </code></pre></div><p>Agora que o CRS do arquivo de entrada é conhecido, e os objetos de referência dos CRS foram criados, é possível preparar o arquivo vetorial (shape):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># assign driver</span>
 driver <span style="color:#f92672">=</span> ogr<span style="color:#f92672">.</span>GetDriverByName(<span style="color:#e6db74">&#39;ESRI Shapefile&#39;</span>)
-
-<span style="color:#75715e"># create a sourceCrs and a targetCrs</span>
-sourceCrs <span style="color:#f92672">=</span> osr<span style="color:#f92672">.</span>SpatialReference()
-sourceCrs<span style="color:#f92672">.</span>ImportFromEPSG(<span style="color:#ae81ff">4674</span>)
-targetCrs <span style="color:#f92672">=</span> osr<span style="color:#f92672">.</span>SpatialReference()
-targetCrs<span style="color:#f92672">.</span>ImportFromEPSG(<span style="color:#ae81ff">5880</span>)
 
 <span style="color:#75715e"># create the CoordinateTransformation</span>
 coordTrans <span style="color:#f92672">=</span> osr<span style="color:#f92672">.</span>CoordinateTransformation(sourceCrs, targetCrs)
@@ -351,7 +346,6 @@ outputShapefile <span style="color:#f92672">=</span> <span style="color:#e6db74"
 outDs <span style="color:#f92672">=</span> driver<span style="color:#f92672">.</span>CreateDataSource(outputShapefile)
 outLayer <span style="color:#f92672">=</span> outDs<span style="color:#f92672">.</span>CreateLayer(
     <span style="color:#e6db74">&#34;mt_municipios_2020_crs5880&#34;</span>, targetCrs, geom_type<span style="color:#f92672">=</span>ogr<span style="color:#f92672">.</span>wkbMultiPolygon)
-
 
 <span style="color:#75715e"># add fields and defn from layer (original)</span>
 inLayerDefn <span style="color:#f92672">=</span> layer<span style="color:#f92672">.</span>GetLayerDefn()
