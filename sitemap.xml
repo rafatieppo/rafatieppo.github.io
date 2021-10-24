@@ -3,7 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/categories/</loc>
-    <lastmod>2021-09-11T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ci%C3%AAncia/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/2021_10_21_whatis_orcid/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/orcid/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/produ%C3%A7%C3%A3o/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/science/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/2021_09_11_creating_wkt/</loc>
     <lastmod>2021-09-11T00:00:00+00:00</lastmod>
@@ -20,16 +44,7 @@
     <loc>/tags/ogr/</loc>
     <lastmod>2021-09-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
-    <lastmod>2021-09-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/python/</loc>
-    <lastmod>2021-09-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2021-09-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2021-09-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/2021_08_26_powergdalogr_m03/</loc>
@@ -86,9 +101,6 @@
     <loc>/tags/stocks/</loc>
     <lastmod>2020-12-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/computer-and-eletronics/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/ensino/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -100,6 +112,12 @@
   </url><url>
     <loc>/tags/open-source/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/teaching/</loc>
+    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/computer-and-eletronics/</loc>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/debian/</loc>
     <lastmod>2020-05-25T00:00:00+00:00</lastmod>
