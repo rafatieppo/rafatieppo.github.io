@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>programming on Rafael Tieppo</title>
-    <link>/tags/programming/</link>
-    <description>Recent content in programming on Rafael Tieppo</description>
+    <title>data science on Rafael Tieppo</title>
+    <link>/tags/data-science/</link>
+    <description>Recent content in data science on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Conditional in Python: map vs loop</title>
       <link>/post/2021_12_02_python_map_loop/</link>
@@ -16,17 +16,6 @@
       <guid>/post/2021_12_02_python_map_loop/</guid>
       <description>Usually I need to classify some kind of data. Some weeks ago, I had a huge file with dates and precipitation, and one of the tasks was classify each day as ten-day. Thus, each month was divided in three sections as follow:
  from day 01 up to 10 is *ten-day 01* from day 11 up to 20 is *ten-day 02* from day 21 up to 31 is *ten-day 03*  Most of time I had used loops (Python language), however this time the process took a little bit slow.</description>
-    </item>
-    
-    <item>
-      <title>Changes in python objects</title>
-      <link>/post/2020_12_31_pythonchanges/</link>
-      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2020_12_31_pythonchanges/</guid>
-      <description>I am enthusiast programmer, thus I am no a professional. I wanna getting better and some times I write some notes to improve my English and programming skills. Certainly you will find some mistakes in the text and programming concepts in this post, I am sorry, I am trying.
-Lets go to what matter now!
-The word change is ambiguous in Python, it means that we have two distinct types of &amp;ldquo;change&amp;rdquo; in Python.</description>
     </item>
     
   </channel>

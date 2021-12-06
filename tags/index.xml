@@ -7,7 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 21 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>data science</title>
+      <link>/tags/data-science/</link>
+      <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>loop</title>
+      <link>/tags/loop/</link>
+      <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/loop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>map</title>
+      <link>/tags/map/</link>
+      <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/map/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>/tags/programming/</link>
+      <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tips</title>
+      <link>/tags/tips/</link>
+      <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tips/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ciência</title>
       <link>/tags/ci%C3%AAncia/</link>
@@ -63,29 +126,11 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>/tags/python/</link>
-      <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>programming, pyvenv</title>
       <link>/tags/programming-pyvenv/</link>
       <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/programming-pyvenv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tips</title>
-      <link>/tags/tips/</link>
-      <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/tips/</guid>
       <description></description>
     </item>
     
@@ -104,15 +149,6 @@
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/pandas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>/tags/programming/</link>
-      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/programming/</guid>
       <description></description>
     </item>
     
@@ -410,15 +446,6 @@
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/idw2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
