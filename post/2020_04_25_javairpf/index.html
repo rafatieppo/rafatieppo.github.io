@@ -275,27 +275,14 @@
 </div>
 
   <h2 id="introdução">Introdução</h2>
-<p>Para fazer declararação de imposto de renda vc necessita reunir a
-documentação e instalar o programa IRPF. Para obter arquivo de
-instalação basta acessar a <a href="http://receita.economia.gov.br/interface/cidadao/irpf/2020/download/multiplataforma-zip">página da
-receita</a>.
-O <strong>detalhe</strong> é que abaixo do link de download há uma mensagem com o
-seguinte aviso ao usuário:</p>
+<p>Para fazer declararação de imposto de renda vc necessita reunir a documentação e instalar o programa IRPF. Para obter arquivo de instalação basta acessar a <a href="http://receita.economia.gov.br/interface/cidadao/irpf/2020/download/multiplataforma-zip">página da receita</a>.  O <strong>detalhe</strong> é que abaixo do link de download há uma mensagem com o seguinte aviso ao usuário:</p>
 <blockquote>
 <p>ATENÇÃO! Caso necessário, atualize a versão <em>JAVA</em> neste computador. Por
 favor, <a href="http://www.java.com/pt_BR/download/manual.jsp">clique aqui</a> e
 prossiga com a instalação.</p>
 </blockquote>
-<p>Dependendo de qual é o seu sistema operacional (Windows, Linux, Solaris,
-etc) a instalação do <em>JAVA</em> pode se tornar um pouco chata. Se você usar
-<em>Windows</em>, acredito que em condições normais você não terá maiores
-problemas. Pois basta acessar o
-<a href="http://www.java.com/pt_BR/download/manual.jsp">site</a> e seguir as
-instruções.</p>
-<p>Caso você use Linux (meu caso), há mais de uma opção para instalação do
-<em>JAVA</em>, o que pode causar algumas confusões. Na tentativa de auxiliar na
-compreensão de como proceder a instalação do <em>JAVA</em>, resolvi escrever
-este post.</p>
+<p>Dependendo de qual é o seu sistema operacional (Windows, Linux, Solaris, etc) a instalação do <em>JAVA</em> pode se tornar um pouco chata. Se você usar <em>Windows</em>, acredito que em condições normais você não terá maiores problemas. Pois basta acessar o <a href="http://www.java.com/pt_BR/download/manual.jsp">site</a> e seguir as instruções.</p>
+<p>Caso você use Linux (meu caso), há mais de uma opção para instalação do <em>JAVA</em>, o que pode causar algumas confusões. Na tentativa de auxiliar na compreensão de como proceder a instalação do <em>JAVA</em>, resolvi escrever este post.</p>
 <h2 id="o-que-é-java">O que é JAVA?</h2>
 <p>Para deixar claro, vamos especificar quem é quem:</p>
 <ul>
@@ -303,83 +290,26 @@ este post.</p>
 <li><strong>JAVA</strong>: é uma linguagem de programação orientada a objetos;</li>
 <li><strong>Java Virtual Machine (JVM)</strong>: para o português <em>máquina virtual java</em></li>
 </ul>
-<p>Um dos motivos que fez da linguagem de programação <strong>JAVA</strong> um sucesso é
-o seu conceito de multi-plataforma. Inclusive, um dos slogans do JAVA é
-&ldquo;WORA&rdquo; (Write once, run anywhere), que na tradução para o português
-significa: <em>Escreva uma vez, execute em qualquer lugar</em>.</p>
-<p>Sendo extremamente simplista, na prática isto isto significa que uma vez
-que o desenvolvedor escreve o código em JAVA, e gera um determinado
-programa, independentemente do seu sistema operacional (<em>Linux</em>,
-<em>Windows</em>, <em>MAC</em>, etc), basta você possuir a <strong>JVM</strong> para poder rodar o
-programa no seu computador. Isto porque a <strong>JVM</strong> faz todo o trabalho de
-carregar as dependências necessárias para rodar o programa. Caso você não
-tenha entendido o conceito de máquina virtual, imagine a máquina virtual
-JAVA como sendo um mini computador dentro do seu computador. Este mini
-computador é que executa os programas JAVA.</p>
+<p>Um dos motivos que fez da linguagem de programação <strong>JAVA</strong> um sucesso é o seu conceito de multi-plataforma. Inclusive, um dos slogans do JAVA é &ldquo;WORA&rdquo; (Write once, run anywhere), que na tradução para o português significa: <em>Escreva uma vez, execute em qualquer lugar</em>.</p>
+<p>Sendo extremamente simplista, na prática isto isto significa que uma vez que o desenvolvedor escreve o código em JAVA, e gera um determinado programa, independentemente do seu sistema operacional (<em>Linux</em>, <em>Windows</em>, <em>MAC</em>, etc), basta você possuir a <strong>JVM</strong> para poder rodar o programa no seu computador. Isto porque a <strong>JVM</strong> faz todo o trabalho de carregar as dependências necessárias para rodar o programa. Caso você não tenha entendido o conceito de máquina virtual, imagine a máquina virtual JAVA como sendo um mini computador dentro do seu computador. Este mini computador é que executa os programas JAVA.</p>
 <h2 id="qual-java-instalar-para-rodar-o-programa-do-irpf">Qual JAVA instalar para rodar o programa do IRPF?</h2>
-<p>Para ter a <strong>JVM</strong>  em seu sistema é necessário instalar o <strong>JRE</strong> (JAVA
-Runtime Environment), que é gratuito, e permite ao usuário rodar
-aplicativos JAVA no seu computador.</p>
-<p>Agora, para quem deseja desenvolver aplicações JAVA, é necessário
-instalar o <strong>JDK</strong> (JAVA Development Kit). No <strong>JDK</strong> está incluso o que
-é necessário para escrever aplicações, e inclusive o <strong>JRE</strong>.</p>
-<p>Por via das dúvidas, usualmente eu instalo o <strong>JDK</strong>.</p>
+<p>Para ter a <strong>JVM</strong> em seu sistema é necessário instalar o <strong>JRE</strong> (JAVA Runtime Environment), que é gratuito, e permite ao usuário rodar aplicativos JAVA no seu computador.</p>
+<p>Agora, para quem deseja desenvolver aplicações JAVA, é necessário instalar o <strong>JDK</strong> (JAVA Development Kit). No <strong>JDK</strong> está incluso o que é necessário para escrever aplicações, e inclusive o <strong>JRE</strong>.</p>
+<p>Por via das dúvidas, usualmente eu instalo o <strong>JDK</strong> e o <strong>JRE</strong>.</p>
 <h2 id="como-instalar-o-java-no-linux-para-rodar-o-programa-irpf">Como instalar o JAVA no Linux para rodar o programa IRPF</h2>
-<p>Há pelo menos duas opções de JAVA, uma que é proprietária, pertencente à
-<a href="https://www.java.com/pt_BR/">Oracle</a>, e outra que é de código aberto
-<a href="https://openjdk.java.net/">OpenJDK</a> com licença <em>GPLv2</em>. Se o uso do
-<strong>JDK</strong> for para fins comerciais, recomenda-se a leitura das licenças
-para ambas as versões, mas para rodar o IRPF ambas podem ser utilizadas
-sem problemas (este é o nosso objetivo).</p>
-<p>Usualmente, nos repositórios das distribuições Linux o <strong>JDK</strong>
-disponível é o <code>OpenJDK</code>, e para evitar a adição de repositórios é esta
-a versão que vamos instalar. A sua versão mais recente (2020-04-25) é
-a 11.</p>
-<p>Agora que já sabemos quem é quem, vamos realizar a instalação. Nas
-distros Linux <em>Debian</em>, <em>Ubuntu</em>, <em>Mint</em>, <em>PopOS</em> e derivados, acesse o
-<strong>terminal</strong> e digite:</p>
-<pre><code>sudo apt-get install openjdk-11-jdk
-</code></pre><p>Uma vez que você finalizou a instalação do <strong>JDK</strong>, vamos obter o
-programa do IRPF. Acesse a página da
-<a href="http://receita.economia.gov.br/">Receita</a>, posteriormente acesse a
-seção do <strong>IRPF2020</strong> e acesse a área de <strong>downloads</strong>. Agora, procure o
-quadro que tem o nome <em>Computador</em>, clique em <code>Outros (Mac, Linux, Solaris)</code>. Na sequência clique sobre <code>SOLARIS/ OUTROS (jar)</code>, por fim
-clique sobre <code>Programa IRPF 2020</code> para iniciar o download.</p>
-<p>Após a conclusão do download um arquivo com extensão <code>.jar</code> estará salvo
-no seu computador. Coloque este arquivo em uma pasta da sua
-preferência. Via <strong>Terminal</strong> acesse a referida pasta e digite:</p>
-<pre><code>java -jar IRPF2020v1.6.jar
-</code></pre><p>Assim que o comando acima for executado, uma janela de instalação do
-programa IRPF será aberta. Siga as instruções até finalizar a
-instalação. Por padrão o programa é instalado em
-<code>/home/NomeUsuario/ProgramasRFB/</code> (Figura 1).</p>
-<figure>
-    <img src="/post/pics/20200425_folder.png" alt="" width="auto"/>
-  <figcaption>
-      <p>Figura 1 - Caminho de instalação do programa IRPF<p>
-  </figcaption>
-</figure>
-<p>Para executar o programa IRPF, basta acessar a sua pasta
-<code>/home/NomeUsuario/</code>, e localizar a pasta <code>ProgramasRFB</code>.  Nesta pasta
-estará a(s) versão(s) do(s) programa(s) IRPF. Via <strong>terminal</strong>, acesse a
-versão desejada, por exemplo, <code>IRPF 2020</code>, e execute a linha de comando
-(Figura 2):</p>
+<p>Há pelo menos duas opções de JAVA, uma que é proprietária, pertencente à <a href="https://www.java.com/pt_BR/">Oracle</a>, e outra que é de código aberto <a href="https://openjdk.java.net/">OpenJDK</a> com licença <em>GPLv2</em>. Se o uso do <strong>JDK</strong> for para fins comerciais, recomenda-se a leitura das licenças para ambas as versões, mas para rodar o IRPF ambas podem ser utilizadas sem problemas (este é o nosso objetivo).</p>
+<p>Usualmente, nos repositórios das distribuições Linux o <strong>JDK</strong> disponível é o <code>OpenJDK</code>, e para evitar a adição de repositórios é esta a versão que vamos instalar.</p>
+<p>Agora que já sabemos quem é quem, vamos realizar a instalação. Nas distros Linux <em>Debian</em>, <em>Ubuntu</em>, <em>Mint</em>, <em>PopOS</em> e derivados, acesse o <strong>terminal</strong> e digite:</p>
+<pre><code>apt install default-jre default-jdk
+</code></pre><p>Caso queira a versão mais recente, no terminal digite:</p>
+<pre><code>apt install openjdk-17-jre openjdk-17-jdk 
+</code></pre><p>Uma vez que você finalizou a instalação do <strong>JDK</strong>, vamos obter o programa do IRPF. Acesse a página da <a href="http://receita.economia.gov.br/">Receita</a>, posteriormente acesse a seção do <strong>IRPF2022</strong> e acesse a área de <a href="https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/download/pgd/dirpf">downloads</a>. Agora, procure o quadro que tem o nome <em>Programa IRPF 2022</em>. Note que na versão 2022 há três opções: Mac, Linux, Multi. Se optar pelo sistema Linux, uma imagem  do programa será salva no seu computador, o que pode resolver na maioria dos casos. Como a ideia é mostar o uso do java, vou optar pelo download para <em>Multi</em> sistemas operacionais.</p>
+<p>Após a conclusão do download um arquivo com extensão <code>.zip</code> estará salvo no seu computador. Descompacte este arquivo em uma pasta da sua preferência e via <strong>Terminal</strong> acesse a referida pasta e digite:</p>
 <pre><code>java -jar irpf.jar
-</code></pre><figure>
-    <img src="/post/pics/20200425_terminal.png" alt="" width="auto"/>
-  <figcaption>
-      <p>Figura 2 - Execução do arquivo irpf.jar<p>
-  </figcaption>
-</figure>
-<p>Se tudo ocorreu bem, basta usar o programa IRPF.  Há um vídeo no youtube
-que explica como acessar o programa IRPF (<a href="https://www.youtube.com/watch?v=I3XI9Tn9JBI">video
-aqui</a>).</p>
+</code></pre><p>Assim que o comando acima for executado, uma janela de instalação do programa IRPF será aberta. Siga as instruções até finalizar a instalação. Nas versões antigas, era necessário uma instalação completa e o programa era instalado em outra pasta. Na versão 2022 basta retornar na pasta que o arquivo <code>zip</code> foi descompactado e repetir a linha de comando acima.</p>
 <h2 id="references">References</h2>
-<p><a href="https://www.edivaldobrito.com.br/oracle-java-11-no-ubuntu/">https://www.edivaldobrito.com.br/oracle-java-11-no-ubuntu/</a></p>
 <p><a href="https://dicasdejava.com.br/qual-a-diferenca-entre-jdk-jre-e-jvm/">https://dicasdejava.com.br/qual-a-diferenca-entre-jdk-jre-e-jvm/</a></p>
-<p><a href="https://www.edivaldobrito.com.br/java-no-ubuntu-instalar-o-openjdk-8/">https://www.edivaldobrito.com.br/java-no-ubuntu-instalar-o-openjdk-8/</a></p>
-<p><a href="https://www.edivaldobrito.com.br/instalar-java-no-linux-veja-como-fazer-isso-manualmente/">https://www.edivaldobrito.com.br/instalar-java-no-linux-veja-como-fazer-isso-manualmente/</a></p>
-<p><a href="http://receita.economia.gov.br/">http://receita.economia.gov.br/</a></p>
+<p><a href="https://www.gov.br/receitafederal/pt-br">https://www.gov.br/receitafederal/pt-br</a></p>
 
   
   <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
