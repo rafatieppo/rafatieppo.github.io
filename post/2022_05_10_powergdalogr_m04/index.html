@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Recorte de arquivos raster com uso de máscara em Python">
+  <meta name="generator" content="Hugo 0.86.1" />
+
+  <title>The power of GDAL and OGR &middot; Rafael Tieppo</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">RafaTieppo</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/project/"><i class='fa fa-briefcase fa-fw'></i>Project</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/teaching/"><i class='fa fa-graduation-cap fa-fw'></i>Teaching</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/rafaeltieppo" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://researchgate.net/profile/Rafael-Tieppo" rel="me" target="_blank"><i class="ai ai-researchgate-square ai-1x"></i>researchgate</a>
+    </li>
+    
+    
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://orcid.org/0000-0001-8132-4813" rel="me" target="_blank"><i class="ai ai-orcid-square ai-1x"></i>orcid</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://scholar.google.com/citations?user=ClN1Q6AAAAAJ" rel="me" target="_blank"><i class="ai ai-google-scholar ai-1x"></i>google-scholar</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/3109019/rafa" rel="me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2021 <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Licensed CC:By-NC-SA</a></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>The power of GDAL and OGR</h1>
+  <h2>Recorte de arquivos raster com uso de máscara em Python</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>2022-05-10</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/ogr">ogr</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/gdal">gdal</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/geoprocessing">geoprocessing</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <h1 id="módulo-04">Módulo 04</h1>
+<h2 id="introdução">Introdução</h2>
+<p>Usualmente após o download dos arquivos raster, realiza-se recortes das bandas para realizar as análises na área de interesse. Dependendo o número de arquivos que deseja-se fazer o recorte, a atividades pode torna-se cansativa e consumir um tempo significativo. Como trata-se de um processo repetitivo, o objetivo deste post é implementar um script para agilizar o processamento das imagens.</p>
+<h2 id="material-e-métodos">Material e métodos</h2>
+<p>Entre as possíveis alternativas, uso o método <code>gdal.Warp</code> ( <a href="https://gdal.org/">GDAL</a> - Geospatial Data Abstraction Library) para fazer o recorte. A sequência básica para o recorte das imagens, utilizando um arquivo <code>shape</code>, consiste nos seguintes passos:</p>
+<ol>
+<li>Crie uma pasta (diretório) e insira na mesma todos os arquivos raster que deseja-se fazer o recorte;</li>
+<li>Na mesma pasta, insira o arquivo <code>shape</code> que servirá como máscara, ou seja, fornecerá o contorno do recorte.</li>
+<li>Verifique se todos os arquivos estão no mesmo CRS (sistema de referência de coordenadas e.g. EPSG 4326), caso não estejam faça a reprojeção conforme necessário.</li>
+<li>Ainda na mesma pasta, crie o arquivo <code>crop_raster.py</code> para inserirmos o código em Python.</li>
+</ol>
+<h3 id="o-código">O código</h3>
+<p>Importando as bibliotecas:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> osgeo <span style="color:#f92672">import</span> ogr
+<span style="color:#f92672">from</span> osgeo <span style="color:#f92672">import</span> gdal
+<span style="color:#f92672">import</span> glob
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</code></pre></div><p>Lendo os arquivos raster contidos na pasta:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">lsRaster <span style="color:#f92672">=</span> glob<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#39;./raster/*.jp2&#39;</span>)
+</code></pre></div><p>Se necessário, no código acima, edite a extensão do arquivo raster, e.g. de <code>jp2</code> para <code>tif</code>. Uma vez criada a lista com todos os arquivos raster que deseja-se recortar, cria-se um objeto com o caminho do arquivo <code>shape</code> que será usado como máscara.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">pathShapeMask <span style="color:#f92672">=</span> str(<span style="color:#e6db74">&#39;./shape_mask/shape_mascara.shp&#39;</span>)
+</code></pre></div><p>Antes de realizar o recorte dos arquivos raster, é interessante virificar se os arquivos estão no mesmo CRS. Para verificar o CRS do arquivo <code>shape</code>, uma das opções é:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># Lendo o arquivo shape</span>
+ds <span style="color:#f92672">=</span> ogr<span style="color:#f92672">.</span>Open(pathShapeMask, <span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 0 means read-only. 1 means writeable</span>
+
+<span style="color:#75715e"># Obtendo informacoes</span>
+layer <span style="color:#f92672">=</span> ds<span style="color:#f92672">.</span>GetLayer()
+spatialRef <span style="color:#f92672">=</span> layer<span style="color:#f92672">.</span>GetSpatialRef()
+
+print(spatialRef<span style="color:#f92672">.</span>ExportToWkt())
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#e6db74">&#39;PROJCS[&#34;WGS 84 / UTM zone 21S&#34;,GEOGCS[&#34;WGS 84&#34;,DATUM[&#34;WGS_1984&#34;,SPHEROID[&#34;WGS 84&#34;,6378137,298.257223563,AUTHORITY[&#34;EPSG&#34;,&#34;7030&#34;]],AUTHORITY[&#34;EPSG&#34;,&#34;6326&#34;]],PRIMEM[&#34;Greenwich&#34;,0,AUTHORITY[&#34;EPSG&#34;,&#34;8901&#34;]],UNIT[&#34;degree&#34;,0.0174532925199433,AUTHORITY[&#34;EPSG&#34;,&#34;9122&#34;]],AUTHORITY[&#34;EPSG&#34;,&#34;4326&#34;]],PROJECTION[&#34;Transverse_Mercator&#34;],PARAMETER[&#34;latitude_of_origin&#34;,0],PARAMETER[&#34;central_meridian&#34;,-57],PARAMETER[&#34;scale_factor&#34;,0.9996],PARAMETER[&#34;false_easting&#34;,500000],PARAMETER[&#34;false_northing&#34;,10000000],UNIT[&#34;metre&#34;,1,AUTHORITY[&#34;EPSG&#34;,&#34;9001&#34;]],AXIS[&#34;Easting&#34;,EAST],AXIS[&#34;Northing&#34;,NORTH],AUTHORITY[&#34;EPSG&#34;,&#34;32721&#34;]]&#39;</span>
+
+<span style="color:#75715e"># fechando o arquivo</span>
+ds <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</code></pre></div><p>Para verificar o CRS do arquivo raster:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># Lendo arquivo raster e verificando o CRS</span>
+pathRasterFile <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./raster/T21LTD_20200305T141041_B02_10m.jp2&#39;</span>
+dsR <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(pathRasterFile)
+
+print(dsR<span style="color:#f92672">.</span>GetProjection())
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#e6db74">&#39;PROJCS[&#34;WGS 84 / UTM zone 21S&#34;,GEOGCS[&#34;WGS 84&#34;,DATUM[&#34;WGS_1984&#34;,SPHEROID[&#34;WGS 84&#34;,6378137,298.257223563,AUTHORITY[&#34;EPSG&#34;,&#34;7030&#34;]],AUTHORITY[&#34;EPSG&#34;,&#34;6326&#34;]],PRIMEM[&#34;Greenwich&#34;,0,AUTHORITY[&#34;EPSG&#34;,&#34;8901&#34;]],UNIT[&#34;degree&#34;,0.0174532925199433,AUTHORITY[&#34;EPSG&#34;,&#34;9122&#34;]],AUTHORITY[&#34;EPSG&#34;,&#34;4326&#34;]],PROJECTION[&#34;Transverse_Mercator&#34;],PARAMETER[&#34;latitude_of_origin&#34;,0],PARAMETER[&#34;central_meridian&#34;,-57],PARAMETER[&#34;scale_factor&#34;,0.9996],PARAMETER[&#34;false_easting&#34;,500000],PARAMETER[&#34;false_northing&#34;,10000000],UNIT[&#34;metre&#34;,1,AUTHORITY[&#34;EPSG&#34;,&#34;9001&#34;]],AXIS[&#34;Easting&#34;,EAST],AXIS[&#34;Northing&#34;,NORTH],AUTHORITY[&#34;EPSG&#34;,&#34;32721&#34;]]&#39;</span>
+
+dsR <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</code></pre></div><p>Uma vez verificado o CRS, realiza-se o recorte dos arquivos raster. No nome de cada arquivo recortado será adicionado o termo <code>_cut.jp2</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># recortando e renomeando os aquivos raster da lista</span>
+<span style="color:#66d9ef">for</span> idx <span style="color:#f92672">in</span> range(len(lsRaster)):
+    rasterFile <span style="color:#f92672">=</span> lsRaster[idx]
+    outputFilePath <span style="color:#f92672">=</span> str(<span style="color:#e6db74">&#39;./&#39;</span> <span style="color:#f92672">+</span> lsRaster[idx]<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;.&#39;</span>)[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;_cut.jp2&#39;</span>)
+    dsR <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(rasterFile)
+    dsClip <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Warp(outputFilePath, dsR,
+                       cutlineDSName<span style="color:#f92672">=</span>pathShapeMask,
+                       cropToCutline<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, dstNodata<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>nan)
+    print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> File: </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, outputFilePath, <span style="color:#e6db74">&#34; was created </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+    dsR <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+    dsClip <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</code></pre></div><h2 id="resultados">Resultados</h2>
+<p>Consulte o vídeo no canal do YouTube: <a href="https://www.youtube.com/channel/UC0Ld1c35Jg6JSIJJxRbGVUg/featured">&lsquo;YouTube&rsquo;</a></p>
+<h2 id="considerações">Considerações</h2>
+<p>Os arquivos recortados foram gerados com sucesso. Salienta-se que o desenvolvimento do código pode custar mais tempo que fazer a operação manual para um número reduzido de aquivos. Todavia, uma vez feito o código, o mesmo poderá ser utilizado em outras situações similares.</p>
+<p>Outra consideração é que quanto maior o número de aquivos a ser recortado, maior a vantagem do uso do script em relação ao processo manual.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://pcjericks.github.io/py-gdalogr-cookbook/projection.html">Python GDAL/OGR Cookbook 1.0 documentation</a></li>
+<li><a href="https://www.osgeo.org/projects/gdal/">GDAL/OGR</a></li>
+<li><a href="https://www.python.org/">PYTHON</a></li>
+<li><a href="https://gdal.org/python/index.html">GDAL API Python</a></li>
+<li></li>
+</ul>
+
+  
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2f2022_05_10_powergdalogr_m04%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2f2022_05_10_powergdalogr_m04%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=%2fpost%2f2022_05_10_powergdalogr_m04%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2f2022_05_10_powergdalogr_m04%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2f2022_05_10_powergdalogr_m04%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=%2fpost%2f2022_05_10_powergdalogr_m04%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/2021_12_02_python_map_loop/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/2021_12_02_python_map_loop/">Conditional in Python: map vs loop</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+  
+  
+  
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-rafatieppo-github-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+<script src="/js/menus.js"></script>
+
+
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-33432733-8', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+<script src="/js/math-code.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
+</html>
+
