@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="IDW for python and R">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="generator" content="Hugo 0.68.3" />
 
   <title>Inverse Distance Weighting (IDW) Interpolation &middot; Rafael Tieppo</title>
 
@@ -344,9 +344,9 @@ point, and <em>p</em> is the power (e.g. 2).</p>
 </table>
 <p>For Python we will make our own code. We need two functions, one of them
 for distances calculation, and another one to prediction.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># packages</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># packages</span>
 <span style="color:#f92672">import</span> math
-<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#75715e">#------------------------------------------------------------</span>
 <span style="color:#75715e"># Distance calculation, degree to km (Haversine method)</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">harvesine</span>(lon1, lat1, lon2, lat2):
@@ -376,7 +376,7 @@ for distances calculation, and another one to prediction.</p>
         lstxyzi<span style="color:#f92672">.</span>append(xyzi)
     <span style="color:#66d9ef">return</span>(lstxyzi)
 </code></pre></div><p>Solving:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># know points</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># know points</span>
 x <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">47.6</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">47.6</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.6</span>]
 y <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">23.4</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">24.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">23.9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">23.1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">22.7</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">22.5</span>]
 z <span style="color:#f92672">=</span> [<span style="color:#ae81ff">27.0</span>,  <span style="color:#ae81ff">33.4</span>,  <span style="color:#ae81ff">34.6</span>,  <span style="color:#ae81ff">18.2</span>,   <span style="color:#ae81ff">30.8</span>, <span style="color:#ae81ff">42.8</span>]
@@ -388,8 +388,8 @@ idwr(x,y,z,xi,yi)
 <span style="color:#75715e"># output</span>
 [[<span style="color:#f92672">-</span><span style="color:#ae81ff">48.05306</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">23.59167</span>, <span style="color:#ae81ff">31.486682779040855</span>]]
 </code></pre></div><p>Plotting with distances (Figure 2):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
-<span style="color:#f92672">import</span> matplotlib.style <span style="color:#66d9ef">as</span> style
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> matplotlib.style <span style="color:#f92672">as</span> style
 style<span style="color:#f92672">.</span>available
 style<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#39;seaborn-white&#39;</span>)
 dists <span style="color:#f92672">=</span> [<span style="color:#ae81ff">50.93664088924365</span>, <span style="color:#ae81ff">97.50798854810864</span>, <span style="color:#ae81ff">37.44644402279387</span>, <span style="color:#ae81ff">102.4130216426453</span>, <span style="color:#ae81ff">109.55825855482198</span>, <span style="color:#ae81ff">133.81580425549404</span>]
@@ -410,7 +410,7 @@ plt<span style="color:#f92672">.</span>scatter(xi,yi,
             c<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">230</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;unknown&#39;</span>, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*&#39;</span>)
 plt<span style="color:#f92672">.</span>legend(bbox_to_anchor<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1.04</span>,<span style="color:#ae81ff">1</span>), loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;upper left&#34;</span>)
 plt<span style="color:#f92672">.</span>tight_layout()
-plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
+plt<span style="color:#f92672">.</span>grid(True)
 plt<span style="color:#f92672">.</span>show()
 </code></pre></div><figure>
   <img src="/post/pics/2018_07_27_pointsa.png"  />
@@ -419,7 +419,7 @@ plt<span style="color:#f92672">.</span>show()
   </figcaption>
 </figure>
 <h2 id="validation-using-r">Validation using R</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">library</span>(gstat)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">library</span>(gstat)
 <span style="color:#a6e22e">library</span>(sp)
 dfsp <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(x <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-47.6</span>, <span style="color:#ae81ff">-48.9</span>, <span style="color:#ae81ff">-48.2</span>, <span style="color:#ae81ff">-48.9</span>, <span style="color:#ae81ff">-47.6</span>, <span style="color:#ae81ff">-48.6</span>),
                   y <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-23.4</span>, <span style="color:#ae81ff">-24.0</span>, <span style="color:#ae81ff">-23.9</span>, <span style="color:#ae81ff">-23.1</span>, <span style="color:#ae81ff">-22.7</span>, <span style="color:#ae81ff">-22.5</span>),

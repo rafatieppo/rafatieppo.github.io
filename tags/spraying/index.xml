@@ -7,7 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 11 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="/tags/spraying/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/spraying/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>APP PEESA SPRAYING</title>
       <link>/project/2017-09-09-portfolio_03_peesaspray/</link>

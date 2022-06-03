@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A practical method to read and store data in R (statistical programming language)">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="generator" content="Hugo 0.68.3" />
 
   <title>Reading and storing several files using R &middot; Rafael Tieppo</title>
 
@@ -281,7 +281,7 @@ we will show how to handle with.</p>
 <h2 id="case-i---reading-several-files">Case I - reading several files</h2>
 <p>Supposing you have some <code>.csv</code> files. If you have not one we will create them.</p>
 <h3 id="creating-a-hypothetical-data-frame">Creating a hypothetical data frame</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">
 DF <span style="color:#f92672">&lt;-</span>
     <span style="color:#a6e22e">data.frame</span>(BLOCO <span style="color:#f92672">=</span> <span style="color:#a6e22e">rep</span>(<span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>), each <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>),
                TRAT<span style="color:#f92672">=</span><span style="color:#a6e22e">rep</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;T1&#34;</span>, <span style="color:#e6db74">&#34;T2&#34;</span>, <span style="color:#e6db74">&#34;T3&#34;</span>), each <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>),
@@ -296,7 +296,7 @@ DF <span style="color:#f92672">&lt;-</span>
 ## 5     1   T2   1 30.31546
 ## 6     1   T2   2 28.90498
 </code></pre><h3 id="recording-five-csv-files">Recording five <code>.csv</code> files</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">sapply</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;foo1.csv&#34;</span>, <span style="color:#e6db74">&#34;foo2.csv&#34;</span>, <span style="color:#e6db74">&#34;foo3.csv&#34;</span>, <span style="color:#e6db74">&#34;foo4.csv&#34;</span>, <span style="color:#e6db74">&#34;foo5.csv&#34;</span>),
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">sapply</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;foo1.csv&#34;</span>, <span style="color:#e6db74">&#34;foo2.csv&#34;</span>, <span style="color:#e6db74">&#34;foo3.csv&#34;</span>, <span style="color:#e6db74">&#34;foo4.csv&#34;</span>, <span style="color:#e6db74">&#34;foo5.csv&#34;</span>),
        <span style="color:#a6e22e">function</span>(i){
        <span style="color:#a6e22e">write.csv</span>(DF, <span style="color:#a6e22e">paste</span>(i))})
 </code></pre></div><pre><code>## $foo1.csv
@@ -314,19 +314,19 @@ DF <span style="color:#f92672">&lt;-</span>
 ## $foo5.csv
 ## NULL
 </code></pre><h3 id="checking-if-the-five-files-have-been-created">Checking if the five files have been created</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dir</span>()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dir</span>()
 </code></pre></div><pre><code>## [1] &quot;170514_READING_FILES.md&quot;  &quot;170514_READING_FILES.Rmd&quot;
 ## [3] &quot;foo1.csv&quot;                 &quot;foo2.csv&quot;                
 ## [5] &quot;foo3.csv&quot;                 &quot;foo4.csv&quot;                
 ## [7] &quot;foo5.csv&quot;
 </code></pre><h3 id="reading-files-csv-names">Reading file&rsquo;s (<code>.csv</code>) names</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">temp <span style="color:#f92672">=</span> <span style="color:#a6e22e">list.files</span>(pattern<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*.csv&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">temp <span style="color:#f92672">=</span> <span style="color:#a6e22e">list.files</span>(pattern<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*.csv&#34;</span>)
 temp
 </code></pre></div><pre><code>## [1] &quot;foo1.csv&quot; &quot;foo2.csv&quot; &quot;foo3.csv&quot; &quot;foo4.csv&quot; &quot;foo5.csv&quot;
 </code></pre><h3 id="all-csv-file-in-only-one-list-and-transforming-it-to-data-frame">All <code>.csv</code> file in only one list, and transforming it to data frame</h3>
 <p>In my opinion, a good way to store data from several files is the <em>list</em>
 format. Especially for files with the same header.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">DF_LIST <span style="color:#f92672">&lt;-</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">DF_LIST <span style="color:#f92672">&lt;-</span>
     <span style="color:#a6e22e">lapply</span>(<span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">length</span>(temp)),
            <span style="color:#a6e22e">function</span>(z)
                <span style="color:#a6e22e">read.csv</span>(temp[z],
@@ -346,19 +346,19 @@ DF_LIST_agrup <span style="color:#f92672">&lt;-</span>
 ## 5 5     1   T2   1 30.31546
 ## 6 6     1   T2   2 28.90498
 </code></pre><h3 id="checking-dimensions-all-looks-great">Checking dimensions. All looks great.</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dim</span>(DF_LIST_agrup)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dim</span>(DF_LIST_agrup)
 </code></pre></div><pre><code>## [1] 240   5
 </code></pre><p>You can see it.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">View</span>(DF_LIST_agrup)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">View</span>(DF_LIST_agrup)
 </code></pre></div><h2 id="case--ii---excel-files-dealing-with-">Case  II - Excel files, dealing with &hellip;</h2>
 <p>If you work with spread sheets (<code>.xls</code> or <code>.xlsx</code>), you can use <code>readxl</code> package.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(readxl)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(readxl)
 
 DF1 <span style="color:#f92672">&lt;-</span> 
 <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;FILE_NAME.xlsx&#34;</span>)
 </code></pre></div><p>Just in case, if you require a specif sheet from your file <code>.xls</code> or
 <code>.xlsx</code>, you can set the options.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#library(readxl)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#library(readxl)</span>
 
 DF2 <span style="color:#f92672">&lt;-</span>
     <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;FILE_NAME.xlsx&#34;</span>,
@@ -367,13 +367,13 @@ DF2 <span style="color:#f92672">&lt;-</span>
 <p>If you <code>.xls</code> or <code>xlxs</code> file has more than one sheet, you can use the
 same logic for <strong>Case I</strong>.</p>
 <h3 id="create-a-list-with-sheets-names">Create a list with sheet&rsquo;s names</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(readxl)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(readxl)
 
 LIST_SHEET <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;SHEET1&#34;</span>,
                 <span style="color:#e6db74">&#34;SHEET2&#34;</span>,
                 <span style="color:#e6db74">&#34;SHEET3&#34;</span>)
 </code></pre></div><h3 id="reading-file-and-sheets">Reading file and sheets</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">DF3_LIST <span style="color:#f92672">&lt;-</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">DF3_LIST <span style="color:#f92672">&lt;-</span>
     <span style="color:#a6e22e">sapply</span>(LIST_SHEET,
            <span style="color:#a6e22e">function</span>(L){
                <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;FILE_NAME.xlsx&#34;</span>,
@@ -381,7 +381,7 @@ LIST_SHEET <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">
                },
            simplify <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
 </code></pre></div><h3 id="transform-to-data-frame-if-necessary">Transform to data frame (if necessary)</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">### DB ACCOUNT</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">### DB ACCOUNT</span>
 DF3_DF <span style="color:#f92672">&lt;-</span>
     <span style="color:#a6e22e">do.call</span>(rbind.data.frame, DF3_LIST)
 </code></pre></div><p>More details about reading and storing data in R you can find in References</p>

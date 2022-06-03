@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Leitura, edição e gravação de arquivo vetorial (shape)">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="generator" content="Hugo 0.68.3" />
 
   <title>The power of GDAL and OGR &middot; Rafael Tieppo</title>
 
@@ -294,34 +294,34 @@
 <h2 id="leitura-e-gravação-de-arquivo-vetorial-shape">Leitura e gravação de arquivo vetorial (shape)</h2>
 <h3 id="importação-dos-pacotes">Importação dos pacotes</h3>
 <p>Inicialmente importar os pacotes</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> osgeo <span style="color:#f92672">import</span> ogr, osr, gdal
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> osgeo <span style="color:#f92672">import</span> ogr, osr, gdal
 </code></pre></div><h3 id="leitura-do-arquivo">Leitura do arquivo</h3>
 <p>Para abrir o arquivo vetorial, define-se o caminho e o parâmetro 0 ou 1:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># ------------------------------------------------------------</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># ------------------------------------------------------------</span>
 <span style="color:#75715e"># reading shape</span>
 <span style="color:#75715e"># ------------------------------------------------------------</span>
 shapePath <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./shape/mt_municipios_2020.shp&#39;</span>
 ds <span style="color:#f92672">=</span> ogr<span style="color:#f92672">.</span>Open(shapePath, <span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 0 means read-only. 1 means writeable</span>
 
 <span style="color:#75715e"># Check to see if shapefile was found.</span>
-<span style="color:#66d9ef">if</span> ds <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
-    print(<span style="color:#e6db74">&#34;------------------------------------------------------- </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
-    print(<span style="color:#e6db74">&#39;Could not open </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (shapePath))
-    print(<span style="color:#e6db74">&#39;Check shapefile&#39;</span>)
+<span style="color:#66d9ef">if</span> ds <span style="color:#f92672">is</span> None:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;------------------------------------------------------- </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Could not open </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (shapePath))
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Check shapefile&#39;</span>)
 <span style="color:#66d9ef">else</span>:
-    print(<span style="color:#e6db74">&#34;------------------------------------------------------- </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
-    print(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#e6db74">&#39; has been opened&#39;</span> <span style="color:#f92672">%</span> (shapePath))
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;------------------------------------------------------- </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#e6db74">&#39; has been opened&#39;</span> <span style="color:#f92672">%</span> (shapePath))
     layer <span style="color:#f92672">=</span> ds<span style="color:#f92672">.</span>GetLayer()
 </code></pre></div><p>Nesse bloco foi especificado o caminho que o arquivo encontra-se, e o método <code>Open</code> da classe OGR é executado com o argumento <code>1</code> para possibilitar a edição do arquivo. Na sequência, criou-se uma verificação da leitura do arquivo. Se o arquivo foi aberto com sucesso, o objeto layer recebe a classe <code>Layer</code> via <code>ds.GetLayer()</code>. Verifique aqui todos os métodos disponíveis na classe <code>Layer</code> <a href="https://gdal.org/python/index.html">aqui</a></p>
 <p>Para conhecer o número de feições do arquivo e o CRS do aquirvo utiliza-se:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># Get the number of features in the layer</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># Get the number of features in the layer</span>
 numFeatures <span style="color:#f92672">=</span> layer<span style="color:#f92672">.</span>GetFeatureCount()
-print(numFeatures)
-<span style="color:#f92672">&gt;&gt;&gt;</span> print(numFeatures)
+<span style="color:#66d9ef">print</span>(numFeatures)
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(numFeatures)
 <span style="color:#ae81ff">141</span>
 
 <span style="color:#75715e"># get CRS</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> print(layer<span style="color:#f92672">.</span>GetSpatialRef())
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(layer<span style="color:#f92672">.</span>GetSpatialRef())
 GEOGCS[<span style="color:#e6db74">&#34;SIRGAS 2000&#34;</span>,
     DATUM[<span style="color:#e6db74">&#34;Sistema_de_Referencia_Geocentrico_para_las_AmericaS_2000&#34;</span>,
         SPHEROID[<span style="color:#e6db74">&#34;GRS 1980&#34;</span>,<span style="color:#ae81ff">6378137</span>,<span style="color:#ae81ff">298.257222101</span>,
@@ -334,7 +334,7 @@ GEOGCS[<span style="color:#e6db74">&#34;SIRGAS 2000&#34;</span>,
         AUTHORITY[<span style="color:#e6db74">&#34;EPSG&#34;</span>,<span style="color:#e6db74">&#34;9122&#34;</span>]],
     AUTHORITY[<span style="color:#e6db74">&#34;EPSG&#34;</span>,<span style="color:#e6db74">&#34;4674&#34;</span>]]
 </code></pre></div><p>No exemplo utilizado, há 141 feições, que no caso representam os municípios do estado. Para obter os campos (atributos ou nome das colunas) contidos na Tabela de Atributos há diversas opções, vamos listar duas:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># opt 01</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># opt 01</span>
 <span style="color:#75715e"># get name of atributes in shape file</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> ldefn <span style="color:#f92672">=</span> layer<span style="color:#f92672">.</span>GetLayerDefn()
 <span style="color:#f92672">&gt;&gt;&gt;</span> ldefn<span style="color:#f92672">.</span>GetFieldCount()  <span style="color:#75715e"># number of columns</span>
@@ -344,20 +344,20 @@ lsAtribNames <span style="color:#f92672">=</span> []
 <span style="color:#66d9ef">for</span> idx <span style="color:#f92672">in</span> range(ldefn<span style="color:#f92672">.</span>GetFieldCount()):
     lsAtribNames<span style="color:#f92672">.</span>append(ldefn<span style="color:#f92672">.</span>GetFieldDefn(idx)<span style="color:#f92672">.</span>name)
 
-<span style="color:#f92672">&gt;&gt;&gt;</span> print(lsAtribNames)
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(lsAtribNames)
 [<span style="color:#e6db74">&#39;CD_MUN&#39;</span>, <span style="color:#e6db74">&#39;NM_MUN&#39;</span>, <span style="color:#e6db74">&#39;SIGLA_UF&#39;</span>, <span style="color:#e6db74">&#39;AREA_KM2&#39;</span>, <span style="color:#e6db74">&#39;AREA_ha&#39;</span>]
 
 
 <span style="color:#75715e"># opt 02</span>
 lsAtribNames <span style="color:#f92672">=</span> [field<span style="color:#f92672">.</span>name <span style="color:#66d9ef">for</span> field <span style="color:#f92672">in</span> layer<span style="color:#f92672">.</span>schema]
-<span style="color:#f92672">&gt;&gt;&gt;</span> print(lsAtribNames)
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(lsAtribNames)
 [<span style="color:#e6db74">&#39;CD_MUN&#39;</span>, <span style="color:#e6db74">&#39;NM_MUN&#39;</span>, <span style="color:#e6db74">&#39;SIGLA_UF&#39;</span>, <span style="color:#e6db74">&#39;AREA_KM2&#39;</span>, <span style="color:#e6db74">&#39;AREA_ha&#39;</span>]
 </code></pre></div><p>Como resultado verifica-se que o arquivo tem 5 campos: &ldquo;CD_MUN&rdquo;, &ldquo;NM_MUN&rdquo;, &ldquo;SIGLA_UF&rdquo;, &ldquo;AREA_KM2&rdquo;, &ldquo;AREA_ha&rdquo;.  Agora. caso deseje-se obter os valores dos campos de uma dada feição:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># ------------------------------------------------------------</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># ------------------------------------------------------------</span>
 <span style="color:#75715e"># opt 01</span>
 <span style="color:#75715e"># get feature</span>
 <span style="color:#66d9ef">for</span> feat <span style="color:#f92672">in</span> layer<span style="color:#f92672">.</span>GetFeature(<span style="color:#ae81ff">0</span>):
-    print(feat)
+    <span style="color:#66d9ef">print</span>(feat)
 
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">5100102</span>
 Acorizal
@@ -366,9 +366,9 @@ MT
 <span style="color:#ae81ff">85076.296</span>
 
 <span style="color:#66d9ef">for</span> feat <span style="color:#f92672">in</span> layer<span style="color:#f92672">.</span>GetFeature(<span style="color:#ae81ff">1</span>):
-    print(feat)
+    <span style="color:#66d9ef">print</span>(feat)
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">5100201</span>
-Água Boa
+<span style="color:#960050;background-color:#1e0010">Á</span>gua Boa
 MT
 <span style="color:#ae81ff">7549.233</span>
 <span style="color:#ae81ff">754928.252</span>
@@ -387,7 +387,7 @@ opt <span style="color:#ae81ff">02</span>
 </code></pre></div><p>Note que ao mudar o número entre parênteses, obtém-se valores de outra feição. Agora vamos editar o arquivo shape, como exercício vamos criar um campo (atributo) para o cálculo da área em m<sup>2</sup>.</p>
 <h3 id="edição-do-arquivo">Edição do arquivo</h3>
 <p>A lógica consiste em criar o novo campo desejado e posteriormente preencher com os valores desejados. No caso é á área em m<sup>2</sup>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># new field</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># new field</span>
 newField <span style="color:#f92672">=</span> ogr<span style="color:#f92672">.</span>FieldDefn(<span style="color:#e6db74">&#34;Area_m2&#34;</span>, ogr<span style="color:#f92672">.</span>OFTReal)
 newField<span style="color:#f92672">.</span>SetWidth(<span style="color:#ae81ff">16</span>)
 newField<span style="color:#f92672">.</span>SetPrecision(<span style="color:#ae81ff">1</span>)
@@ -401,7 +401,7 @@ layer<span style="color:#f92672">.</span>CreateField(newField)
     layer<span style="color:#f92672">.</span>SetFeature(feat)
 
 <span style="color:#75715e"># close to write file</span>
-layer <span style="color:#f92672">=</span> feat <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+layer <span style="color:#f92672">=</span> feat <span style="color:#f92672">=</span> None
 </code></pre></div><p>A variável <code>newField</code> é um objeto da classe <code>osgeo.ogr.FieldDefn</code> e recebe o &ldquo;comprimento&rdquo; do número e a precisão das casas decimais. Na sequência, no objeto <code>layer</code> é criado o campo <code>Area_m2</code>. <strong>Note que é muito similar a lógica da calculadora de campo do QGIS</strong>.
 Posteriormente o referido campo é preenchido com os valores da área em m<sup>2</sup>. Por fim, <strong>é necessário fechar</strong> as variáveis para o arquivo ser gravado em disco.</p>
 <p>Se verificarmos a Tabela de atributo do arquivo no QGIS, nota-se a coluna com a área em m<sup>2</sup>  (Figura 2). <strong>Não esqueça de importar o arquivo shape novamente</strong>.</p>

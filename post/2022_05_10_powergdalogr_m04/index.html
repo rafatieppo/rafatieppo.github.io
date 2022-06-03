@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Recorte de arquivos raster com uso de máscara em Python">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="generator" content="Hugo 0.68.3" />
 
   <title>The power of GDAL and OGR &middot; Rafael Tieppo</title>
 
@@ -289,48 +289,48 @@
 </ol>
 <h3 id="o-código">O código</h3>
 <p>Importando as bibliotecas:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> osgeo <span style="color:#f92672">import</span> ogr
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> osgeo <span style="color:#f92672">import</span> ogr
 <span style="color:#f92672">from</span> osgeo <span style="color:#f92672">import</span> gdal
 <span style="color:#f92672">import</span> glob
-<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 </code></pre></div><p>Lendo os arquivos raster contidos na pasta:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">lsRaster <span style="color:#f92672">=</span> glob<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#39;./raster/*.jp2&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">lsRaster <span style="color:#f92672">=</span> glob<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#39;./raster/*.jp2&#39;</span>)
 </code></pre></div><p>Se necessário, no código acima, edite a extensão do arquivo raster, e.g. de <code>jp2</code> para <code>tif</code>. Uma vez criada a lista com todos os arquivos raster que deseja-se recortar, cria-se um objeto com o caminho do arquivo <code>shape</code> que será usado como máscara.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">pathShapeMask <span style="color:#f92672">=</span> str(<span style="color:#e6db74">&#39;./shape_mask/shape_mascara.shp&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">pathShapeMask <span style="color:#f92672">=</span> str(<span style="color:#e6db74">&#39;./shape_mask/shape_mascara.shp&#39;</span>)
 </code></pre></div><p>Antes de realizar o recorte dos arquivos raster, é interessante virificar se os arquivos estão no mesmo CRS. Para verificar o CRS do arquivo <code>shape</code>, uma das opções é:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># Lendo o arquivo shape</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># Lendo o arquivo shape</span>
 ds <span style="color:#f92672">=</span> ogr<span style="color:#f92672">.</span>Open(pathShapeMask, <span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 0 means read-only. 1 means writeable</span>
 
 <span style="color:#75715e"># Obtendo informacoes</span>
 layer <span style="color:#f92672">=</span> ds<span style="color:#f92672">.</span>GetLayer()
 spatialRef <span style="color:#f92672">=</span> layer<span style="color:#f92672">.</span>GetSpatialRef()
 
-print(spatialRef<span style="color:#f92672">.</span>ExportToWkt())
+<span style="color:#66d9ef">print</span>(spatialRef<span style="color:#f92672">.</span>ExportToWkt())
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#e6db74">&#39;PROJCS[&#34;WGS 84 / UTM zone 21S&#34;,GEOGCS[&#34;WGS 84&#34;,DATUM[&#34;WGS_1984&#34;,SPHEROID[&#34;WGS 84&#34;,6378137,298.257223563,AUTHORITY[&#34;EPSG&#34;,&#34;7030&#34;]],AUTHORITY[&#34;EPSG&#34;,&#34;6326&#34;]],PRIMEM[&#34;Greenwich&#34;,0,AUTHORITY[&#34;EPSG&#34;,&#34;8901&#34;]],UNIT[&#34;degree&#34;,0.0174532925199433,AUTHORITY[&#34;EPSG&#34;,&#34;9122&#34;]],AUTHORITY[&#34;EPSG&#34;,&#34;4326&#34;]],PROJECTION[&#34;Transverse_Mercator&#34;],PARAMETER[&#34;latitude_of_origin&#34;,0],PARAMETER[&#34;central_meridian&#34;,-57],PARAMETER[&#34;scale_factor&#34;,0.9996],PARAMETER[&#34;false_easting&#34;,500000],PARAMETER[&#34;false_northing&#34;,10000000],UNIT[&#34;metre&#34;,1,AUTHORITY[&#34;EPSG&#34;,&#34;9001&#34;]],AXIS[&#34;Easting&#34;,EAST],AXIS[&#34;Northing&#34;,NORTH],AUTHORITY[&#34;EPSG&#34;,&#34;32721&#34;]]&#39;</span>
 
 <span style="color:#75715e"># fechando o arquivo</span>
-ds <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+ds <span style="color:#f92672">=</span> None
 </code></pre></div><p>Para verificar o CRS do arquivo raster:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># Lendo arquivo raster e verificando o CRS</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># Lendo arquivo raster e verificando o CRS</span>
 pathRasterFile <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./raster/T21LTD_20200305T141041_B02_10m.jp2&#39;</span>
 dsR <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(pathRasterFile)
 
-print(dsR<span style="color:#f92672">.</span>GetProjection())
+<span style="color:#66d9ef">print</span>(dsR<span style="color:#f92672">.</span>GetProjection())
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#e6db74">&#39;PROJCS[&#34;WGS 84 / UTM zone 21S&#34;,GEOGCS[&#34;WGS 84&#34;,DATUM[&#34;WGS_1984&#34;,SPHEROID[&#34;WGS 84&#34;,6378137,298.257223563,AUTHORITY[&#34;EPSG&#34;,&#34;7030&#34;]],AUTHORITY[&#34;EPSG&#34;,&#34;6326&#34;]],PRIMEM[&#34;Greenwich&#34;,0,AUTHORITY[&#34;EPSG&#34;,&#34;8901&#34;]],UNIT[&#34;degree&#34;,0.0174532925199433,AUTHORITY[&#34;EPSG&#34;,&#34;9122&#34;]],AUTHORITY[&#34;EPSG&#34;,&#34;4326&#34;]],PROJECTION[&#34;Transverse_Mercator&#34;],PARAMETER[&#34;latitude_of_origin&#34;,0],PARAMETER[&#34;central_meridian&#34;,-57],PARAMETER[&#34;scale_factor&#34;,0.9996],PARAMETER[&#34;false_easting&#34;,500000],PARAMETER[&#34;false_northing&#34;,10000000],UNIT[&#34;metre&#34;,1,AUTHORITY[&#34;EPSG&#34;,&#34;9001&#34;]],AXIS[&#34;Easting&#34;,EAST],AXIS[&#34;Northing&#34;,NORTH],AUTHORITY[&#34;EPSG&#34;,&#34;32721&#34;]]&#39;</span>
 
-dsR <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+dsR <span style="color:#f92672">=</span> None
 </code></pre></div><p>Uma vez verificado o CRS, realiza-se o recorte dos arquivos raster. No nome de cada arquivo recortado será adicionado o termo <code>_cut.jp2</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># recortando e renomeando os aquivos raster da lista</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># recortando e renomeando os aquivos raster da lista</span>
 <span style="color:#66d9ef">for</span> idx <span style="color:#f92672">in</span> range(len(lsRaster)):
     rasterFile <span style="color:#f92672">=</span> lsRaster[idx]
     outputFilePath <span style="color:#f92672">=</span> str(<span style="color:#e6db74">&#39;./&#39;</span> <span style="color:#f92672">+</span> lsRaster[idx]<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;.&#39;</span>)[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;_cut.jp2&#39;</span>)
     dsR <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(rasterFile)
     dsClip <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Warp(outputFilePath, dsR,
                        cutlineDSName<span style="color:#f92672">=</span>pathShapeMask,
-                       cropToCutline<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, dstNodata<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>nan)
-    print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> File: </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, outputFilePath, <span style="color:#e6db74">&#34; was created </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
-    dsR <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
-    dsClip <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+                       cropToCutline<span style="color:#f92672">=</span>True, dstNodata<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>nan)
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> File: </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, outputFilePath, <span style="color:#e6db74">&#34; was created </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+    dsR <span style="color:#f92672">=</span> None
+    dsClip <span style="color:#f92672">=</span> None
 </code></pre></div><h2 id="resultados">Resultados</h2>
 <p>Consulte o vídeo no canal do YouTube: <a href="https://www.youtube.com/channel/UC0Ld1c35Jg6JSIJJxRbGVUg/featured">&lsquo;YouTube&rsquo;</a></p>
 <h2 id="considerações">Considerações</h2>

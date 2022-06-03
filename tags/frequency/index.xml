@@ -7,7 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 26 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="/tags/frequency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/frequency/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Histogram and Barplot with Python</title>
       <link>/post/2018_11_26_barhistpy/</link>

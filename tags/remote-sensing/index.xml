@@ -7,7 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 06 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="/tags/remote-sensing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/remote-sensing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>SEBAL model by means GRASS and PYTHON</title>
       <link>/project/2018-07-06-portfolio_05_sebal/</link>
