@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 08 Jul 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/filter/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 08 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="/tags/filter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Filtering objects from a workdir</title>
       <link>/post/2019_07_08_filterobje/</link>

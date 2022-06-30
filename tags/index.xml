@@ -7,15 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 10 May 2022 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>gdal</title>
       <link>/tags/gdal/</link>
-      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>/tags/gdal/</guid>
       <description></description>
@@ -24,16 +20,25 @@
     <item>
       <title>geoprocessing</title>
       <link>/tags/geoprocessing/</link>
-      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>/tags/geoprocessing/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>NDVI</title>
+      <link>/tags/ndvi/</link>
+      <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ndvi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ogr</title>
       <link>/tags/ogr/</link>
-      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>/tags/ogr/</guid>
       <description></description>
@@ -42,7 +47,7 @@
     <item>
       <title>python</title>
       <link>/tags/python/</link>
-      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>/tags/python/</guid>
       <description></description>

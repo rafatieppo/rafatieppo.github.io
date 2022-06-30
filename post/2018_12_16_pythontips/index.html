@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Learning python, begginer level">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.86.1" />
 
   <title>Python beginner tips &middot; Rafael Tieppo</title>
 
@@ -284,7 +284,7 @@ for others applications.</p>
 code that I learned (from several sources). Moreover, to write a blog is
 a way to improve my learning.</p>
 <h2 id="getting-values-from-dictionary">Getting values from dictionary</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> dic <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Mary&#39;</span>: <span style="color:#e6db74">&#39;1235&#39;</span>}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> dic <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Mary&#39;</span>: <span style="color:#e6db74">&#39;1235&#39;</span>}
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">try</span>:
         V <span style="color:#f92672">=</span> dic[<span style="color:#e6db74">&#39;some&#39;</span>]
     <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyError</span>:
@@ -292,28 +292,28 @@ a way to improve my learning.</p>
 <span style="color:#f92672">&gt;&gt;&gt;</span> V
 <span style="color:#e6db74">&#39;error&#39;</span>
 </code></pre></div><p>Instead, You can try it</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> V <span style="color:#f92672">=</span> dic<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Mary&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> V <span style="color:#f92672">=</span> dic<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Mary&#39;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> V
 <span style="color:#e6db74">&#39;1235&#39;</span>
 </code></pre></div><p>Or for a second parameter:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> V <span style="color:#f92672">=</span> dic<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;some&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">99</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> V <span style="color:#f92672">=</span> dic<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;some&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">99</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> V
 <span style="color:#f92672">-</span><span style="color:#ae81ff">99</span>
 </code></pre></div><h2 id="conditional">Conditional</h2>
 <p><strong>For some values</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a, b, c, d <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a, b, c, d <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> a <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> b <span style="color:#f92672">==</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">and</span> c <span style="color:#f92672">==</span> <span style="color:#ae81ff">30</span> <span style="color:#f92672">and</span> d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>:
-        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;all True!&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> all True<span style="color:#960050;background-color:#1e0010">!</span>
+        print(<span style="color:#e6db74">&#39;all True!&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> all <span style="color:#66d9ef">True</span><span style="color:#960050;background-color:#1e0010">!</span>
 
 </code></pre></div><p>We can simplify, let&rsquo;s try:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> cond1 <span style="color:#f92672">=</span> [a <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>,
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> cond1 <span style="color:#f92672">=</span> [a <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>,
              b <span style="color:#f92672">==</span> <span style="color:#ae81ff">20</span>,
              c <span style="color:#f92672">==</span> <span style="color:#ae81ff">30</span>,
              d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>]
 
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> all(cond1):
-       <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;All is true&#39;</span>)
+       print(<span style="color:#e6db74">&#39;All is true&#39;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> All <span style="color:#f92672">is</span> true
 
 <span style="color:#75715e"># if we change the conditions</span>
@@ -325,17 +325,17 @@ cond2 <span style="color:#f92672">=</span> [
     d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>]
 
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> any(cond2):
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;one is true at least&#39;</span>)
+    print(<span style="color:#e6db74">&#39;one is true at least&#39;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> one <span style="color:#f92672">is</span> true at least
 
 </code></pre></div><p>A more complex example. For instance you have cars sells, for 3 sellers
 in 3 months. You would like to know for <em>March</em> what seller achieved the
 goal. The goal is more than 3 cars in march and a profit greater than
 0.25.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#75715e"># import packs</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 <span style="color:#75715e"># data frame</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> DF <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;MONTH&#34;</span>: np<span style="color:#f92672">.</span>repeat([<span style="color:#e6db74">&#39;Jan&#39;</span>, <span style="color:#e6db74">&#39;Fev&#39;</span>, <span style="color:#e6db74">&#39;Mar&#39;</span>], <span style="color:#ae81ff">3</span>),
         <span style="color:#e6db74">&#34;SELLER&#34;</span>: np<span style="color:#f92672">.</span>tile([<span style="color:#e6db74">&#39;Max&#39;</span>, <span style="color:#e6db74">&#39;Ted&#39;</span>, <span style="color:#e6db74">&#39;Saul&#39;</span>], <span style="color:#ae81ff">3</span>),
@@ -378,7 +378,7 @@ goal. The goal is more than 3 cars in march and a profit greater than
 
 </code></pre></div><h2 id="loop">Loop</h2>
 <p>Usually:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
 
 <span style="color:#75715e"># a math operation</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> l1_new <span style="color:#f92672">=</span> []
@@ -387,7 +387,7 @@ goal. The goal is more than 3 cars in march and a profit greater than
 <span style="color:#f92672">&gt;&gt;&gt;</span> l1_new
 [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
 </code></pre></div><p>All in one line:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l1_new  <span style="color:#f92672">=</span> [x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> l1]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l1_new  <span style="color:#f92672">=</span> [x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> l1]
 <span style="color:#f92672">&gt;&gt;&gt;</span> l1_new
 [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
 </code></pre></div><h2 id="functions-in-one-line">Functions in one line</h2>
@@ -397,7 +397,7 @@ need to replace by numbers:</p>
 <ul>
 <li>x = 0</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l2 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l2 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
 
 <span style="color:#75715e"># function</span>
 
@@ -414,7 +414,7 @@ need to replace by numbers:</p>
 [<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
 
 </code></pre></div><p>We can decrease the code size:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#75715e"># function</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">replace_v</span>(i):
         <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span>:
@@ -428,7 +428,7 @@ need to replace by numbers:</p>
 <span style="color:#f92672">&gt;&gt;&gt;</span> l2_new
 [<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
 </code></pre></div><p>A little bit smaller:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># function</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># function</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> repl <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> i: <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#66d9ef">else</span> i
 
 <span style="color:#f92672">&gt;&gt;&gt;</span> l2_new <span style="color:#f92672">=</span> []

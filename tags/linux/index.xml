@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ensino remoto e tecnologia</title>
       <link>/post/2020_07_31_ensino_remoto/</link>

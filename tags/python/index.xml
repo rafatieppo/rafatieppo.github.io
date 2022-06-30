@@ -7,10 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 10 May 2022 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The power of GDAL and OGR</title>
+      <link>/post/2022_06_26_powergdalogr_m05/</link>
+      <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022_06_26_powergdalogr_m05/</guid>
+      <description>Módulo 05 Introdução Um dos índices de vegetação utilizados com frequência é o NDVI (índice de vegetação por diferença normalizada) (KRIEGLER et al., 1969), o qual é oriundo das banda infra-vermelho (NIR) próximo e vermelho (RED):
+$$ NDVI = \frac{NIR - RED}{NIR + RED} $$
+Há diversos recursos para a realização dos cálculos do NDVI, entre eles cita-se o QGIS, GRASS, códigos próprios em diversas linguagens de programação, etc. Como mais uma alternativa disponível, e para mostrar a utilização de um script (o que deixa o processo mais prática), este post teve o objetivo de demonstrar um script desenvolvido em Python para o cálculo do NDVI por meio da biblioteca GDAL.</description>
+    </item>
     
     <item>
       <title>The power of GDAL and OGR</title>

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="to convert julian date to standard date and vice versa">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.86.1" />
 
   <title>Julian date with python 3 &middot; Rafael Tieppo</title>
 
@@ -1321,7 +1321,7 @@ and Julian day from a string date in python.</p>
 <h2 id="from-standard-date-to-julian-date">From standard Date to Julian date</h2>
 <p>Once your date is in <code>datetime</code> format, just convert to <code>timetuple</code>,
 as follows:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> datetime
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> datetime
 
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">datestdtojd</span> (stddate):
     fmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>
@@ -1331,16 +1331,16 @@ as follows:</p>
     <span style="color:#66d9ef">return</span>(jdate)
 </code></pre></div><p>Let&rsquo;s suppose that you would like to know the Julian date
 for <strong>2018-11-01</strong>. Running the code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> datestdtojd(<span style="color:#e6db74">&#39;2018-11-01&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> datestdtojd(<span style="color:#e6db74">&#39;2018-11-01&#39;</span>)
 <span style="color:#ae81ff">305</span>
 </code></pre></div><p>It means 305<sup>th</sup> day of 2018.</p>
 <h2 id="from-julian-date-to-standard-date">From Julian date to standard Date</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">jdtodatestd</span> (jdate):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">jdtodatestd</span> (jdate):
     fmt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;%Y%j&#39;</span>
     datestd <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>strptime(jdate, fmt)<span style="color:#f92672">.</span>date()
     <span style="color:#66d9ef">return</span>(datestd)
 </code></pre></div><p>If you need to know month and day for the 305<sup>th</sup> of 2018.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> jdtodatestd(<span style="color:#e6db74">&#39;2018305&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> jdtodatestd(<span style="color:#e6db74">&#39;2018305&#39;</span>)
 datetime<span style="color:#f92672">.</span>date(<span style="color:#ae81ff">2018</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">1</span>)
 </code></pre></div><h2 id="conclusion">Conclusion</h2>
 <p>Julian date is pretty handy to tidy files and data bank. Thus some

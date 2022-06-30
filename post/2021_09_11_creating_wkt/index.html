@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Compreendendo arquivos WKT e suas aplicações">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.86.1" />
 
   <title>Criando arquivos WKT (Well Know Text) &middot; Rafael Tieppo</title>
 
@@ -278,7 +278,7 @@
 
   <h1 id="motivação">Motivação</h1>
 <p>Tudo começou quando estava tentando abrir um arquivo <code>.shp</code> via <em>GeoPandas</em> (pacote <em>Python</em>) em um McBook (<em>OS BigSur</em>). Ao fazer a leitura do arquivo o seguinte erro era retornado.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">...</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">...</span>
 IllegalArgumentException: geometries must <span style="color:#f92672">not</span> contain null elements
 Shell <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> a LinearRing
 </code></pre></div><p><strong>Nota</strong>: estava testando um McBook, uso sistema operacional <em>Debian</em>, e até o momento não tive este problema.</p>
@@ -315,60 +315,60 @@ Shell <span style="color:#f92672">is</span> <span style="color:#f92672">not</spa
 </table>
 <h2 id="estudo-de-caso">Estudo de caso</h2>
 <p>Bibliotecas utilizados:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ------------------------------------------------------------</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ------------------------------------------------------------</span>
 <span style="color:#75715e"># packages</span>
 <span style="color:#f92672">import</span> ogr
 <span style="color:#f92672">import</span> geojson
-<span style="color:#f92672">import</span> geopandas <span style="color:#f92672">as</span> gpd
-<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> geopandas <span style="color:#66d9ef">as</span> gpd
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
 </code></pre></div><p>Para ler o arquivo <code>.shp</code> fiz uso da biblioteca <code>ogr</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ------------------------------------------------------------</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ------------------------------------------------------------</span>
 <span style="color:#75715e"># reading shape</span>
 
 shapePath <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./field_011.shp&#39;</span>
 ds <span style="color:#f92672">=</span> ogr<span style="color:#f92672">.</span>Open(shapePath, <span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># 0 means read-only. 1 means writeable</span>
 <span style="color:#75715e"># Check to see if shapefile was found.</span>
-<span style="color:#66d9ef">if</span> ds <span style="color:#f92672">is</span> None:
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;------------------------------------------------------- </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Could not open </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (shapePath))
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Check shapefile&#39;</span>)
+<span style="color:#66d9ef">if</span> ds <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+    print(<span style="color:#e6db74">&#34;------------------------------------------------------- </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+    print(<span style="color:#e6db74">&#39;Could not open </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (shapePath))
+    print(<span style="color:#e6db74">&#39;Check shapefile&#39;</span>)
 <span style="color:#66d9ef">else</span>:
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;------------------------------------------------------- </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#e6db74">&#39; has been opened&#39;</span> <span style="color:#f92672">%</span> (shapePath))
+    print(<span style="color:#e6db74">&#34;------------------------------------------------------- </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+    print(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#e6db74">&#39; has been opened&#39;</span> <span style="color:#f92672">%</span> (shapePath))
     layer <span style="color:#f92672">=</span> ds<span style="color:#f92672">.</span>GetLayer()
     
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">-------------------------------------------------------</span> 
 <span style="color:#f92672">./</span>field_011<span style="color:#f92672">.</span>shp has been opened
 </code></pre></div><p>Uma vez que o arquivo foi aberto com sucesso, e o objeto <code>layer</code> recebeu a camada do arquivo <code>field_011.shp</code>, um novo objeto denominado <code>feat</code> recebeu a feição 0 do objeto <code>layer</code>. Por fim, este último foi &ldquo;fechado&rdquo; (recebeu <em>None</em>):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># get feature</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># get feature</span>
 feat <span style="color:#f92672">=</span> layer<span style="color:#f92672">.</span>GetFeature(<span style="color:#ae81ff">0</span>)
 <span style="color:#75715e"># close layer</span>
-layer <span style="color:#f92672">=</span> None
+layer <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
 </code></pre></div><p>A próxima etapa foi obter as coordenadas do polígono, e criar o arquivo <code>.wkt</code>. O modo mais prático seria usar a biblioteca <em>shapely</em>, mas como a referida biblioteca também gerava o mesmo erro, optei por criar um objeto <code>GeoJson</code> com a poligonal em questão, e extrair as coordenadas para criar &ldquo;manualmente&rdquo; um <code>.wkt</code>.</p>
 <ul>
 <li>Criando e lendo o <code>.geoJson</code>:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># create and read GeoJson</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># create and read GeoJson</span>
 featGeoJson <span style="color:#f92672">=</span> feat<span style="color:#f92672">.</span>ExportToJson()
 layerGeoJson <span style="color:#f92672">=</span> geojson<span style="color:#f92672">.</span>loads(featGeoJson)
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(layerGeoJson)
+<span style="color:#f92672">&gt;&gt;&gt;</span> print(layerGeoJson)
 {<span style="color:#e6db74">&#34;geometry&#34;</span>: {<span style="color:#e6db74">&#34;coordinates&#34;</span>: [[[<span style="color:#f92672">-</span><span style="color:#ae81ff">57.669078</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909359</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">57.670381</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.912523</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">57.671333</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.91486</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">57.672349</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.917289</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">57.672533</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.91768</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">57.672744</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.917664</span>], 
 <span style="color:#f92672">...</span>
 [<span style="color:#f92672">-</span><span style="color:#ae81ff">57.670604</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.9091</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">57.669345</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909243</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">57.669109</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909274</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">57.669078</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909359</span>]]], <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Polygon&#34;</span>}, <span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;properties&#34;</span>: {<span style="color:#e6db74">&#34;Area_ha&#34;</span>: <span style="color:#ae81ff">127.01</span>, <span style="color:#e6db74">&#34;Field&#34;</span>: <span style="color:#e6db74">&#34;011&#34;</span>, <span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>}, <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Feature&#34;</span>}
 </code></pre></div><ul>
 <li>Extraindo as coordenadas do polígono e armazenando os valores em <em>Tuple</em>:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">po <span style="color:#f92672">=</span> layerGeoJson[<span style="color:#e6db74">&#34;geometry&#34;</span>][<span style="color:#e6db74">&#34;coordinates&#34;</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">po <span style="color:#f92672">=</span> layerGeoJson[<span style="color:#e6db74">&#34;geometry&#34;</span>][<span style="color:#e6db74">&#34;coordinates&#34;</span>]
 coords <span style="color:#f92672">=</span> tuple([(x[<span style="color:#ae81ff">0</span>], x[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> po[<span style="color:#ae81ff">0</span>]])
 
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(coords)
+<span style="color:#f92672">&gt;&gt;&gt;</span> print(coords)
 ((<span style="color:#f92672">-</span><span style="color:#ae81ff">57.669078</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909359</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">57.670381</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.912523</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">57.671333</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.91486</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">57.672349</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.917289</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">57.672533</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.91768</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">57.672744</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.917664</span>), 
 <span style="color:#f92672">...</span>
 (<span style="color:#f92672">-</span><span style="color:#ae81ff">57.670604</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.9091</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">57.669345</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909243</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">57.669109</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909274</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">57.669078</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909359</span>))
 </code></pre></div><ul>
 <li>Gerando o <code>wkt</code>:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># write a WKT from tuple</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># write a WKT from tuple</span>
 wktPol <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;POLYGON ((&#34;</span>
 <span style="color:#66d9ef">for</span> idx <span style="color:#f92672">in</span> range(len(coords)):
     a, b <span style="color:#f92672">=</span> coords[idx][<span style="color:#ae81ff">0</span>], coords[idx][<span style="color:#ae81ff">1</span>]
@@ -378,25 +378,25 @@ wktPol <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;POL
         wktPol <span style="color:#f92672">=</span> wktPol <span style="color:#f92672">+</span> str(str(a) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> str(b)) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span>
 wktPol <span style="color:#f92672">=</span> wktPol <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;))&#34;</span>
 
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(type(wktPol))
+<span style="color:#f92672">&gt;&gt;&gt;</span> print(type(wktPol))
 <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">str</span><span style="color:#e6db74">&#39;&gt;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(wktPol)
+<span style="color:#f92672">&gt;&gt;&gt;</span> print(wktPol)
 POLYGON ((<span style="color:#f92672">-</span><span style="color:#ae81ff">57.669078</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909359</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">57.670381</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.912523</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">57.671333</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.91486</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">57.672349</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.917289</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">57.672533</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.91768</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">57.672744</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.917664</span>,
 <span style="color:#f92672">...</span>
 <span style="color:#f92672">-</span><span style="color:#ae81ff">57.670604</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.9091</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">57.669345</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909243</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">57.669109</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909274</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">57.669078</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.909359</span>))
 </code></pre></div><p>Para que o <em>GeoPandas</em> leia o <code>.wkt</code>, passamos o mesmo para um objeto <em>GeoSeries</em> e posteriormente cria-se o <em>GeodataFrame</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">gs <span style="color:#f92672">=</span> gpd<span style="color:#f92672">.</span>GeoSeries<span style="color:#f92672">.</span>from_wkt([wktPol])
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">gs <span style="color:#f92672">=</span> gpd<span style="color:#f92672">.</span>GeoSeries<span style="color:#f92672">.</span>from_wkt([wktPol])
 gdf <span style="color:#f92672">=</span> gpd<span style="color:#f92672">.</span>GeoDataFrame(geometry<span style="color:#f92672">=</span>gs, crs<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;EPSG:4326&#34;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(gdf)
+<span style="color:#f92672">&gt;&gt;&gt;</span> print(gdf)
                                             geometry
 <span style="color:#ae81ff">0</span>  POLYGON ((<span style="color:#f92672">-</span><span style="color:#ae81ff">57.66908</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.90936</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">57.67038</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.9</span><span style="color:#f92672">...</span>
 </code></pre></div><p>Se necessário, basta criar outra coluna para identificar o polígono:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> gdf[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;field_11&#39;</span>]
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">print</span>(gdf)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> gdf[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;field_11&#39;</span>]
+<span style="color:#f92672">&gt;&gt;&gt;</span> print(gdf)
                                             geometry        id
 <span style="color:#ae81ff">0</span>  POLYGON ((<span style="color:#f92672">-</span><span style="color:#ae81ff">57.66908</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.90936</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">57.67038</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">13.9</span><span style="color:#f92672">...</span>  field_11
 </code></pre></div><p>Como complemento, para gerar o <code>.wkt</code> via <em>shapely</em>, basta importar a referida biblioteca, criar um objeto com geometria <em>polygon</em> com as coordenadas (<code>coords</code>), e usar o método <code>.to_wkt()</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> shapely
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> shapely
 
 shp <span style="color:#f92672">=</span> shapely<span style="color:#f92672">.</span>geometry<span style="color:#f92672">.</span>Polygon(coords)
 wkt <span style="color:#f92672">=</span> shp<span style="color:#f92672">.</span>to_wkt()
