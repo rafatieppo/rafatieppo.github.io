@@ -3,33 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/categories/</loc>
-    <lastmod>2022-06-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/gdal/</loc>
-    <lastmod>2022-06-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/geoprocessing/</loc>
-    <lastmod>2022-06-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/geoprocessing/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/grass-gis/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/landsat/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/python/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/2022_07_13_sebalpy_grass/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/gdal/</loc>
     <lastmod>2022-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/ndvi/</loc>
     <lastmod>2022-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/ogr/</loc>
-    <lastmod>2022-06-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
-    <lastmod>2022-06-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/python/</loc>
-    <lastmod>2022-06-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2022-06-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2022-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/2022_06_26_powergdalogr_m05/</loc>

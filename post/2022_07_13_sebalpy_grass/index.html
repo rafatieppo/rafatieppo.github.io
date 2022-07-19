@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Surface Energy Balance Algorithm for Land">
+  <meta name="generator" content="Hugo 0.86.1" />
+
+  <title>SEBAL model by means GRASS and PYTHON SEBAL &middot; Rafael Tieppo</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">RafaTieppo</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/project/"><i class='fa fa-briefcase fa-fw'></i>Project</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/teaching/"><i class='fa fa-graduation-cap fa-fw'></i>Teaching</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/rafaeltieppo" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://researchgate.net/profile/Rafael-Tieppo" rel="me" target="_blank"><i class="ai ai-researchgate-square ai-1x"></i>researchgate</a>
+    </li>
+    
+    
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://orcid.org/0000-0001-8132-4813" rel="me" target="_blank"><i class="ai ai-orcid-square ai-1x"></i>orcid</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://scholar.google.com/citations?user=ClN1Q6AAAAAJ" rel="me" target="_blank"><i class="ai ai-google-scholar ai-1x"></i>google-scholar</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/3109019/rafa" rel="me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2021 <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Licensed CC:By-NC-SA</a></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>SEBAL model by means GRASS and PYTHON SEBAL</h1>
+  <h2>Surface Energy Balance Algorithm for Land</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>2022-07-13</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/grass-gis">grass gis</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/landsat">landsat</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/python">python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/geoprocessing">geoprocessing</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <h1 id="introduction">Introduction</h1>
+<p>In few words, the Surface Energy Balance Algorithm for Land (SEBAL) is used to predict some hydrological features like evapotranspiration, water deficit, etc. The main creator of SEBAL is Professor Wim G. M. Bastiaanssen (Bastiaanssen et al., 1998) and his method has been validated under several conditions for different locations ((Bastiaanssen, 2000),(Bastiaanssen et al., 2002), (Santos et al., 2010)).</p>
+<p>Around 3 years ago I wrote a code to run the SEBAL, and I still find one or two emails every month asking some doubt about the script (unfortunately I cannot answer all). Thus I will try in this post and with a video to explain how to run the script. You can find the video:</p>
+<ul>
+<li><a href="https://youtu.be/ffrZ6_VPxDQ">Part1 - Pytyhon Environment and install packages</a></li>
+<li><a href="https://youtu.be/z96M6DZ5noY">Part2 - Config and Run the script</a></li>
+</ul>
+<h1 id="material-and-methods">Material and Methods</h1>
+<p>The basic requirements to run the script are:</p>
+<ul>
+<li>a computer with 4 GB of RAM and a i3 processor</li>
+<li>operational system Debian 11, UBUNTU, MINT or similar</li>
+<li>Python 3.7 or + and PIP3 package manager</li>
+<li>GRASS GIS 78 or +</li>
+<li>Landsat8 images and DEM from ASTER</li>
+<li>files from repository</li>
+</ul>
+<p>For a better explanation this tutorial is divided in seven steps:</p>
+<ol>
+<li>download the files from repository <a href="https://rafatieppo.github.io/sebal/">HERE</a></li>
+<li>download landsat 8 images and DEM file</li>
+<li>create a python environment and install all required packages</li>
+<li>verify if grass is installed and to find the path</li>
+<li>assign GRASS workdir and create location</li>
+<li>edit script to assign the paths and variables</li>
+<li>run the model</li>
+</ol>
+<h2 id="download-files-from-repository">Download files from repository</h2>
+<p>Create a folder in you system, go to <a href="https://github.com/rafatieppo/sebal">HERE</a> and download the files: <code>sebal_v10.py</code> and <code>requirement_pysebal.txt</code>. I created a folder <code>sebal_tutorial</code>.</p>
+<h2 id="download-landsat8-images-and-dem">Download landsat8 images and DEM</h2>
+<p>Download all Landsat8 images and save in the same folder created in step 1. Just to remember, I create a folder named as <code>sebal_tutorial</code> . Repeat the process for Digital Elevation Model (DEM) from ASTER.</p>
+<p>Once that all images has been downloaded, reproject all the images (LS8 images) for the interested coordinate reference system (e.g. EPSG:32721).</p>
+<p><strong>NOTE</strong>: You MUST reproject the DEM file for the same coordinate reference system of interest, RENAME it as <code>MDT_Sebal.TIF</code>.</p>
+<h2 id="python-environment">Python environment</h2>
+<p>To create a python environment, first create a new folder. I will create <code>venv_sebal</code> folder. Now, in Linux Terminal, We can create the python environment with the code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python3 <span style="color:#f92672">-</span>m venv <span style="color:#f92672">./</span>venv_sebal
+</code></pre></div><p>Once it is done, We can activate the environment and install the packages. To activate the environment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">source <span style="color:#f92672">~/.</span>virtualenvs<span style="color:#f92672">/</span>venv_sebal<span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>activate
+</code></pre></div><p>To install all the package, download THIS file into the <code>Downloads</code> folder or any other. Now you can type in terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip3 install <span style="color:#f92672">-</span>r <span style="color:#f92672">/</span>media<span style="color:#f92672">/</span>rafatieppo<span style="color:#f92672">/</span>hd_back<span style="color:#f92672">/</span>sebal_tutorial<span style="color:#f92672">/</span>requirement_pysebal<span style="color:#f92672">.</span>txt
+</code></pre></div><p>Verify if all packs has been installed correctly, You can try to import the packs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Order matters</span>
+<span style="color:#f92672">import</span> math
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">import</span> os
+<span style="color:#f92672">from</span> grass_session <span style="color:#f92672">import</span> session
+<span style="color:#f92672">import</span> grass.script <span style="color:#66d9ef">as</span> gscript
+<span style="color:#f92672">from</span> grass.script <span style="color:#f92672">import</span> core <span style="color:#66d9ef">as</span> gcore
+</code></pre></div><p>If all is ok, We can advance for the step 4.</p>
+<h2 id="grass-gis-and-config-path">GRASS GIS and config path</h2>
+<p>If you do not have GRASS GIS in your machine, you can try to install (it requires root privileges):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">apt<span style="color:#f92672">-</span>get install grass
+apt<span style="color:#f92672">-</span>get install grass<span style="color:#f92672">-</span>gui
+apt<span style="color:#f92672">-</span>get install grass<span style="color:#f92672">-</span>dev
+</code></pre></div><p>Let&rsquo;s find the path?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">grass78 <span style="color:#f92672">--</span>config path
+</code></pre></div><p>It should return something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">usr<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>grass78
+</code></pre></div><p>Copy and paste this path in a notepad.</p>
+<h2 id="grass-workdir-and-location">GRASS workdir and location</h2>
+<p>To assign the GRASS GIS data base, create a GRASS LOCATION and MAPSET, watch the video. Just in case, my GRASS GIS data base is <code>/home/rafatieppo/grassdata</code> . I created a GRASS LOCATION <code>epsg31981</code>, and about the MAPSET I keep the standard, which is <code>PERMANTENT</code>.</p>
+<h2 id="import-mdt-file-in-grass">Import MDT file in grass</h2>
+<p><strong>NOTE</strong>: <strong>The script will make all the processing only for the area covered by MDT image</strong>. The GRASS GIS call it as <code>Computational Region</code>. It means that although We will import the full landsat images, the calculations will be just over the MDT area. Thus, BEFORE you import the MDT file, make sure if your field (study area) is covered by the MDT file. You can edit (cut) the MDT file in other software (e.g. QGIS).</p>
+<p>To import the file, in main menu click on: <code>File -&gt; Import raster data -&gt; r.import</code></p>
+<p>Fill the required field <em>Source input</em>:</p>
+<ul>
+<li>click on <em>Browse</em> find the MDT file, and click on <em>Open</em></li>
+<li>click on <em>import</em>. After close.</li>
+</ul>
+<h2 id="edit-script-to-assign-the-paths-and-variables">Edit script to assign the paths and variables</h2>
+<p>To run GRASS GIS it is necessary to set some parameters:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">gisbase <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/usr/lib/grass78&#39;</span>
+gisdb <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/home/rafatieppo/grassdata&#39;</span>
+location <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;epsg31981&#39;</span>
+mapset <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;PERMANENT&#39;</span>
+
+<span style="color:#75715e"># Finding files and assign local variables</span>
+<span style="color:#75715e"># path = &#34;/media/rafatieppo/SSD_24gb/QGIS_SEBAL/20170904&#34;</span>
+path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/media/rafatieppo/hd_back/sebal_tutorial/&#39;</span>
+</code></pre></div><p>Note that:</p>
+<ul>
+<li><em>gisbase</em> is the path for GRASS GIS</li>
+<li><em>gisdb</em> is the local folder to store GRASS data</li>
+<li><em>location</em> is the local with a particular CRS (we created that)</li>
+<li><em>mapset</em> is a kind of subdivision to work into the location (we use <em>PERMANENT</em> location)</li>
+<li><em>path</em> is the path for the workdir, where is all files (landsat, DEM, script, &hellip;)</li>
+</ul>
+<p>After edition, save and close the script.</p>
+<h2 id="run-the-model">Run the model</h2>
+<p>Once you are in correct folder (that one with all your files), just run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python3 SEBAL_v10<span style="color:#f92672">.</span>py,
+</code></pre></div><p>Three variables will be required:</p>
+<ul>
+<li>wind speed value in the weather station (height of the 2 m (m/s))</li>
+<li>instantaneous value of reference evapotranspiration (EToi) in the weather station (time of the satellite overpass (mm))</li>
+<li>daily value of reference evapotranspiration (ETo) from the weather station (mm)</li>
+</ul>
+<p>After that, several process will be started, after some of them, the coordinates for <em>cold</em> pixel and <em>hot pixel</em> will be required. For a better choice of this coordinates, I recommend to read the references. Just for a very short explanation, at moment that the <em>cold pixel coordinate</em> is required, you may:</p>
+<ul>
+<li>open GRASS GIS</li>
+<li>add raster layers: <code>AS</code> <code>LAI</code> <code>CC_432</code> <code>COLDPIX</code></li>
+<li>for <code>COLDPIX</code> layer create a histogram plot, note the temperature values in X axis
+<ul>
+<li>it is necessary a point with low temperature, but no extremely cold (in my case around 299)</li>
+<li>go to the <code>COLDPIX</code> layer, find a pixel with this temperature and get its coordinates</li>
+<li>once you found this pixel, make sure that its <code>LAI</code> value is between 4 and 6, and <code>AS</code> value is between 0.22 and 0.24</li>
+<li>if conditions are not satisfied, look for another point</li>
+<li>look for areas with irrigation system</li>
+<li>copy and paste the coordinates in terminal like this: 453086.876501,8379695.52117</li>
+<li>to copy coordinates from GRASS press <code>CTRL+C</code>, to paste in terminal press <code>CTRL+SHIFT+V</code></li>
+<li>press <code>ENTER</code></li>
+</ul>
+</li>
+</ul>
+<p>For <em>hot pixel coordinates</em>, it is the same idea:</p>
+<ul>
+<li>add <code>HOTPIX</code> layer and create a histogram plot, note the temperature values in X axis
+<ul>
+<li>find a high temperature but not extreme, and check values for <code>LAI</code> and <code>aS</code></li>
+<li>copy and paste the coordinates in terminal like this: 452632.542909,8379983.49339</li>
+<li>to copy coordinates from GRASS press <code>CTRL+C</code>, to paste in terminal press <code>CTRL+SHIFT+V</code></li>
+<li>press <code>ENTER</code></li>
+</ul>
+</li>
+</ul>
+<p>If all worked well, It is possible to find all files in GRASS GIS. Just export the raster files if you desire.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>Bastiaanssen, W.G.M., 2000. SEBAL-based sensible and latent heat fluxes in the irrigated Gediz Basin, Turkey. Journal of Hydrology 229, 87–100. <a href="https://doi.org/https://doi.org/10.1016/S0022-1694(99)00202-4">https://doi.org/https://doi.org/10.1016/S0022-1694(99)00202-4</a></li>
+<li>Bastiaanssen, W.G.M., Ahmad, M.-u.-D., Chemin, Y., 2002. Satellite surveillance of evaporative depletion across the Indus Basin. Water Resources Research 38, 9–1–9–9. <a href="https://doi.org/10.1029/2001WR000386">https://doi.org/10.1029/2001WR000386</a></li>
+<li>Bastiaanssen, W.G.M., Menenti, M., Feddes, R.A., Holtslag, A.A.M., 1998. A remote sensing surface energy balance algorithm for land (SEBAL). 1. Formulation. Journal of Hydrology 212-213, 198–212. <a href="https://doi.org/https://doi.org/10.1016/S0022-1694(98)00253-4">https://doi.org/https://doi.org/10.1016/S0022-1694(98)00253-4</a></li>
+<li>Bernardo, S., Soares, A.A., Mantovani, E.C., 2006. Manual de irrigação, 8th ed. UFV, Viçosa.</li>
+<li>Cavalcante, L.B., Inácio, A. da S., Barros, H.G., Jiménez, Nicácio, R.M., Coelho, S.M.S. da C., 2016. Cálculo do saldo de radiação pelo algoritmo sebal na porção do baixo-médio São Francisco, Brasil, utilizando um software de código livre. Revista Brasileira de Cartografia 1515–1529.</li>
+<li>Gondim, R., Teixeira, A.d.S., Barbosa, F., 2005. Novo paradigma para a água e coeficientes de cultivos aplicados à gestão de recursos hídricos em nível de bacia hidrográfica. Revista Item Irrigação e Tecnologia 14–18.</li>
+<li>Hessels, T., Opstal, J. van, Trambauer, P., Bastiaanssen, W., Smiej, M.F., Mohamed, Y., Er-Raji, A., 2017. pySEBAL_3.3.8.</li>
+<li>Neteler, M., Bowman, M.H., Landa, M., Metz, M., 2012. GRASS GIS: a multi-purpose Open Source GIS. Environmental Modelling &amp; Software 31, 124–130. <a href="https://doi.org/10.1016/j.envsoft.2011.11.014">https://doi.org/10.1016/j.envsoft.2011.11.014</a></li>
+<li>Rossum, G. van, 1995. Python tutorial (No. CS-R9526). Centrum voor Wiskunde en Informatica (CWI), Amsterdam.</li>
+<li>Santos, T.V. dos, Fontana, D.C., Alves, R.C.M., 2010. Avaliação de fluxos de calor e evapotranspiração pelo modelo SEBAL com uso de dados do sensor ASTER. Pesquisa Agropecuária Brasileira 45, 488–496. <a href="https://doi.org/10.1590/S0100-204X2010000500008">https://doi.org/10.1590/S0100-204X2010000500008</a></li>
+<li>Wolff, W., 2016. wwolff7/SEBAL_GRASS. <a href="https://doi.org/10.5281/zenodo.167350">https://doi.org/10.5281/zenodo.167350</a></li>
+<li><a href="https://www.python.org/">PYTHON</a></li>
+<li><a href="https://pcjericks.github.io/py-gdalogr-cookbook/projection.html">Python GDAL/OGR Cookbook 1.0 documentation</a></li>
+<li><a href="https://www.osgeo.org/projects/gdal/">GDAL/OGR</a></li>
+<li><a href="https://gdal.org/python/index.html">GDAL API Python</a></li>
+</ul>
+
+  
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2f2022_07_13_sebalpy_grass%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2f2022_07_13_sebalpy_grass%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=%2fpost%2f2022_07_13_sebalpy_grass%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2f2022_07_13_sebalpy_grass%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2f2022_07_13_sebalpy_grass%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=%2fpost%2f2022_07_13_sebalpy_grass%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/2022_06_26_powergdalogr_m05/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/2022_06_26_powergdalogr_m05/">The power of GDAL and OGR</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+  
+  
+  
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-rafatieppo-github-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+<script src="/js/menus.js"></script>
+
+
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-33432733-8', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+

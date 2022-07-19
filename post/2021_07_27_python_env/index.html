@@ -286,23 +286,23 @@
 </ol>
 <h2 id="criando-um-diretório">Criando um diretório</h2>
 <p>Via terminal, acesse o diretório que conterá o ambiente virtual, e crie um diretório com o nome desejado. Neste exemplo usaremos <code>teste_venv</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rt@av52a:~$ cd ~/.virtualenvs/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rt@av52a:~$ cd ~/.virtualenvs/
 rt@av52a:~/.virtualenvs$ mkdir teste_venv
 rt@av52a:~/.virtualenvs$ ls
 &gt; myownenv  teste_venv
-rafatieppo@rt-av52a:~/.virtualenvs$ 
+rt@av52a:~/.virtualenvs$ 
 </code></pre></div><h2 id="criando-ambiente-virtual">Criando ambiente virtual</h2>
 <p>Até o Python 3.4 o comando <code>pyvenv</code> era recomendado para a criação do ambiente virtual. A partir da versão 3.6, a recomendação é usar o comando <code>venv</code>. Maiores informações consulte <a href="https://docs.python.org/3/library/venv.html">https://docs.python.org/3/library/venv.html</a>. Desta forma vamos criar o ambiente virtual e listar o seu conteúdo.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python3 -m venv ./teste_venv
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rt@av52a:~.virtualenvs$ python3 -m venv ./teste_venv
 
-rt@av52a:~/.virtualenvs$ ls -l ./teste_venv/
+rt@av52a:~.virtualenvs$ ls -l ./teste_venv/
 --&gt; bin
 --&gt; include
 --&gt; lib
 --&gt; lib64 -&gt; lib
 --&gt; pyvenv.cfg
 --&gt; share
-rt@rav52a:~/.virtualenvs$ 
+rt@av52a:~/.virtualenvs$ 
 </code></pre></div><p>O comando <code>ls -l</code> tem objetivo de listar o conteúdo do ambiente virtual gerado. No diretório <code>bin</code> ficam os &ldquo;executáveis&rdquo; no <code>lib</code> os pacotes, e assim por diante.</p>
 <h2 id="ativar-o-ambiente-virtual">Ativar o ambiente virtual</h2>
 <p>Para ativar o ambiente virtual utiliza-se o comando <code>source</code>, e na sequência o caminho <code>/caminho_do_virtual_env/bin/activate</code>.</p>
@@ -311,7 +311,7 @@ rt@rav52a:~/.virtualenvs$
 </code></pre></div><p>Note que o nome do ambiente virtual ficará à esquerda entre parênteses.</p>
 <h2 id="instalando-pacote">Instalando pacote</h2>
 <p>Uma vez que o ambiente virtual está ativo, basta instalar os pacotes desejados. Como exemplo vamos usar o <code>numpy</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rafatieppo@rt-av52a:~/.virtualenvs$ pip3 install numpy
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rt@rt-av52a:~/.virtualenvs$ pip3 install numpy
 Collecting numpy
   Cache entry deserialization failed, entry ignored
   Downloading https://files.pythonhosted.org/packages/b8/46/40729c784/numpyx86_64.whl <span style="color:#f92672">(</span>14.1MB<span style="color:#f92672">)</span>

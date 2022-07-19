@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/geoprocessing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/geoprocessing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SEBAL model by means GRASS and PYTHON SEBAL</title>
+      <link>/post/2022_07_13_sebalpy_grass/</link>
+      <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022_07_13_sebalpy_grass/</guid>
+      <description>Introduction In few words, the Surface Energy Balance Algorithm for Land (SEBAL) is used to predict some hydrological features like evapotranspiration, water deficit, etc. The main creator of SEBAL is Professor Wim G. M. Bastiaanssen (Bastiaanssen et al., 1998) and his method has been validated under several conditions for different locations ((Bastiaanssen, 2000),(Bastiaanssen et al., 2002), (Santos et al., 2010)).
+Around 3 years ago I wrote a code to run the SEBAL, and I still find one or two emails every month asking some doubt about the script (unfortunately I cannot answer all).</description>
+    </item>
+    
     <item>
       <title>The power of GDAL and OGR</title>
       <link>/post/2022_06_26_powergdalogr_m05/</link>
