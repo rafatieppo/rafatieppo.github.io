@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Orientações e procedimentos">
+  <meta name="generator" content="Hugo 0.86.1" />
+
+  <title>Curso Introdução ao Geoprocessamento com QGIS &middot; Rafael Tieppo</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">RafaTieppo</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/project/"><i class='fa fa-briefcase fa-fw'></i>Project</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/teaching/"><i class='fa fa-graduation-cap fa-fw'></i>Teaching</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/rafaeltieppo" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://researchgate.net/profile/Rafael-Tieppo" rel="me" target="_blank"><i class="ai ai-researchgate-square ai-1x"></i>researchgate</a>
+    </li>
+    
+    
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://orcid.org/0000-0001-8132-4813" rel="me" target="_blank"><i class="ai ai-orcid-square ai-1x"></i>orcid</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://scholar.google.com/citations?user=ClN1Q6AAAAAJ" rel="me" target="_blank"><i class="ai ai-google-scholar ai-1x"></i>google-scholar</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/3109019/rafa" rel="me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2021 <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Licensed CC:By-NC-SA</a></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Curso Introdução ao Geoprocessamento com QGIS</h1>
+  <h2>Orientações e procedimentos</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>2022-09-12</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/geoprocessing">geoprocessing</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <h1 id="conteúdo-e-programação">Conteúdo e programação</h1>
+<ul>
+<li>
+<p>Aula 01 - 2022-09-13</p>
+<ul>
+<li>Apresentação do curso;</li>
+<li>Como estudar;</li>
+<li>Boas práticas e projeto QGIS</li>
+<li>Introdução ao geoprocessamento (vetor e raster);</li>
+<li>Introdução ao sistema de referência de coordenadas (CRS ou DATUM);</li>
+<li>Detalhes sobre a importação de arquivos de textos;</li>
+<li>Reprojeção</li>
+</ul>
+</li>
+<li>
+<p>Aula 02 - 2022-09-20</p>
+<ul>
+<li>Centroides, extração de vértices;</li>
+<li>Manipulação de polígonos;</li>
+<li>Extração de centroides e vértices;</li>
+<li>União, divisão, dissolução de polígonos;</li>
+<li>Geração de pontos no polígono (grid);</li>
+<li>Interpolação (IDW**;</li>
+</ul>
+</li>
+<li>
+<p>Aula 03 - 2022-09-27</p>
+<ul>
+<li>Radiação do espectro eletromagnético;</li>
+<li>Aquisição de imagens de satélite;</li>
+<li>Composição RGB;</li>
+<li>Recorte raster;</li>
+</ul>
+</li>
+<li>
+<p>Aula 04 - 2022-10-04</p>
+<ul>
+<li>Índice de vegetação</li>
+<li>Calculadora Raster</li>
+</ul>
+</li>
+<li>
+<p>Aula 05 - 2022-10-11</p>
+<ul>
+<li>Segmentação de imagens</li>
+<li>Classificação de imagens</li>
+</ul>
+</li>
+</ul>
+<h2 id="material">Material</h2>
+<h3 id="material-para-realização-do-curso">Material para realização do curso</h3>
+<p>Pasta drive com conteúdo:</p>
+<p><a href="https://drive.google.com/drive/folders/1T0BnWtLVdptD_vqKD_7TCJQ_UFo-GaMZ?usp=sharing">https://drive.google.com/drive/folders/1T0BnWtLVdptD_vqKD_7TCJQ_UFo-GaMZ?usp=sharing</a></p>
+<h3 id="material-para-estudo">Material para estudo</h3>
+<ul>
+<li>Apostila Geoprocessamento: <a href="https://drive.google.com/file/d/14-Hr4p-iNX6vwBd5bYIxYZ3z5Vi-7zCK/view?usp=sharing">Link download</a></li>
+</ul>
+<h3 id="vídeos-do-curso-on-line">Vídeos do curso on-line</h3>
+<ul>
+<li>
+<p>Aula 01: <a href="https://youtu.be/hGZ_O7AMoq4">https://youtu.be/hGZ_O7AMoq4</a></p>
+<ul>
+<li>Download e instalação do QGIS;</li>
+<li>Introdução à interface do QGIS;</li>
+<li>Salvar projeto;</li>
+</ul>
+</li>
+<li>
+<p>Aula 02:</p>
+<ul>
+<li>Download do shape <a href="https://portaldemapas.ibge.gov.br/portal.php">https://portaldemapas.ibge.gov.br/portal.php</a>;
+<ul>
+<li>Malha de municípios - Mato Grosso malha municipal 2020;</li>
+<li>Malha de municípios - Brasil malha municipal 2020;</li>
+<li>Malha todas unidades da federação - Brasil 2020;</li>
+</ul>
+</li>
+<li>parte 1: <a href="https://youtu.be/lXPVnhJQ5BQ">https://youtu.be/lXPVnhJQ5BQ</a>
+<ul>
+<li>Inserção de dados do tipo shape, csv e txt;</li>
+</ul>
+</li>
+<li>parte 2: <a href="https://youtu.be/IgLI8rFwb6I">https://youtu.be/IgLI8rFwb6I</a> parte 3: <a href="https://youtu.be/DYeYPjMSSjM">https://youtu.be/DYeYPjMSSjM</a>
+<ul>
+<li>Criação de camadas shape (pontos, linhas e polígonos);</li>
+<li>Edição de vetores e reprojeção de camadas shape;</li>
+<li>Introdução tabela de atributos, cálculo de área;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Aula 03: <a href="https://youtu.be/gmshkMhz9lk">https://youtu.be/gmshkMhz9lk</a></p>
+<ul>
+<li>Centroides, extração de vértices;</li>
+<li>Manipulação de polígonos;</li>
+<li>Extração de centroides e vértices;</li>
+<li>Geração de pontos no polígono (grid);</li>
+</ul>
+</li>
+<li>
+<p>Aula 04: <a href="https://youtu.be/knd9AfCIrn4">https://youtu.be/knd9AfCIrn4</a></p>
+<ul>
+<li>União, divisão, dissolução de polígonos;</li>
+</ul>
+</li>
+</ul>
+<h3 id="links-sugeridos">Links sugeridos</h3>
+<ul>
+<li>Livros FREE: Explorando QGIS <a href="https://forest-gis.com/livros/LIVRO_EXPLORANDO%20O%20QGIS%20Dalla%20Corte%20et%20al%202020.pdf">link aqui</a></li>
+</ul>
+<h1 id="atividade-avaliativa">Atividade avaliativa</h1>
+<p>A atividade a ser entregue deve ser enviada até o dia &lt;2021-05-14&gt;, em formato <code>PDF</code>, para o e-mail: <code>geoclimamt@unemat.br</code> com o assunto: <code>curso_007_qgisonline</code>.</p>
+<p>O trabalho a ser desenvolvido deverá ser um relatório com formatação livre, ou seja, o número de páginas, alinhamento, espaçamento é definido pelo participante. Todavia, o trabalho como um todo deve manter o padrão definido pelo participante. Além disso, é mandatório que o relatório tenha as seguinte seções:</p>
+<ul>
+<li>objetivo: deixar claro o objetivo da atividade (veja objetivos da fase 2 a seguir)</li>
+<li>material e métodos: descrever como o trabalho foi realizado, podem fazer de forma sucinta apenas descrevendo as etapas realizadas. Ou desenvolver um passo a passo de cada processo, com <em>print screen</em> das telas do <em>QGIS</em> e descrevendo o que foi feito, como se fosse um material para futura consulta que vcs mesmos usarão.</li>
+<li>resultados: apresentar os produtos gerados.</li>
+<li>conclusão e dificuldades encontradas: descrever a conclusão do trabalho (resposta do objetivo), e possíveis dificuldades encontradas.</li>
+<li>referências bibliográficas</li>
+</ul>
+<p>Há <strong>DUAS</strong> opções de tema do trabalho, escolha a que preferir:</p>
+<p>\newpage</p>
+<p><strong>OPÇÃO 1</strong></p>
+<ol>
+<li>
+<p>utilizando o QGIS, o participante deverá escolher pelo menos 3
+talhões com auxílio do plugin <code>QuickMapServices</code> e fazer o contorno
+de cada talhão com uma poligonal.</p>
+</li>
+<li>
+<p>para cada talhão:</p>
+<ul>
+<li>calcular a área e o perímetro.</li>
+<li>gerar pontos aleatórios para definir locais para coleta de
+amostras de solo, a proporção deverá ser de 1 ponto para cada 5
+hectares, ou seja, se o talhão for de 30 ha, deve-se gerar 6 pontos
+amostrais.</li>
+<li>para cada ponto simular valores de <em>pH</em> e valores de correção da acidez (em $t~ha^{-1}$).</li>
+<li>gerar uma mapa temático com os valores de correção de acidez.</li>
+<li>o mapa deve constar no relatório com escala, norte e legenda.</li>
+</ul>
+</li>
+<li>
+<p>fazer o relatório, gerar o <code>PDF</code> e enviar por e-mail dentro do prazo (até &lt;2021-05-14&gt;).</p>
+</li>
+</ol>
+<p><strong>OPÇÃO 2</strong></p>
+<ol>
+<li>
+<p>No site do IBGE escolha a malha municipal de um estado de sua preferência, por exemplo Mato Grosso. No próprio site do IBGE <a href="https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&amp;t=resultados&amp;utm_source=landing&amp;utm_medium=explica&amp;utm_campaign=pib">https://www.ibge.gov.br/</a> , ou em outra fonte de dados, busque por dados municipais (população, PIB, área agrícola, área urbana, etc). Vincule estes dados na tabela de atributos da malha municipal escolhida.</p>
+</li>
+<li>
+<p>Para cada município, realize cálculos para análise. Por exemplo:</p>
+<ul>
+<li>habitantes por metro quadrado,</li>
+<li>relação área urbana e rural</li>
+<li>IDH, PIB</li>
+<li>etc</li>
+</ul>
+</li>
+<li>
+<p>Gere mapas temáticos das análises realizadas.</p>
+<ul>
+<li>o mapa deve constar no relatório com escala, norte e legenda.</li>
+</ul>
+</li>
+<li>
+<p>fazer o relatório (máximo de 8 folhas A4), gerar o <code>PDF</code> e enviar por e-mail dentro do prazo (até &lt;2022-10-05&gt;). Formatação do relatório livre.</p>
+</li>
+</ol>
+
+  
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fteaching%2f2022_09_12_c008_qgis%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=%2fteaching%2f2022_09_12_c008_qgis%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=%2fteaching%2f2022_09_12_c008_qgis%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fteaching%2f2022_09_12_c008_qgis%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fteaching%2f2022_09_12_c008_qgis%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=%2fteaching%2f2022_09_12_c008_qgis%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/teaching/2022_01_01_geoprocessing/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/teaching/2022_01_01_geoprocessing/">Geo test</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+  
+  
+  
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-rafatieppo-github-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+<script src="/js/menus.js"></script>
+
+
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-33432733-8', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+<script src="/js/math-code.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
+</html>
+
