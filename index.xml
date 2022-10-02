@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 12 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to upload TCX file from Polar Flow to Garmin Connect</title>
+      <link>/post/2022_10_01_tcxfile_polargarm/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022_10_01_tcxfile_polargarm/</guid>
+      <description>Introduction I used a Garmin 310XT since 2015 and it works very well until now. However I would like to measure some data from my sleep time. Thus I was wondering to buy a new watch.
+My first idea was a Garmin, but the prices in Brazil was a little bit bitter that moment. I made a research and find out some Polar models, and after all I bought a Polar M2.</description>
+    </item>
+    
     <item>
       <title>Curso Introdução ao Geoprocessamento com QGIS</title>
       <link>/teaching/2022_09_12_c008_qgis/</link>
