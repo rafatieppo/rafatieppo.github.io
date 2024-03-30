@@ -16,7 +16,7 @@
       <guid>/post/170510_bind_rows/</guid>
       <description>Introdução Trabalhando com banco de dados, em algum momento torna-se necessária a extração de determininados elementos que satisfaçam um dada condição. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.
 Estudo de caso Vamos supor que você tenha um data.frame com três tratamentos e quatro repetições
-DF &amp;lt;- data.frame(BLOCO = rep(seq(1,4), each = 12), TRAT=rep(c(&amp;quot;T1&amp;quot;, &amp;quot;T2&amp;quot;, &amp;quot;T3&amp;quot;), each = 4), REP = seq(1,4), Z = rnorm(48, 30, 2.</description>
+DF &amp;lt;- data.frame(BLOCO = rep(seq(1,4), each = 12), TRAT=rep(c(&amp;#34;T1&amp;#34;, &amp;#34;T2&amp;#34;, &amp;#34;T3&amp;#34;), each = 4), REP = seq(1,4), Z = rnorm(48, 30, 2.</description>
     </item>
     
   </channel>

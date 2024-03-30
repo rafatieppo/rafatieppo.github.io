@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Java (VM) para declararação IRPF">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+Java (VM) para declararação IRPF">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>Entendendo java (VM) para instalação do programa IRPF &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -300,12 +303,12 @@ prossiga com a instalação.</p>
 <p>Há pelo menos duas opções de JAVA, uma que é proprietária, pertencente à <a href="https://www.java.com/pt_BR/">Oracle</a>, e outra que é de código aberto <a href="https://openjdk.java.net/">OpenJDK</a> com licença <em>GPLv2</em>. Se o uso do <strong>JDK</strong> for para fins comerciais, recomenda-se a leitura das licenças para ambas as versões, mas para rodar o IRPF ambas podem ser utilizadas sem problemas (este é o nosso objetivo).</p>
 <p>Usualmente, nos repositórios das distribuições Linux o <strong>JDK</strong> disponível é o <code>OpenJDK</code>, e para evitar a adição de repositórios é esta a versão que vamos instalar.</p>
 <p>Agora que já sabemos quem é quem, vamos realizar a instalação. Nas distros Linux <em>Debian</em>, <em>Ubuntu</em>, <em>Mint</em>, <em>PopOS</em> e derivados, acesse o <strong>terminal</strong> e digite:</p>
-<pre><code>apt install default-jre default-jdk
+<pre tabindex="0"><code>apt install default-jre default-jdk
 </code></pre><p>Caso queira a versão mais recente, no terminal digite:</p>
-<pre><code>apt install openjdk-17-jre openjdk-17-jdk 
+<pre tabindex="0"><code>apt install openjdk-17-jre openjdk-17-jdk 
 </code></pre><p>Uma vez que você finalizou a instalação do <strong>JDK</strong>, vamos obter o programa do IRPF. Acesse a página da <a href="http://receita.economia.gov.br/">Receita</a>, posteriormente acesse a seção do <strong>IRPF2022</strong> e acesse a área de <a href="https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/download/pgd/dirpf">downloads</a>. Agora, procure o quadro que tem o nome <em>Programa IRPF 2022</em>. Note que na versão 2022 há três opções: Mac, Linux, Multi. Se optar pelo sistema Linux, uma imagem  do programa será salva no seu computador, o que pode resolver na maioria dos casos. Como a ideia é mostar o uso do java, vou optar pelo download para <em>Multi</em> sistemas operacionais.</p>
 <p>Após a conclusão do download um arquivo com extensão <code>.zip</code> estará salvo no seu computador. Descompacte este arquivo em uma pasta da sua preferência e via <strong>Terminal</strong> acesse a referida pasta e digite:</p>
-<pre><code>java -jar irpf.jar
+<pre tabindex="0"><code>java -jar irpf.jar
 </code></pre><p>Assim que o comando acima for executado, uma janela de instalação do programa IRPF será aberta. Siga as instruções até finalizar a instalação. Nas versões antigas, era necessário uma instalação completa e o programa era instalado em outra pasta. Na versão 2022 basta retornar na pasta que o arquivo <code>zip</code> foi descompactado e repetir a linha de comando acima.</p>
 <h2 id="references">References</h2>
 <p><a href="https://dicasdejava.com.br/qual-a-diferenca-entre-jdk-jre-e-jvm/">https://dicasdejava.com.br/qual-a-diferenca-entre-jdk-jre-e-jvm/</a></p>

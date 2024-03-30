@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learning pca with python">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+Learning pca with python">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>PCA analysis and tidy data &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -344,12 +347,12 @@ demands a data set with a specific format:</p>
 </tbody>
 </table>
 <p>For some reason you loaded your data and get something like that:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-<span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-
-df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;birds.csv&#39;</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;,&#39;</span>, header<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
-df<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">8</span>)
-</code></pre></div><table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;birds.csv&#39;</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;,&#39;</span>, header<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">8</span>)
+</span></span></code></pre></div><table>
 <thead>
 <tr>
 <th>VAR</th>
@@ -393,19 +396,19 @@ df<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">8</span>)
 </table>
 <p>An alternative to tidy data to use <code>pivot</code> method. Check the code and
 comments as follows:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create a ID column to identify the measures `X1 X2 X3 X4 X5`</span>
-df[<span style="color:#e6db74">&#39;ID&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>tile([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>], <span style="color:#ae81ff">49</span>)
-<span style="color:#75715e"># create a column to identify the samples</span>
-ls_sample <span style="color:#f92672">=</span> []
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">49</span>):
-    a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>repeat(i, <span style="color:#ae81ff">5</span>)
-    ls_sample<span style="color:#f92672">.</span>append(a)
-df[<span style="color:#e6db74">&#39;SAMPLE&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>concatenate(ls_sample)
-<span style="color:#75715e"># apply pivot (it is the oposite of `melt` method)</span>
-df_pca <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>pivot_table(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SAMPLE&#34;</span>,
-                        columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ID&#39;</span>)[<span style="color:#e6db74">&#39;Y&#39;</span>]<span style="color:#f92672">.</span>reset_index()
-</code></pre></div><p>We got:</p>
-<pre><code>&gt;&gt;&gt; df_pca.head(8)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># create a ID column to identify the measures `X1 X2 X3 X4 X5`</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;ID&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>tile([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>], <span style="color:#ae81ff">49</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># create a column to identify the samples</span>
+</span></span><span style="display:flex;"><span>ls_sample <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">49</span>):
+</span></span><span style="display:flex;"><span>    a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>repeat(i, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>    ls_sample<span style="color:#f92672">.</span>append(a)
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;SAMPLE&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>concatenate(ls_sample)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># apply pivot (it is the oposite of `melt` method)</span>
+</span></span><span style="display:flex;"><span>df_pca <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>pivot_table(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SAMPLE&#34;</span>,
+</span></span><span style="display:flex;"><span>                        columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ID&#39;</span>)[<span style="color:#e6db74">&#39;Y&#39;</span>]<span style="color:#f92672">.</span>reset_index()
+</span></span></code></pre></div><p>We got:</p>
+<pre tabindex="0"><code>&gt;&gt;&gt; df_pca.head(8)
 ID  SAMPLE      1      2     3     4     5
 0        0  156.0  245.0  31.6  18.5  20.5
 1        1  154.0  240.0  30.4  17.9  19.6
@@ -415,25 +418,24 @@ ID  SAMPLE      1      2     3     4     5
 5        5  163.0  247.0  32.0  19.0  20.9
 6        6  157.0  238.0  30.9  18.4  20.2
 7        7  155.0  239.0  32.8  18.6  21.2
-
 </code></pre><p>Notice that we got 7 columns. The <code>ID</code> columns is <code>Index</code>, another
 columns are <code>columns</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> df_pca<span style="color:#f92672">.</span>columns
-Index([<span style="color:#e6db74">&#39;SAMPLE&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>], dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;object&#39;</span>, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ID&#39;</span>)
-</code></pre></div><p>For a better data understanding We may rename the columns name:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># change columns name</span>
-df_pca<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;SAMPLE&#39;</span>, <span style="color:#e6db74">&#39;X1&#39;</span>, <span style="color:#e6db74">&#39;X2&#39;</span>, <span style="color:#e6db74">&#39;X3&#39;</span>, <span style="color:#e6db74">&#39;X4&#39;</span>, <span style="color:#e6db74">&#39;X5&#39;</span>]
-<span style="color:#f92672">&gt;&gt;&gt;</span> df_pca<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">8</span>)
-   SAMPLE     X1     X2    X3    X4    X5
-<span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">156.0</span>  <span style="color:#ae81ff">245.0</span>  <span style="color:#ae81ff">31.6</span>  <span style="color:#ae81ff">18.5</span>  <span style="color:#ae81ff">20.5</span>
-<span style="color:#ae81ff">1</span>       <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">154.0</span>  <span style="color:#ae81ff">240.0</span>  <span style="color:#ae81ff">30.4</span>  <span style="color:#ae81ff">17.9</span>  <span style="color:#ae81ff">19.6</span>
-<span style="color:#ae81ff">2</span>       <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">153.0</span>  <span style="color:#ae81ff">240.0</span>  <span style="color:#ae81ff">31.0</span>  <span style="color:#ae81ff">18.4</span>  <span style="color:#ae81ff">20.6</span>
-<span style="color:#ae81ff">3</span>       <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">153.0</span>  <span style="color:#ae81ff">236.0</span>  <span style="color:#ae81ff">30.9</span>  <span style="color:#ae81ff">17.7</span>  <span style="color:#ae81ff">20.2</span>
-<span style="color:#ae81ff">4</span>       <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">155.0</span>  <span style="color:#ae81ff">243.0</span>  <span style="color:#ae81ff">31.5</span>  <span style="color:#ae81ff">18.6</span>  <span style="color:#ae81ff">20.3</span>
-<span style="color:#ae81ff">5</span>       <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">163.0</span>  <span style="color:#ae81ff">247.0</span>  <span style="color:#ae81ff">32.0</span>  <span style="color:#ae81ff">19.0</span>  <span style="color:#ae81ff">20.9</span>
-<span style="color:#ae81ff">6</span>       <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">157.0</span>  <span style="color:#ae81ff">238.0</span>  <span style="color:#ae81ff">30.9</span>  <span style="color:#ae81ff">18.4</span>  <span style="color:#ae81ff">20.2</span>
-<span style="color:#ae81ff">7</span>       <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">155.0</span>  <span style="color:#ae81ff">239.0</span>  <span style="color:#ae81ff">32.8</span>  <span style="color:#ae81ff">18.6</span>  <span style="color:#ae81ff">21.2</span>
-</code></pre></div><p>Once we tided the data set it is time to run PCA.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> df_pca<span style="color:#f92672">.</span>columns
+</span></span><span style="display:flex;"><span>Index([<span style="color:#e6db74">&#39;SAMPLE&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>], dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;object&#39;</span>, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ID&#39;</span>)
+</span></span></code></pre></div><p>For a better data understanding We may rename the columns name:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># change columns name</span>
+</span></span><span style="display:flex;"><span>df_pca<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;SAMPLE&#39;</span>, <span style="color:#e6db74">&#39;X1&#39;</span>, <span style="color:#e6db74">&#39;X2&#39;</span>, <span style="color:#e6db74">&#39;X3&#39;</span>, <span style="color:#e6db74">&#39;X4&#39;</span>, <span style="color:#e6db74">&#39;X5&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> df_pca<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span>   SAMPLE     X1     X2    X3    X4    X5
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">156.0</span>  <span style="color:#ae81ff">245.0</span>  <span style="color:#ae81ff">31.6</span>  <span style="color:#ae81ff">18.5</span>  <span style="color:#ae81ff">20.5</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>       <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">154.0</span>  <span style="color:#ae81ff">240.0</span>  <span style="color:#ae81ff">30.4</span>  <span style="color:#ae81ff">17.9</span>  <span style="color:#ae81ff">19.6</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>       <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">153.0</span>  <span style="color:#ae81ff">240.0</span>  <span style="color:#ae81ff">31.0</span>  <span style="color:#ae81ff">18.4</span>  <span style="color:#ae81ff">20.6</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>       <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">153.0</span>  <span style="color:#ae81ff">236.0</span>  <span style="color:#ae81ff">30.9</span>  <span style="color:#ae81ff">17.7</span>  <span style="color:#ae81ff">20.2</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>       <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">155.0</span>  <span style="color:#ae81ff">243.0</span>  <span style="color:#ae81ff">31.5</span>  <span style="color:#ae81ff">18.6</span>  <span style="color:#ae81ff">20.3</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>       <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">163.0</span>  <span style="color:#ae81ff">247.0</span>  <span style="color:#ae81ff">32.0</span>  <span style="color:#ae81ff">19.0</span>  <span style="color:#ae81ff">20.9</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span>       <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">157.0</span>  <span style="color:#ae81ff">238.0</span>  <span style="color:#ae81ff">30.9</span>  <span style="color:#ae81ff">18.4</span>  <span style="color:#ae81ff">20.2</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span>       <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">155.0</span>  <span style="color:#ae81ff">239.0</span>  <span style="color:#ae81ff">32.8</span>  <span style="color:#ae81ff">18.6</span>  <span style="color:#ae81ff">21.2</span>
+</span></span></code></pre></div><p>Once we tided the data set it is time to run PCA.</p>
 <h2 id="pca">PCA</h2>
 <p>Keep in mind that I will not show mathematics equations or solve all PCA with my own
 code. To make it simple we will use <code>sklearn</code> library.</p>
@@ -443,42 +445,42 @@ code. To make it simple we will use <code>sklearn</code> library.</p>
 details about you can find
 <a href="https://www.fieldmuseum.org/blog/hermon-bumpus-and-house-sparrows">here</a>.</p>
 <p>We will need load:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.decomposition <span style="color:#f92672">import</span> PCA
-<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> StandardScaler
-<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
-<span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;pardal.txt&#39;</span>, header<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#39;</span>)
-df_data<span style="color:#f92672">.</span>shape
-<span style="color:#f92672">&gt;&gt;&gt;</span> df_data<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">5</span>)
-   survive  length  alar  weight   lbh   lhum   lfem  ltibio  wskull  lkeel
-<span style="color:#ae81ff">0</span>        <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">154</span>    <span style="color:#ae81ff">41</span>     <span style="color:#ae81ff">4.5</span>  <span style="color:#ae81ff">31.0</span>  <span style="color:#ae81ff">0.687</span>  <span style="color:#ae81ff">0.668</span>   <span style="color:#ae81ff">1.000</span>   <span style="color:#ae81ff">0.587</span>  <span style="color:#ae81ff">0.830</span>
-<span style="color:#ae81ff">1</span>        <span style="color:#ae81ff">0</span>     <span style="color:#ae81ff">165</span>    <span style="color:#ae81ff">40</span>     <span style="color:#ae81ff">6.5</span>  <span style="color:#ae81ff">31.0</span>  <span style="color:#ae81ff">0.738</span>  <span style="color:#ae81ff">0.704</span>   <span style="color:#ae81ff">1.095</span>   <span style="color:#ae81ff">0.606</span>  <span style="color:#ae81ff">0.847</span>
-<span style="color:#ae81ff">2</span>        <span style="color:#ae81ff">0</span>     <span style="color:#ae81ff">160</span>    <span style="color:#ae81ff">45</span>     <span style="color:#ae81ff">6.1</span>  <span style="color:#ae81ff">30.0</span>  <span style="color:#ae81ff">0.736</span>  <span style="color:#ae81ff">0.709</span>   <span style="color:#ae81ff">1.109</span>   <span style="color:#ae81ff">0.611</span>  <span style="color:#ae81ff">0.840</span>
-<span style="color:#ae81ff">3</span>        <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">160</span>    <span style="color:#ae81ff">50</span>     <span style="color:#ae81ff">6.9</span>  <span style="color:#ae81ff">30.8</span>  <span style="color:#ae81ff">0.736</span>  <span style="color:#ae81ff">0.709</span>   <span style="color:#ae81ff">1.180</span>   <span style="color:#ae81ff">0.600</span>  <span style="color:#ae81ff">0.841</span>
-<span style="color:#ae81ff">4</span>        <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">155</span>    <span style="color:#ae81ff">43</span>     <span style="color:#ae81ff">6.9</span>  <span style="color:#ae81ff">30.6</span>  <span style="color:#ae81ff">0.733</span>  <span style="color:#ae81ff">0.704</span>   <span style="color:#ae81ff">1.151</span>   <span style="color:#ae81ff">0.600</span>  <span style="color:#ae81ff">0.846</span>
-</code></pre></div><p>So, we have 10 columns and 56 rows. Now it is necessary split the data
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.decomposition <span style="color:#f92672">import</span> PCA
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> StandardScaler
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df_data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;pardal.txt&#39;</span>, header<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>df_data<span style="color:#f92672">.</span>shape
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> df_data<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>   survive  length  alar  weight   lbh   lhum   lfem  ltibio  wskull  lkeel
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span>        <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">154</span>    <span style="color:#ae81ff">41</span>     <span style="color:#ae81ff">4.5</span>  <span style="color:#ae81ff">31.0</span>  <span style="color:#ae81ff">0.687</span>  <span style="color:#ae81ff">0.668</span>   <span style="color:#ae81ff">1.000</span>   <span style="color:#ae81ff">0.587</span>  <span style="color:#ae81ff">0.830</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>        <span style="color:#ae81ff">0</span>     <span style="color:#ae81ff">165</span>    <span style="color:#ae81ff">40</span>     <span style="color:#ae81ff">6.5</span>  <span style="color:#ae81ff">31.0</span>  <span style="color:#ae81ff">0.738</span>  <span style="color:#ae81ff">0.704</span>   <span style="color:#ae81ff">1.095</span>   <span style="color:#ae81ff">0.606</span>  <span style="color:#ae81ff">0.847</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>        <span style="color:#ae81ff">0</span>     <span style="color:#ae81ff">160</span>    <span style="color:#ae81ff">45</span>     <span style="color:#ae81ff">6.1</span>  <span style="color:#ae81ff">30.0</span>  <span style="color:#ae81ff">0.736</span>  <span style="color:#ae81ff">0.709</span>   <span style="color:#ae81ff">1.109</span>   <span style="color:#ae81ff">0.611</span>  <span style="color:#ae81ff">0.840</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>        <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">160</span>    <span style="color:#ae81ff">50</span>     <span style="color:#ae81ff">6.9</span>  <span style="color:#ae81ff">30.8</span>  <span style="color:#ae81ff">0.736</span>  <span style="color:#ae81ff">0.709</span>   <span style="color:#ae81ff">1.180</span>   <span style="color:#ae81ff">0.600</span>  <span style="color:#ae81ff">0.841</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>        <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">155</span>    <span style="color:#ae81ff">43</span>     <span style="color:#ae81ff">6.9</span>  <span style="color:#ae81ff">30.6</span>  <span style="color:#ae81ff">0.733</span>  <span style="color:#ae81ff">0.704</span>   <span style="color:#ae81ff">1.151</span>   <span style="color:#ae81ff">0.600</span>  <span style="color:#ae81ff">0.846</span>
+</span></span></code></pre></div><p>So, we have 10 columns and 56 rows. Now it is necessary split the data
 set in <em>features</em> and <em>target</em>. Features are all measured data, and
 target is about the survive condition. Each study can have different
 targets like <em>machines</em>, <em>locals</em>, etc. For this case we will use <code>x</code>
 for features and <code>y</code> for target.  Let&rsquo;s create a list to represent
 features:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">features <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;length&#39;</span>, <span style="color:#e6db74">&#39;alar&#39;</span>, <span style="color:#e6db74">&#39;weight&#39;</span>, <span style="color:#e6db74">&#39;lbh&#39;</span>, <span style="color:#e6db74">&#39;lhum&#39;</span>,
-            <span style="color:#e6db74">&#39;lfem&#39;</span>, <span style="color:#e6db74">&#39;ltibio&#39;</span>, <span style="color:#e6db74">&#39;wskull&#39;</span>, <span style="color:#e6db74">&#39;lkeel&#39;</span>]
-
-<span style="color:#75715e"># Separating out the features</span>
-x <span style="color:#f92672">=</span> df_data<span style="color:#f92672">.</span>loc[:, features]<span style="color:#f92672">.</span>values
-
-<span style="color:#75715e"># Separating out the target</span>
-y <span style="color:#f92672">=</span> list(df_data[<span style="color:#e6db74">&#39;survive&#39;</span>])
-</code></pre></div><p>Once We assigned the variables, we can start. Let&rsquo;s the game begin!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>features <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;length&#39;</span>, <span style="color:#e6db74">&#39;alar&#39;</span>, <span style="color:#e6db74">&#39;weight&#39;</span>, <span style="color:#e6db74">&#39;lbh&#39;</span>, <span style="color:#e6db74">&#39;lhum&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;lfem&#39;</span>, <span style="color:#e6db74">&#39;ltibio&#39;</span>, <span style="color:#e6db74">&#39;wskull&#39;</span>, <span style="color:#e6db74">&#39;lkeel&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Separating out the features</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> df_data<span style="color:#f92672">.</span>loc[:, features]<span style="color:#f92672">.</span>values
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Separating out the target</span>
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> list(df_data[<span style="color:#e6db74">&#39;survive&#39;</span>])
+</span></span></code></pre></div><p>Once We assigned the variables, we can start. Let&rsquo;s the game begin!</p>
 <img src="https://media.giphy.com/media/yUXv7HHLTeq0U/giphy.gif" alt="" width="200"/>
 <p>First of all, We can check the correlation among variables:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>figure(figsize(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">9</span>))cmap <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;viridis_r&#39;</span>, annot <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>)
-sns<span style="color:#f92672">.</span>heatmap(df_pca<span style="color:#f92672">.</span>data[:, features]<span style="color:#f92672">.</span>corr(),
-            cmap <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;viridis_r&#39;</span>, annot <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>)
-plt<span style="color:#f92672">.</span>tight_layout()
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">9</span>))cmap <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;viridis_r&#39;</span>, annot <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>heatmap(df_pca<span style="color:#f92672">.</span>data[:, features]<span style="color:#f92672">.</span>corr(),
+</span></span><span style="display:flex;"><span>            cmap <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;viridis_r&#39;</span>, annot <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><figure>
   <img src="/post/pics/20200321_corr.png"/>
   <figcaption>
       <p>Figure 1: Correlations<p>
@@ -489,22 +491,22 @@ case We have, thus <em>Go Ahead</em>!</p>
 <p>PCA is effected by scale so We need to scale the features before
 applying PCA. StandardScaler is an option to standardize the dataset’s
 features into unit scale (mean = 0 and variance = 1).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sc <span style="color:#f92672">=</span> StandardScaler()  <span style="color:#75715e"># Normaliza os dados z = (x - media)/sd</span>
-x <span style="color:#f92672">=</span> sc<span style="color:#f92672">.</span>fit_transform(x)
-</code></pre></div><p>Now we run PCA for all possible dimensions, I mean &ldquo;PC1&rdquo;, &ldquo;PC2&rdquo;, &hellip;,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pca<span style="color:#f92672">=</span>PCA()
-principalComponents<span style="color:#f92672">=</span>pca<span style="color:#f92672">.</span>fit_transform(x)
-</code></pre></div><p>Verifying how much explanation for each principal component, or in other
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sc <span style="color:#f92672">=</span> StandardScaler()  <span style="color:#75715e"># Normaliza os dados z = (x - media)/sd</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> sc<span style="color:#f92672">.</span>fit_transform(x)
+</span></span></code></pre></div><p>Now we run PCA for all possible dimensions, I mean &ldquo;PC1&rdquo;, &ldquo;PC2&rdquo;, &hellip;,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pca<span style="color:#f92672">=</span>PCA()
+</span></span><span style="display:flex;"><span>principalComponents<span style="color:#f92672">=</span>pca<span style="color:#f92672">.</span>fit_transform(x)
+</span></span></code></pre></div><p>Verifying how much explanation for each principal component, or in other
 words, variance caused by each of the principal components.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">evry <span style="color:#f92672">=</span> pca<span style="color:#f92672">.</span>explained_variance_ratio_
-evrx <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">1</span>, len(evry)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
-plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>))
-plt<span style="color:#f92672">.</span>bar(x<span style="color:#f92672">=</span>evrx, height<span style="color:#f92672">=</span>evry)
-plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;PCA&#39;</span>)
-plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Variance&#39;</span>)
-plt<span style="color:#f92672">.</span>tight_layout()
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>evry <span style="color:#f92672">=</span> pca<span style="color:#f92672">.</span>explained_variance_ratio_
+</span></span><span style="display:flex;"><span>evrx <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">1</span>, len(evry)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>bar(x<span style="color:#f92672">=</span>evrx, height<span style="color:#f92672">=</span>evry)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;PCA&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Variance&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><figure>
   <img src="/post/pics/20200321_pcavar.png"/>
   <figcaption>
       <p>Figure 2: Variance caused by each of the principal components<p>
@@ -515,22 +517,22 @@ plt<span style="color:#f92672">.</span>show()
 reduced it to 3. Now We can compute the correlation between each sample
 and PC1, PC2, PC3, &hellip; PCn, if you use <code>R</code> it is easy, just
 <code>pca$scores</code>. In Python we run <code>pca.fit_transform(x)</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ls_pcs <span style="color:#f92672">=</span> []
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(features)):
-    tt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;PC&#39;</span> <span style="color:#f92672">+</span> str(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
-    ls_pcs<span style="color:#f92672">.</span>append(tt)
-df_pcSamples <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(principalComponents,
-                            columns<span style="color:#f92672">=</span>ls_pcs)
-df_pcSamples[<span style="color:#e6db74">&#39;SAMPLE&#39;</span>] <span style="color:#f92672">=</span> y
-
-plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">7</span>))
-sns<span style="color:#f92672">.</span>heatmap(pd<span style="color:#f92672">.</span>concat([df_data<span style="color:#f92672">.</span>iloc[:, <span style="color:#ae81ff">1</span>:],
-                       df_pcSamples<span style="color:#f92672">.</span>iloc[:, <span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>]],
-                      axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>corr(),
-            cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;viridis_r&#39;</span>, annot<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
-plt<span style="color:#f92672">.</span>tight_layout()
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ls_pcs <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(features)):
+</span></span><span style="display:flex;"><span>    tt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;PC&#39;</span> <span style="color:#f92672">+</span> str(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    ls_pcs<span style="color:#f92672">.</span>append(tt)
+</span></span><span style="display:flex;"><span>df_pcSamples <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(principalComponents,
+</span></span><span style="display:flex;"><span>                            columns<span style="color:#f92672">=</span>ls_pcs)
+</span></span><span style="display:flex;"><span>df_pcSamples[<span style="color:#e6db74">&#39;SAMPLE&#39;</span>] <span style="color:#f92672">=</span> y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">7</span>))
+</span></span><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>heatmap(pd<span style="color:#f92672">.</span>concat([df_data<span style="color:#f92672">.</span>iloc[:, <span style="color:#ae81ff">1</span>:],
+</span></span><span style="display:flex;"><span>                       df_pcSamples<span style="color:#f92672">.</span>iloc[:, <span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>]],
+</span></span><span style="display:flex;"><span>                      axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>corr(),
+</span></span><span style="display:flex;"><span>            cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;viridis_r&#39;</span>, annot<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><figure>
   <img src="/post/pics/20200321_corr_pcsample.png"/>
   <figcaption>
       <p>Figure 3: “Scores” of each individual object (birds) computed as linear combinations of the original variables<p>
@@ -547,44 +549,44 @@ biplot. NOTE: I would like to appreciate
 <a href="https://stackoverflow.com/questions/50796024/feature-variable-importance-after-a-pca-analysis/50845697#50845697">explanation</a> and share the
 <a href="https://stackoverflow.com/questions/50796024/feature-variable-importance-after-a-pca-analysis/50845697#50845697">code</a>
 to a better  understanding how to do this visualization.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_pcFeatures <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame()
-df_pcFeatures[<span style="color:#e6db74">&#39;FEATURES&#39;</span>] <span style="color:#f92672">=</span> features
-df_pcFeatures[<span style="color:#e6db74">&#39;PC1&#39;</span>] <span style="color:#f92672">=</span> list(pca<span style="color:#f92672">.</span>components_[<span style="color:#ae81ff">0</span>])
-df_pcFeatures[<span style="color:#e6db74">&#39;PC2&#39;</span>] <span style="color:#f92672">=</span> list(pca<span style="color:#f92672">.</span>components_[<span style="color:#ae81ff">1</span>])
-df_pcFeatures
-
-scalex <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span><span style="color:#f92672">/</span>(df_pcSamples[<span style="color:#e6db74">&#39;PC1&#39;</span>]<span style="color:#f92672">.</span>max() <span style="color:#f92672">-</span> df_pcSamples[<span style="color:#e6db74">&#39;PC1&#39;</span>]<span style="color:#f92672">.</span>min())
-scaley <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span><span style="color:#f92672">/</span>(df_pcSamples[<span style="color:#e6db74">&#39;PC2&#39;</span>]<span style="color:#f92672">.</span>max() <span style="color:#f92672">-</span> df_pcSamples[<span style="color:#e6db74">&#39;PC2&#39;</span>]<span style="color:#f92672">.</span>min())
-
-plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">7</span>))
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(df_pcFeatures)):
-    plt<span style="color:#f92672">.</span>annotate(df_pcFeatures<span style="color:#f92672">.</span>iloc[i, <span style="color:#ae81ff">0</span>],
-                 (df_pcFeatures<span style="color:#f92672">.</span>iloc[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">1.12</span>,
-                  df_pcFeatures<span style="color:#f92672">.</span>iloc[i, <span style="color:#ae81ff">2</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">1.12</span>), size<span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
-
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(df_pcFeatures)):
-    plt<span style="color:#f92672">.</span>arrow(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,  df_pcFeatures<span style="color:#f92672">.</span>iloc[i, <span style="color:#ae81ff">1</span>],
-              df_pcFeatures<span style="color:#f92672">.</span>iloc[i, <span style="color:#ae81ff">2</span>],
-              width<span style="color:#f92672">=</span><span style="color:#ae81ff">0.003</span>,
-              head_width<span style="color:#f92672">=</span><span style="color:#ae81ff">0.02</span>)
-
-sns<span style="color:#f92672">.</span>scatterplot(x<span style="color:#f92672">=</span>df_pcSamples[<span style="color:#e6db74">&#39;PC1&#39;</span>]<span style="color:#f92672">*</span>scalex,
-                y<span style="color:#f92672">=</span>df_pcSamples[<span style="color:#e6db74">&#39;PC2&#39;</span>]<span style="color:#f92672">*</span>scaley,
-                hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;SAMPLE&#39;</span>, data<span style="color:#f92672">=</span>df_pcSamples,
-                s<span style="color:#f92672">=</span><span style="color:#ae81ff">43</span>, palette<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;seismic_r&#39;</span>)
-
-plt<span style="color:#f92672">.</span>axvline(<span style="color:#ae81ff">0</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gray&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;dashed&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-plt<span style="color:#f92672">.</span>axhline(<span style="color:#ae81ff">0</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gray&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;dashed&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Biplot for  2 main components&#39;</span>)
-plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;PCA1 = &#39;</span> <span style="color:#f92672">+</span> str(ratio_pca1) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;%&#39;</span>)
-plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;PCA2 = &#39;</span> <span style="color:#f92672">+</span> str(ratio_pca2) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;%&#39;</span>)
-plt<span style="color:#f92672">.</span>xticks(np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1.1</span>, <span style="color:#ae81ff">0.2</span>))
-plt<span style="color:#f92672">.</span>yticks(np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.6</span>, <span style="color:#ae81ff">0.7</span>, <span style="color:#ae81ff">0.2</span>))
-plt<span style="color:#f92672">.</span>tight_layout()
-plt<span style="color:#f92672">.</span>savefig(
-    <span style="color:#e6db74">&#39;/home/rafatieppo/Dropbox/profissional/site_my/content/post/pics/20200321_biplot.png&#39;</span>)
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df_pcFeatures <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame()
+</span></span><span style="display:flex;"><span>df_pcFeatures[<span style="color:#e6db74">&#39;FEATURES&#39;</span>] <span style="color:#f92672">=</span> features
+</span></span><span style="display:flex;"><span>df_pcFeatures[<span style="color:#e6db74">&#39;PC1&#39;</span>] <span style="color:#f92672">=</span> list(pca<span style="color:#f92672">.</span>components_[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>df_pcFeatures[<span style="color:#e6db74">&#39;PC2&#39;</span>] <span style="color:#f92672">=</span> list(pca<span style="color:#f92672">.</span>components_[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>df_pcFeatures
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>scalex <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span><span style="color:#f92672">/</span>(df_pcSamples[<span style="color:#e6db74">&#39;PC1&#39;</span>]<span style="color:#f92672">.</span>max() <span style="color:#f92672">-</span> df_pcSamples[<span style="color:#e6db74">&#39;PC1&#39;</span>]<span style="color:#f92672">.</span>min())
+</span></span><span style="display:flex;"><span>scaley <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span><span style="color:#f92672">/</span>(df_pcSamples[<span style="color:#e6db74">&#39;PC2&#39;</span>]<span style="color:#f92672">.</span>max() <span style="color:#f92672">-</span> df_pcSamples[<span style="color:#e6db74">&#39;PC2&#39;</span>]<span style="color:#f92672">.</span>min())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">7</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(df_pcFeatures)):
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>annotate(df_pcFeatures<span style="color:#f92672">.</span>iloc[i, <span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>                 (df_pcFeatures<span style="color:#f92672">.</span>iloc[i, <span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">1.12</span>,
+</span></span><span style="display:flex;"><span>                  df_pcFeatures<span style="color:#f92672">.</span>iloc[i, <span style="color:#ae81ff">2</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">1.12</span>), size<span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(df_pcFeatures)):
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>arrow(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,  df_pcFeatures<span style="color:#f92672">.</span>iloc[i, <span style="color:#ae81ff">1</span>],
+</span></span><span style="display:flex;"><span>              df_pcFeatures<span style="color:#f92672">.</span>iloc[i, <span style="color:#ae81ff">2</span>],
+</span></span><span style="display:flex;"><span>              width<span style="color:#f92672">=</span><span style="color:#ae81ff">0.003</span>,
+</span></span><span style="display:flex;"><span>              head_width<span style="color:#f92672">=</span><span style="color:#ae81ff">0.02</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>scatterplot(x<span style="color:#f92672">=</span>df_pcSamples[<span style="color:#e6db74">&#39;PC1&#39;</span>]<span style="color:#f92672">*</span>scalex,
+</span></span><span style="display:flex;"><span>                y<span style="color:#f92672">=</span>df_pcSamples[<span style="color:#e6db74">&#39;PC2&#39;</span>]<span style="color:#f92672">*</span>scaley,
+</span></span><span style="display:flex;"><span>                hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;SAMPLE&#39;</span>, data<span style="color:#f92672">=</span>df_pcSamples,
+</span></span><span style="display:flex;"><span>                s<span style="color:#f92672">=</span><span style="color:#ae81ff">43</span>, palette<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;seismic_r&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>axvline(<span style="color:#ae81ff">0</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gray&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;dashed&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>axhline(<span style="color:#ae81ff">0</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gray&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;dashed&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Biplot for  2 main components&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;PCA1 = &#39;</span> <span style="color:#f92672">+</span> str(ratio_pca1) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;%&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;PCA2 = &#39;</span> <span style="color:#f92672">+</span> str(ratio_pca2) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;%&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xticks(np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1.1</span>, <span style="color:#ae81ff">0.2</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>yticks(np<span style="color:#f92672">.</span>arange(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.6</span>, <span style="color:#ae81ff">0.7</span>, <span style="color:#ae81ff">0.2</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>savefig(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;/home/rafatieppo/Dropbox/profissional/site_my/content/post/pics/20200321_biplot.png&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><figure>
   <img src="/post/pics/20200321_biplot.png"/>
   <figcaption>
       <p>Figure 4: Biplot for two main components. (0 no survive, 1 survive)<p>

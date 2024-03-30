@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Surface Energy Balance Algorithm for Land">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+Surface Energy Balance Algorithm for Land">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>SEBAL model by means GRASS and PYTHON SEBAL &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -311,30 +314,30 @@
 <p><strong>NOTE</strong>: You MUST reproject the DEM file for the same coordinate reference system of interest, RENAME it as <code>MDT_Sebal.TIF</code>.</p>
 <h2 id="python-environment">Python environment</h2>
 <p>To create a python environment, first create a new folder. I will create <code>venv_sebal</code> folder. Now, in Linux Terminal, We can create the python environment with the code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python3 <span style="color:#f92672">-</span>m venv <span style="color:#f92672">./</span>venv_sebal
-</code></pre></div><p>Once it is done, We can activate the environment and install the packages. To activate the environment:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">source <span style="color:#f92672">~/.</span>virtualenvs<span style="color:#f92672">/</span>venv_sebal<span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>activate
-</code></pre></div><p>To install all the package, download THIS file into the <code>Downloads</code> folder or any other. Now you can type in terminal:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip3 install <span style="color:#f92672">-</span>r <span style="color:#f92672">/</span>media<span style="color:#f92672">/</span>rafatieppo<span style="color:#f92672">/</span>hd_back<span style="color:#f92672">/</span>sebal_tutorial<span style="color:#f92672">/</span>requirement_pysebal<span style="color:#f92672">.</span>txt
-</code></pre></div><p>Verify if all packs has been installed correctly, You can try to import the packs.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Order matters</span>
-<span style="color:#f92672">import</span> math
-<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-<span style="color:#f92672">import</span> os
-<span style="color:#f92672">from</span> grass_session <span style="color:#f92672">import</span> session
-<span style="color:#f92672">import</span> grass.script <span style="color:#66d9ef">as</span> gscript
-<span style="color:#f92672">from</span> grass.script <span style="color:#f92672">import</span> core <span style="color:#66d9ef">as</span> gcore
-</code></pre></div><p>If all is ok, We can advance for the step 4.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>python3 <span style="color:#f92672">-</span>m venv <span style="color:#f92672">./</span>venv_sebal
+</span></span></code></pre></div><p>Once it is done, We can activate the environment and install the packages. To activate the environment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>source <span style="color:#f92672">~/.</span>virtualenvs<span style="color:#f92672">/</span>venv_sebal<span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>activate
+</span></span></code></pre></div><p>To install all the package, download THIS file into the <code>Downloads</code> folder or any other. Now you can type in terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pip3 install <span style="color:#f92672">-</span>r <span style="color:#f92672">/</span>media<span style="color:#f92672">/</span>rafatieppo<span style="color:#f92672">/</span>hd_back<span style="color:#f92672">/</span>sebal_tutorial<span style="color:#f92672">/</span>requirement_pysebal<span style="color:#f92672">.</span>txt
+</span></span></code></pre></div><p>Verify if all packs has been installed correctly, You can try to import the packs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Order matters</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> grass_session <span style="color:#f92672">import</span> session
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> grass.script <span style="color:#66d9ef">as</span> gscript
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> grass.script <span style="color:#f92672">import</span> core <span style="color:#66d9ef">as</span> gcore
+</span></span></code></pre></div><p>If all is ok, We can advance for the step 4.</p>
 <h2 id="grass-gis-and-config-path">GRASS GIS and config path</h2>
 <p>If you do not have GRASS GIS in your machine, you can try to install (it requires root privileges):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">apt<span style="color:#f92672">-</span>get install grass
-apt<span style="color:#f92672">-</span>get install grass<span style="color:#f92672">-</span>gui
-apt<span style="color:#f92672">-</span>get install grass<span style="color:#f92672">-</span>dev
-</code></pre></div><p>Let&rsquo;s find the path?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">grass78 <span style="color:#f92672">--</span>config path
-</code></pre></div><p>It should return something like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">usr<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>grass78
-</code></pre></div><p>Copy and paste this path in a notepad.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>apt<span style="color:#f92672">-</span>get install grass
+</span></span><span style="display:flex;"><span>apt<span style="color:#f92672">-</span>get install grass<span style="color:#f92672">-</span>gui
+</span></span><span style="display:flex;"><span>apt<span style="color:#f92672">-</span>get install grass<span style="color:#f92672">-</span>dev
+</span></span></code></pre></div><p>Let&rsquo;s find the path?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>grass78 <span style="color:#f92672">--</span>config path
+</span></span></code></pre></div><p>It should return something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>usr<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>grass78
+</span></span></code></pre></div><p>Copy and paste this path in a notepad.</p>
 <h2 id="grass-workdir-and-location">GRASS workdir and location</h2>
 <p>To assign the GRASS GIS data base, create a GRASS LOCATION and MAPSET, watch the video. Just in case, my GRASS GIS data base is <code>/home/rafatieppo/grassdata</code> . I created a GRASS LOCATION <code>epsg31981</code>, and about the MAPSET I keep the standard, which is <code>PERMANTENT</code>.</p>
 <h2 id="import-mdt-file-in-grass">Import MDT file in grass</h2>
@@ -347,15 +350,15 @@ apt<span style="color:#f92672">-</span>get install grass<span style="color:#f926
 </ul>
 <h2 id="edit-script-to-assign-the-paths-and-variables">Edit script to assign the paths and variables</h2>
 <p>To run GRASS GIS it is necessary to set some parameters:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">gisbase <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/usr/lib/grass78&#39;</span>
-gisdb <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/home/rafatieppo/grassdata&#39;</span>
-location <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;epsg31981&#39;</span>
-mapset <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;PERMANENT&#39;</span>
-
-<span style="color:#75715e"># Finding files and assign local variables</span>
-<span style="color:#75715e"># path = &#34;/media/rafatieppo/SSD_24gb/QGIS_SEBAL/20170904&#34;</span>
-path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/media/rafatieppo/hd_back/sebal_tutorial/&#39;</span>
-</code></pre></div><p>Note that:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>gisbase <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/usr/lib/grass78&#39;</span>
+</span></span><span style="display:flex;"><span>gisdb <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/home/rafatieppo/grassdata&#39;</span>
+</span></span><span style="display:flex;"><span>location <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;epsg31981&#39;</span>
+</span></span><span style="display:flex;"><span>mapset <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;PERMANENT&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Finding files and assign local variables</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># path = &#34;/media/rafatieppo/SSD_24gb/QGIS_SEBAL/20170904&#34;</span>
+</span></span><span style="display:flex;"><span>path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/media/rafatieppo/hd_back/sebal_tutorial/&#39;</span>
+</span></span></code></pre></div><p>Note that:</p>
 <ul>
 <li><em>gisbase</em> is the path for GRASS GIS</li>
 <li><em>gisdb</em> is the local folder to store GRASS data</li>
@@ -366,8 +369,8 @@ path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/medi
 <p>After edition, save and close the script.</p>
 <h2 id="run-the-model">Run the model</h2>
 <p>Once you are in correct folder (that one with all your files), just run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python3 SEBAL_v10<span style="color:#f92672">.</span>py,
-</code></pre></div><p>Three variables will be required:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>python3 SEBAL_v10<span style="color:#f92672">.</span>py,
+</span></span></code></pre></div><p>Three variables will be required:</p>
 <ul>
 <li>wind speed value in the weather station (height of the 2 m (m/s))</li>
 <li>instantaneous value of reference evapotranspiration (EToi) in the weather station (time of the satellite overpass (mm))</li>

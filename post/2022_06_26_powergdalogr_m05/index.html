@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cálculo de NDVI com GDAL e Python">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+Cálculo de NDVI com GDAL e Python">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>The power of GDAL and OGR &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -294,7 +297,7 @@ $$</p>
 <li>Gravação do arquivo em disco.</li>
 </ul>
 <p>Como há um vídeo no YouTube (<a href="https://youtu.be/Jq63rpdoPA4">LINK DO VIDEO</a>) explicando o procedimento, não será detalhado o material e métodos e os resultados. Apenas será disponibilizado código:</p>
-<pre><code>&quot;&quot;&quot;The power of GDAL and OGR: calcular ndvi.&quot;&quot;&quot;
+<pre tabindex="0"><code>&#34;&#34;&#34;The power of GDAL and OGR: calcular ndvi.&#34;&#34;&#34;
 
 # ======================================================================
 #                                        Rafael Tieppo
@@ -312,12 +315,12 @@ import matplotlib.pyplot as plt
 # ------------------------------------------------------------
 # Lendo os arquivos raster contidos na pasta:
 
-lsRaster = glob.glob('./raster/*.jp2')
+lsRaster = glob.glob(&#39;./raster/*.jp2&#39;)
 lsRaster
 
 
 def find_band(list_lyrs, bandname):
-    &quot;&quot;&quot;Find a layer by name in a list with layers.&quot;&quot;&quot;
+    &#34;&#34;&#34;Find a layer by name in a list with layers.&#34;&#34;&#34;
     for idx in list_lyrs:
         if bandname in idx:
             return idx
@@ -326,15 +329,15 @@ def find_band(list_lyrs, bandname):
 # ------------------------------------------------------------
 # Lendo arquivo raster - b8 iv sentinel
 
-dsB08 = gdal.Open(find_band(lsRaster, 'B08'))
+dsB08 = gdal.Open(find_band(lsRaster, &#39;B08&#39;))
 transform = dsB08.GetGeoTransform()
 rows = dsB08.RasterYSize
 cols = dsB08.RasterXSize
 bands = dsB08.RasterCount
 prj = dsB08.GetProjection()
 
-print('\n transform: {} \n rows: {} \n cols: {} \n \
- bands: {} \n proj: {} \n'.format(
+print(&#39;\n transform: {} \n rows: {} \n cols: {} \n \
+ bands: {} \n proj: {} \n&#39;.format(
     transform, rows, cols, bands, prj))
 
 datatype = gdal.GetDataTypeName(dsB08.GetRasterBand(1).DataType)
@@ -345,13 +348,13 @@ arrB08
 
 dsB08 = None
 
-plt.imshow(arrB08, cmap='viridis')
+plt.imshow(arrB08, cmap=&#39;viridis&#39;)
 plt.colorbar()
 plt.show()
 
 # ------------------------------------------------------------
 # Lendo arquivo raster b04 red; sentinel
-dsB04 = gdal.Open(find_band(lsRaster, 'B04'))
+dsB04 = gdal.Open(find_band(lsRaster, &#39;B04&#39;))
 arrB04 = dsB04.GetRasterBand(1).ReadAsArray().astype(np.float32)
 dfB04 = None
 
@@ -361,7 +364,7 @@ ndvi = (arrB08 - arrB04) / (arrB08 + arrB04)
 ndvi = np.nan_to_num(ndvi)
 ndviRound = np.round(ndvi, 2)
 
-plt.imshow(ndviRound, cmap='viridis')
+plt.imshow(ndviRound, cmap=&#39;viridis&#39;)
 plt.colorbar()
 plt.show()
 
@@ -369,11 +372,11 @@ plt.show()
 # criando e gravando o ndvi como arquivo GTiff
 
 # driver
-driver = gdal.GetDriverByName('GTiff')
-dsout = driver.Create('./raster/ndvi.tif',
+driver = gdal.GetDriverByName(&#39;GTiff&#39;)
+dsout = driver.Create(&#39;./raster/ndvi.tif&#39;,
                       xsize=cols, ysize=rows, bands=1,
                       eType=gdal.GDT_Float32,
-                      options=[&quot;COMPRESS=LZW&quot;])
+                      options=[&#34;COMPRESS=LZW&#34;])
 
 # definicao de limites e tamanho de pixel
 dsout.SetGeoTransform(transform)

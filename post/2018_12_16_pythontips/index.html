@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learning python, begginer level">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+Learning python, begginer level">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>Python beginner tips &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -284,159 +287,155 @@ for others applications.</p>
 code that I learned (from several sources). Moreover, to write a blog is
 a way to improve my learning.</p>
 <h2 id="getting-values-from-dictionary">Getting values from dictionary</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> dic <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Mary&#39;</span>: <span style="color:#e6db74">&#39;1235&#39;</span>}
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">try</span>:
-        V <span style="color:#f92672">=</span> dic[<span style="color:#e6db74">&#39;some&#39;</span>]
-    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyError</span>:
-        V <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;error&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> V
-<span style="color:#e6db74">&#39;error&#39;</span>
-</code></pre></div><p>Instead, You can try it</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> V <span style="color:#f92672">=</span> dic<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Mary&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> V
-<span style="color:#e6db74">&#39;1235&#39;</span>
-</code></pre></div><p>Or for a second parameter:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> V <span style="color:#f92672">=</span> dic<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;some&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">99</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> V
-<span style="color:#f92672">-</span><span style="color:#ae81ff">99</span>
-</code></pre></div><h2 id="conditional">Conditional</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> dic <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Mary&#39;</span>: <span style="color:#e6db74">&#39;1235&#39;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        V <span style="color:#f92672">=</span> dic[<span style="color:#e6db74">&#39;some&#39;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyError</span>:
+</span></span><span style="display:flex;"><span>        V <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;error&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> V
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;error&#39;</span>
+</span></span></code></pre></div><p>Instead, You can try it</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> V <span style="color:#f92672">=</span> dic<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Mary&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> V
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;1235&#39;</span>
+</span></span></code></pre></div><p>Or for a second parameter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> V <span style="color:#f92672">=</span> dic<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;some&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">99</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> V
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span><span style="color:#ae81ff">99</span>
+</span></span></code></pre></div><h2 id="conditional">Conditional</h2>
 <p><strong>For some values</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> a, b, c, d <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> a <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> b <span style="color:#f92672">==</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">and</span> c <span style="color:#f92672">==</span> <span style="color:#ae81ff">30</span> <span style="color:#f92672">and</span> d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>:
-        print(<span style="color:#e6db74">&#39;all True!&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> all <span style="color:#66d9ef">True</span><span style="color:#960050;background-color:#1e0010">!</span>
-
-</code></pre></div><p>We can simplify, let&rsquo;s try:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> cond1 <span style="color:#f92672">=</span> [a <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>,
-             b <span style="color:#f92672">==</span> <span style="color:#ae81ff">20</span>,
-             c <span style="color:#f92672">==</span> <span style="color:#ae81ff">30</span>,
-             d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>]
-
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> all(cond1):
-       print(<span style="color:#e6db74">&#39;All is true&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> All <span style="color:#f92672">is</span> true
-
-<span style="color:#75715e"># if we change the conditions</span>
-
-cond2 <span style="color:#f92672">=</span> [
-    a <span style="color:#f92672">==</span> <span style="color:#ae81ff">910</span>,
-    b <span style="color:#f92672">==</span> <span style="color:#ae81ff">920</span>,
-    c <span style="color:#f92672">==</span> <span style="color:#ae81ff">930</span>,
-    d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>]
-
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> any(cond2):
-    print(<span style="color:#e6db74">&#39;one is true at least&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> one <span style="color:#f92672">is</span> true at least
-
-</code></pre></div><p>A more complex example. For instance you have cars sells, for 3 sellers
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> a, b, c, d <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> a <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> b <span style="color:#f92672">==</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">and</span> c <span style="color:#f92672">==</span> <span style="color:#ae81ff">30</span> <span style="color:#f92672">and</span> d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;all True!&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> all <span style="color:#66d9ef">True</span><span style="color:#960050;background-color:#1e0010">!</span>
+</span></span></code></pre></div><p>We can simplify, let&rsquo;s try:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> cond1 <span style="color:#f92672">=</span> [a <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>,
+</span></span><span style="display:flex;"><span>             b <span style="color:#f92672">==</span> <span style="color:#ae81ff">20</span>,
+</span></span><span style="display:flex;"><span>             c <span style="color:#f92672">==</span> <span style="color:#ae81ff">30</span>,
+</span></span><span style="display:flex;"><span>             d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> all(cond1):
+</span></span><span style="display:flex;"><span>       print(<span style="color:#e6db74">&#39;All is true&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> All <span style="color:#f92672">is</span> true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># if we change the conditions</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cond2 <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    a <span style="color:#f92672">==</span> <span style="color:#ae81ff">910</span>,
+</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">==</span> <span style="color:#ae81ff">920</span>,
+</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">==</span> <span style="color:#ae81ff">930</span>,
+</span></span><span style="display:flex;"><span>    d <span style="color:#f92672">==</span> <span style="color:#ae81ff">40</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> any(cond2):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;one is true at least&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> one <span style="color:#f92672">is</span> true at least
+</span></span></code></pre></div><p>A more complex example. For instance you have cars sells, for 3 sellers
 in 3 months. You would like to know for <em>March</em> what seller achieved the
 goal. The goal is more than 3 cars in march and a profit greater than
 0.25.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#75715e"># import packs</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-<span style="color:#75715e"># data frame</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> DF <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;MONTH&#34;</span>: np<span style="color:#f92672">.</span>repeat([<span style="color:#e6db74">&#39;Jan&#39;</span>, <span style="color:#e6db74">&#39;Fev&#39;</span>, <span style="color:#e6db74">&#39;Mar&#39;</span>], <span style="color:#ae81ff">3</span>),
-        <span style="color:#e6db74">&#34;SELLER&#34;</span>: np<span style="color:#f92672">.</span>tile([<span style="color:#e6db74">&#39;Max&#39;</span>, <span style="color:#e6db74">&#39;Ted&#39;</span>, <span style="color:#e6db74">&#39;Saul&#39;</span>], <span style="color:#ae81ff">3</span>),
-        <span style="color:#e6db74">&#34;CARSOLD&#34;</span>: [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>],
-        <span style="color:#e6db74">&#34;PROFIT&#34;</span>: [<span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.4</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.1</span>, <span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.3</span>]})
-
-<span style="color:#f92672">&gt;&gt;&gt;</span> DF
-  MONTH SELLER  CARSOLD  PROFIT
-<span style="color:#ae81ff">0</span>   Jan    Max        <span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">0.30</span>
-<span style="color:#ae81ff">1</span>   Jan    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>
-<span style="color:#ae81ff">2</span>   Jan   Saul        <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">0.20</span>
-<span style="color:#ae81ff">3</span>   Fev    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.40</span>
-<span style="color:#ae81ff">4</span>   Fev    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>
-<span style="color:#ae81ff">5</span>   Fev   Saul        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.10</span>
-<span style="color:#ae81ff">6</span>   Mar    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.25</span>
-<span style="color:#ae81ff">7</span>   Mar    Ted        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>
-<span style="color:#ae81ff">8</span>   Mar   Saul        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>
-
-<span style="color:#75715e"># numpy can help us </span>
-<span style="color:#75715e"># condition</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> cond3 <span style="color:#f92672">=</span> [
-    (DF[<span style="color:#e6db74">&#39;MONTH&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Mar&#39;</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;PROFIT&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0.25</span>),
-    (DF[<span style="color:#e6db74">&#39;MONTH&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Mar&#39;</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;PROFIT&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.25</span>)
-    ]
-<span style="color:#f92672">&gt;&gt;&gt;</span> choices <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;reward&#39;</span>, <span style="color:#e6db74">&#39;regular&#39;</span>]
-<span style="color:#75715e"># running, note that np.select provide a standard value &#39;nomatch&#39; </span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> DF[<span style="color:#e6db74">&#39;RESULT&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>select(cond3, choices, <span style="color:#e6db74">&#39;nomatch&#39;</span>)
-
-<span style="color:#f92672">&gt;&gt;&gt;</span> DF
-  MONTH SELLER  CARSOLD  PROFIT   RESULT
-<span style="color:#ae81ff">0</span>   Jan    Max        <span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">0.30</span>  nomatch
-<span style="color:#ae81ff">1</span>   Jan    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>  nomatch
-<span style="color:#ae81ff">2</span>   Jan   Saul        <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">0.20</span>  nomatch
-<span style="color:#ae81ff">3</span>   Fev    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.40</span>  nomatch
-<span style="color:#ae81ff">4</span>   Fev    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>  nomatch
-<span style="color:#ae81ff">5</span>   Fev   Saul        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.10</span>  nomatch
-<span style="color:#ae81ff">6</span>   Mar    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.25</span>  nomatch
-<span style="color:#ae81ff">7</span>   Mar    Ted        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>   reward
-<span style="color:#ae81ff">8</span>   Mar   Saul        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>   reward
-
-</code></pre></div><h2 id="loop">Loop</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># import packs</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># data frame</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> DF <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;MONTH&#34;</span>: np<span style="color:#f92672">.</span>repeat([<span style="color:#e6db74">&#39;Jan&#39;</span>, <span style="color:#e6db74">&#39;Fev&#39;</span>, <span style="color:#e6db74">&#39;Mar&#39;</span>], <span style="color:#ae81ff">3</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;SELLER&#34;</span>: np<span style="color:#f92672">.</span>tile([<span style="color:#e6db74">&#39;Max&#39;</span>, <span style="color:#e6db74">&#39;Ted&#39;</span>, <span style="color:#e6db74">&#39;Saul&#39;</span>], <span style="color:#ae81ff">3</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;CARSOLD&#34;</span>: [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;PROFIT&#34;</span>: [<span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.4</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.1</span>, <span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.3</span>]})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> DF
+</span></span><span style="display:flex;"><span>  MONTH SELLER  CARSOLD  PROFIT
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span>   Jan    Max        <span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">0.30</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>   Jan    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>   Jan   Saul        <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">0.20</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>   Fev    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.40</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>   Fev    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>   Fev   Saul        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.10</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span>   Mar    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.25</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span>   Mar    Ted        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span>   Mar   Saul        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># numpy can help us </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># condition</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> cond3 <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    (DF[<span style="color:#e6db74">&#39;MONTH&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Mar&#39;</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;PROFIT&#39;</span>] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0.25</span>),
+</span></span><span style="display:flex;"><span>    (DF[<span style="color:#e6db74">&#39;MONTH&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Mar&#39;</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">&amp;</span> (DF[<span style="color:#e6db74">&#39;PROFIT&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.25</span>)
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> choices <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;reward&#39;</span>, <span style="color:#e6db74">&#39;regular&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># running, note that np.select provide a standard value &#39;nomatch&#39; </span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> DF[<span style="color:#e6db74">&#39;RESULT&#39;</span>] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>select(cond3, choices, <span style="color:#e6db74">&#39;nomatch&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> DF
+</span></span><span style="display:flex;"><span>  MONTH SELLER  CARSOLD  PROFIT   RESULT
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span>   Jan    Max        <span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">0.30</span>  nomatch
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>   Jan    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>  nomatch
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>   Jan   Saul        <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">0.20</span>  nomatch
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>   Fev    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.40</span>  nomatch
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>   Fev    Ted        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.20</span>  nomatch
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>   Fev   Saul        <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0.10</span>  nomatch
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span>   Mar    Max        <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">0.25</span>  nomatch
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span>   Mar    Ted        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>   reward
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span>   Mar   Saul        <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">0.30</span>   reward
+</span></span></code></pre></div><h2 id="loop">Loop</h2>
 <p>Usually:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
-
-<span style="color:#75715e"># a math operation</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> l1_new <span style="color:#f92672">=</span> []
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> l1:
-        l1_new<span style="color:#f92672">.</span>append(x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> l1_new
-[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
-</code></pre></div><p>All in one line:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l1_new  <span style="color:#f92672">=</span> [x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> l1]
-<span style="color:#f92672">&gt;&gt;&gt;</span> l1_new
-[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
-</code></pre></div><h2 id="functions-in-one-line">Functions in one line</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> l1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># a math operation</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> l1_new <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> l1:
+</span></span><span style="display:flex;"><span>        l1_new<span style="color:#f92672">.</span>append(x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> l1_new
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+</span></span></code></pre></div><p>All in one line:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> l1_new  <span style="color:#f92672">=</span> [x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> l1]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> l1_new
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+</span></span></code></pre></div><h2 id="functions-in-one-line">Functions in one line</h2>
 <p>When We need to replace a value in a list, we can use several tools, but
 now, We want use a function. If We have a list with some letters, and We
 need to replace by numbers:</p>
 <ul>
 <li>x = 0</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> l2 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
-
-<span style="color:#75715e"># function</span>
-
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">replace_value</span>(alist):
-        new_list <span style="color:#f92672">=</span> []
-        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> alist:
-            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span>:
-                new_list<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0</span>)
-            <span style="color:#66d9ef">else</span>:
-                new_list<span style="color:#f92672">.</span>append(i)
-        <span style="color:#66d9ef">return</span>(new_list)
-
-<span style="color:#f92672">&gt;&gt;&gt;</span> replace_value(l2)
-[<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
-
-</code></pre></div><p>We can decrease the code size:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#75715e"># function</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">replace_v</span>(i):
-        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span>:
-            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">return</span> i
-
-<span style="color:#f92672">&gt;&gt;&gt;</span> l2_new <span style="color:#f92672">=</span> []
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> l2:
-        l2_new<span style="color:#f92672">.</span>append(replace_v(i))
-
-<span style="color:#f92672">&gt;&gt;&gt;</span> l2_new
-[<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
-</code></pre></div><p>A little bit smaller:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># function</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> repl <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> i: <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#66d9ef">else</span> i
-
-<span style="color:#f92672">&gt;&gt;&gt;</span> l2_new <span style="color:#f92672">=</span> []
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> l2:
-        l2_new<span style="color:#f92672">.</span>append(repl(i))
-<span style="color:#f92672">&gt;&gt;&gt;</span> l2_new
-[<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
-</code></pre></div><h1 id="conclusion">Conclusion</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> l2 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># function</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">replace_value</span>(alist):
+</span></span><span style="display:flex;"><span>        new_list <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> alist:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span>:
+</span></span><span style="display:flex;"><span>                new_list<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                new_list<span style="color:#f92672">.</span>append(i)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>(new_list)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> replace_value(l2)
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
+</span></span></code></pre></div><p>We can decrease the code size:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># function</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">replace_v</span>(i):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> l2_new <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> l2:
+</span></span><span style="display:flex;"><span>        l2_new<span style="color:#f92672">.</span>append(replace_v(i))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> l2_new
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
+</span></span></code></pre></div><p>A little bit smaller:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># function</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> repl <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> i: <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;x&#39;</span> <span style="color:#66d9ef">else</span> i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> l2_new <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> l2:
+</span></span><span style="display:flex;"><span>        l2_new<span style="color:#f92672">.</span>append(repl(i))
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> l2_new
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>]
+</span></span></code></pre></div><h1 id="conclusion">Conclusion</h1>
 <p>Python provides several ways to do the same thing. In my opinion, at the begin, you should not worry about
 the size of your code. First of all, your code must work correctly,
 after that you can think about processing speed, and for last one

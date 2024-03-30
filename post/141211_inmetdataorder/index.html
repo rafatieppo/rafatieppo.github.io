@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>Ordenar dados INMET &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -301,17 +304,17 @@ instruções, acesse o link:</p>
 <p><a href="https://github.com/rafatieppo/INMET_DATA_ORDER/blob/master/INMET_DATA_ORDER.r" target="_blank"><a href="https://github.com/rafatieppo/INMET_DATA_ORDER/blob/master/INMET_DATA_ORDER.r">https://github.com/rafatieppo/INMET_DATA_ORDER/blob/master/INMET_DATA_ORDER.r</a></a></p>
 <p>Posteriormente, para executar um exemplo do uso da função, basta
 executar o código:</p>
-<pre><code>#PASSO 1 - Para ler dados do GITHUB (local dos dados do exemplo)
+<pre tabindex="0"><code>#PASSO 1 - Para ler dados do GITHUB (local dos dados do exemplo)
 library(RCurl)
 #1.1
-EXAMPLE &lt;-  getURL(&quot;https://raw.githubusercontent.com/rafatieppo/INMET_DATA_ORDER/master/INMET_DATA_EXAMPLE.csv&quot;)
+EXAMPLE &lt;-  getURL(&#34;https://raw.githubusercontent.com/rafatieppo/INMET_DATA_ORDER/master/INMET_DATA_EXAMPLE.csv&#34;)
 #1.2
-EXAMPLE_DATA &lt;- read.csv(text = EXAMPLE, sep=&quot;;&quot;)
+EXAMPLE_DATA &lt;- read.csv(text = EXAMPLE, sep=&#34;;&#34;)
 #1.3 verifique seus dados
 edit(EXAMPLE_DATA)
 
 #obs: provavelvelmente seus dados estarão no seu computador, dessa forma
-#basta usar a função &quot;read.csv(&quot;caminho do arquivo, sep=&quot;;)&quot;
+#basta usar a função &#34;read.csv(&#34;caminho do arquivo, sep=&#34;;)&#34;
         
 #PASSO 2
 #2.1 execute a função
@@ -321,7 +324,7 @@ edit(EXAMPLE_ONELINE)
 
 #PASSO 3
 #3.1 Se necessário exporte seus dados
-write.table(EXAMPLE_ONELINE, &quot;EXAMPLE_DONE.csv&quot;, sep=&quot;;&quot;, col.names = TRUE, row.names = FALSE)
+write.table(EXAMPLE_ONELINE, &#34;EXAMPLE_DONE.csv&#34;, sep=&#34;;&#34;, col.names = TRUE, row.names = FALSE)
 #============================================================
 </code></pre><p>Se tudo correu bem, o exemplo que é formado por aproximadamente 500
 linhas, foi ordenado em +- 2s. Um arquivo com 25000 linhas levará +- 25

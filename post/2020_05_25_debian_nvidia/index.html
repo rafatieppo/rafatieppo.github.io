@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A simple solution but it works">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+A simple solution but it works">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>Debian buster vs GPU hybrid card &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -319,7 +322,7 @@ and <a href="https://wiki.debian.org/LightDM#Viewing_current_configuration">Debi
 <ol>
 <li>nano /etc/modprobe.d/blacklist.conf :</li>
 </ol>
-<pre><code>blacklist nouveau
+<pre tabindex="0"><code>blacklist nouveau
 blacklist lbm-nouveau
 options nouveau modeset=0
 alias nouveau off
@@ -327,16 +330,16 @@ alias lbm-nouveau off
 </code></pre><ol start="2">
 <li>nano /etc/default/grub and add the nouveau.modeset=0 part :</li>
 </ol>
-<pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;nouveau.modeset=0 quiet&quot;
+<pre tabindex="0"><code>GRUB_CMDLINE_LINUX_DEFAULT=&#34;nouveau.modeset=0 quiet&#34;
 </code></pre><ol start="3">
 <li>nano /etc/modprobe.d/nouveau-kms.conf (if you have the file):</li>
 </ol>
-<pre><code>options nouveau modeset=0
-GRUB_CMDLINE_LINUX_DEFAULT=&quot;nouveau.modeset=0 quiet&quot;
+<pre tabindex="0"><code>options nouveau modeset=0
+GRUB_CMDLINE_LINUX_DEFAULT=&#34;nouveau.modeset=0 quiet&#34;
 </code></pre><ol start="4">
 <li>update grub and reboot</li>
 </ol>
-<pre><code>update-grub
+<pre tabindex="0"><code>update-grub
 reboot
 </code></pre><ol start="5">
 <li>Install nvidia-detect utility by execution of the below command:
@@ -357,22 +360,22 @@ execute the above installed nvidia-detect command: <code>nvidia-detect</code></l
 <li>Modify or create (if one doesn&rsquo;t exist) an <code>xorg.conf</code> under
 <code>/etc/X11/xorg.conf</code>; add the following:</li>
 </ol>
-<pre><code>Section &quot;Module&quot;
-    Load &quot;modesetting&quot;
+<pre tabindex="0"><code>Section &#34;Module&#34;
+    Load &#34;modesetting&#34;
 EndSection
 
-Section &quot;Device&quot;
-    Identifier &quot;nvidia&quot;
-    Driver &quot;nvidia&quot;
-    BusID &quot;PCI:X:Y:Z&quot;
-    Option &quot;AllowEmptyInitialConfiguration&quot;
+Section &#34;Device&#34;
+    Identifier &#34;nvidia&#34;
+    Driver &#34;nvidia&#34;
+    BusID &#34;PCI:X:Y:Z&#34;
+    Option &#34;AllowEmptyInitialConfiguration&#34;
 EndSection
 
-# Section &quot;Device&quot;
-#     Identifier &quot;intel&quot;
-#     Driver &quot;modesetting&quot;
-#     BusID &quot;PCI:X:Y:Z&quot;
-#     Option &quot;AllowEmptyInitialConfiguration&quot;
+# Section &#34;Device&#34;
+#     Identifier &#34;intel&#34;
+#     Driver &#34;modesetting&#34;
+#     BusID &#34;PCI:X:Y:Z&#34;
+#     Option &#34;AllowEmptyInitialConfiguration&#34;
 # EndSection
 </code></pre><p><em>Where &ldquo;BusID&rdquo; X:Y:Z are the shortened/truncated numbers from the ID
 gathered above. For example, if the output of <code>lspci -nnk | grep -i 'VGA|3d'</code> displayed a PCI ID of 09:00.0, the BusID entry would read:
@@ -380,7 +383,7 @@ BusID &ldquo;09:00:0&rdquo;</em></p>
 <ol start="3">
 <li>Add/create a custom script, <code>/usr/local/bin/switch_nvidia.sh</code>:</li>
 </ol>
-<pre><code>xrandr --setprovideroutputsource modesetting NVIDIA-0
+<pre tabindex="0"><code>xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 xrandr --dpi 96
 </code></pre><ol start="4">
@@ -397,7 +400,7 @@ a SeatDefaults section &amp; script config. For Debian, lightdm config file
 is in <code>/etc/lightdm/lightdm.conf</code></p>
 </li>
 </ol>
-<pre><code>[SeatDefaults]
+<pre tabindex="0"><code>[SeatDefaults]
 display-setup-script=/usr/local/bin/switch_nvidia.sh
 </code></pre><ol start="7">
 <li>
@@ -409,22 +412,22 @@ display-setup-script=/usr/local/bin/switch_nvidia.sh
 </ol>
 <h3 id="how-to-return-to-intel-video-card">How to return to Intel Video Card</h3>
 <p>Go to step <strong>2.</strong> and change the no comment lines <code>Section &quot;Device&quot;</code>:</p>
-<pre><code>Section &quot;Module&quot;
-    Load &quot;modesetting&quot;
+<pre tabindex="0"><code>Section &#34;Module&#34;
+    Load &#34;modesetting&#34;
 EndSection
 
-#Section &quot;Device&quot;
-#    Identifier &quot;nvidia&quot;
-#    Driver &quot;nvidia&quot;
-#    BusID &quot;PCI:X:Y:Z&quot;
-#    Option &quot;AllowEmptyInitialConfiguration&quot;
+#Section &#34;Device&#34;
+#    Identifier &#34;nvidia&#34;
+#    Driver &#34;nvidia&#34;
+#    BusID &#34;PCI:X:Y:Z&#34;
+#    Option &#34;AllowEmptyInitialConfiguration&#34;
 #EndSection
 
-Section &quot;Device&quot;
-    Identifier &quot;intel&quot;
-    Driver &quot;modesetting&quot;
-    BusID &quot;PCI:X:Y:Z&quot;
-    Option &quot;AllowEmptyInitialConfiguration&quot;
+Section &#34;Device&#34;
+    Identifier &#34;intel&#34;
+    Driver &#34;modesetting&#34;
+    BusID &#34;PCI:X:Y:Z&#34;
+    Option &#34;AllowEmptyInitialConfiguration&#34;
 EndSection
 </code></pre><p>After go to step <strong>6.</strong> and comment the line with
 <code>display-setup-script=/usr/local/bin/switch_nvidia.sh</code>.</p>

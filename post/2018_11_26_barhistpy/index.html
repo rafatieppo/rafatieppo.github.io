@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="plotting with matplotlib and seaborn">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+plotting with matplotlib and seaborn">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>Histogram and Barplot with Python &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -281,19 +284,19 @@
 in this post we intend to provide some points about both of them.</p>
 <p>Let&rsquo;s supose that we have a sample from 200 persons, and we need to
 check the age distribution, so we can produce a histogram (Figure 1).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># creating data</span>
-DF <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;A&#34;</span> : np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(<span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">0.75</span>, <span style="color:#ae81ff">200</span>)})
-<span style="color:#75715e"># plot</span>
-plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>))
-plt<span style="color:#f92672">.</span>hist(DF[<span style="color:#e6db74">&#34;A&#34;</span>], bins <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>,
-         color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;steelblue&#39;</span>,
-         alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>,
-         edgecolor <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;gray&#39;</span> )
-plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Age&#34;</span>)
-plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Count&#34;</span>)
-plt<span style="color:#f92672">.</span>tight_layout()
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># creating data</span>
+</span></span><span style="display:flex;"><span>DF <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;A&#34;</span> : np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(<span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">0.75</span>, <span style="color:#ae81ff">200</span>)})
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># plot</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>hist(DF[<span style="color:#e6db74">&#34;A&#34;</span>], bins <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>,
+</span></span><span style="display:flex;"><span>         color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;steelblue&#39;</span>,
+</span></span><span style="display:flex;"><span>         alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>,
+</span></span><span style="display:flex;"><span>         edgecolor <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;gray&#39;</span> )
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Age&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Count&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><figure>
   <img src="/post/pics/20181126_f1.png"  />
   <figcaption>
       <p>Figure 1: Histogram plot<p>
@@ -301,17 +304,17 @@ plt<span style="color:#f92672">.</span>show()
 </figure>
 <p>Once we have the count, we can produce the density plot (check the
 option <code>density=True</code>):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>))
-plt<span style="color:#f92672">.</span>hist(DF[<span style="color:#e6db74">&#34;A&#34;</span>], bins <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>,
-         color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;steelblue&#39;</span>,
-         alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>,
-         edgecolor <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;gray&#39;</span>,
-         density<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
-plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Age&#34;</span>)
-plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Density&#34;</span>)
-plt<span style="color:#f92672">.</span>tight_layout()
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>hist(DF[<span style="color:#e6db74">&#34;A&#34;</span>], bins <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>,
+</span></span><span style="display:flex;"><span>         color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;steelblue&#39;</span>,
+</span></span><span style="display:flex;"><span>         alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>,
+</span></span><span style="display:flex;"><span>         edgecolor <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;gray&#39;</span>,
+</span></span><span style="display:flex;"><span>         density<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Age&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Density&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><figure>
   <img src="/post/pics/20181126_f2.png"  />
   <figcaption>
       <p>Figure 2: Histogram density plot<p>
@@ -324,21 +327,21 @@ you wish to show the fuel consumption for each car, or maybe, you intend
 to show the fuel consumption by car and drivers, you need a bar
 plot. Thus, a variable <em>x</em> and a variable <em>y</em> (maybe <em>z</em> variable)are
 required. For instance, we can analyse the number of cars sold by month:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># data</span>
-DF1 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;MONTH&#34;</span> : [<span style="color:#e6db74">&#39;Jan&#39;</span>, <span style="color:#e6db74">&#39;Fev&#39;</span>, <span style="color:#e6db74">&#39;Mar&#39;</span>],
-                    <span style="color:#e6db74">&#34;CARSOLD&#34;</span> : [ <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">8</span>]})
-<span style="color:#75715e"># plot</span>
-plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">16</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2.54</span>, <span style="color:#ae81ff">12.5</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2.54</span>))
-plt<span style="color:#f92672">.</span>bar(DF1[<span style="color:#e6db74">&#39;MONTH&#39;</span>],
-        DF1[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>],
-        color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;steelblue&#39;</span>,
-        alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>,
-        edgecolor <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;gray&#39;</span>)
-plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Month&#34;</span>)
-plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Amount&#34;</span>)
-plt<span style="color:#f92672">.</span>tight_layout()
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># data</span>
+</span></span><span style="display:flex;"><span>DF1 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;MONTH&#34;</span> : [<span style="color:#e6db74">&#39;Jan&#39;</span>, <span style="color:#e6db74">&#39;Fev&#39;</span>, <span style="color:#e6db74">&#39;Mar&#39;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;CARSOLD&#34;</span> : [ <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">8</span>]})
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># plot</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">16</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2.54</span>, <span style="color:#ae81ff">12.5</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2.54</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>bar(DF1[<span style="color:#e6db74">&#39;MONTH&#39;</span>],
+</span></span><span style="display:flex;"><span>        DF1[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>],
+</span></span><span style="display:flex;"><span>        color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;steelblue&#39;</span>,
+</span></span><span style="display:flex;"><span>        alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>,
+</span></span><span style="display:flex;"><span>        edgecolor <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;gray&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Month&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Amount&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><figure>
   <img src="/post/pics/20181126_f3.png"  />
   <figcaption>
       <p>Figure 3: Bar plot, sold cars by month<p>
@@ -404,36 +407,36 @@ plt<span style="color:#f92672">.</span>show()
 </tbody>
 </table>
 <p>First of all, we create a <code>DataFrame</code> for our data.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">DF2 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;MONTH&#34;</span> : np<span style="color:#f92672">.</span>repeat([<span style="color:#e6db74">&#39;Jan&#39;</span>, <span style="color:#e6db74">&#39;Fev&#39;</span>, <span style="color:#e6db74">&#39;Mar&#39;</span>],<span style="color:#ae81ff">3</span>),
-                    <span style="color:#e6db74">&#34;SELLER&#34;</span>: np<span style="color:#f92672">.</span>tile([<span style="color:#e6db74">&#39;Max&#39;</span>, <span style="color:#e6db74">&#39;Ted&#39;</span>, <span style="color:#e6db74">&#39;Saul&#39;</span>],<span style="color:#ae81ff">3</span>),
-                    <span style="color:#e6db74">&#34;CARSOLD&#34;</span> : [<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>]})
-</code></pre></div><p>The problem is that <code>Matplotlib</code> does not understand the &ldquo;Seller&rdquo; as
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>DF2 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;MONTH&#34;</span> : np<span style="color:#f92672">.</span>repeat([<span style="color:#e6db74">&#39;Jan&#39;</span>, <span style="color:#e6db74">&#39;Fev&#39;</span>, <span style="color:#e6db74">&#39;Mar&#39;</span>],<span style="color:#ae81ff">3</span>),
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;SELLER&#34;</span>: np<span style="color:#f92672">.</span>tile([<span style="color:#e6db74">&#39;Max&#39;</span>, <span style="color:#e6db74">&#39;Ted&#39;</span>, <span style="color:#e6db74">&#39;Saul&#39;</span>],<span style="color:#ae81ff">3</span>),
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;CARSOLD&#34;</span> : [<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>]})
+</span></span></code></pre></div><p>The problem is that <code>Matplotlib</code> does not understand the &ldquo;Seller&rdquo; as
 category, so it will not work:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>bar(DF2[<span style="color:#e6db74">&#39;MONTH&#39;</span>],
-        DF2[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>],
-        color <span style="color:#f92672">=</span> DF2[<span style="color:#e6db74">&#39;SELLER&#39;</span>], alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>)
-</code></pre></div><p>We need a little trick, We can use <code>conditional</code>, <code>for</code>, and 3 <code>list</code>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>bar(DF2[<span style="color:#e6db74">&#39;MONTH&#39;</span>],
+</span></span><span style="display:flex;"><span>        DF2[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>],
+</span></span><span style="display:flex;"><span>        color <span style="color:#f92672">=</span> DF2[<span style="color:#e6db74">&#39;SELLER&#39;</span>], alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>)
+</span></span></code></pre></div><p>We need a little trick, We can use <code>conditional</code>, <code>for</code>, and 3 <code>list</code>
 with some colors:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># lists</span>
-COLORS <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;steelblue&#39;</span>, <span style="color:#e6db74">&#39;lightgreen&#39;</span>]
-SEL <span style="color:#f92672">=</span> DF2[<span style="color:#e6db74">&#39;SELLER&#39;</span>]<span style="color:#f92672">.</span>unique()
-ind <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(len(COLORS))
-<span style="color:#75715e"># plot</span>
-w <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>))
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(SEL)):
-    DD <span style="color:#f92672">=</span> DF2[DF2[<span style="color:#e6db74">&#39;SELLER&#39;</span>] <span style="color:#f92672">==</span> SEL[i]]
-    plt<span style="color:#f92672">.</span>bar(ind <span style="color:#f92672">+</span> w,
-            DD[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>],
-            color <span style="color:#f92672">=</span> COLORS[i],
-            label <span style="color:#f92672">=</span> SEL[i],
-            width<span style="color:#f92672">=</span><span style="color:#ae81ff">0.2</span>, align<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;center&#34;</span>)
-    w <span style="color:#f92672">=</span> w <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span>
-plt<span style="color:#f92672">.</span>xticks(ind <span style="color:#f92672">+</span> w <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, (<span style="color:#e6db74">&#39;Jan&#39;</span>, <span style="color:#e6db74">&#39;Fev&#39;</span>, <span style="color:#e6db74">&#39;Mar&#39;</span>))
-plt<span style="color:#f92672">.</span>tight_layout()
-plt<span style="color:#f92672">.</span>legend()
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><p>and &hellip; yeaahhh!!!
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># lists</span>
+</span></span><span style="display:flex;"><span>COLORS <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;steelblue&#39;</span>, <span style="color:#e6db74">&#39;lightgreen&#39;</span>]
+</span></span><span style="display:flex;"><span>SEL <span style="color:#f92672">=</span> DF2[<span style="color:#e6db74">&#39;SELLER&#39;</span>]<span style="color:#f92672">.</span>unique()
+</span></span><span style="display:flex;"><span>ind <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(len(COLORS))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># plot</span>
+</span></span><span style="display:flex;"><span>w <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(SEL)):
+</span></span><span style="display:flex;"><span>    DD <span style="color:#f92672">=</span> DF2[DF2[<span style="color:#e6db74">&#39;SELLER&#39;</span>] <span style="color:#f92672">==</span> SEL[i]]
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>bar(ind <span style="color:#f92672">+</span> w,
+</span></span><span style="display:flex;"><span>            DD[<span style="color:#e6db74">&#39;CARSOLD&#39;</span>],
+</span></span><span style="display:flex;"><span>            color <span style="color:#f92672">=</span> COLORS[i],
+</span></span><span style="display:flex;"><span>            label <span style="color:#f92672">=</span> SEL[i],
+</span></span><span style="display:flex;"><span>            width<span style="color:#f92672">=</span><span style="color:#ae81ff">0.2</span>, align<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;center&#34;</span>)
+</span></span><span style="display:flex;"><span>    w <span style="color:#f92672">=</span> w <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.2</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xticks(ind <span style="color:#f92672">+</span> w <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, (<span style="color:#e6db74">&#39;Jan&#39;</span>, <span style="color:#e6db74">&#39;Fev&#39;</span>, <span style="color:#e6db74">&#39;Mar&#39;</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p>and &hellip; yeaahhh!!!
 <img src="https://i.gifer.com/UR7W.gif" alt=""></p>
 <figure>
   <img src="/post/pics/20181126_f4.png"  />
@@ -443,15 +446,15 @@ plt<span style="color:#f92672">.</span>show()
 </figure>
 <p>If you have no time to handle with <code>for</code> and create <code>list</code> (it could be
 boring), you have an alterative. For our hapiness we have <code>seaborn</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>))
-sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MONTH&#39;</span>,
-            y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;CARSOLD&#39;</span>,
-            hue <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;SELLER&#39;</span>,
-            data <span style="color:#f92672">=</span> DF2,
-            palette <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Set2&#39;</span>)
-plt<span style="color:#f92672">.</span>tight_layout()
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>barplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MONTH&#39;</span>,
+</span></span><span style="display:flex;"><span>            y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;CARSOLD&#39;</span>,
+</span></span><span style="display:flex;"><span>            hue <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;SELLER&#39;</span>,
+</span></span><span style="display:flex;"><span>            data <span style="color:#f92672">=</span> DF2,
+</span></span><span style="display:flex;"><span>            palette <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Set2&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><figure>
   <img src="/post/pics/20181126_f5.png"  />
   <figcaption>
       <p>Figure 5: Seaborn Bar plot, sold cars by month and sellers<p>

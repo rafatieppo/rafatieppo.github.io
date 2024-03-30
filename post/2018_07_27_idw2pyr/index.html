@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IDW for python and R">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+IDW for python and R">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>Inverse Distance Weighting (IDW) Interpolation &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -344,98 +347,98 @@ point, and <em>p</em> is the power (e.g. 2).</p>
 </table>
 <p>For Python we will make our own code. We need two functions, one of them
 for distances calculation, and another one to prediction.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># packages</span>
-<span style="color:#f92672">import</span> math
-<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-<span style="color:#75715e">#------------------------------------------------------------</span>
-<span style="color:#75715e"># Distance calculation, degree to km (Haversine method)</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">harvesine</span>(lon1, lat1, lon2, lat2):
-    rad <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>pi <span style="color:#f92672">/</span> <span style="color:#ae81ff">180</span>  <span style="color:#75715e"># degree to radian</span>
-    R <span style="color:#f92672">=</span> <span style="color:#ae81ff">6378.1</span>  <span style="color:#75715e"># earth average radius at equador (km)</span>
-    dlon <span style="color:#f92672">=</span> (lon2 <span style="color:#f92672">-</span> lon1) <span style="color:#f92672">*</span> rad
-    dlat <span style="color:#f92672">=</span> (lat2 <span style="color:#f92672">-</span> lat1) <span style="color:#f92672">*</span> rad
-    a <span style="color:#f92672">=</span> (math<span style="color:#f92672">.</span>sin(dlat <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)) <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> math<span style="color:#f92672">.</span>cos(lat1 <span style="color:#f92672">*</span> rad) <span style="color:#f92672">*</span> \
-        math<span style="color:#f92672">.</span>cos(lat2 <span style="color:#f92672">*</span> rad) <span style="color:#f92672">*</span> (math<span style="color:#f92672">.</span>sin(dlon <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)) <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>
-    c <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> math<span style="color:#f92672">.</span>atan2(math<span style="color:#f92672">.</span>sqrt(a), math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> a))
-    d <span style="color:#f92672">=</span> R <span style="color:#f92672">*</span> c
-    <span style="color:#66d9ef">return</span>(d)
-<span style="color:#75715e"># ------------------------------------------------------------</span>
-<span style="color:#75715e"># Prediction</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">idwr</span>(x, y, z, xi, yi):
-    lstxyzi <span style="color:#f92672">=</span> []
-    <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> range(len(xi)):
-        lstdist <span style="color:#f92672">=</span> []
-        <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> range(len(x)):
-            d <span style="color:#f92672">=</span> (harvesine(x[s], y[s], xi[p], yi[p]))
-            lstdist<span style="color:#f92672">.</span>append(d)
-        sumsup <span style="color:#f92672">=</span> list((<span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> np<span style="color:#f92672">.</span>power(lstdist, <span style="color:#ae81ff">2</span>)))
-        suminf <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(sumsup)
-        sumsup <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(np<span style="color:#f92672">.</span>array(sumsup) <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>array(z))
-        u <span style="color:#f92672">=</span> sumsup <span style="color:#f92672">/</span> suminf
-        xyzi <span style="color:#f92672">=</span> [xi[p], yi[p], u]
-        lstxyzi<span style="color:#f92672">.</span>append(xyzi)
-    <span style="color:#66d9ef">return</span>(lstxyzi)
-</code></pre></div><p>Solving:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># know points</span>
-x <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">47.6</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">47.6</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.6</span>]
-y <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">23.4</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">24.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">23.9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">23.1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">22.7</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">22.5</span>]
-z <span style="color:#f92672">=</span> [<span style="color:#ae81ff">27.0</span>,  <span style="color:#ae81ff">33.4</span>,  <span style="color:#ae81ff">34.6</span>,  <span style="color:#ae81ff">18.2</span>,   <span style="color:#ae81ff">30.8</span>, <span style="color:#ae81ff">42.8</span>]
-<span style="color:#75715e"># unknow point</span>
-xi <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">48.0530600</span>]
-yi <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">23.5916700</span>]
-<span style="color:#75715e"># running the function</span>
-idwr(x,y,z,xi,yi)
-<span style="color:#75715e"># output</span>
-[[<span style="color:#f92672">-</span><span style="color:#ae81ff">48.05306</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">23.59167</span>, <span style="color:#ae81ff">31.486682779040855</span>]]
-</code></pre></div><p>Plotting with distances (Figure 2):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
-<span style="color:#f92672">import</span> matplotlib.style <span style="color:#66d9ef">as</span> style
-style<span style="color:#f92672">.</span>available
-style<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#39;seaborn-white&#39;</span>)
-dists <span style="color:#f92672">=</span> [<span style="color:#ae81ff">50.93664088924365</span>, <span style="color:#ae81ff">97.50798854810864</span>, <span style="color:#ae81ff">37.44644402279387</span>, <span style="color:#ae81ff">102.4130216426453</span>, <span style="color:#ae81ff">109.55825855482198</span>, <span style="color:#ae81ff">133.81580425549404</span>]
-len(dists)
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(x)):
-    plt<span style="color:#f92672">.</span>scatter(x <span style="color:#f92672">=</span> x[i],
-                y <span style="color:#f92672">=</span> y[i],
-                label<span style="color:#f92672">=</span>label[i],
-                s <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>)
-    plt<span style="color:#f92672">.</span>annotate(xy <span style="color:#f92672">=</span> (x[i],y[i]),      
-                 s<span style="color:#f92672">=</span>z[i])
-    plt<span style="color:#f92672">.</span>annotate(xy <span style="color:#f92672">=</span> ( ((x[i] <span style="color:#f92672">+</span> xi[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>), ((y[i] <span style="color:#f92672">+</span> yi[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)),      
-                 s<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;dist=&#39;</span><span style="color:#f92672">+</span> str(np<span style="color:#f92672">.</span>round(dists[i],<span style="color:#ae81ff">2</span>))<span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; km&#39;</span>)
-    lcx <span style="color:#f92672">=</span> [xi[<span style="color:#ae81ff">0</span>], x[i]]
-    lcy <span style="color:#f92672">=</span> [yi[<span style="color:#ae81ff">0</span>], y[i]]
-    plt<span style="color:#f92672">.</span>plot(lcx,lcy)    
-plt<span style="color:#f92672">.</span>scatter(xi,yi,
-            c<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">230</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;unknown&#39;</span>, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*&#39;</span>)
-plt<span style="color:#f92672">.</span>legend(bbox_to_anchor<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1.04</span>,<span style="color:#ae81ff">1</span>), loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;upper left&#34;</span>)
-plt<span style="color:#f92672">.</span>tight_layout()
-plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># packages</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Distance calculation, degree to km (Haversine method)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">harvesine</span>(lon1, lat1, lon2, lat2):
+</span></span><span style="display:flex;"><span>    rad <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>pi <span style="color:#f92672">/</span> <span style="color:#ae81ff">180</span>  <span style="color:#75715e"># degree to radian</span>
+</span></span><span style="display:flex;"><span>    R <span style="color:#f92672">=</span> <span style="color:#ae81ff">6378.1</span>  <span style="color:#75715e"># earth average radius at equador (km)</span>
+</span></span><span style="display:flex;"><span>    dlon <span style="color:#f92672">=</span> (lon2 <span style="color:#f92672">-</span> lon1) <span style="color:#f92672">*</span> rad
+</span></span><span style="display:flex;"><span>    dlat <span style="color:#f92672">=</span> (lat2 <span style="color:#f92672">-</span> lat1) <span style="color:#f92672">*</span> rad
+</span></span><span style="display:flex;"><span>    a <span style="color:#f92672">=</span> (math<span style="color:#f92672">.</span>sin(dlat <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)) <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> math<span style="color:#f92672">.</span>cos(lat1 <span style="color:#f92672">*</span> rad) <span style="color:#f92672">*</span> \
+</span></span><span style="display:flex;"><span>        math<span style="color:#f92672">.</span>cos(lat2 <span style="color:#f92672">*</span> rad) <span style="color:#f92672">*</span> (math<span style="color:#f92672">.</span>sin(dlon <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)) <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> math<span style="color:#f92672">.</span>atan2(math<span style="color:#f92672">.</span>sqrt(a), math<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> a))
+</span></span><span style="display:flex;"><span>    d <span style="color:#f92672">=</span> R <span style="color:#f92672">*</span> c
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>(d)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Prediction</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">idwr</span>(x, y, z, xi, yi):
+</span></span><span style="display:flex;"><span>    lstxyzi <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> range(len(xi)):
+</span></span><span style="display:flex;"><span>        lstdist <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> range(len(x)):
+</span></span><span style="display:flex;"><span>            d <span style="color:#f92672">=</span> (harvesine(x[s], y[s], xi[p], yi[p]))
+</span></span><span style="display:flex;"><span>            lstdist<span style="color:#f92672">.</span>append(d)
+</span></span><span style="display:flex;"><span>        sumsup <span style="color:#f92672">=</span> list((<span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> np<span style="color:#f92672">.</span>power(lstdist, <span style="color:#ae81ff">2</span>)))
+</span></span><span style="display:flex;"><span>        suminf <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(sumsup)
+</span></span><span style="display:flex;"><span>        sumsup <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(np<span style="color:#f92672">.</span>array(sumsup) <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>array(z))
+</span></span><span style="display:flex;"><span>        u <span style="color:#f92672">=</span> sumsup <span style="color:#f92672">/</span> suminf
+</span></span><span style="display:flex;"><span>        xyzi <span style="color:#f92672">=</span> [xi[p], yi[p], u]
+</span></span><span style="display:flex;"><span>        lstxyzi<span style="color:#f92672">.</span>append(xyzi)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>(lstxyzi)
+</span></span></code></pre></div><p>Solving:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># know points</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">47.6</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">47.6</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">48.6</span>]
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">23.4</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">24.0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">23.9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">23.1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">22.7</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">22.5</span>]
+</span></span><span style="display:flex;"><span>z <span style="color:#f92672">=</span> [<span style="color:#ae81ff">27.0</span>,  <span style="color:#ae81ff">33.4</span>,  <span style="color:#ae81ff">34.6</span>,  <span style="color:#ae81ff">18.2</span>,   <span style="color:#ae81ff">30.8</span>, <span style="color:#ae81ff">42.8</span>]
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># unknow point</span>
+</span></span><span style="display:flex;"><span>xi <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">48.0530600</span>]
+</span></span><span style="display:flex;"><span>yi <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">23.5916700</span>]
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># running the function</span>
+</span></span><span style="display:flex;"><span>idwr(x,y,z,xi,yi)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># output</span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#f92672">-</span><span style="color:#ae81ff">48.05306</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">23.59167</span>, <span style="color:#ae81ff">31.486682779040855</span>]]
+</span></span></code></pre></div><p>Plotting with distances (Figure 2):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.style <span style="color:#66d9ef">as</span> style
+</span></span><span style="display:flex;"><span>style<span style="color:#f92672">.</span>available
+</span></span><span style="display:flex;"><span>style<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#39;seaborn-white&#39;</span>)
+</span></span><span style="display:flex;"><span>dists <span style="color:#f92672">=</span> [<span style="color:#ae81ff">50.93664088924365</span>, <span style="color:#ae81ff">97.50798854810864</span>, <span style="color:#ae81ff">37.44644402279387</span>, <span style="color:#ae81ff">102.4130216426453</span>, <span style="color:#ae81ff">109.55825855482198</span>, <span style="color:#ae81ff">133.81580425549404</span>]
+</span></span><span style="display:flex;"><span>len(dists)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(x)):
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>scatter(x <span style="color:#f92672">=</span> x[i],
+</span></span><span style="display:flex;"><span>                y <span style="color:#f92672">=</span> y[i],
+</span></span><span style="display:flex;"><span>                label<span style="color:#f92672">=</span>label[i],
+</span></span><span style="display:flex;"><span>                s <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>annotate(xy <span style="color:#f92672">=</span> (x[i],y[i]),      
+</span></span><span style="display:flex;"><span>                 s<span style="color:#f92672">=</span>z[i])
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>annotate(xy <span style="color:#f92672">=</span> ( ((x[i] <span style="color:#f92672">+</span> xi[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>), ((y[i] <span style="color:#f92672">+</span> yi[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)),      
+</span></span><span style="display:flex;"><span>                 s<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;dist=&#39;</span><span style="color:#f92672">+</span> str(np<span style="color:#f92672">.</span>round(dists[i],<span style="color:#ae81ff">2</span>))<span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; km&#39;</span>)
+</span></span><span style="display:flex;"><span>    lcx <span style="color:#f92672">=</span> [xi[<span style="color:#ae81ff">0</span>], x[i]]
+</span></span><span style="display:flex;"><span>    lcy <span style="color:#f92672">=</span> [yi[<span style="color:#ae81ff">0</span>], y[i]]
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>plot(lcx,lcy)    
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(xi,yi,
+</span></span><span style="display:flex;"><span>            c<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;black&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">230</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;unknown&#39;</span>, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(bbox_to_anchor<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1.04</span>,<span style="color:#ae81ff">1</span>), loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;upper left&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>tight_layout()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>grid(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><figure>
   <img src="/post/pics/2018_07_27_pointsa.png"  />
   <figcaption>
       <p>Figure 2: Know and Unknown points<p>
   </figcaption>
 </figure>
 <h2 id="validation-using-r">Validation using R</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">library</span>(gstat)
-<span style="color:#a6e22e">library</span>(sp)
-dfsp <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(x <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-47.6</span>, <span style="color:#ae81ff">-48.9</span>, <span style="color:#ae81ff">-48.2</span>, <span style="color:#ae81ff">-48.9</span>, <span style="color:#ae81ff">-47.6</span>, <span style="color:#ae81ff">-48.6</span>),
-                  y <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-23.4</span>, <span style="color:#ae81ff">-24.0</span>, <span style="color:#ae81ff">-23.9</span>, <span style="color:#ae81ff">-23.1</span>, <span style="color:#ae81ff">-22.7</span>, <span style="color:#ae81ff">-22.5</span>),
-                  chuva <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">27.0</span>,  <span style="color:#ae81ff">33.4</span>,  <span style="color:#ae81ff">34.6</span>,  <span style="color:#ae81ff">18.2</span>,   <span style="color:#ae81ff">30.8</span>, <span style="color:#ae81ff">42.8</span>))
-sp <span style="color:#f92672">=</span> dfsp
-<span style="color:#a6e22e">coordinates</span>(sp) <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>x<span style="color:#f92672">+</span>y
-xi <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-48.0530600</span>)
-yi <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-23.5916700</span>)
-grid <span style="color:#f92672">=</span> <span style="color:#a6e22e">expand.grid </span>(xi<span style="color:#f92672">=</span>xi ,yi<span style="color:#f92672">=</span>yi)
-<span style="color:#a6e22e">coordinates</span>(grid) <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>xi <span style="color:#f92672">+</span> yi
-<span style="color:#a6e22e">idw</span>(sp<span style="color:#f92672">$</span>chuva<span style="color:#f92672">~</span><span style="color:#ae81ff">1</span>, sp, grid)
-<span style="color:#75715e"># output</span>
-[inverse distance weighted interpolation]
-             coordinates var1.pred var1.var
-<span style="color:#ae81ff">1</span> (<span style="color:#ae81ff">-48.05306</span>, <span style="color:#ae81ff">-23.59167</span>)  <span style="color:#ae81ff">31.68969</span>       <span style="color:#66d9ef">NA</span>
-</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(gstat)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(sp)
+</span></span><span style="display:flex;"><span>dfsp <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(x <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-47.6</span>, <span style="color:#ae81ff">-48.9</span>, <span style="color:#ae81ff">-48.2</span>, <span style="color:#ae81ff">-48.9</span>, <span style="color:#ae81ff">-47.6</span>, <span style="color:#ae81ff">-48.6</span>),
+</span></span><span style="display:flex;"><span>                  y <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-23.4</span>, <span style="color:#ae81ff">-24.0</span>, <span style="color:#ae81ff">-23.9</span>, <span style="color:#ae81ff">-23.1</span>, <span style="color:#ae81ff">-22.7</span>, <span style="color:#ae81ff">-22.5</span>),
+</span></span><span style="display:flex;"><span>                  chuva <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">27.0</span>,  <span style="color:#ae81ff">33.4</span>,  <span style="color:#ae81ff">34.6</span>,  <span style="color:#ae81ff">18.2</span>,   <span style="color:#ae81ff">30.8</span>, <span style="color:#ae81ff">42.8</span>))
+</span></span><span style="display:flex;"><span>sp <span style="color:#f92672">=</span> dfsp
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">coordinates</span>(sp) <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>x<span style="color:#f92672">+</span>y
+</span></span><span style="display:flex;"><span>xi <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-48.0530600</span>)
+</span></span><span style="display:flex;"><span>yi <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-23.5916700</span>)
+</span></span><span style="display:flex;"><span>grid <span style="color:#f92672">=</span> <span style="color:#a6e22e">expand.grid </span>(xi<span style="color:#f92672">=</span>xi ,yi<span style="color:#f92672">=</span>yi)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">coordinates</span>(grid) <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>xi <span style="color:#f92672">+</span> yi
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">idw</span>(sp<span style="color:#f92672">$</span>chuva<span style="color:#f92672">~</span><span style="color:#ae81ff">1</span>, sp, grid)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># output</span>
+</span></span><span style="display:flex;"><span>[inverse distance weighted interpolation]
+</span></span><span style="display:flex;"><span>             coordinates var1.pred var1.var
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> (<span style="color:#ae81ff">-48.05306</span>, <span style="color:#ae81ff">-23.59167</span>)  <span style="color:#ae81ff">31.68969</span>       <span style="color:#66d9ef">NA</span>
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
 <p>By our code we found <strong>31.48</strong>, and using R we found <strong>31.68</strong>, almost the
 same value. Feel free to choose what is the best method for you.</p>
 <p>Let me know you have some question, just send me a e-mail.</p>

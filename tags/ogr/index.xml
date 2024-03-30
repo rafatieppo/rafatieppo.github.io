@@ -68,8 +68,9 @@ from osgeo import ogr, osr, gdal Leitura do arquivo vetorial Para abrir o arquiv
       
       <guid>/post/2021_08_24_powergdalogr_m01/</guid>
       <description>Módulo 01 Objetivo Ler, editar e gravar arquivo vetorial (shape).
-Material e métodos  Linux Debian Buster GDAL 2.4.0, released 2018/12/14  Na manipulação e processamento de aquivo vetorial, utilizaremos um arquivo shape com os municípios do estado de MT (Figura 1).
-  Figura 1: Arquivo shape do estado de MT com Tabela de Atributos   Leitura e gravação de arquivo vetorial (shape) Importação dos pacotes Inicialmente importar os pacotes</description>
+Material e métodos Linux Debian Buster GDAL 2.4.0, released 2018/12/14 Na manipulação e processamento de aquivo vetorial, utilizaremos um arquivo shape com os municípios do estado de MT (Figura 1).
+Figura 1: Arquivo shape do estado de MT com Tabela de Atributos Leitura e gravação de arquivo vetorial (shape) Importação dos pacotes Inicialmente importar os pacotes
+from osgeo import ogr, osr, gdal Leitura do arquivo Para abrir o arquivo vetorial, define-se o caminho e o parâmetro 0 ou 1:</description>
     </item>
     
     <item>

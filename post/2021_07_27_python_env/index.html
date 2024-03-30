@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="venv in python">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+venv in python">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>Ambiente virtual em Python &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -286,54 +289,54 @@
 </ol>
 <h2 id="criando-um-diretório">Criando um diretório</h2>
 <p>Via terminal, acesse o diretório que conterá o ambiente virtual, e crie um diretório com o nome desejado. Neste exemplo usaremos <code>teste_venv</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rt@av52a:~$ cd ~/.virtualenvs/
-rt@av52a:~/.virtualenvs$ mkdir teste_venv
-rt@av52a:~/.virtualenvs$ ls
-&gt; myownenv  teste_venv
-rt@av52a:~/.virtualenvs$ 
-</code></pre></div><h2 id="criando-ambiente-virtual">Criando ambiente virtual</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>rt@av52a:~$ cd ~/.virtualenvs/
+</span></span><span style="display:flex;"><span>rt@av52a:~/.virtualenvs$ mkdir teste_venv
+</span></span><span style="display:flex;"><span>rt@av52a:~/.virtualenvs$ ls
+</span></span><span style="display:flex;"><span>&gt; myownenv  teste_venv
+</span></span><span style="display:flex;"><span>rt@av52a:~/.virtualenvs$ 
+</span></span></code></pre></div><h2 id="criando-ambiente-virtual">Criando ambiente virtual</h2>
 <p>Até o Python 3.4 o comando <code>pyvenv</code> era recomendado para a criação do ambiente virtual. A partir da versão 3.6, a recomendação é usar o comando <code>venv</code>. Maiores informações consulte <a href="https://docs.python.org/3/library/venv.html">https://docs.python.org/3/library/venv.html</a>. Desta forma vamos criar o ambiente virtual e listar o seu conteúdo.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rt@av52a:~.virtualenvs$ python3 -m venv ./teste_venv
-
-rt@av52a:~.virtualenvs$ ls -l ./teste_venv/
---&gt; bin
---&gt; include
---&gt; lib
---&gt; lib64 -&gt; lib
---&gt; pyvenv.cfg
---&gt; share
-rt@av52a:~/.virtualenvs$ 
-</code></pre></div><p>O comando <code>ls -l</code> tem objetivo de listar o conteúdo do ambiente virtual gerado. No diretório <code>bin</code> ficam os &ldquo;executáveis&rdquo; no <code>lib</code> os pacotes, e assim por diante.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rt@av52a:~.virtualenvs$ python3 -m venv ./teste_venv
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rt@av52a:~.virtualenvs$ ls -l ./teste_venv/
+</span></span><span style="display:flex;"><span>--&gt; bin
+</span></span><span style="display:flex;"><span>--&gt; include
+</span></span><span style="display:flex;"><span>--&gt; lib
+</span></span><span style="display:flex;"><span>--&gt; lib64 -&gt; lib
+</span></span><span style="display:flex;"><span>--&gt; pyvenv.cfg
+</span></span><span style="display:flex;"><span>--&gt; share
+</span></span><span style="display:flex;"><span>rt@av52a:~/.virtualenvs$ 
+</span></span></code></pre></div><p>O comando <code>ls -l</code> tem objetivo de listar o conteúdo do ambiente virtual gerado. No diretório <code>bin</code> ficam os &ldquo;executáveis&rdquo; no <code>lib</code> os pacotes, e assim por diante.</p>
 <h2 id="ativar-o-ambiente-virtual">Ativar o ambiente virtual</h2>
 <p>Para ativar o ambiente virtual utiliza-se o comando <code>source</code>, e na sequência o caminho <code>/caminho_do_virtual_env/bin/activate</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rt@rt-av52a:~/.virtualenvs$ source ./teste_venv/bin/activate
-<span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rafatieppo@rt-av52a:~/.virtualenvs$ 
-</code></pre></div><p>Note que o nome do ambiente virtual ficará à esquerda entre parênteses.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rt@rt-av52a:~/.virtualenvs$ source ./teste_venv/bin/activate
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rafatieppo@rt-av52a:~/.virtualenvs$ 
+</span></span></code></pre></div><p>Note que o nome do ambiente virtual ficará à esquerda entre parênteses.</p>
 <h2 id="instalando-pacote">Instalando pacote</h2>
 <p>Uma vez que o ambiente virtual está ativo, basta instalar os pacotes desejados. Como exemplo vamos usar o <code>numpy</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rt@rt-av52a:~/.virtualenvs$ pip3 install numpy
-Collecting numpy
-  Cache entry deserialization failed, entry ignored
-  Downloading https://files.pythonhosted.org/packages/b8/46/40729c784/numpyx86_64.whl <span style="color:#f92672">(</span>14.1MB<span style="color:#f92672">)</span>
-    100% |████████████████████████████████| 14.1MB 128kB/s 
-Installing collected packages: numpy
-Successfully installed numpy-1.21.1
-<span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rafatieppo@rt-av52a:~/.virtualenvs$
-</code></pre></div><p>Pronto, para usar o seu ambiente virtual basta direcionar o seu editor (ou IDE) de preferência, ou se quiser, apenas digite <code>python3</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rt@av52a:~/.virtualenvs$ python3
-Python 3.7.3 <span style="color:#f92672">(</span>default, Jan <span style="color:#ae81ff">22</span> 2021, 20:04:44<span style="color:#f92672">)</span> 
-<span style="color:#f92672">[</span>GCC 8.3.0<span style="color:#f92672">]</span> on linux
-Type <span style="color:#e6db74">&#34;help&#34;</span>, <span style="color:#e6db74">&#34;copyright&#34;</span>, <span style="color:#e6db74">&#34;credits&#34;</span> or <span style="color:#e6db74">&#34;license&#34;</span> <span style="color:#66d9ef">for</span> more information.
-&gt;&gt;&gt; 
-</code></pre></div><h2 id="para-desativar">Para desativar</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rt@rt-av52a:~/.virtualenvs$ pip3 install numpy
+</span></span><span style="display:flex;"><span>Collecting numpy
+</span></span><span style="display:flex;"><span>  Cache entry deserialization failed, entry ignored
+</span></span><span style="display:flex;"><span>  Downloading https://files.pythonhosted.org/packages/b8/46/40729c784/numpyx86_64.whl <span style="color:#f92672">(</span>14.1MB<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    100% |████████████████████████████████| 14.1MB 128kB/s 
+</span></span><span style="display:flex;"><span>Installing collected packages: numpy
+</span></span><span style="display:flex;"><span>Successfully installed numpy-1.21.1
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rafatieppo@rt-av52a:~/.virtualenvs$
+</span></span></code></pre></div><p>Pronto, para usar o seu ambiente virtual basta direcionar o seu editor (ou IDE) de preferência, ou se quiser, apenas digite <code>python3</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rt@av52a:~/.virtualenvs$ python3
+</span></span><span style="display:flex;"><span>Python 3.7.3 <span style="color:#f92672">(</span>default, Jan <span style="color:#ae81ff">22</span> 2021, 20:04:44<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>GCC 8.3.0<span style="color:#f92672">]</span> on linux
+</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#34;help&#34;</span>, <span style="color:#e6db74">&#34;copyright&#34;</span>, <span style="color:#e6db74">&#34;credits&#34;</span> or <span style="color:#e6db74">&#34;license&#34;</span> <span style="color:#66d9ef">for</span> more information.
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 
+</span></span></code></pre></div><h2 id="para-desativar">Para desativar</h2>
 <p>Apena digite <code>deactivate</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rt@av52a:~/.virtualenvs$ python3
-Python 3.7.3 <span style="color:#f92672">(</span>default, Jan <span style="color:#ae81ff">22</span> 2021, 20:04:44<span style="color:#f92672">)</span> 
-<span style="color:#f92672">[</span>GCC 8.3.0<span style="color:#f92672">]</span> on linux
-&gt;&gt;&gt; exit<span style="color:#f92672">()</span>
-<span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rt@av52a:~/.virtualenvs$ deactivate 
-rafatieppo@rt-av52a:~/.virtualenvs$ 
-</code></pre></div><p>Para remover o diretório, primeiro desative e posteriormente use <code>rm -r ./teste_venv/</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rt@av52a:~/.virtualenvs$ python3
+</span></span><span style="display:flex;"><span>Python 3.7.3 <span style="color:#f92672">(</span>default, Jan <span style="color:#ae81ff">22</span> 2021, 20:04:44<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>GCC 8.3.0<span style="color:#f92672">]</span> on linux
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; exit<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>teste_venv<span style="color:#f92672">)</span> rt@av52a:~/.virtualenvs$ deactivate 
+</span></span><span style="display:flex;"><span>rafatieppo@rt-av52a:~/.virtualenvs$ 
+</span></span></code></pre></div><p>Para remover o diretório, primeiro desative e posteriormente use <code>rm -r ./teste_venv/</code></p>
 <h2 id="references">References</h2>
 <p><a href="https://www.python.org/">https://www.python.org/</a></p>
 <p><a href="https://docs.python.org/3/library/venv.html">https://docs.python.org/3/library/venv.html</a></p>

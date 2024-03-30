@@ -14,9 +14,9 @@
       <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>/teaching/2022_09_12_c008_qgis/</guid>
-      <description>Conteúdo e programação   Aula 01 - 2022-09-13
- Apresentação do curso; Como estudar; Boas práticas e projeto QGIS Introdução ao geoprocessamento (vetor e raster); Introdução ao sistema de referência de coordenadas (CRS ou DATUM); Detalhes sobre a importação de arquivos de textos; Reprojeção    Aula 02 - 2022-09-20
- Centroides, extração de vértices; Manipulação de polígonos; Extração de centroides e vértices; União, divisão, dissolução de polígonos; Geração de pontos no polígono (grid); Interpolação (IDW**;    Aula 03 - 2022-09-27</description>
+      <description>Conteúdo e programação Aula 01 - 2022-09-13
+Apresentação do curso; Como estudar; Boas práticas e projeto QGIS Introdução ao geoprocessamento (vetor e raster); Introdução ao sistema de referência de coordenadas (CRS ou DATUM); Detalhes sobre a importação de arquivos de textos; Reprojeção Aula 02 - 2022-09-20
+Centroides, extração de vértices; Manipulação de polígonos; Extração de centroides e vértices; União, divisão, dissolução de polígonos; Geração de pontos no polígono (grid); Interpolação (IDW**; Aula 03 - 2022-09-27</description>
     </item>
     
     <item>
@@ -57,7 +57,7 @@ Material e métodos Entre as possíveis alternativas, uso o método gdal.</descr
       
       <guid>/teaching/2022_01_01_geoprocessing/</guid>
       <description>Professor at State University of Mato Grosso - Agricultural Engineering Department. Geoprocessing
-Graduate level introduction to the concepts of datum, projections, interpolations, data analysis. TGAD852GEOA-194883 Portuguese Advance info click [HERE](http://docente.unemat.br/rafaeltieppo)  </description>
+Graduate level introduction to the concepts of datum, projections, interpolations, data analysis. TGAD852GEOA-194883 Portuguese Advance info click [HERE](http://docente.unemat.br/rafaeltieppo) </description>
     </item>
     
     <item>
@@ -99,8 +99,9 @@ from osgeo import ogr, osr, gdal Leitura do arquivo vetorial Para abrir o arquiv
       
       <guid>/post/2021_08_24_powergdalogr_m01/</guid>
       <description>Módulo 01 Objetivo Ler, editar e gravar arquivo vetorial (shape).
-Material e métodos  Linux Debian Buster GDAL 2.4.0, released 2018/12/14  Na manipulação e processamento de aquivo vetorial, utilizaremos um arquivo shape com os municípios do estado de MT (Figura 1).
-  Figura 1: Arquivo shape do estado de MT com Tabela de Atributos   Leitura e gravação de arquivo vetorial (shape) Importação dos pacotes Inicialmente importar os pacotes</description>
+Material e métodos Linux Debian Buster GDAL 2.4.0, released 2018/12/14 Na manipulação e processamento de aquivo vetorial, utilizaremos um arquivo shape com os municípios do estado de MT (Figura 1).
+Figura 1: Arquivo shape do estado de MT com Tabela de Atributos Leitura e gravação de arquivo vetorial (shape) Importação dos pacotes Inicialmente importar os pacotes
+from osgeo import ogr, osr, gdal Leitura do arquivo Para abrir o arquivo vetorial, define-se o caminho e o parâmetro 0 ou 1:</description>
     </item>
     
     <item>
@@ -138,8 +139,7 @@ IDW is a deterministic method for interpolation, once you have a set of know poi
       <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/project/2018-07-06-portfolio_05_sebal/</guid>
-      <description>SEBAL model by means GRASS and PYTHON 
-O modelo SEBAL ((Surface Energy Balance Algorithm for Land) utiliza o balanço de energia da superfície terrestre para a realizar a predição de algumas características hidrológicas (evapotranspiração, deficit de água, etc)). O principal criador do referido modelo é o Professor Wim G. M. Bastiaanssen (Bastiaanssen et al., 1998).
+      <description>SEBAL model by means GRASS and PYTHON O modelo SEBAL ((Surface Energy Balance Algorithm for Land) utiliza o balanço de energia da superfície terrestre para a realizar a predição de algumas características hidrológicas (evapotranspiração, deficit de água, etc)). O principal criador do referido modelo é o Professor Wim G. M. Bastiaanssen (Bastiaanssen et al., 1998).
 Para maiores detalhes e download, acesse a página do código em: https://rafatieppo.github.io/sebal/.</description>
     </item>
     

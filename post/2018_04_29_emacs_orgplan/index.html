@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Emacs org-mode rocks">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+Emacs org-mode rocks">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>Planning all your projects with EMACS &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -287,12 +290,12 @@ and
 and it was piece of cake. I split in 4 steps.</p>
 <h3 id="step-1---prepare-your-org-file">Step 1 - prepare your org file</h3>
 <p>Prepare a <code>.org</code> file like this:</p>
-<pre><code>* PROJECTS 
+<pre tabindex="0"><code>* PROJECTS 
    :PROPERTIES:
    :COLUMNS:  %6TYPE %20ITEM  %OWNER  %13DEADLINE
    :TYPE_ALL: Proj Action
    :OWNER_ALL: Person1 Person2
-   :Approved_ALL: &quot;[ ]&quot; &quot;[X]&quot;
+   :Approved_ALL: &#34;[ ]&#34; &#34;[X]&#34;
    :DONE_ALL: Yes Nop
    :END:
 
@@ -332,13 +335,13 @@ turn the column view on from any location in the buffer (<a href="https://orgmod
 so you can capture and and create an overview about all your
 projects. In the last line create a new item called <code>Report</code> or any
 name, and insert the <code>block</code> as follows:</p>
-<pre><code>** Report
+<pre tabindex="0"><code>** Report
 
 #+BEGIN: columnview :maxlevel 5 :hlines t
 
 #+END:
 </code></pre><p>On the <code>BEGIN</code> press <code>C-c C-c</code> and you see the magic:</p>
-<pre><code>#+BEGIN: columnview :maxlevel 5 :hlines t
+<pre tabindex="0"><code>#+BEGIN: columnview :maxlevel 5 :hlines t
 | TYPE | ITEM                   | OWNER  | DEADLINE       |
 |------|------------------------|--------|----------------|
 |      | * PROJECTS             |        |                |
@@ -348,7 +351,6 @@ name, and insert the <code>block</code> as follows:</p>
 |      | *** TODO PAPER [%]     | Daniel | 2018-04-27 Fri |
 |      | ** Report              |        |                |
 #+END:
-
 </code></pre><h3 id="step-4---see-all-in-hmtl-file">Step 4 - See all in <code>hmtl</code> file</h3>
 <p><a href="https://www.gnu.org/software/emacs/">EMACS</a> really rocks. You can
 export your file like <code>.html</code>, just <code>C-c C-e</code>, press <code>h</code> and <code>h</code> and set

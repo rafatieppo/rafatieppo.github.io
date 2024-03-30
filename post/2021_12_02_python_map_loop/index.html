@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="who is faster">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+who is faster">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>Conditional in Python: map vs loop &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -299,87 +302,87 @@
 <p>So, let&rsquo;s try!</p>
 <h2 id="hands-on">Hands On!</h2>
 <p>Load packages and create a <code>data frame</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-<span style="color:#f92672">import</span> time
-
-df_prob <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;day&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">50000</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">0</span>)})
-
-df_prob<span style="color:#f92672">.</span>info()
-<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">pandas</span><span style="color:#f92672">.</span>core<span style="color:#f92672">.</span>frame<span style="color:#f92672">.</span>DataFrame<span style="color:#e6db74">&#39;&gt;</span>
-RangeIndex: <span style="color:#ae81ff">50000</span> entries, <span style="color:#ae81ff">0</span> to <span style="color:#ae81ff">49999</span>
-Data columns (total <span style="color:#ae81ff">1</span> columns):
- <span style="color:#75715e">#   Column  Non-Null Count  Dtype  </span>
-<span style="color:#f92672">---</span>  <span style="color:#f92672">------</span>  <span style="color:#f92672">--------------</span>  <span style="color:#f92672">-----</span>  
- <span style="color:#ae81ff">0</span>   day     <span style="color:#ae81ff">50000</span> non<span style="color:#f92672">-</span>null  float64
-dtypes: float64(<span style="color:#ae81ff">1</span>)
-memory usage: <span style="color:#ae81ff">390.8</span> KB
-</code></pre></div><p>Now, comparing <strong>Loop</strong> vs <strong>map()</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># loop</span>
-start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
-ls_desc <span style="color:#f92672">=</span> []
-<span style="color:#66d9ef">for</span> idx <span style="color:#f92672">in</span> range(len(df_prob)):
-    <span style="color:#66d9ef">if</span> df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>iloc[idx] <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>:
-        dd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;01&#39;</span>
-    <span style="color:#66d9ef">elif</span> df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>iloc[idx] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> \
-            df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>iloc[idx] <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">20</span>:
-        dd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;02&#39;</span>
-    <span style="color:#66d9ef">elif</span> df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>iloc[idx] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">and</span> \
-            df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>iloc[idx] <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">31</span>:
-        dd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;03&#39;</span>
-    <span style="color:#66d9ef">else</span>:
-        dd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-99&#39;</span>
-    ls_desc<span style="color:#f92672">.</span>append(dd)
-print(<span style="color:#e6db74">&#34;loop --- </span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> seconds ---&#34;</span> <span style="color:#f92672">%</span> (time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start_time))
-
-<span style="color:#75715e"># map</span>
-start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
-ls_desc <span style="color:#f92672">=</span> list(map(<span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#39;01&#39;</span> <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">else</span>
-                   (<span style="color:#e6db74">&#39;02&#39;</span> <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> x <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">20</span> <span style="color:#66d9ef">else</span>(
-                       <span style="color:#e6db74">&#39;03&#39;</span> <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">and</span> x <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">31</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;-99&#39;</span>)),
-                   df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>values))
-print(<span style="color:#e6db74">&#34;map --- </span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> seconds ---&#34;</span> <span style="color:#f92672">%</span> (time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start_time))
-</code></pre></div><p>The results:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> loop <span style="color:#f92672">---</span> <span style="color:#ae81ff">0.8795549869537354</span> seconds <span style="color:#f92672">---</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> map <span style="color:#f92672">---</span> <span style="color:#ae81ff">0.022134780883789062</span> seconds <span style="color:#f92672">---</span>
-</code></pre></div><p>The function <code>map</code> was better than <code>loop</code>. For a small data like this example, maybe it does not matter. But for a large file &hellip;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df_prob <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;day&#39;</span>: np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">50000</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">0</span>)})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df_prob<span style="color:#f92672">.</span>info()
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">pandas</span><span style="color:#f92672">.</span>core<span style="color:#f92672">.</span>frame<span style="color:#f92672">.</span>DataFrame<span style="color:#e6db74">&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>RangeIndex: <span style="color:#ae81ff">50000</span> entries, <span style="color:#ae81ff">0</span> to <span style="color:#ae81ff">49999</span>
+</span></span><span style="display:flex;"><span>Data columns (total <span style="color:#ae81ff">1</span> columns):
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">#   Column  Non-Null Count  Dtype  </span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span>  <span style="color:#f92672">------</span>  <span style="color:#f92672">--------------</span>  <span style="color:#f92672">-----</span>  
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">0</span>   day     <span style="color:#ae81ff">50000</span> non<span style="color:#f92672">-</span>null  float64
+</span></span><span style="display:flex;"><span>dtypes: float64(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>memory usage: <span style="color:#ae81ff">390.8</span> KB
+</span></span></code></pre></div><p>Now, comparing <strong>Loop</strong> vs <strong>map()</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># loop</span>
+</span></span><span style="display:flex;"><span>start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>ls_desc <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> idx <span style="color:#f92672">in</span> range(len(df_prob)):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>iloc[idx] <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>:
+</span></span><span style="display:flex;"><span>        dd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;01&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>iloc[idx] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> \
+</span></span><span style="display:flex;"><span>            df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>iloc[idx] <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">20</span>:
+</span></span><span style="display:flex;"><span>        dd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;02&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>iloc[idx] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">and</span> \
+</span></span><span style="display:flex;"><span>            df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>iloc[idx] <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">31</span>:
+</span></span><span style="display:flex;"><span>        dd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;03&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        dd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-99&#39;</span>
+</span></span><span style="display:flex;"><span>    ls_desc<span style="color:#f92672">.</span>append(dd)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;loop --- </span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> seconds ---&#34;</span> <span style="color:#f92672">%</span> (time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start_time))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># map</span>
+</span></span><span style="display:flex;"><span>start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>ls_desc <span style="color:#f92672">=</span> list(map(<span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#39;01&#39;</span> <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                   (<span style="color:#e6db74">&#39;02&#39;</span> <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> x <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">20</span> <span style="color:#66d9ef">else</span>(
+</span></span><span style="display:flex;"><span>                       <span style="color:#e6db74">&#39;03&#39;</span> <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">and</span> x <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">31</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;-99&#39;</span>)),
+</span></span><span style="display:flex;"><span>                   df_prob[<span style="color:#e6db74">&#39;day&#39;</span>]<span style="color:#f92672">.</span>values))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;map --- </span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> seconds ---&#34;</span> <span style="color:#f92672">%</span> (time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start_time))
+</span></span></code></pre></div><p>The results:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> loop <span style="color:#f92672">---</span> <span style="color:#ae81ff">0.8795549869537354</span> seconds <span style="color:#f92672">---</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> map <span style="color:#f92672">---</span> <span style="color:#ae81ff">0.022134780883789062</span> seconds <span style="color:#f92672">---</span>
+</span></span></code></pre></div><p>The function <code>map</code> was better than <code>loop</code>. For a small data like this example, maybe it does not matter. But for a large file &hellip;.</p>
 <p>Notice that is necessary nested <code>if / else</code> to run into <code>map</code> function.</p>
 <h2 id="extra-test">Extra test</h2>
 <p>After all, I tough about <em>R</em> statistical software. It is because I use R for several analysis. Actually, <em>R</em> is my favorite choice for data analyses.</p>
 <p>How was <em>R</em> (base):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">df_prob <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(<span style="color:#e6db74">&#39;day&#39;</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">runif</span>(<span style="color:#ae81ff">50000</span>,  <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">31</span>)))
-
-start_time <span style="color:#f92672">=</span> <span style="color:#a6e22e">Sys.time</span>()
-ls_desc <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ifelse</span>(
-    df_prob<span style="color:#f92672">$</span>day <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;01&#39;</span>,
-           <span style="color:#a6e22e">ifelse</span>(df_prob<span style="color:#f92672">$</span>day <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">&amp;</span> df_prob <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;02&#39;</span>,
-           <span style="color:#a6e22e">ifelse</span>(df_prob<span style="color:#f92672">$</span>day <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&amp;</span> df_prob<span style="color:#f92672">$</span>day <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">31</span>, <span style="color:#e6db74">&#39;03&#39;</span>, <span style="color:#e6db74">&#39;-99&#39;</span>)))
-final_time <span style="color:#f92672">&lt;-</span> (<span style="color:#a6e22e">Sys.time</span>() <span style="color:#f92672">-</span> start_time)
-<span style="color:#a6e22e">print</span>(<span style="color:#a6e22e">paste</span>(<span style="color:#e6db74">&#34; --- %s seconds ---&#34;</span>, final_time))
-
-<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&gt;</span> [1] <span style="color:#e6db74">&#34;loop --- %s seconds --- 0.0353324413299561&#34;</span>
-</code></pre></div><p><em>R</em> was fast as <code>map()</code> function in <em>Python</em> (ok, a little bit slower). Besides, both of them have a similar style.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>df_prob <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(<span style="color:#e6db74">&#39;day&#39;</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">runif</span>(<span style="color:#ae81ff">50000</span>,  <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">31</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start_time <span style="color:#f92672">=</span> <span style="color:#a6e22e">Sys.time</span>()
+</span></span><span style="display:flex;"><span>ls_desc <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ifelse</span>(
+</span></span><span style="display:flex;"><span>    df_prob<span style="color:#f92672">$</span>day <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;01&#39;</span>,
+</span></span><span style="display:flex;"><span>           <span style="color:#a6e22e">ifelse</span>(df_prob<span style="color:#f92672">$</span>day <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">&amp;</span> df_prob <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;02&#39;</span>,
+</span></span><span style="display:flex;"><span>           <span style="color:#a6e22e">ifelse</span>(df_prob<span style="color:#f92672">$</span>day <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&amp;</span> df_prob<span style="color:#f92672">$</span>day <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">31</span>, <span style="color:#e6db74">&#39;03&#39;</span>, <span style="color:#e6db74">&#39;-99&#39;</span>)))
+</span></span><span style="display:flex;"><span>final_time <span style="color:#f92672">&lt;-</span> (<span style="color:#a6e22e">Sys.time</span>() <span style="color:#f92672">-</span> start_time)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">print</span>(<span style="color:#a6e22e">paste</span>(<span style="color:#e6db74">&#34; --- %s seconds ---&#34;</span>, final_time))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&gt;</span> [1] <span style="color:#e6db74">&#34;loop --- %s seconds --- 0.0353324413299561&#34;</span>
+</span></span></code></pre></div><p><em>R</em> was fast as <code>map()</code> function in <em>Python</em> (ok, a little bit slower). Besides, both of them have a similar style.</p>
 <h2 id="hardware-and-software">Hardware and software</h2>
 <p>The test was performed on a workstation:</p>
-<pre><code>
+<pre tabindex="0"><code>
 rafatieppo@rt-av52a:~/Dropbox/emacs_dot$ screenfetch 
          _,met$$$$$gg.           rafatieppo@rt-av52a
       ,g$$$$$$$$$$$$$$$P.        OS: Debian 10 buster
-    ,g$$P&quot;&quot;       &quot;&quot;&quot;Y$$.&quot;.      Kernel: x86_64 Linux 4.19.0-16-amd64
-   ,$$P'              `$$$.      Uptime: 1h 13m
-  ',$$P       ,ggs.     `$$b:    Packages: 2699
-  `d$$'     ,$P&quot;'   .    $$$     Shell: bash 5.0.3
-   $$P      d$'     ,    $$P     Resolution: 3840x1080
-   $$:      $$.   -    ,d$$'     DE: MATE 1.20.2
-   $$\;      Y$b._   _,d$P'      WM: Metacity (Marco)
-   Y$$.    `.`&quot;Y$$$$P&quot;'          GTK Theme: 'Adapta' [GTK2/3]
-   `$$b      &quot;-.__               Icon Theme: Numix
+    ,g$$P&#34;&#34;       &#34;&#34;&#34;Y$$.&#34;.      Kernel: x86_64 Linux 4.19.0-16-amd64
+   ,$$P&#39;              `$$$.      Uptime: 1h 13m
+  &#39;,$$P       ,ggs.     `$$b:    Packages: 2699
+  `d$$&#39;     ,$P&#34;&#39;   .    $$$     Shell: bash 5.0.3
+   $$P      d$&#39;     ,    $$P     Resolution: 3840x1080
+   $$:      $$.   -    ,d$$&#39;     DE: MATE 1.20.2
+   $$\;      Y$b._   _,d$P&#39;      WM: Metacity (Marco)
+   Y$$.    `.`&#34;Y$$$$P&#34;&#39;          GTK Theme: &#39;Adapta&#39; [GTK2/3]
+   `$$b      &#34;-.__               Icon Theme: Numix
     `Y$$                         Font: Monaco 14
      `Y$$.                       CPU: Intel Core i5-9300H @ 8x 4.1GHz [44.0°C]
        `$$b.                     GPU: GeForce GTX 1050
          `Y$$b.                  RAM: 1862MiB / 15901MiB
-            `&quot;Y$b._             
-                `&quot;&quot;&quot;&quot;           
+            `&#34;Y$b._             
+                `&#34;&#34;&#34;&#34;           
 </code></pre><h2 id="references">References</h2>
 <p><a href="https://www.python.org/">https://www.python.org/</a></p>
 <p><a href="https://cran.r-project.org/">https://cran.r-project.org/</a></p>

@@ -4,8 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.86.1" />
+  <meta name="description" content="
+
+">
+  <meta name="generator" content="Hugo 0.117.0">
 
   <title>Lendo e armazenando uma série de arquivos &middot; Rafael Tieppo</title>
 
@@ -58,6 +60,7 @@
 
   
   
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
 
 </head>
 
@@ -285,10 +288,10 @@ poderia ser investido em outra ação. Na linguagem <strong>R</strong>, uma das 
 de se realizar esta operação é a utilização de <em>listas</em>.</p>
 <h1 id="estudo-de-caso-i">Estudo de caso I</h1>
 <p>Vamos supor que você tenha uma série de arquivos no formato <code>.csv</code></p>
-<pre><code>### Criando um data.frame hipotético
+<pre tabindex="0"><code>### Criando um data.frame hipotético
 DF &lt;-
     data.frame(BLOCO = rep(seq(1,4), each = 12),
-               TRAT=rep(c(&quot;T1&quot;, &quot;T2&quot;, &quot;T3&quot;), each = 4),
+               TRAT=rep(c(&#34;T1&#34;, &#34;T2&#34;, &#34;T3&#34;), each = 4),
                REP = seq(1,4),
                Z = rnorm(48, 30, 2.6))
 head(DF)
@@ -300,8 +303,8 @@ head(DF)
 ## 4     1   T1   4 30.58861
 ## 5     1   T2   1 30.31546
 ## 6     1   T2   2 28.90498
-</code></pre><pre><code>### Gerando uma série de arquivos csv
-sapply(c(&quot;foo1.csv&quot;, &quot;foo2.csv&quot;, &quot;foo3.csv&quot;, &quot;foo4.csv&quot;, &quot;foo5.csv&quot;),
+</code></pre><pre tabindex="0"><code>### Gerando uma série de arquivos csv
+sapply(c(&#34;foo1.csv&#34;, &#34;foo2.csv&#34;, &#34;foo3.csv&#34;, &#34;foo4.csv&#34;, &#34;foo5.csv&#34;),
        function(i){
        write.csv(DF, paste(i))})
 &gt;
@@ -319,27 +322,27 @@ sapply(c(&quot;foo1.csv&quot;, &quot;foo2.csv&quot;, &quot;foo3.csv&quot;, &quot
 ## 
 ## $foo5.csv
 ## NULL
-</code></pre><pre><code>### Verifique se os arquivos .csv foram criados
+</code></pre><pre tabindex="0"><code>### Verifique se os arquivos .csv foram criados
 dir()
 &gt;
-## [1] &quot;170514_READING_FILES.md&quot;  &quot;170514_READING_FILES.Rmd&quot;
-## [3] &quot;foo1.csv&quot;                 &quot;foo2.csv&quot;                
-## [5] &quot;foo3.csv&quot;                 &quot;foo4.csv&quot;                
-## [7] &quot;foo5.csv&quot;
-</code></pre><pre><code>### Lendo os nomes dos arquivos .csv
-temp = list.files(pattern=&quot;*.csv&quot;)
+## [1] &#34;170514_READING_FILES.md&#34;  &#34;170514_READING_FILES.Rmd&#34;
+## [3] &#34;foo1.csv&#34;                 &#34;foo2.csv&#34;                
+## [5] &#34;foo3.csv&#34;                 &#34;foo4.csv&#34;                
+## [7] &#34;foo5.csv&#34;
+</code></pre><pre tabindex="0"><code>### Lendo os nomes dos arquivos .csv
+temp = list.files(pattern=&#34;*.csv&#34;)
 temp
 &gt;
-## [1] &quot;foo1.csv&quot; &quot;foo2.csv&quot; &quot;foo3.csv&quot; &quot;foo4.csv&quot; &quot;foo5.csv&quot;
-</code></pre><pre><code>### Gerando uma lista com os arquivos .csv
+## [1] &#34;foo1.csv&#34; &#34;foo2.csv&#34; &#34;foo3.csv&#34; &#34;foo4.csv&#34; &#34;foo5.csv&#34;
+</code></pre><pre tabindex="0"><code>### Gerando uma lista com os arquivos .csv
 
 DF_LIST &lt;-
     lapply(seq(1, length(temp)),
            function(z)
                read.csv(temp[z],
                         header = TRUE,
-                        dec = &quot;.&quot;,
-                        sep = &quot;,&quot;))
+                        dec = &#34;.&#34;,
+                        sep = &#34;,&#34;))
 
 ### Agrupando em um único data.frame
 DF_LIST_agrup &lt;-
@@ -354,38 +357,38 @@ head(DF_LIST_agrup)
 ## 4 4     1   T1   4 30.58861
 ## 5 5     1   T2   1 30.31546
 ## 6 6     1   T2   2 28.90498
-</code></pre><pre><code>dim(DF_LIST_agrup)
+</code></pre><pre tabindex="0"><code>dim(DF_LIST_agrup)
 &gt;
 ## [1] 240   5
 </code></pre><h1 id="estudo-de-caso-ii">Estudo de caso II</h1>
 <p>Quando se tem arquivos <code>.xls</code> ou <code>.xlsx</code> pode-se utilizar o pacote
 <code>readxl</code>.</p>
-<pre><code>#library(readxl)
+<pre tabindex="0"><code>#library(readxl)
 
 DF1 &lt;- 
-read_excel(&quot;NOME_DO_ARQUIVO.xlsx&quot;)
+read_excel(&#34;NOME_DO_ARQUIVO.xlsx&#34;)
 </code></pre><p>Caso seja necessário ler uma pasta específica do seu arquivo <code>.xls</code> ou
 <code>xlxs</code> basta usar as opções da função.</p>
-<pre><code>#library(readxl)
+<pre tabindex="0"><code>#library(readxl)
 
 DF2 &lt;-
-    read_excel(&quot;NOME_DO_ARQUIVO.xlsx&quot;,
-               sheet = &quot;NOME_DA_PASTA&quot;)
+    read_excel(&#34;NOME_DO_ARQUIVO.xlsx&#34;,
+               sheet = &#34;NOME_DA_PASTA&#34;)
 </code></pre><h1 id="estudo-de-caso-iii">Estudo de caso III</h1>
 <p>Se seu arquivo <code>.xls</code> ou <code>xlxs</code> tiver uma série de pastas, basta usar a
 mesma lógica do <strong>Estudo de caso I</strong>.</p>
-<pre><code>#library(readxl)
+<pre tabindex="0"><code>#library(readxl)
 
-LISTA_PASTAS &lt;- c(&quot;PASTA1&quot;,
-                  &quot;PASTA2&quot;,
-                  &quot;PASTA3&quot;)
+LISTA_PASTAS &lt;- c(&#34;PASTA1&#34;,
+                  &#34;PASTA2&#34;,
+                  &#34;PASTA3&#34;)
 
-### Lendo as pastas do arquivo  &quot;NOME_DO_ARQUIVO.xlsx&quot;
+### Lendo as pastas do arquivo  &#34;NOME_DO_ARQUIVO.xlsx&#34;
 
 DF3_LISTA &lt;-
     sapply(LISTA_PASTAS,
            function(L){
-               read_excel(&quot;NOME_DO_ARQUIVO.xlsx&quot;,
+               read_excel(&#34;NOME_DO_ARQUIVO.xlsx&#34;,
                           sheet = L)
                },
            simplify = FALSE)
