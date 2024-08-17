@@ -4,10 +4,12 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
+  <meta name="description" content="
+
+extraindo dados do currículo Lattes">
   <meta name="generator" content="Hugo 0.117.0">
 
-  <title>lattes &middot; Rafael Tieppo</title>
+  <title>lucyLattes (v1.0.0) um script para manipular dados da plataforma Lattes &middot; Rafael Tieppo</title>
 
     
 
@@ -45,9 +47,6 @@
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="Rafael Tieppo"
-    href='/tags/lattes/index.xml' />
   
 
   
@@ -119,11 +118,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='/tags/lattes/index.xml'><i
-          class="fas fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -249,16 +243,12 @@
 
 
 <div class="header">
-  <h1>lattes</h1>
+  <h1>lucyLattes (v1.0.0) um script para manipular dados da plataforma Lattes</h1>
+  <h2>extraindo dados do currículo Lattes</h2>
 </div>
-
 <div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="/post/2024_08_17_lucylattes_v100/">lucyLattes (v1.0.0) um script para manipular dados da plataforma Lattes</a></h2>
 
-    <div class="post-meta">
+  <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
@@ -293,121 +283,129 @@
 
 </div>
 
-  </header>
-
-  <p>
-  O que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o lucyLattes para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão.
-Se estiver interessado na história do lucyLattes: https://rafatieppo.github.io/post/2019_03_13_lucylattes/ .
-Na versão v1.0.0 , as melhorias são:
-Reorganização do código: acredito estar melhor do que antes, pelo menos no que tange a estrutura, organização e por incrível que pareça, no código em si.
-  </p>
+  <p>O que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o <em>lucyLattes</em> para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão.</p>
+<p>Se estiver interessado na história do <em>lucyLattes</em>: <a href="https://rafatieppo.github.io/post/2019_03_13_lucylattes/">https://rafatieppo.github.io/post/2019_03_13_lucylattes/</a> .</p>
+<p>Na versão v1.0.0 , as melhorias são:</p>
+<ul>
+<li>Reorganização do código: acredito estar melhor do que antes, pelo menos no que tange a estrutura, organização e por incrível que pareça, no código em si. Todavia, se que o código está longe de ser profissional. Ah! se você estiver se perguntando se foi realizado algum Processo de Teste, a resposta é <strong>não</strong>! Por que? Porque o código não tem erro! :) Além disso: <em>Na minha máquina roda</em>! Brincadeira a parte, no geral acho que está melhor do que antes.</li>
+<li>O relatório tem pequenas melhorias, algumas explicações extras sobre as tabelas.</li>
+<li>Há uma interface para fazer as configurações desejadas.</li>
+<li>Para que usou a versão anterior, agora não é mais necessário ficar digitando <code>ID</code> de pesquisador(a) e nome no arquivo de texto.</li>
+<li>E uma melhoria considerável (acho que foi a melhor), para excluir os mesmo artigos que aparecem para mais de um pesquisador foi implementando um algorítimo de <em>NLP</em> (<em>Natural Language Processing</em>). De modo resumido, foi utilizado a <em>similaridade por cosseno</em> para comparar os títulos. De um modo mais fancy, <strong>agora o lucyLattes tem I.A.</strong>.</li>
+<li>Deve ter mais coisas, mas agora não recordo.</li>
+</ul>
+<p>Para instalar e usar, há vídeos no <em>YouTube</em> e mais informações no site do projeto (GitHub):</p>
+<ul>
+<li><code>youtube</code>: <a href="www.youtube.com/@rafatieppo">Rafael Tieppo</a> .</li>
+<li><code>GitHub</code>: <a href="https://github.com/rafatieppo/lucylattes">https://github.com/rafatieppo/lucylattes</a></li>
+</ul>
+<p>Caso queira, sinta-se livre para me pagar um cafézinho. Tudo que faço aqui é uma maneira de retribuir e compartilhar o conhecimento que adquiri ao longo da minha carreira, mas quem sou eu para negar um café, certo? Sua ajuda vai ser convertida para manter os scripts (pagando o provedor, por exemplo). O excedente, será utilizado para comprar café mesmo.</p>
+<ul>
+<li><strong>PayPal</strong></li>
+</ul>
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=68LAA9FZLABUQ" > <img src="/post/pics/20190313_logo_rt_donate.png" alt="" border="0" width="250"/> </a></p>
+<ul>
+<li><strong>Pix</strong></li>
+</ul>
+<figure>
+  <img src=" https://github.com/rafatieppo/lucylattes/raw/master/fig_pix_lucy.jpg" width="250" height="auto"/>
+  <figcaption>
+      <p></p>
+  </figcaption>
+</figure>
 
   
-  <footer>
-    <a href="/post/2024_08_17_lucylattes_v100/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2f2024_08_17_lucylattes_v100%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2f2024_08_17_lucylattes_v100%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=%2fpost%2f2024_08_17_lucylattes_v100%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2f2024_08_17_lucylattes_v100%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2f2024_08_17_lucylattes_v100%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=%2fpost%2f2024_08_17_lucylattes_v100%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
 
   
-    <article>
-  <header>
-    <h2><a href="/project/2019-03-19-portfolio_04_lucylattes/">lucyLattes</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>2019-03-13</time>
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/2024_05_25_qgis_challenge/"><i class="fa fa-chevron-left"></i></a>
+    
   </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
+  <div class="pure-u-10-24">
     
-      <a class="post-taxonomy-tag" href="/tags/lattes">Lattes</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="/tags/scraping">scraping</a>
+    <nav class="prev">
+      <a href="/post/2024_05_25_qgis_challenge/">30DaysOfQGIS – Master QGIS in 30 Days</a>
+    </nav>
     
   </div>
-  
-  
-
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
 </div>
 
-  </header>
-
-  <p>
-  O script lucyLattes.py é um script em python para extração, compilação, e organização dos dados dos currículos da plataforma Lattes em arquivos de texto, e geração de um relátório simplificado, que proporcionam agilidade para a geração de informação.
-Download e instruções aqui. 
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="/post/2019_03_13_lucylattes/">lucyLattes (v0.0.0) um script para manipular dados da plataforma Lattes</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>2019-03-13</time>
-  </div>
-
-  
-
-  
 
   
   
   
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
     
-      <a class="post-taxonomy-tag" href="/tags/datascience">datascience</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="/tags/lattes">lattes</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="/tags/lucylattes">lucyLattes</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="/tags/python">python</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="/tags/minera%C3%A7%C3%A3o">mineração</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="/tags/data-mining">data mining</a>
-    
-  </div>
-  
-  
+    if (window.location.hostname == "localhost")
+        return;
 
-</div>
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-rafatieppo-github-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-  </header>
-
-  <p>
-  Estou atualizando este post em 2024-08-17, pois o que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o lucyLattes para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão. Há um novo post sobre a versão nova, inclusive há videos como instalar e usar o lucyLattes no canal do youtube: Rafael Tieppo .
-Aqui deixo um pouco da história, um pouco sobre o relatório de saída, e o site no github: https://github.
-  </p>
 
   
-  <footer>
-    <a href="/post/2019_03_13_lucylattes/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
 
-  
 </div>
 
 </div>
@@ -439,3 +437,4 @@ Aqui deixo um pouco da história, um pouco sobre o relatório de saída, e o sit
 
 </body>
 </html>
+

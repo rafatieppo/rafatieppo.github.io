@@ -7,7 +7,115 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>data mining</title>
+      <link>/tags/data-mining/</link>
+      <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/data-mining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>datascience</title>
+      <link>/tags/datascience/</link>
+      <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/datascience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lattes</title>
+      <link>/tags/lattes/</link>
+      <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lattes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lucyLattes</title>
+      <link>/tags/lucylattes/</link>
+      <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lucylattes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mineração</title>
+      <link>/tags/minera%C3%A7%C3%A3o/</link>
+      <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/minera%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>30DaysOfQGIS</title>
+      <link>/tags/30daysofqgis/</link>
+      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/30daysofqgis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>geoprocessing</title>
+      <link>/tags/geoprocessing/</link>
+      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/geoprocessing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GIS</title>
+      <link>/tags/gis/</link>
+      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/gis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QGIS</title>
+      <link>/tags/qgis/</link>
+      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/qgis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regex</title>
+      <link>/tags/regex/</link>
+      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/regex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spatialthoughts</title>
+      <link>/tags/spatialthoughts/</link>
+      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/spatialthoughts/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>garmin</title>
       <link>/tags/garmin/</link>
@@ -36,15 +144,6 @@
     </item>
     
     <item>
-      <title>regex</title>
-      <link>/tags/regex/</link>
-      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/regex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>sed</title>
       <link>/tags/sed/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
@@ -63,15 +162,6 @@
     </item>
     
     <item>
-      <title>geoprocessing</title>
-      <link>/tags/geoprocessing/</link>
-      <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/geoprocessing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>grass gis</title>
       <link>/tags/grass-gis/</link>
       <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
@@ -86,15 +176,6 @@
       <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>/tags/landsat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>/tags/python/</link>
-      <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
@@ -216,15 +297,6 @@
     </item>
     
     <item>
-      <title>datascience</title>
-      <link>/tags/datascience/</link>
-      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/datascience/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>pandas</title>
       <link>/tags/pandas/</link>
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
@@ -333,29 +405,11 @@
     </item>
     
     <item>
-      <title>GIS</title>
-      <link>/tags/gis/</link>
-      <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/gis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>mapa de produtividade</title>
       <link>/tags/mapa-de-produtividade/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/mapa-de-produtividade/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>QGIS</title>
-      <link>/tags/qgis/</link>
-      <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/qgis/</guid>
       <description></description>
     </item>
     
@@ -428,42 +482,6 @@
       <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/filter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data mining</title>
-      <link>/tags/data-mining/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/data-mining/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lattes</title>
-      <link>/tags/lattes/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/lattes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lucyLattes</title>
-      <link>/tags/lucylattes/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/lucylattes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mineração</title>
-      <link>/tags/minera%C3%A7%C3%A3o/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/minera%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
     

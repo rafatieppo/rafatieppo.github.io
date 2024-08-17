@@ -9,7 +9,7 @@
 extraindo dados do currículo Lattes">
   <meta name="generator" content="Hugo 0.117.0">
 
-  <title>lucyLattes um script para manipular dados da plataforma Lattes &middot; Rafael Tieppo</title>
+  <title>lucyLattes (v0.0.0) um script para manipular dados da plataforma Lattes &middot; Rafael Tieppo</title>
 
     
 
@@ -243,7 +243,7 @@ extraindo dados do currículo Lattes">
 
 
 <div class="header">
-  <h1>lucyLattes um script para manipular dados da plataforma Lattes</h1>
+  <h1>lucyLattes (v0.0.0) um script para manipular dados da plataforma Lattes</h1>
   <h2>extraindo dados do currículo Lattes</h2>
 </div>
 <div class="content">
@@ -283,7 +283,9 @@ extraindo dados do currículo Lattes">
 
 </div>
 
-  <h2 id="introdução">Introdução</h2>
+  <p>Estou atualizando este post em <em>2024-08-17</em>, pois o que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o <em>lucyLattes</em> para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão. Há um novo <em>post</em> sobre a versão nova, inclusive há videos como instalar e usar o <em>lucyLattes</em> no canal do <code>youtube</code>: <a href="www.youtube.com/@rafatieppo">Rafael Tieppo</a> .</p>
+<p>Aqui deixo um pouco da história, um pouco sobre o relatório de saída, e o site no <em>github</em>: <a href="https://github.com/rafatieppo/lucylattes">https://github.com/rafatieppo/lucylattes</a> .</p>
+<h2 id="história">História</h2>
 <p>Historicamente o <a href="http://www.cnpq.br/">CNPq</a> gerencia uma base dados sobre pesquisadores em C&amp;T para diversos fins, cita-se como exemplo a avaliação de programas de pós-graduação, seleção de bolsas para pesquisadores, entre outros. Esta base dados é denominada <a href="http://lattes.cnpq.br/">Plataforma Lattes</a>.</p>
 <p>Devido esta referida plataforma ser amplamente utilizada, tornou-se padrão em universidades, órgãos de pesquisa, etc. Nesta plataforma é possível encontrar desde a formação acadêmica do profissional, as empresas que trabalhou, até sua produção científica, e artística, etc.</p>
 <p>O que deixava o uso do <a href="http://buscatextual.cnpq.br/buscatextual/busca.do?metodo=apresentar">Currículo Lattes</a> tedioso era a extração dos dados, pois usualmente era manual, o que consequentemente torna o trabalho massante. Contudo, tudo mudou com <a href="http://scriptlattes.sourceforge.net/">scriptLattes</a>. Este script GNU-GPL realiza a extração e compilação automática de: produções bibliográficas, técnicas,artísticas, orientações, projetos de pesquisa, etc, de um conjunto de pesquisadores cadastrados na plataforma Lattes.</p>
@@ -297,9 +299,80 @@ extraindo dados do currículo Lattes">
       <p>Figure 1: Lucy<p>
   </figcaption>
 </figure>
-<h2 id="como-usar-e-quais-os-resultados-obtidos">Como usar e quais os resultados obtidos</h2>
+<h3 id="relatório-de-saída">Relatório de saída</h3>
+<p>Se tudo ocorreu bem, no diretório <code>lucyLattes-master</code>, acesse a pasta relatório, e abra com o navegador (Firefox ou Chrome) o arquivo <code>relatorio_producao.html</code>. No navegador aparecerá um relatório com as seguinte informações: <em>Equipe</em>, <em>Resumo da produção</em>, <em>Projetos de extensão</em>, <em>Projetos de pesquisa</em>, <em>Artigos em periódicos</em>, <em>Extrato de periódicos por integrante</em>.</p>
+<p>Além das informações supracitadas, são gerados três gráficos: relação de produção de artigos em periódicos por ano, relação de periódicos por qualis, e se há intereção entre os pesquisadores (Figuras 6, 7, e 8).</p>
+<figure>
+  <img src="/post/pics/20190313_period_dep_year.png" width="530" height="auto"  />
+  <figcaption>
+      <p>Figure 6: Número de publicações por ano<p>
+  </figcaption>
+</figure>
+<figure>
+  <img src="/post/pics/20190313_period_year_qualis.png" width="530" height="auto"  />
+  <figcaption>
+      <p>Figure 7: Publicações de periódicos por qualis.<p>
+  </figcaption>
+</figure>
+<figure>
+  <img src="/post/pics/20190313_grapho.png" width="530" height="auto"  />
+  <figcaption>
+      <p>Figure 7: Grafo de colaboração entre pesquisadores apenas em artigos.<p>
+  </figcaption>
+</figure>
+<p>O Extrato de periódicos por integrante resume o número de publicação(s)
+por ano e qualis:</p>
+<p>Rafael Cesar Tieppo: produção total = 20</p>
+<table>
+<thead>
+<tr><th style="text-align: right;">  </th><th style="text-align: right;">  YEAR</th><th style="text-align: right;">  A2</th><th style="text-align: right;">  B1</th><th style="text-align: right;">  B2</th><th style="text-align: right;">  B3</th><th style="text-align: right;">  B5</th><th style="text-align: right;">  C </th><th style="text-align: right;">  XX</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: right;"> 0</td><td style="text-align: right;">  2010</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
+<tr><td style="text-align: right;"> 1</td><td style="text-align: right;">  2011</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   2</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
+<tr><td style="text-align: right;"> 2</td><td style="text-align: right;">  2012</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
+<tr><td style="text-align: right;"> 3</td><td style="text-align: right;">  2013</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
+<tr><td style="text-align: right;"> 4</td><td style="text-align: right;">  2014</td><td style="text-align: right;">   0</td><td style="text-align: right;">   2</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
+<tr><td style="text-align: right;"> 5</td><td style="text-align: right;">  2016</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
+<tr><td style="text-align: right;"> 6</td><td style="text-align: right;">  2017</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   2</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td></tr>
+<tr><td style="text-align: right;"> 7</td><td style="text-align: right;">  2018</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td></tr>
+<tr><td style="text-align: right;"> 8</td><td style="text-align: right;">  2019</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
+</tbody>
+</table>
+ <hr> 
+<h2 id="considerações">Considerações</h2>
+<p>Espero que o <code>lucyLattes</code> seja útil de alguma forma, dentro do possível estarei melhorando o script na sua funcionalidade.</p>
+<p><img src="https://i.gifer.com/QLRN.gif" alt=""></p>
+<h2 id="gostou">Gostou?</h2>
+<ul>
+<li>Nos de uma estrela clicando na estrela no topo da página (lado direito) <a href="https://github.com/rafatieppo/lucyLattes">AQUI</a></li>
+<li>Deixe um comentário aqui no Blog</li>
+<li>Vc pode doar um café via Paypal ;)</li>
+</ul>
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=68LAA9FZLABUQ" > <img src="/post/pics/20190313_logo_rt_donate.png" alt="" border="0" width="250"/> </a></p>
+<ul>
+<li><strong>Pix</strong></li>
+</ul>
+<figure>
+  <img src=" https://github.com/rafatieppo/lucylattes/raw/master/fig_pix_lucy.jpg" width="250" height="auto"/>
+  <figcaption>
+      <p></p>
+  </figcaption>
+</figure>
+<h2 id="notas">Notas</h2>
+<blockquote>
+<p>O lucyLattes não tem vínculo com o CNPq. Este programa computacional é fruto de um esforço (independente) realizado com o objetivo de dar suporte às rotinas de análise de dados cadastradas nos Currículos Lattes (publicamente disponíveis).</p>
+</blockquote>
+<blockquote>
+<p>Este programa é um software livre; você pode redistribui-lo e/ou modificá-lo dentro dos termos da Licença Pública Geral GNU. Verifique o arquivo LICENSE.txt .</p>
+</blockquote>
+<blockquote>
+<p>Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA; sem uma garantia implicita de ADEQUAÇÂO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Verifique o arquivo LICENSE.txt .</p>
+</blockquote>
+<h2 id="versão-v000-antiga">Versão v0.0.0 (antiga)</h2>
+<p>Caso precise, segue um tutorial:</p>
 <p>Inicialmente, tudo ficará mais fácil se utilizar um sistema operacional <em>Linux</em>. Eu testei no <a href="https://www.ubuntu.com/download/flavours">Ubuntu</a> e no <a href="https://www.debian.org/">Debian</a> (distribuição que uso), mas fique à vontade para escolher a sua distribuição. No sistema Windows fiz poucos testes.</p>
-<p>Os pacotes necessários e como proceder a instalação dos mesmos está descrito <a href="https://rafatieppo.github.io/lucylattes/">AQUI</a>.</p>
+<p>Os pacotes da versão antiga <em>V0.0.0</em> podem sera acessados aqui: <a href="https://github.com/rafatieppo/lucylattes/tags">AQUI</a>.</p>
 <p>Uma vez que os requisitos necessários foram atendidos, torna-se possível utilizar o <code>lucyLattes</code>. Siga as seguintes etapas:</p>
 <h3 id="passo-1">Passo 1</h3>
 <p>Após fazer o download do <code>lucyLattes</code> (<a href="https://rafatieppo.github.io/lucylattes/">download aqui</a>), descompacte o arquivo <code>lucyLattes-master.zip</code>. Após a descompactação a pasta <code>lucyLattes-master</code> estará disponível. Abra esta pasta e você terá acesso aos seguintes arquivos e diretórios:</p>
@@ -361,67 +434,6 @@ extraindo dados do currículo Lattes">
       <p>Figure 5: Executando o script pelo terminal<p>
   </figcaption>
 </figure>
-<h3 id="passo-6-último-">Passo 6 (último) :)</h3>
-<p>Se tudo ocorreu bem, no diretório <code>lucyLattes-master</code>, acesse a pasta relatório, e abra com o navegador (Firefox ou Chrome) o arquivo <code>relatorio_producao.html</code>. No navegador aparecerá um relatório com as seguinte informações: <em>Equipe</em>, <em>Resumo da produção</em>, <em>Projetos de extensão</em>, <em>Projetos de pesquisa</em>, <em>Artigos em periódicos</em>, <em>Extrato de periódicos por integrante</em>.</p>
-<p>Além das informações supracitadas, são gerados três gráficos: relação de produção de artigos em periódicos por ano, relação de periódicos por qualis, e se há intereção entre os pesquisadores (Figuras 6, 7, e 8).</p>
-<figure>
-  <img src="/post/pics/20190313_period_dep_year.png" width="530" height="auto"  />
-  <figcaption>
-      <p>Figure 6: Número de publicações por ano<p>
-  </figcaption>
-</figure>
-<figure>
-  <img src="/post/pics/20190313_period_year_qualis.png" width="530" height="auto"  />
-  <figcaption>
-      <p>Figure 7: Publicações de periódicos por qualis.<p>
-  </figcaption>
-</figure>
-<figure>
-  <img src="/post/pics/20190313_grapho.png" width="530" height="auto"  />
-  <figcaption>
-      <p>Figure 7: Grafo de colaboração entre pesquisadores apenas em artigos.<p>
-  </figcaption>
-</figure>
-<p>O Extrato de periódicos por integrante resume o número de publicação(s)
-por ano e qualis:</p>
-<p>Rafael Cesar Tieppo: produção total = 20</p>
-<table>
-<thead>
-<tr><th style="text-align: right;">  </th><th style="text-align: right;">  YEAR</th><th style="text-align: right;">  A2</th><th style="text-align: right;">  B1</th><th style="text-align: right;">  B2</th><th style="text-align: right;">  B3</th><th style="text-align: right;">  B5</th><th style="text-align: right;">  C </th><th style="text-align: right;">  XX</th></tr>
-</thead>
-<tbody>
-<tr><td style="text-align: right;"> 0</td><td style="text-align: right;">  2010</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
-<tr><td style="text-align: right;"> 1</td><td style="text-align: right;">  2011</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   2</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
-<tr><td style="text-align: right;"> 2</td><td style="text-align: right;">  2012</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
-<tr><td style="text-align: right;"> 3</td><td style="text-align: right;">  2013</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
-<tr><td style="text-align: right;"> 4</td><td style="text-align: right;">  2014</td><td style="text-align: right;">   0</td><td style="text-align: right;">   2</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
-<tr><td style="text-align: right;"> 5</td><td style="text-align: right;">  2016</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
-<tr><td style="text-align: right;"> 6</td><td style="text-align: right;">  2017</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   2</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td></tr>
-<tr><td style="text-align: right;"> 7</td><td style="text-align: right;">  2018</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   1</td></tr>
-<tr><td style="text-align: right;"> 8</td><td style="text-align: right;">  2019</td><td style="text-align: right;">   1</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td><td style="text-align: right;">   0</td></tr>
-</tbody>
-</table>
- <hr> 
-<h2 id="considerações">Considerações</h2>
-<p>Espero que o <code>lucyLattes</code> seja útil de alguma forma, dentro do possível estarei melhorando o script na sua funcionalidade.</p>
-<p><img src="https://i.gifer.com/QLRN.gif" alt=""></p>
-<h2 id="gostou">Gostou?</h2>
-<ul>
-<li>Nos de uma estrela clicando na estrela no topo da página (lado direito) <a href="https://github.com/rafatieppo/lucyLattes">AQUI</a></li>
-<li>Deixe um comentário aqui no Blog</li>
-<li>Vc pode doar um café via Paypal ;)</li>
-</ul>
-<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=68LAA9FZLABUQ" > <img src="/post/pics/20190313_logo_rt_donate.png" alt="" border="0" width="150"/> </a></p>
-<h2 id="notas">Notas</h2>
-<blockquote>
-<p>O lucyLattes não tem vínculo com o CNPq. Este programa computacional é fruto de um esforço (independente) realizado com o objetivo de dar suporte às rotinas de análise de dados cadastradas nos Currículos Lattes (publicamente disponíveis).</p>
-</blockquote>
-<blockquote>
-<p>Este programa é um software livre; você pode redistribui-lo e/ou modificá-lo dentro dos termos da Licença Pública Geral GNU. Verifique o arquivo LICENSE.txt .</p>
-</blockquote>
-<blockquote>
-<p>Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA; sem uma garantia implicita de ADEQUAÇÂO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Verifique o arquivo LICENSE.txt .</p>
-</blockquote>
 
   
   <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>

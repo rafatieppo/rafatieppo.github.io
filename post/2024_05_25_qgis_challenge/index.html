@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="
+
+From the spatialthoughts.com, great challenges to improve the GIS skills">
+  <meta name="generator" content="Hugo 0.117.0">
+
+  <title>30DaysOfQGIS – Master QGIS in 30 Days &middot; Rafael Tieppo</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">RafaTieppo</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/project/"><i class='fa fa-briefcase fa-fw'></i>Project</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/teaching/"><i class='fa fa-graduation-cap fa-fw'></i>Teaching</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/rafaeltieppo" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://researchgate.net/profile/Rafael-Tieppo" rel="me" target="_blank"><i class="ai ai-researchgate-square ai-1x"></i>researchgate</a>
+    </li>
+    
+    
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://orcid.org/0000-0001-8132-4813" rel="me" target="_blank"><i class="ai ai-orcid-square ai-1x"></i>orcid</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://scholar.google.com/citations?user=ClN1Q6AAAAAJ" rel="me" target="_blank"><i class="ai ai-google-scholar ai-1x"></i>google-scholar</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/3109019/rafa" rel="me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2021 <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Licensed CC:By-NC-SA</a></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>30DaysOfQGIS – Master QGIS in 30 Days</h1>
+  <h2>From the spatialthoughts.com, great challenges to improve the GIS skills</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>2024-05-25</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/gis">GIS</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/qgis">QGIS</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/spatialthoughts">spatialthoughts</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/geoprocessing">geoprocessing</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/30daysofqgis">30DaysOfQGIS</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/regex">regex</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <h1 id="day-1">Day 1</h1>
+<h2 id="introduction-and-course-overview">Introduction and Course Overview</h2>
+<p>From the great <a href="https://spatialthoughts.com/2024/05/13/30daysofqgis/">spatialthoughts.com</a>, I mean the <a href="https://spatialthoughts.com/about/">Ujaval Gandhi</a> and team, this challenge is a really way to improve skills in geoprocessing. I am a quite rusty, so Why not to practice? The goal is to achieve the 30 challenges, maybe I will be late a little bit! Anyway, Lets go!</p>
+<p>The Advanced QGIS (Full Course Material) is <a href="https://courses.spatialthoughts.com/advanced-qgis.html">here</a>. The Youtube content is <a href="https://www.youtube.com/watch?v=MzSmVdEiwWs&amp;list=PLppGmFLhQ1HIXuGHWmUL50LV5V5Wta91n&amp;index=2">Here</a></p>
+<p><strong>Note</strong>: Some challenges I solved with different methods</p>
+<h2 id="get-the-data-package">Get the Data Package</h2>
+<p>The examples in this class use a variety of datasets. All the required layers, project files etc. are supplied to you in the <code>advanced_qgis.zip</code>
+file along with your class materials. Unzip this file to the Downloads directory. <a href="https://drive.google.com/uc?export=download&amp;id=1pAc72QDSZGjZFXGb33N1gxX6is0fKYk4">Download advanced_qgis.zip.</a></p>
+<h1 id="day-2">Day 2</h1>
+<h2 id="challenge-removing-null-values">Challenge: Removing NULL Values</h2>
+<p>There are many features in the <code>national_highways</code> layer where the <code>&quot;name&quot;</code> attribute is <strong>NULL</strong>. Find an appopriate algorithm from the Processing Toolbox to create a new layer with the features having NULL values removed.</p>
+<p>The original solution was the tool <em>Extract by expression</em> from <em>QGIS Tool box</em>. In this case, I made a copy of original data and used the <code>Field Calculator</code>.</p>
+<p>Selecting only the <code>national_higways</code> from <em>karnataka_major_roads</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>regexp_match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ref&#34;</span> , <span style="color:#e6db74">&#39;^NH.&#39;</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>The next step was to calculate the length of each national highway. The original solution:</p>
+<ul>
+<li>Add geometry attributes (calculate the distances in Elliposidal math) to calculate in meters, OR</li>
+<li>Field Calculator processing tool and use <code>&quot;length&quot;/1000</code> to calculate in km</li>
+</ul>
+<p>Some stats:</p>
+<figure>
+  <img src="/post/pics/20240525_nation_high_stats.png" width="550" height="auto"/>
+  <figcaption>
+      <p>Figure: Stats from national_highway layer</p>
+  </figcaption>
+</figure>
+<p>And to remove the <strong>NULL</strong> in the <code>&quot;name&quot;</code> attribute:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#e6db74">&#34;name&#34;</span> is NULL
+</span></span></code></pre></div><figure>
+  <img src="/post/pics/20240525_nation_high_not_null.png" width="550" height="auto"/>
+  <figcaption>
+      <p>Figure: Solution day 2<p>
+  </figcaption>
+</figure>
+<h1 id="day-3-and-4">Day 3 and 4</h1>
+<h2 id="challenge-organizing-the-attribute-table-and-processing-algorithms">Challenge: Organizing the Attribute Table and processing algorithms</h2>
+<p>Calculate the length of national highways for each district in the state. This will require us to perform a spatial join and analyze the results using group statistics. Original solution (with tool box):</p>
+<ul>
+<li>Join attributes by Location
+<ul>
+<li>Feature key: intersect</li>
+<li>Join type: For the Join type, you have 3 options. Here we want to do a one-to-one join where the for each road feature, we want to select one district feature. Select the Take attributes of the feature with largest overlap only option.</li>
+</ul>
+</li>
+<li>Statistic by Categories</li>
+<li>Save the layer to the karnataka.gpkg as a layer named <code>national_highways_by_districts</code></li>
+</ul>
+<p>Finally, the challenge: Apply the following formatting changes on the <code>national_highways_by_districts</code> layer and save it to <code>karnataka.gpkg</code> as a new layer <code>national_highways_by_districts_formatted</code>.</p>
+<ul>
+<li>Rename the DISTRICT field to district.</li>
+<li>Rename the sum field to total_length.</li>
+<li>Round the lengths in the total_length field to nearest integer using the round() function.</li>
+<li>Delete all remaining fields.</li>
+</ul>
+<p>For all above steps, its possible to use processing algorithm called <code>Refactor Fields</code>. I use <code>DB manager instead</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> national_highway.fid, karnataka_districts.DISTRICT <span style="color:#66d9ef">AS</span> <span style="color:#e6db74">&#39;district&#39;</span>,
+</span></span><span style="display:flex;"><span> round(<span style="color:#66d9ef">sum</span>(national_highway.length_km),<span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">AS</span> <span style="color:#e6db74">&#39;total_lenght_km&#39;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> national_highway, karnataka_districts 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> (st_intersects (national_highway.geometry, karnataka_districts.geometry) ) 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> karnataka_districts.DISTRICT
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> national_highway.fid 
+</span></span></code></pre></div><figure>
+  <img src="/post/pics/20240525_national_high_sql.png" width="550" height="auto"/>
+  <figcaption>
+      <p>Figure: Solution day 3 by means DB manager<p>
+  </figcaption>
+</figure>
+<p>Note: In this query, the join type was: <code>Create separate feature for each matching featura (one-to-many)</code></p>
+<p>An alternative for the toll box <code>Statistics by Categories</code> is another tool called <code>Execute SQL</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> DISTRICT, <span style="color:#66d9ef">sum</span>(length_km) 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> input1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> DISTRICT
+</span></span></code></pre></div><p>Make sure to set <em>Geometry type</em> option as <em>Mo geometry</em></p>
+<h1 id="day-5">Day 5</h1>
+<h2 id="batch-processing">Batch Processing</h2>
+<p>All algorithms (including models) can be executed as a batch process. That is, they can be executed using not just a single set of inputs, but several of them, executing the algorithm as many times as needed. This is useful when processing large amounts of data, since it is not necessary to launch the algorithm many times from the toolbox.</p>
+<p>To execute an algorithm as a batch process, right-click on its name in the toolbox and select the Execute as batch process option in the pop-up menu that will appear. Further details are available <a href="https://docs.qgis.org/3.34/en/docs/user_manual/processing/batch.html">here</a>.</p>
+<h2 id="challenge-re-projecting-multiple-layers-by-means-batch-processing">Challenge: Re-projecting Multiple Layers by means Batch Processing</h2>
+<p>The challenge is <em>Reprojected</em> all the clipped layers to a UTM projection. You can reproject all the layers to the <strong>CRS WGS84 / UTM zone 43N EPSG:32643</strong>. Save the reprojected layers to the same GeoPackage <em>clipped.gpkg</em></p>
+<p>Steps:</p>
+<ol>
+<li>Cut layers by mask (<code>natural_earth_india — state_boundary</code>)</li>
+<li>Reproject by means batch processing</li>
+<li>Save all reproject layers in the same <code>Geopackage</code>. For this, find in processing tools <code>Package layers</code>.</li>
+</ol>
+<figure>
+  <img src="/post/pics/20240525_batch.png" width="550" height="auto"/>
+  <figcaption>
+      <p>Figure: Partial solution:screen to cut layers with mask by means batch processing<p>
+  </figcaption>
+</figure>
+<p>The files <code>.gpkg-shm</code> and <code>gpkg-wal</code> are temporary files. It disappear after closed.</p>
+<h1 id="day-6-and-7">Day 6 and 7</h1>
+<h2 id="review-and-catch-up-on-week1-materials">Review and catch up on Week1 materials</h2>
+<p>&hellip;</p>
+<h1 id="day-8">Day 8</h1>
+<h2 id="using-calculate-by-expression-autofill-qgis-easter-egg-bored">Using &ldquo;Calculate by Expression&rdquo; Autofill QGIS Easter Egg &ldquo;bored&rdquo;!</h2>
+<ul>
+<li>Egg Easter: load a raster and type <code>bored</code> in coordinates box, then press <em>Enter</em> . You got a puzzle.</li>
+</ul>
+<figure>
+  <img src="/post/pics/20240525_bored.png" width="550" height="auto"/>
+  <figcaption>
+      <p>Figure: QGIS Puzzle by means *bored* egg Easter
+  </figcaption>
+</figure>
+<ul>
+<li>Calculate by Expression: Regarding the <code>Batch Processing</code>, it is possible to use an <code>Expression</code> to save the output file.</li>
+</ul>
+<h1 id="day-9">Day 9</h1>
+<h2 id="qgis-model-designer">QGIS Model Designer</h2>
+<p>The <a href="https://docs.qgis.org/3.34/en/docs/user_manual/processing/modeler.html">model designer</a> allows you to create complex models using a simple and easy-to-use interface. When working with a GIS, most analysis operations are not isolated, rather part of a chain of operations. Using the model designer, that chain of operations can be wrapped into a single process, making it convenient to execute later with a different set of inputs. No matter how many steps and different algorithms it involves, a model is executed as a single algorithm, saving time and effort. The model designer can be opened from the Processing menu (Processing  Model Designer) (This paragraph is from <strong>QGIS</strong> user manual).</p>
+<p>The step by step to build this model is available on <a href="https://youtu.be/GOkR0_HYR08?list=PLppGmFLhQ1HIXuGHWmUL50LV5V5Wta91n">SpatialToughts</a>.</p>
+<h2 id="challenge-extracting-the-feature-with-the-highest-value">Challenge: Extracting the Feature with the Highest Value</h2>
+<p>The challenge was extract the geometry (hexagon) with the greatest number of occurrences (count).</p>
+<p>To solve it, an algorithm <code>Extract by expression</code> was add to filter values from <strong>Count_points_in_polygon</strong>. Thus the <em>Input layer</em> was  <strong>Count_points_in_polygon</strong>, the <em>Expression</em> was <code>&quot;NUMPOINTS&quot; =  maximum(  &quot;NUMPOINTS&quot; )</code>, and the <em>Matching features</em> was assigned as <code>MAX</code>.</p>
+<figure>
+  <img src="/post/pics/20240525_desigmodel.png" width="750" height="auto"/>
+  <figcaption>
+      <p>Figure: Model designer to extract Highest Value
+  </figcaption>
+</figure>
+<p>Notice that <code>maximum(  &quot;NUMPOINTS&quot; )</code> just returns the maximum Value (<strong>NUMPOINTS</strong>). So it is necessary to select the feature(s) with the same value of the maximum <strong>NUMPOINTS</strong>.</p>
+<p>The result on <em>canvas</em>:</p>
+<figure>
+  <img src="/post/pics/20240525_desigmodel_canvas.png" width="750" height="auto"/>
+  <figcaption>
+      <p>Figure: Solution from model designer
+  </figcaption>
+</figure>
+<p>The exactly same process can be done by means python QGIS algorithm.</p>
+<h1 id="day-10">Day 10</h1>
+<h2 id="concept-spatial-indexing-using-spatial-index">Concept: Spatial Indexing Using Spatial Index</h2>
+<p>Running the <em>Model</em> (Piracy_hexbin) in the <em>Day 9</em> we noticed a message as follow:</p>
+<blockquote>
+<p>No spatial index exists for input layer,
+performance will be severely degraded Model processed OK.
+Executed 5 algorithms total in 7.878s.
+Execution completed in 7.89 seconds</p>
+</blockquote>
+<p>There is no <em>spatial index</em> in the model, generating this error or warning. Thus it is necessary to create a spatial index, it can improve the processing time, specially for large operations.</p>
+<p>A spatial index is a data structure that enables efficient querying and retrieval of spatial data, such as points, lines, and polygons in a multidimensional space. It is commonly used in geographic information systems (GIS), databases, and other applications that deal with spatial information <a href="https://mapscaping.com/an-introduction-to-spatial-indexing/">MapScapping</a>. In other words, a spatial index is a kind of extended index that to provide to index a spatial column (e.g. a column with geometry data)</p>
+<p>From <a href="http://postgis.net/workshops/postgis-intro/indexing.html">PostGis</a>, a short explanation:</p>
+<p><i>Standard database indexes create a hierarchical tree based on the values of the column being indexed. Spatial indexes are a little different – they are unable to index the geometric features themselves and instead index the bounding boxes of the features.</i></p>
+<figure>
+  <img src="/post/pics/20240525_spatial_index.png" width="650" height="auto"/>
+  <figcaption>
+      <p>Figure: Spatial indexes
+  </figcaption>
+</figure>
+<i>In the figure above, the number of lines that intersect the yellow star is one, the red line. But the bounding boxes of features that intersect the yellow box is two, the red and blue ones. The way the database efficiently answers the question "what lines intersect the yellow star" is to first answer the question “what boxes intersect the yellow box” using the index (which is very fast) and then do an exact calculation of “what lines intersect the yellow star” only for those features returned by the first test. For a large table, this "two pass" system of evaluating the approximate index first, then carrying out an exact test can radically reduce the amount of calculations necessary to answer a query.</i>
+<p>Off course, all the main concept is available on <a href="https://youtu.be/TdIQMsNajng?list=PLppGmFLhQ1HIXuGHWmUL50LV5V5Wta91n">SpatialToughts</a>.</p>
+<p>Checking is a layer has <code>Spatial Index</code>:
+$$
+Properties =&gt; Source =&gt; Geometry
+$$</p>
+<p>The layer <strong>ASAM_events</strong> has <code>Spatial index</code>, otherwise the layer <code>Aggregated</code> has not. So, let&rsquo;s return to <code>Piracy_hexbin</code> model and add the processing tool <code>Create spatial index</code>.</p>
+<p>Note: The <code>Geopackage</code> file has <code>spatial index</code> by default.</p>
+<p>The <code>Spatial index</code> will be between <code>Create_grid</code> and <code>Extract Layer</code>, as follow:
+<i>Standard database indexes create a hierarchical tree based on the values of the column being indexed. Spatial indexes are a little different – they are unable to index the geometric features themselves and instead index the bounding boxes of the features.</i></p>
+<figure>
+  <img src="/post/pics/20240525_desigmodel_si.png" width="650" height="auto"/>
+  <figcaption>
+      <p>Figure: Spatial indexes</p>
+  </figcaption>
+</figure>
+<p>Now, the message on the <code>log</code> has changed, and the total time was around 10 time shorter:</p>
+<blockquote>
+<p>Model processed OK. Executed 6 algorithms total in 0.786s.
+Execution completed in 0.81 seconds</p>
+</blockquote>
+<h2 id="challenge-converting-input-values-in-a-model">Challenge: Converting Input Values in a Model</h2>
+<p><strong>Challenge</strong>: Can you change the model so that instead of entering the grid size in meters, the user can enter the size in kilometers?</p>
+<p>There are several options to solve it. One of them is to change in <strong>Create_grid</strong> the horizontal and vertical spacing. Initially there was the input <em>Value</em> as option, to transform the input from <code>km</code> to <code>m</code>, now you may use <em>Pre-calculated Value</em> instead. Finally, add the expression:</p>
+<pre tabindex="0"><code>@grid_size_km * 1000
+</code></pre><p>, as follow:</p>
+<figure>
+  <img src="/post/pics/20240525_desigmodel_si_km.png" width="650" height="auto"/>
+  <figcaption>
+      <p>Figure: Algorithm Create Grid with <i>Pre-calculated Value</i> input</p>
+  </figcaption>
+</figure>
+<h1 id="day-11">Day 11</h1>
+<h2 id="enabling-reproducible-workflows-concept-understanding-user-profiles">Enabling Reproducible Workflows Concept: Understanding User Profiles</h2>
+<p>GeoPackage is an open and flexible data format that makes data management simple. We saw how you can package multiple layers in a GeoPackage. We will now learn how to embed QGIS projects inside of a goepackage.</p>
+<p>QGIS projects contain information of layer configuration, symbology, label positions and even models. We can make the reproducing your workflow even easier by embedding the QGIS Project in the same geopackage containing the source layers.</p>
+<ol>
+<li>
+<p>Now, lets save this project in martime_piracy.gpkg geopackage. Click Project → Save To → GeoPackage….</p>
+</li>
+<li>
+<p>In the Save project to GeoPackage dialog box, click … to browse to martime_piracy geopackage.</p>
+</li>
+<li>
+<p>Enter project name as martime_piracy and click OK.</p>
+</li>
+<li>
+<p>Now in Browser, under martime_piracy.gpkg the project is saved. You now have just 1 GeoPackage file that contains all your input layers, styles, project and models. Sharing this 1 file will enable anyone to reproduce your output using the embedded model and layers.</p>
+</li>
+</ol>
+<figure>
+  <img src="/post/pics/20240525_gpkg_piracy.png" width="700" height="auto"/>
+  <figcaption>
+      <p>Figure: Project and files in a geopackage
+  </figcaption>
+</figure>
+<h2 id="tip-docking-attribute-table">Tip: Docking Attribute Table</h2>
+<p>Docking attribute table is very useful, because it makes easier to manage (close) the tables. In the menu <code>Settings =&gt; Options =&gt; data sources </code>, click on <code>Open attribute table as docked window</code>.</p>
+<h1 id="day-12">Day 12</h1>
+<h2 id="conditional-branch-and-modeler-tools-assignment">Conditional Branch and Modeler Tools Assignment</h2>
+<p>A key feature introduced in QGIS 3.14 was the ability for models to have a conditional branch. This allows models to check for a condition and execute a different part of the model based on the output of the condition. This is equivalent to If/Else statements in a programming language.</p>
+<p>Let us develop a Conditional branch in the piracy_hexbin model covered in the previous section. We will add a new check-box input Use Spatial Index - that allows the user to specify whether to use a spatial index in the model. We will add a conditional branch that takes the following actions:</p>
+<blockquote>
+<p>If the Use Spatial Index option is selected, the model will create a spatial index for the grid layer and use it in the subsequent steps.
+If the option is not selected, the model will proceed without generating a spatial index.</p>
+</blockquote>
+<h1 id="day-13-and-14">Day 13 and 14</h1>
+<p>Weekend: Review and catch up on Week2 materials</p>
+<h1 id="day-15">Day 15</h1>
+<h2 id="assignment-continued-from-day-12">Assignment (continued from Day 12)</h2>
+<p>Your task is to create a model called Calculate Highway Statistics that will automate the workflow outlined in the previous section 1. Using Processing Toolbox.</p>
+<p>Your model is expected to take following 3 inputs:</p>
+<ul>
+<li>Roads Layer: A vector layer of the road network. i.e. karnataka_major_roads.</li>
+<li>Admin Boundaries Layer: A vector layer containing admin boundaries. i.e. karnataka_districts</li>
+<li>Highway Type: An enum input with 2 options: National Highway and State Highway.</li>
+</ul>
+<p>Steps to solve:</p>
+<ol>
+<li>Input <em>Vector Layer</em> for <code>MajorRoads</code></li>
+<li>Input <em>Enum</em> to choose between <em>National</em> ou <em>State</em> road</li>
+<li>Algorithm <em>Extract by expression</em> to filter <code>MajorRoads</code> based on <em>Enum</em>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">@highway_tyype</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>  regexp_match(<span style="color:#e6db74">&#34;ref&#34;</span>, <span style="color:#e6db74">&#39;^NH.*&#39;</span>),
+</span></span><span style="display:flex;"><span>  regexp_match(<span style="color:#e6db74">&#34;ref&#34;</span>, <span style="color:#e6db74">&#39;^SH.*&#39;</span>)
+</span></span><span style="display:flex;"><span>  )
+</span></span></code></pre></div><ol start="4">
+<li>Input <em>Vector Layer</em> <code>Districts</code></li>
+<li>Algorithm <em>Join Attributes by location</em>: <code>Districts</code> vs <code>Output</code> from <em>Extract from expression</em></li>
+<li><em>Statistics by categories</em> from output <em>Join Attributes by location</em> , vars <code>lenght_km</code> <code>DISTRICT</code></li>
+</ol>
+<figure>
+  <img src="/post/pics/20240525_model_assig.png" width="700" height="auto"/>
+  <figcaption>
+      <p>Figure: Assignment for Model Designer
+  </figcaption>
+</figure>
+<h2 id="qgis-easter-egg-dizzy">QGIS Easter Egg ‘dizzy’</h2>
+<p>Type <em>dizzy</em> in coordinate label to shake the screen. It is a prank! To spot it is necessary to type <em>dizzy</em> again.</p>
+<h1 id="day-16">Day 16</h1>
+<ul>
+<li>Rendering Map Layouts from a Model</li>
+</ul>
+<p><a href="https://youtu.be/DWjazIhz1pU?list=PLppGmFLhQ1HIXuGHWmUL50LV5V5Wta91n">CheckOnYouTube</a></p>
+<h1 id="day-17">Day 17</h1>
+<ul>
+<li>2D Animations</li>
+</ul>
+<p>Challenge: Assigning Weights in a Heatmap</p>
+<p>To create rules, we can use the <code>Field Calculator</code>:</p>
+<pre tabindex="0"><code>CASE 
+WHEN  &#34;hostilit_D&#34; = &#39;Suspicious Approach&#39; THEN 1
+WHEN  &#34;hostilit_D&#34; = &#39;Kidnapping&#39; THEN 2
+WHEN  &#34;hostilit_D&#34; = &#39;Pirate Assault&#39; THEN 5 
+WHEN  &#34;hostilit_D&#34; = &#39;Naval Engagement&#39; THEN 10 
+ELSE 1
+END
+</code></pre><p>After just apply <code>Heat Map</code> in <strong>Layer Styling</strong>:</p>
+<figure>
+  <img src="/post/pics/20240525_heatmap.png" width="700" height="auto"/>
+  <figcaption>
+      <p>Figure: Heat map for an assigned weight
+  </figcaption>
+</figure>
+<p>For the animation by means temporal date, in properties click on <code>Temporal</code>. Select the configuration, limits and the Field with the <code>timestamp</code> and click <strong>OK</strong>. If all was good, a clock will show on right side of the layer (Panel Layer). Now, We need to look for a icon with a <code>clock</code> to activate the <em>Temporal Controler</em>. Set the date range of the animation and play. To show the <em>year</em> or any text on the canvas click on menu <code>View -&gt; Decorator -&gt; Title Label</code> and apply an expression <code>year(@map_start_time)</code>.</p>
+<figure>
+<img src="/post/pics/20240525_heatmap_movie.png" width="700" height="auto"/>
+  <figcaption>
+      <p>Figure: Heat map for an assigned weight
+  </figcaption>
+</figure>
+
+  
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2f2024_05_25_qgis_challenge%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2f2024_05_25_qgis_challenge%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=%2fpost%2f2024_05_25_qgis_challenge%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2f2024_05_25_qgis_challenge%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2f2024_05_25_qgis_challenge%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=%2fpost%2f2024_05_25_qgis_challenge%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/2022_10_01_tcxfile_polargarm/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/2022_10_01_tcxfile_polargarm/">How to upload TCX file from Polar Flow to Garmin Connect</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="/post/2024_08_17_lucylattes_v100/">lucyLattes (v1.0.0) um script para manipular dados da plataforma Lattes</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="/post/2024_08_17_lucylattes_v100/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+  
+  
+  
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-rafatieppo-github-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+<script src="/js/menus.js"></script>
+
+
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-33432733-8', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+<script src="/js/math-code.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
+</html>
+
