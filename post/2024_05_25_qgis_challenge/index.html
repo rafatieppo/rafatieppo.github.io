@@ -565,6 +565,26 @@ END
       <p>Figure: Heat map for an assigned weight
   </figcaption>
 </figure>
+<h1 id="day-18">Day 18</h1>
+<ul>
+<li>Exporting 2D Animation</li>
+</ul>
+<p>To export these as images and convert them as GIF select the <strong>Export Animation</strong> (save icon) in the <em>temporal controller window</em>. It will export a lot of frames (figures) in <code>.png</code> format. Save all this frames in a folder. BEFORE exportation, make sure that the zoom in the canvas is as you wish.</p>
+<p>In this example 18 frames were created:</p>
+<figure>
+<img src="/post/pics/20240525_frames.png" width="700" height="auto"/>
+  <figcaption>
+      <p>Figure: All 18 frames in <code>png</code> format
+  </figcaption>
+</figure>
+<p>Now it is possible to use this frames in your favorite tool to generate the <em>animation</em> (<code>.gif</code>). One option is the site (<a href="https://ezgif.com/maker)%5Bhttps://ezgif.com/maker%5D">https://ezgif.com/maker)[https://ezgif.com/maker]</a> , and another on is to use the <code>ImageMagick</code>.</p>
+<pre tabindex="0"><code>convert -size 1080x1080 -delay 100 -loop 0 *.png output.gif
+</code></pre><figure>
+<img src="/post/pics/20240525_frames_anime.gif" width="700" height="auto"/>
+  <figcaption>
+      <p>Figure: Animation (gif) from the generated frames.
+  </figcaption>
+</figure>
 
   
   <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
