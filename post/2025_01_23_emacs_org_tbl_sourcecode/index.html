@@ -297,86 +297,17 @@ a quick and pratical option">
    (emacs-lisp . t)))
 </code></pre><h1 id="create-a-table">Create a table</h1>
 <p>This example is to summarize some investments:</p>
-<p>#+name: invest</p>
-<table>
-<thead>
-<tr>
-<th>TICKET</th>
-<th>AMOUNT</th>
-<th>PRICE_AGV</th>
-<th>VALUE_INVEST</th>
-<th>SECTOR</th>
-<th>PERC</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>STOCK_01</td>
-<td>170</td>
-<td>100.06</td>
-<td>17009.56</td>
-<td>FINANC</td>
-<td>17.93</td>
-</tr>
-<tr>
-<td>STOCK_02</td>
-<td>85</td>
-<td>102.35</td>
-<td>8699.90</td>
-<td>TECH</td>
-<td>9.17</td>
-</tr>
-<tr>
-<td>STOCK_03</td>
-<td>30</td>
-<td>114.84</td>
-<td>3445.33</td>
-<td>TECH</td>
-<td>3.63</td>
-</tr>
-<tr>
-<td>STOCK_04</td>
-<td>600</td>
-<td>8.89</td>
-<td>5335.69</td>
-<td>FINANC</td>
-<td>5.62</td>
-</tr>
-<tr>
-<td>STOCK_05</td>
-<td>650</td>
-<td>9.56</td>
-<td>6215.96</td>
-<td>REALSTATE</td>
-<td>6.55</td>
-</tr>
-<tr>
-<td>STOCK_06</td>
-<td>155</td>
-<td>106.14</td>
-<td>16451.32</td>
-<td>REALSTATE</td>
-<td>17.34</td>
-</tr>
-<tr>
-<td>STOCK_07</td>
-<td>420</td>
-<td>89.83</td>
-<td>37730.18</td>
-<td>REALSTATE</td>
-<td>39.76</td>
-</tr>
-<tr>
-<td>#+TBLFM: $1=@#-1</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h1 id="run-some-code">Run some code</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span><span style="color:#f92672">#+</span>name: invest
+</span></span><span style="display:flex;"><span>| TICKET   | AMOUNT | PRICE_AGV | VALUE_INVEST | SECTOR    |  PERC |
+</span></span><span style="display:flex;"><span>|----------|--------|-----------|--------------|-----------|-------|
+</span></span><span style="display:flex;"><span>| STOCK_01 |    <span style="color:#ae81ff">170</span> |    100.06 |     <span style="color:#ae81ff">17009.56</span> | FINANC    | <span style="color:#ae81ff">17.93</span> |
+</span></span><span style="display:flex;"><span>| STOCK_02 |     85 |    <span style="color:#ae81ff">102.35</span> |      8699.90 | TECH      |  9.17 |
+</span></span><span style="display:flex;"><span>| STOCK_03 |     <span style="color:#ae81ff">30</span> |    114.84 |      <span style="color:#ae81ff">3445.33</span> | TECH      |  <span style="color:#ae81ff">3.63</span> |
+</span></span><span style="display:flex;"><span>| STOCK_04 |    600 |      <span style="color:#ae81ff">8.89</span> |      5335.69 | FINANC    |  5.62 |
+</span></span><span style="display:flex;"><span>| STOCK_05 |    <span style="color:#ae81ff">650</span> |      9.56 |      <span style="color:#ae81ff">6215.96</span> | REALSTATE |  <span style="color:#ae81ff">6.55</span> |
+</span></span><span style="display:flex;"><span>| STOCK_06 |    155 |    <span style="color:#ae81ff">106.14</span> |     16451.32 | REALSTATE | 17.34 |
+</span></span><span style="display:flex;"><span>| STOCK_07 |    <span style="color:#ae81ff">420</span> |     89.83 |     <span style="color:#ae81ff">37730.18</span> | REALSTATE | <span style="color:#ae81ff">39.76</span> <span style="color:#960050;background-color:#1e0010">|</span>
+</span></span></code></pre></div><h1 id="run-some-code">Run some code</h1>
 <p>Now it necessary to know how much money and each sector and the percentage. All you need is a source-code and a little bit of <code>sql</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span><span style="color:#f92672">#+</span>begin_src sqlite <span style="color:#e6db74">:db</span> /tmp/rip.db <span style="color:#e6db74">:colnames</span> no <span style="color:#e6db74">:var</span> orgtable=invest <span style="color:#e6db74">:header</span> on <span style="color:#e6db74">:exports</span> both value
 </span></span><span style="display:flex;"><span>drop table <span style="color:#66d9ef">if</span> exists invest<span style="color:#75715e">;</span>
