@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="
+
+Jupyter and R">
+  <meta name="generator" content="Hugo 0.117.0">
+
+  <title>How to Run R Stats Directly in Jupyter Notebook Locally &middot; Rafael Tieppo</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">RafaTieppo</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/project/"><i class='fa fa-briefcase fa-fw'></i>Project</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/teaching/"><i class='fa fa-graduation-cap fa-fw'></i>Teaching</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/rafaeltieppo" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://researchgate.net/profile/Rafael-Tieppo" rel="me" target="_blank"><i class="ai ai-researchgate-square ai-1x"></i>researchgate</a>
+    </li>
+    
+    
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://orcid.org/0000-0001-8132-4813" rel="me" target="_blank"><i class="ai ai-orcid-square ai-1x"></i>orcid</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://scholar.google.com/citations?user=ClN1Q6AAAAAJ" rel="me" target="_blank"><i class="ai ai-google-scholar ai-1x"></i>google-scholar</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/3109019/rafa" rel="me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2021 <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Licensed CC:By-NC-SA</a></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>How to Run R Stats Directly in Jupyter Notebook Locally</h1>
+  <h2>Jupyter and R</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>2025-05-10</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/datascience">datascience</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/jupyter-notebook">jupyter-notebook</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/jupyter-lab">jupyter-lab</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/r">R</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/r-stats">R-stats</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <h1 id="motivation">Motivation</h1>
+<p>Around 2010, I begun my data science journey with <a href="https://www.r-project.org/">R</a>, after <a href="https://www.python.org/">Python</a>. Now days I spend more time in <a href="https://www.python.org/">Python</a>, but I am thinking to change my workflow. So, I am trying a new approach.</p>
+<p>Regarding data analysis, people spend most of their time running <code>R</code> <a href="https://posit.co/download/rstudio-desktop/">R-Studio</a> and <code>Python</code> in <a href="https://jupyter.org/">Jupyter</a> (<em>jupyter-lab</em> or <em>jupyter-notebook</em>).</p>
+<p><strong>Note</strong>: For programming and any other job, as type a text, notes, etc, I work in <a href="https://www.gnu.org/software/emacs/">Emacs</a>.</p>
+<p>As I said, for data science, <a href="https://jupyter.org/">Jupyter</a> and <a href="https://www.python.org/">Python</a> are an amazing match. Furthermore, I really enjoy <em>Jupyter-Lab</em>. I was thinking: if I return to <code>R</code>, Do I have to switch to <a href="https://quarto.org/">Quarto</a>?</p>
+<p>Researching about <a href="https://quarto.org/">Quarto</a>, I found this flow to reach a final report:</p>
+<figure>
+  <img src="/post/pics/20250510_quarto_flow.png" width="550" height="auto"/>
+  <figcaption>
+      <p>Figure 1:  Quarto flow from https://bioinformatics.ccr.cancer.gov </p>
+  </figcaption>
+</figure>
+<p>At moment, I prefer the <a href="https://nbconvert.readthedocs.io/en/latest/">nbconverter</a>, <a href="https://pandoc.org/">Pandoc</a> and my own <code>sty</code> or <code>css</code> files format. So, just out of the blue, I remembered that in some day I run <code>R</code> in <em>Jupyter</em> and decide to try again.</p>
+<h1 id="r-in-jupyter">R in Jupyter</h1>
+<h2 id="step-1">Step 1</h2>
+<p>Make sure you have <code>R</code> in your machine.</p>
+<h2 id="step-2">Step 2</h2>
+<p>Open <code>R</code> <strong>in terminal</strong> and install the packages:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">install.packages</span>(<span style="color:#e6db74">&#34;languageserver&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">install.packages</span>(<span style="color:#e6db74">&#39;IRkernel&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">install.packages</span>(<span style="color:#e6db74">&#34;IRdisplay&#34;</span>)
+</span></span></code></pre></div><p>Now, in <code>R</code> (<strong>in terminal</strong>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(IRkernel)
+</span></span><span style="display:flex;"><span>IRkernel<span style="color:#f92672">::</span><span style="color:#a6e22e">installspec</span>()
+</span></span></code></pre></div><p>Note from <a href="https://github.com/IRkernel/IRkernel">https://github.com/IRkernel/IRkernel</a>: Per default <code>IRkernel::installspec()</code> will install a kernel with the name <em>ir</em> and a display name of <em>R</em>. Multiple calls will overwrite the kernel with a kernel spec pointing to the last R interpreter you called that commands from. You can install kernels for multiple versions of <em>R</em> by supplying a name and displayname argument to the <code>installspec()</code> call (You still need to install these packages in all interpreters you want to run as a jupyter kernel!):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># in R 3.3</span>
+</span></span><span style="display:flex;"><span>IRkernel<span style="color:#f92672">::</span><span style="color:#a6e22e">installspec</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ir33&#39;</span>, displayname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;R 3.3&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># in R 3.2</span>
+</span></span><span style="display:flex;"><span>IRkernel<span style="color:#f92672">::</span><span style="color:#a6e22e">installspec</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ir32&#39;</span>, displayname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;R 3.2&#39;</span>)
+</span></span></code></pre></div><h2 id="step-3">Step 3</h2>
+<p>Run you <strong>Jupyter</strong> and:</p>
+<figure>
+  <img src="/post/pics/20250410_jupyter_screen.png" width="550" height="auto"/>
+  <figcaption>
+      <p>Figure 2: Jupyter-lab with Python and R kernels</p>
+  </figcaption>
+</figure>
+<h1 id="comments">Comments</h1>
+<p>I you use <code>conda</code>, maybe it may be useful: <a href="https://www.freecodecamp.org/news/how-to-run-r-programs-directly-in-jupyter-notebook-locally/#heading-run-r-in-jupyter-notebook">https://www.freecodecamp.org/news/how-to-run-r-programs-directly-in-jupyter-notebook-locally/#heading-run-r-in-jupyter-notebook</a> .</p>
+<p>Maybe in the future I will try <a href="https://quarto.org/">Quarto</a>, but for now I am happy with <a href="https://jupyter.org/">Jupyter</a>.</p>
+<p>That&rsquo;s all folks!
+Regards!</p>
+<h1 id="references">References</h1>
+<ul>
+<li><a href="https://github.com/REditorSupport/languageserver">https://github.com/REditorSupport/languageserver</a></li>
+<li><a href="https://github.com/IRkernel/IRkernel">https://github.com/IRkernel/IRkernel</a></li>
+</ul>
+
+  
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2f2025_05_10_r_jupyter_lab%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2f2025_05_10_r_jupyter_lab%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=%2fpost%2f2025_05_10_r_jupyter_lab%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2f2025_05_10_r_jupyter_lab%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2f2025_05_10_r_jupyter_lab%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=%2fpost%2f2025_05_10_r_jupyter_lab%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/2025_01_23_emacs_org_tbl_sourcecode/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/2025_01_23_emacs_org_tbl_sourcecode/">Computing data in org-mode table by means sql and R</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+  
+  
+  
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-rafatieppo-github-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+<script src="/js/menus.js"></script>
+
+
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-33432733-8', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+

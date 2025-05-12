@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jupyter-lab on Rafael Tieppo</title>
+    <link>/tags/jupyter-lab/</link>
+    <description>Recent content in jupyter-lab on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/jupyter-lab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Run R Stats Directly in Jupyter Notebook Locally</title>
+      <link>/post/2025_05_10_r_jupyter_lab/</link>
+      <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2025_05_10_r_jupyter_lab/</guid>
+      <description>Motivation Around 2010, I begun my data science journey with R, after Python. Now days I spend more time in Python, but I am thinking to change my workflow. So, I am trying a new approach.
+Regarding data analysis, people spend most of their time running R R-Studio and Python in Jupyter (jupyter-lab or jupyter-notebook).
+Note: For programming and any other job, as type a text, notes, etc, I work in Emacs.</description>
+    </item>
+    
+  </channel>
+</rss>
