@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>filter on Rafael Tieppo</title>
+    <title>Filter on Rafael Tieppo</title>
     <link>/tags/filter/</link>
-    <description>Recent content in filter on Rafael Tieppo</description>
+    <description>Recent content in Filter on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 08 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="/tags/filter/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/filter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Filtering objects from a workdir</title>
       <link>/post/2019_07_08_filterobje/</link>
       <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/2019_07_08_filterobje/</guid>
-      <description>Introduction Usually, if you work with in data science field, you need to create several objects, like list, DataFrame, matrix, etc. Besides, you have to handle some files to read and make copies. For that and other actions, sometime you have to select some objects from your workdir.
-The goal in this post is to show some options about how to filter objects from your workdir.
-Listing and Filtering your objects There are several options to list the objects from a workdir.</description>
+      <description>Introduction Usually, if you work with in data science field, you need to create several objects, like list, DataFrame, matrix, etc. Besides, you have to handle some files to read and make copies. For that and other actions, sometime you have to select some objects from your workdir.&#xA;The goal in this post is to show some options about how to filter objects from your workdir.&#xA;Listing and Filtering your objects There are several options to list the objects from a workdir.</description>
     </item>
-    
   </channel>
 </rss>

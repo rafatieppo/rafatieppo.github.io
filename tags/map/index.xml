@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>map on Rafael Tieppo</title>
+    <title>Map on Rafael Tieppo</title>
     <link>/tags/map/</link>
-    <description>Recent content in map on Rafael Tieppo</description>
+    <description>Recent content in Map on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/map/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/map/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Conditional in Python: map vs loop</title>
       <link>/post/2021_12_02_python_map_loop/</link>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>/post/2021_12_02_python_map_loop/</guid>
-      <description>Usually I need to classify some kind of data. Some weeks ago, I had a huge file with dates and precipitation, and one of the tasks was classify each day as ten-day. Thus, each month was divided in three sections as follow:
-from day 01 up to 10 is *ten-day 01* from day 11 up to 20 is *ten-day 02* from day 21 up to 31 is *ten-day 03* Most of time I had used loops (Python language), however this time the process took a little bit slow.</description>
+      <description>Usually I need to classify some kind of data. Some weeks ago, I had a huge file with dates and precipitation, and one of the tasks was classify each day as ten-day. Thus, each month was divided in three sections as follow:&#xA;from day 01 up to 10 is *ten-day 01* from day 11 up to 20 is *ten-day 02* from day 21 up to 31 is *ten-day 03* Most of time I had used loops (Python language), however this time the process took a little bit slow.</description>
     </item>
-    
   </channel>
 </rss>

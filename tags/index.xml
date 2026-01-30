@@ -7,798 +7,665 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>datascience</title>
+      <title>Geojson</title>
+      <link>/tags/geojson/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/geojson/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Geoprocessing</title>
+      <link>/tags/geoprocessing/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/geoprocessing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GNSS</title>
+      <link>/tags/gnss/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/gnss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GPS</title>
+      <link>/tags/gps/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/gps/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kml</title>
+      <link>/tags/kml/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/kml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Organic Maps</title>
+      <link>/tags/organic-maps/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/organic-maps/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OsmAnd</title>
+      <link>/tags/osmand/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/osmand/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Datascience</title>
       <link>/tags/datascience/</link>
       <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
-      
       <guid>/tags/datascience/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>jupyter-lab</title>
+      <title>Jupyter-Lab</title>
       <link>/tags/jupyter-lab/</link>
       <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
-      
       <guid>/tags/jupyter-lab/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>jupyter-notebook</title>
+      <title>Jupyter-Notebook</title>
       <link>/tags/jupyter-notebook/</link>
       <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
-      
       <guid>/tags/jupyter-notebook/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>R</title>
       <link>/tags/r/</link>
       <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
-      
       <guid>/tags/r/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>R-stats</title>
+      <title>R-Stats</title>
       <link>/tags/r-stats/</link>
       <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
-      
       <guid>/tags/r-stats/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>emacs</title>
+      <title>Emacs</title>
       <link>/tags/emacs/</link>
       <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
-      
       <guid>/tags/emacs/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>org-mode</title>
+      <title>Org-Mode</title>
       <link>/tags/org-mode/</link>
       <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
-      
       <guid>/tags/org-mode/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>source-code</title>
+      <title>Source-Code</title>
       <link>/tags/source-code/</link>
       <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
-      
       <guid>/tags/source-code/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>sql</title>
+      <title>Sql</title>
       <link>/tags/sql/</link>
       <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
-      
       <guid>/tags/sql/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>data mining</title>
+      <title>Data Mining</title>
       <link>/tags/data-mining/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/data-mining/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>lattes</title>
+      <title>Lattes</title>
       <link>/tags/lattes/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/lattes/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>lucyLattes</title>
+      <title>LucyLattes</title>
       <link>/tags/lucylattes/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/lucylattes/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>mineração</title>
+      <title>Mineração</title>
       <link>/tags/minera%C3%A7%C3%A3o/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/minera%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>python</title>
+      <title>Python</title>
       <link>/tags/python/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/python/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>30DaysOfQGIS</title>
       <link>/tags/30daysofqgis/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/30daysofqgis/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>geoprocessing</title>
-      <link>/tags/geoprocessing/</link>
-      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/geoprocessing/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>GIS</title>
       <link>/tags/gis/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/gis/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>QGIS</title>
       <link>/tags/qgis/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/qgis/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>regex</title>
+      <title>Regex</title>
       <link>/tags/regex/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/regex/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>spatialthoughts</title>
+      <title>Spatialthoughts</title>
       <link>/tags/spatialthoughts/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>/tags/spatialthoughts/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>garmin</title>
+      <title>Garmin</title>
       <link>/tags/garmin/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/garmin/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>grep</title>
+      <title>Grep</title>
       <link>/tags/grep/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/grep/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>polar</title>
+      <title>Polar</title>
       <link>/tags/polar/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/polar/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>sed</title>
+      <title>Sed</title>
       <link>/tags/sed/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/sed/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>shell</title>
+      <title>Shell</title>
       <link>/tags/shell/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/shell/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>grass gis</title>
+      <title>Grass Gis</title>
       <link>/tags/grass-gis/</link>
       <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/grass-gis/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>landsat</title>
+      <title>Landsat</title>
       <link>/tags/landsat/</link>
       <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/landsat/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gdal</title>
+      <title>Gdal</title>
       <link>/tags/gdal/</link>
       <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/gdal/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>NDVI</title>
       <link>/tags/ndvi/</link>
       <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/ndvi/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ogr</title>
+      <title>Ogr</title>
       <link>/tags/ogr/</link>
       <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/ogr/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>data science</title>
+      <title>Data Science</title>
       <link>/tags/data-science/</link>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/data-science/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>loop</title>
+      <title>Loop</title>
       <link>/tags/loop/</link>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/loop/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>map</title>
+      <title>Map</title>
       <link>/tags/map/</link>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/map/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>programming</title>
+      <title>Programming</title>
       <link>/tags/programming/</link>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/programming/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tips</title>
+      <title>Tips</title>
       <link>/tags/tips/</link>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/tips/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ciência</title>
+      <title>Ciência</title>
       <link>/tags/ci%C3%AAncia/</link>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/ci%C3%AAncia/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>orcid</title>
+      <title>Orcid</title>
       <link>/tags/orcid/</link>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/orcid/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>produção</title>
+      <title>Produção</title>
       <link>/tags/produ%C3%A7%C3%A3o/</link>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/produ%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>programming, pyvenv</title>
+      <title>Programming, Pyvenv</title>
       <link>/tags/programming-pyvenv/</link>
       <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>/tags/programming-pyvenv/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pandas</title>
+      <title>Pandas</title>
       <link>/tags/pandas/</link>
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/pandas/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>numpy</title>
+      <title>Numpy</title>
       <link>/tags/numpy/</link>
       <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/numpy/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>matplotlib</title>
+      <title>Matplotlib</title>
       <link>/tags/matplotlib/</link>
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/matplotlib/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>seaborn</title>
+      <title>Seaborn</title>
       <link>/tags/seaborn/</link>
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/seaborn/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>stocks</title>
+      <title>Stocks</title>
       <link>/tags/stocks/</link>
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/stocks/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ensino</title>
+      <title>Ensino</title>
       <link>/tags/ensino/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/ensino/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>/tags/linux/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>open source</title>
+      <title>Open Source</title>
       <link>/tags/open-source/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/open-source/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Debian</title>
       <link>/tags/debian/</link>
       <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/debian/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Intel</title>
       <link>/tags/intel/</link>
       <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/intel/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Nvidia</title>
       <link>/tags/nvidia/</link>
       <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/nvidia/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>agricultura de precisão</title>
+      <title>Agricultura De Precisão</title>
       <link>/tags/agricultura-de-precis%C3%A3o/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/agricultura-de-precis%C3%A3o/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>mapa de produtividade</title>
+      <title>Mapa De Produtividade</title>
       <link>/tags/mapa-de-produtividade/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/mapa-de-produtividade/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>irpf</title>
+      <title>Irpf</title>
       <link>/tags/irpf/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/irpf/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>java</title>
+      <title>Java</title>
       <link>/tags/java/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/java/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pca</title>
+      <title>Pca</title>
       <link>/tags/pca/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/pca/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>stats</title>
+      <title>Stats</title>
       <link>/tags/stats/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/stats/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>avell</title>
+      <title>Avell</title>
       <link>/tags/avell/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>/tags/avell/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>distros</title>
+      <title>Distros</title>
       <link>/tags/distros/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>/tags/distros/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>PopOS</title>
       <link>/tags/popos/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>/tags/popos/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>filter</title>
+      <title>Filter</title>
       <link>/tags/filter/</link>
       <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>/tags/filter/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>scraping</title>
+      <title>Scraping</title>
       <link>/tags/scraping/</link>
       <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/tags/scraping/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>datetime</title>
+      <title>Datetime</title>
       <link>/tags/datetime/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/datetime/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>meteorology</title>
+      <title>Meteorology</title>
       <link>/tags/meteorology/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/meteorology/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tidy</title>
+      <title>Tidy</title>
       <link>/tags/tidy/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/tidy/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>frequency</title>
+      <title>Frequency</title>
       <link>/tags/frequency/</link>
       <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/frequency/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>idw</title>
+      <title>Idw</title>
       <link>/tags/idw/</link>
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/idw/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>idw2</title>
+      <title>Idw2</title>
       <link>/tags/idw2/</link>
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/idw2/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>digital agriculture</title>
+      <title>Digital Agriculture</title>
       <link>/tags/digital-agriculture/</link>
       <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/digital-agriculture/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>grass</title>
+      <title>Grass</title>
       <link>/tags/grass/</link>
       <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/grass/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>remote sensing</title>
+      <title>Remote Sensing</title>
       <link>/tags/remote-sensing/</link>
       <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/remote-sensing/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>column-view</title>
+      <title>Column-View</title>
       <link>/tags/column-view/</link>
       <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/column-view/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>planning</title>
+      <title>Planning</title>
       <link>/tags/planning/</link>
       <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/planning/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>calendar</title>
+      <title>Calendar</title>
       <link>/tags/calendar/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/calendar/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>google</title>
+      <title>Google</title>
       <link>/tags/google/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/google/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>org-cal</title>
+      <title>Org-Cal</title>
       <link>/tags/org-cal/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/org-cal/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>android</title>
+      <title>Android</title>
       <link>/tags/android/</link>
       <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
-      
       <guid>/tags/android/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>spraying</title>
+      <title>Spraying</title>
       <link>/tags/spraying/</link>
       <pubDate>Mon, 11 Dec 2017 00:00:00 +0000</pubDate>
-      
       <guid>/tags/spraying/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>csv</title>
+      <title>Csv</title>
       <link>/tags/csv/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>/tags/csv/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dataframe</title>
+      <title>Dataframe</title>
       <link>/tags/dataframe/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>/tags/dataframe/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>list</title>
+      <title>List</title>
       <link>/tags/list/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>/tags/list/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>excel</title>
+      <title>Excel</title>
       <link>/tags/excel/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>/tags/excel/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>agriculture</title>
+      <title>Agriculture</title>
       <link>/tags/agriculture/</link>
       <pubDate>Fri, 11 Dec 2015 00:00:00 +0000</pubDate>
-      
       <guid>/tags/agriculture/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>cost</title>
+      <title>Cost</title>
       <link>/tags/cost/</link>
       <pubDate>Fri, 11 Dec 2015 00:00:00 +0000</pubDate>
-      
       <guid>/tags/cost/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>machinery</title>
+      <title>Machinery</title>
       <link>/tags/machinery/</link>
       <pubDate>Fri, 11 Dec 2015 00:00:00 +0000</pubDate>
-      
       <guid>/tags/machinery/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dados climáticos</title>
+      <title>Dados Climáticos</title>
       <link>/tags/dados-clim%C3%A1ticos/</link>
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
-      
       <guid>/tags/dados-clim%C3%A1ticos/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>inmet</title>
+      <title>Inmet</title>
       <link>/tags/inmet/</link>
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
-      
       <guid>/tags/inmet/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>meteorologia</title>
+      <title>Meteorologia</title>
       <link>/tags/meteorologia/</link>
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
-      
       <guid>/tags/meteorologia/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>simplex</title>
+      <title>Simplex</title>
       <link>/tags/simplex/</link>
       <pubDate>Sat, 11 Dec 2010 00:00:00 +0000</pubDate>
-      
       <guid>/tags/simplex/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

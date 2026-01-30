@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>numpy on Rafael Tieppo</title>
+    <title>Numpy on Rafael Tieppo</title>
     <link>/tags/numpy/</link>
-    <description>Recent content in numpy on Rafael Tieppo</description>
+    <description>Recent content in Numpy on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 30 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tips for Python - Numpy and Pandas library</title>
       <link>/post/2020_12_30_pandas_tips/</link>
       <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020_12_30_pandas_tips/</guid>
-      <description>Introduction Saving time for cleaning, tidying and processing data is quite useful in data science. It means that you can get more time to analyses and think about solutions.
-If I working Data Science with Python, usually I am using Pandas and Numpy library. It is a great library with a lot smart functions. However, sometimes I forget some functions and write my own functions to solve calculations. For practicing it is cool, but it spends some time.</description>
+      <description>Introduction Saving time for cleaning, tidying and processing data is quite useful in data science. It means that you can get more time to analyses and think about solutions.&#xA;If I working Data Science with Python, usually I am using Pandas and Numpy library. It is a great library with a lot smart functions. However, sometimes I forget some functions and write my own functions to solve calculations. For practicing it is cool, but it spends some time.</description>
     </item>
-    
   </channel>
 </rss>

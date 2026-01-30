@@ -1,127 +1,97 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>geoprocessing on Rafael Tieppo</title>
+    <title>Geoprocessing on Rafael Tieppo</title>
     <link>/tags/geoprocessing/</link>
-    <description>Recent content in geoprocessing on Rafael Tieppo</description>
+    <description>Recent content in Geoprocessing on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 25 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/geoprocessing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/geoprocessing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amazing and simple apps for navigating tracks and other stuff.</title>
+      <link>/post/2026_01_30_app_navigation_p00/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/post/2026_01_30_app_navigation_p00/</guid>
+      <description>Motivation Some times I plan a tracking activity and create a route in QGIS, after I just export as geojson or kml file to use in the mobile. The QField is outstanding, but I would like something more simple, besides it should allow to work off-line.&#xA;After some research I found two options for my issues:&#xA;OsmAnd (Offline Maps &amp;amp; GPS): Best for power users, hikers, and detailed mapping, offering offline topo lines, contours, and 3D terrain.</description>
+    </item>
     <item>
       <title>30DaysOfQGIS – Master QGIS in 30 Days</title>
       <link>/post/2024_05_25_qgis_challenge/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>/post/2024_05_25_qgis_challenge/</guid>
-      <description>Day 1 Introduction and Course Overview From the great spatialthoughts.com, I mean the Ujaval Gandhi and team, this challenge is a really way to improve skills in geoprocessing. I am a quite rusty, so Why not to practice? The goal is to achieve the 30 challenges, maybe I will be late a little bit! Anyway, Lets go!
-The Advanced QGIS (Full Course Material) is here. The Youtube content is Here</description>
+      <description>Day 1 Introduction and Course Overview From the great spatialthoughts.com, I mean the Ujaval Gandhi and team, this challenge is a really way to improve skills in geoprocessing. I am a quite rusty, so Why not to practice? The goal is to achieve the 30 challenges, maybe I will be late a little bit! Anyway, Lets go!&#xA;The Advanced QGIS (Full Course Material) is here. The Youtube content is Here</description>
     </item>
-    
     <item>
       <title>Curso Introdução ao Geoprocessamento com QGIS</title>
       <link>/teaching/2022_09_12_c008_qgis/</link>
       <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>/teaching/2022_09_12_c008_qgis/</guid>
-      <description>Conteúdo e programação Aula 01 - 2022-09-13
-Apresentação do curso; Como estudar; Boas práticas e projeto QGIS Introdução ao geoprocessamento (vetor e raster); Introdução ao sistema de referência de coordenadas (CRS ou DATUM); Detalhes sobre a importação de arquivos de textos; Reprojeção Aula 02 - 2022-09-20
-Centroides, extração de vértices; Manipulação de polígonos; Extração de centroides e vértices; União, divisão, dissolução de polígonos; Geração de pontos no polígono (grid); Interpolação (IDW**; Aula 03 - 2022-09-27</description>
+      <description>Conteúdo e programação Aula 01 - 2022-09-13&#xA;Apresentação do curso; Como estudar; Boas práticas e projeto QGIS Introdução ao geoprocessamento (vetor e raster); Introdução ao sistema de referência de coordenadas (CRS ou DATUM); Detalhes sobre a importação de arquivos de textos; Reprojeção Aula 02 - 2022-09-20&#xA;Centroides, extração de vértices; Manipulação de polígonos; Extração de centroides e vértices; União, divisão, dissolução de polígonos; Geração de pontos no polígono (grid); Interpolação (IDW**; Aula 03 - 2022-09-27</description>
     </item>
-    
     <item>
       <title>SEBAL model by means GRASS and PYTHON SEBAL</title>
       <link>/post/2022_07_13_sebalpy_grass/</link>
       <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>/post/2022_07_13_sebalpy_grass/</guid>
-      <description>Introduction In few words, the Surface Energy Balance Algorithm for Land (SEBAL) is used to predict some hydrological features like evapotranspiration, water deficit, etc. The main creator of SEBAL is Professor Wim G. M. Bastiaanssen (Bastiaanssen et al., 1998) and his method has been validated under several conditions for different locations ((Bastiaanssen, 2000),(Bastiaanssen et al., 2002), (Santos et al., 2010)).
-Around 3 years ago I wrote a code to run the SEBAL, and I still find one or two emails every month asking some doubt about the script (unfortunately I cannot answer all).</description>
+      <description>Introduction In few words, the Surface Energy Balance Algorithm for Land (SEBAL) is used to predict some hydrological features like evapotranspiration, water deficit, etc. The main creator of SEBAL is Professor Wim G. M. Bastiaanssen (Bastiaanssen et al., 1998) and his method has been validated under several conditions for different locations ((Bastiaanssen, 2000),(Bastiaanssen et al., 2002), (Santos et al., 2010)).&#xA;Around 3 years ago I wrote a code to run the SEBAL, and I still find one or two emails every month asking some doubt about the script (unfortunately I cannot answer all).</description>
     </item>
-    
     <item>
       <title>The power of GDAL and OGR</title>
       <link>/post/2022_06_26_powergdalogr_m05/</link>
       <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/post/2022_06_26_powergdalogr_m05/</guid>
-      <description>Módulo 05 Introdução Um dos índices de vegetação utilizados com frequência é o NDVI (índice de vegetação por diferença normalizada) (KRIEGLER et al., 1969), o qual é oriundo das banda infra-vermelho (NIR) próximo e vermelho (RED):
-$$ NDVI = \frac{NIR - RED}{NIR + RED} $$
-Há diversos recursos para a realização dos cálculos do NDVI, entre eles cita-se o QGIS, GRASS, códigos próprios em diversas linguagens de programação, etc. Como mais uma alternativa disponível, e para mostrar a utilização de um script (o que deixa o processo mais prática), este post teve o objetivo de demonstrar um script desenvolvido em Python para o cálculo do NDVI por meio da biblioteca GDAL.</description>
+      <description>Módulo 05 Introdução Um dos índices de vegetação utilizados com frequência é o NDVI (índice de vegetação por diferença normalizada) (KRIEGLER et al., 1969), o qual é oriundo das banda infra-vermelho (NIR) próximo e vermelho (RED):&#xA;$$ NDVI = \frac{NIR - RED}{NIR + RED} $$&#xA;Há diversos recursos para a realização dos cálculos do NDVI, entre eles cita-se o QGIS, GRASS, códigos próprios em diversas linguagens de programação, etc. Como mais uma alternativa disponível, e para mostrar a utilização de um script (o que deixa o processo mais prática), este post teve o objetivo de demonstrar um script desenvolvido em Python para o cálculo do NDVI por meio da biblioteca GDAL.</description>
     </item>
-    
     <item>
       <title>The power of GDAL and OGR</title>
       <link>/post/2022_05_10_powergdalogr_m04/</link>
       <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>/post/2022_05_10_powergdalogr_m04/</guid>
-      <description>Módulo 04 Introdução Usualmente após o download dos arquivos raster, realiza-se recortes das bandas para realizar as análises na área de interesse. Dependendo o número de arquivos que deseja-se fazer o recorte, a atividades pode torna-se cansativa e consumir um tempo significativo. Como trata-se de um processo repetitivo, o objetivo deste post é implementar um script para agilizar o processamento das imagens.
-Material e métodos Entre as possíveis alternativas, uso o método gdal.</description>
+      <description>Módulo 04 Introdução Usualmente após o download dos arquivos raster, realiza-se recortes das bandas para realizar as análises na área de interesse. Dependendo o número de arquivos que deseja-se fazer o recorte, a atividades pode torna-se cansativa e consumir um tempo significativo. Como trata-se de um processo repetitivo, o objetivo deste post é implementar um script para agilizar o processamento das imagens.&#xA;Material e métodos Entre as possíveis alternativas, uso o método gdal.</description>
     </item>
-    
     <item>
       <title>Geo test</title>
       <link>/teaching/2022_01_01_geoprocessing/</link>
       <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
-      
       <guid>/teaching/2022_01_01_geoprocessing/</guid>
-      <description>Professor at State University of Mato Grosso - Agricultural Engineering Department. Geoprocessing
-Graduate level introduction to the concepts of datum, projections, interpolations, data analysis. TGAD852GEOA-194883 Portuguese Advance info click [HERE](http://docente.unemat.br/rafaeltieppo) </description>
+      <description>Professor at State University of Mato Grosso - Agricultural Engineering Department. Geoprocessing&#xA;Graduate level introduction to the concepts of datum, projections, interpolations, data analysis. TGAD852GEOA-194883 Portuguese Advance info click [HERE](http://docente.unemat.br/rafaeltieppo) </description>
     </item>
-    
     <item>
       <title>Criando arquivos WKT (Well Know Text)</title>
       <link>/post/2021_09_11_creating_wkt/</link>
       <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
-      
       <guid>/post/2021_09_11_creating_wkt/</guid>
-      <description>Motivação Tudo começou quando estava tentando abrir um arquivo .shp via GeoPandas (pacote Python) em um McBook (OS BigSur). Ao fazer a leitura do arquivo o seguinte erro era retornado.
-... IllegalArgumentException: geometries must not contain null elements Shell is not a LinearRing Nota: estava testando um McBook, uso sistema operacional Debian, e até o momento não tive este problema.
-Após testar outros pacotes, transformar o arquivo para outros formatos, criar outros ambientes Python, entre outras tentativas, o erro persistia.</description>
+      <description>Motivação Tudo começou quando estava tentando abrir um arquivo .shp via GeoPandas (pacote Python) em um McBook (OS BigSur). Ao fazer a leitura do arquivo o seguinte erro era retornado.&#xA;... IllegalArgumentException: geometries must not contain null elements Shell is not a LinearRing Nota: estava testando um McBook, uso sistema operacional Debian, e até o momento não tive este problema.&#xA;Após testar outros pacotes, transformar o arquivo para outros formatos, criar outros ambientes Python, entre outras tentativas, o erro persistia.</description>
     </item>
-    
     <item>
       <title>The power of GDAL and OGR</title>
       <link>/post/2021_08_26_powergdalogr_m03/</link>
       <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>/post/2021_08_26_powergdalogr_m03/</guid>
       <description>Módulo 03 Introdução Uma dos métodos para conversão dos arquivos vetoriais para outros formatos é utilizar o ogr2ogr. O referido programa é uma ferramenta em linha de comando (CLI) que acompanha o GDAL (Geospatial Data Abstraction Library). Como trata-se de um recurso de linha de comando é possível utilizá-lo diretamente via terminal. Todavia, prefiro fazer um &amp;ldquo;intermédio&amp;rdquo; via script Python. Salienta-se que é possível reaproveitar (adaptar) os códigos apresentados aqui para usar diretamente no terminal.</description>
     </item>
-    
     <item>
       <title>The power of GDAL and OGR</title>
       <link>/post/2021_08_25_powergdalogr_m02/</link>
       <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>/post/2021_08_25_powergdalogr_m02/</guid>
-      <description>Módulo 02 Objetivo A partir de um arquivo vetorial (shape), realizar a reprojeção para outro CRS (DATUM).
-Leitura de arquivo (shape) e reprojeção Importação dos pacotes Inicialmente importar os pacotes
-from osgeo import ogr, osr, gdal Leitura do arquivo vetorial Para abrir o arquivo vetorial, define-se o caminho e o parâmetro 0 ou 1:
-# reading shape shapePath = &amp;#39;./shape/mt_municipios_2020.shp&amp;#39; ds = ogr.Open(shapePath, 1) # 0 means read-only. 1 means writeable # Check to see if shapefile was found.</description>
+      <description>Módulo 02 Objetivo A partir de um arquivo vetorial (shape), realizar a reprojeção para outro CRS (DATUM).&#xA;Leitura de arquivo (shape) e reprojeção Importação dos pacotes Inicialmente importar os pacotes&#xA;from osgeo import ogr, osr, gdal Leitura do arquivo vetorial Para abrir o arquivo vetorial, define-se o caminho e o parâmetro 0 ou 1:&#xA;# reading shape shapePath = &amp;#39;./shape/mt_municipios_2020.shp&amp;#39; ds = ogr.Open(shapePath, 1) # 0 means read-only. 1 means writeable # Check to see if shapefile was found.</description>
     </item>
-    
     <item>
       <title>The power of GDAL and OGR</title>
       <link>/post/2021_08_24_powergdalogr_m01/</link>
       <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>/post/2021_08_24_powergdalogr_m01/</guid>
-      <description>Módulo 01 Objetivo Ler, editar e gravar arquivo vetorial (shape).
-Material e métodos Linux Debian Buster GDAL 2.4.0, released 2018/12/14 Na manipulação e processamento de aquivo vetorial, utilizaremos um arquivo shape com os municípios do estado de MT (Figura 1).
-Figura 1: Arquivo shape do estado de MT com Tabela de Atributos Leitura e gravação de arquivo vetorial (shape) Importação dos pacotes Inicialmente importar os pacotes
-from osgeo import ogr, osr, gdal Leitura do arquivo Para abrir o arquivo vetorial, define-se o caminho e o parâmetro 0 ou 1:</description>
+      <description>Módulo 01 Objetivo Ler, editar e gravar arquivo vetorial (shape).&#xA;Material e métodos Linux Debian Buster GDAL 2.4.0, released 2018/12/14 Na manipulação e processamento de aquivo vetorial, utilizaremos um arquivo shape com os municípios do estado de MT (Figura 1).&#xA;Figura 1: Arquivo shape do estado de MT com Tabela de Atributos Leitura e gravação de arquivo vetorial (shape) Importação dos pacotes Inicialmente importar os pacotes&#xA;from osgeo import ogr, osr, gdal Leitura do arquivo Para abrir o arquivo vetorial, define-se o caminho e o parâmetro 0 ou 1:</description>
     </item>
-    
     <item>
       <title>The power of GDAL and OGR</title>
       <link>/post/2021_08_20_powergdalogr_m00/</link>
       <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>/post/2021_08_20_powergdalogr_m00/</guid>
       <description>Módulo 00 Introdução GDAL é um biblioteca licenciada pela OSGeo (Open Source Geospatial Foundation), desenvolvida em C++, que permite manipular mais de 200 formatos de aquivos matricial (raster) e vetorial. Tratando-se de uma biblioteca, a mesma apresenta um modelo de dados para abstração de arquivos raster e outra para arquivo vetorial, oferecendo uma série de comandos de linha (comandos via terminal) para processamento de dados. Ainda como se não fosse suficiente, possui API para diversas linguagens de programação como: C, C++, Python, Perl, R, C# and Java.</description>
     </item>
-    
   </channel>
 </rss>

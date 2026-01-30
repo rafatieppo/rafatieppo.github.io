@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>org-cal on Rafael Tieppo</title>
+    <title>Org-Cal on Rafael Tieppo</title>
     <link>/tags/org-cal/</link>
-    <description>Recent content in org-cal on Rafael Tieppo</description>
+    <description>Recent content in Org-Cal on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="/tags/org-cal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/org-cal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Integrating emacs org-mode and google calendar</title>
       <link>/post/2018_02_20_emacs_googlecal/</link>
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/2018_02_20_emacs_googlecal/</guid>
       <description>I am an EMACS user and consequently I use the amazing Org mode to plan my schedule and to manage my projects. However I was boring about how I synchronized the .ics file from EMACS and my Google calendar. I spent some minutes in my Google calendar to clear the appointments, and import a new file. So, a while ago I improved my routine. I did know nothing about it.</description>
     </item>
-    
   </channel>
 </rss>

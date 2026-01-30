@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Organic Maps on Rafael Tieppo</title>
+    <link>/tags/organic-maps/</link>
+    <description>Recent content in Organic Maps on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/organic-maps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amazing and simple apps for navigating tracks and other stuff.</title>
+      <link>/post/2026_01_30_app_navigation_p00/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/post/2026_01_30_app_navigation_p00/</guid>
+      <description>Motivation Some times I plan a tracking activity and create a route in QGIS, after I just export as geojson or kml file to use in the mobile. The QField is outstanding, but I would like something more simple, besides it should allow to work off-line.&#xA;After some research I found two options for my issues:&#xA;OsmAnd (Offline Maps &amp;amp; GPS): Best for power users, hikers, and detailed mapping, offering offline topo lines, contours, and 3D terrain.</description>
+    </item>
+  </channel>
+</rss>

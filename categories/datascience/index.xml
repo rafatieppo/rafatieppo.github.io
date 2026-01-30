@@ -1,170 +1,125 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>datascience on Rafael Tieppo</title>
+    <title>Datascience on Rafael Tieppo</title>
     <link>/categories/datascience/</link>
-    <description>Recent content in datascience on Rafael Tieppo</description>
+    <description>Recent content in Datascience on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/datascience/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/datascience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amazing and simple apps for navigating tracks and other stuff.</title>
+      <link>/post/2026_01_30_app_navigation_p00/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/post/2026_01_30_app_navigation_p00/</guid>
+      <description>Motivation Some times I plan a tracking activity and create a route in QGIS, after I just export as geojson or kml file to use in the mobile. The QField is outstanding, but I would like something more simple, besides it should allow to work off-line.&#xA;After some research I found two options for my issues:&#xA;OsmAnd (Offline Maps &amp;amp; GPS): Best for power users, hikers, and detailed mapping, offering offline topo lines, contours, and 3D terrain.</description>
+    </item>
     <item>
       <title>How to Run R Stats Directly in Jupyter Notebook Locally</title>
       <link>/post/2025_05_10_r_jupyter_lab/</link>
       <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
-      
       <guid>/post/2025_05_10_r_jupyter_lab/</guid>
-      <description>Motivation Around 2010, I begun my data science journey with R, after Python. Now days I spend more time in Python, but I am thinking to change my workflow. So, I am trying a new approach.
-Regarding data analysis, people spend most of their time running R R-Studio and Python in Jupyter (jupyter-lab or jupyter-notebook).
-Note: For programming and any other job, as type a text, notes, etc, I work in Emacs.</description>
+      <description>Motivation Around 2010, I begun my data science journey with R, after Python. Now days I spend more time in Python, but I am thinking to change my workflow. So, I am trying a new approach.&#xA;Regarding data analysis, people spend most of their time running R R-Studio and Python in Jupyter (jupyter-lab or jupyter-notebook).&#xA;Note: For programming and any other job, as type a text, notes, etc, I work in Emacs.</description>
     </item>
-    
     <item>
       <title>Computing data in org-mode table by means sql and R</title>
       <link>/post/2025_01_23_emacs_org_tbl_sourcecode/</link>
       <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
-      
       <guid>/post/2025_01_23_emacs_org_tbl_sourcecode/</guid>
-      <description>Usually I prepare some personal reports and some shorts analysis as well. The Jupyter-Notebook is an amazing tool, however sometimes I just wanna a simple plain text. I use EMACS org-mode to organize my agenda and to manage my projects. So, Why not use org-mode tables in EMACS?
-At the begin I thought it was complicate, but actually not. With source code blocks in EMACS is possible to run several languages.</description>
+      <description>Usually I prepare some personal reports and some shorts analysis as well. The Jupyter-Notebook is an amazing tool, however sometimes I just wanna a simple plain text. I use EMACS org-mode to organize my agenda and to manage my projects. So, Why not use org-mode tables in EMACS?&#xA;At the begin I thought it was complicate, but actually not. With source code blocks in EMACS is possible to run several languages.</description>
     </item>
-    
     <item>
       <title>lucyLattes (v1.0.0) um script para manipular dados da plataforma Lattes</title>
       <link>/post/2024_08_17_lucylattes_v100/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>/post/2024_08_17_lucylattes_v100/</guid>
-      <description>O que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o lucyLattes para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão.
-Se estiver interessado na história do lucyLattes: https://rafatieppo.github.io/post/2019_03_13_lucylattes/ .
-Na versão v1.0.0 , as melhorias são:
-Reorganização do código: acredito estar melhor do que antes, pelo menos no que tange a estrutura, organização e por incrível que pareça, no código em si.</description>
+      <description>O que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o lucyLattes para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão.&#xA;Se estiver interessado na história do lucyLattes: https://rafatieppo.github.io/post/2019_03_13_lucylattes/ .&#xA;Na versão v1.0.0 , as melhorias são:&#xA;Reorganização do código: acredito estar melhor do que antes, pelo menos no que tange a estrutura, organização e por incrível que pareça, no código em si.</description>
     </item>
-    
     <item>
       <title>How to upload TCX file from Polar Flow to Garmin Connect</title>
       <link>/post/2022_10_01_tcxfile_polargarm/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/post/2022_10_01_tcxfile_polargarm/</guid>
-      <description>Introduction I used a Garmin 310XT since 2015 and it works very well until now. However I would like to measure some data from my sleep time. Thus I was wondering to buy a new watch.
-My first idea was a Garmin, but the prices in Brazil were a little bit bitter that moment. I made a research and found out some Polar models, and after all I bought a Polar M2.</description>
+      <description>Introduction I used a Garmin 310XT since 2015 and it works very well until now. However I would like to measure some data from my sleep time. Thus I was wondering to buy a new watch.&#xA;My first idea was a Garmin, but the prices in Brazil were a little bit bitter that moment. I made a research and found out some Polar models, and after all I bought a Polar M2.</description>
     </item>
-    
     <item>
       <title>Ambiente virtual em Python</title>
       <link>/post/2021_07_27_python_env/</link>
       <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>/post/2021_07_27_python_env/</guid>
       <description>Um dos objetivos do ambiente virtual é auxiliar no gerenciamento das dependências exigidas nos projetos. Um exemplo prático seria a necessidade de testar um código em uma versão antiga de um determinado pacote (ou biblioteca), sendo que na sua máquina esteja instalada a versão mais recente deste pacote. Para evitar algum possível conflito de versões, e possíveis danos no seu sistema operacional, é possível criar um ambiente virtual que deixará isolado os pacotes antigos necessários.</description>
     </item>
-    
     <item>
       <title>Changes in python objects</title>
       <link>/post/2020_12_31_pythonchanges/</link>
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020_12_31_pythonchanges/</guid>
-      <description>I am enthusiast programmer, thus I am no a professional. I wanna getting better and some times I write some notes to improve my English and programming skills. Certainly you will find some mistakes in the text and programming concepts in this post, I am sorry, I am trying.
-Lets go to what matter now!
-The word change is ambiguous in Python, it means that we have two distinct types of &amp;ldquo;change&amp;rdquo; in Python.</description>
+      <description>I am enthusiast programmer, thus I am no a professional. I wanna getting better and some times I write some notes to improve my English and programming skills. Certainly you will find some mistakes in the text and programming concepts in this post, I am sorry, I am trying.&#xA;Lets go to what matter now!&#xA;The word change is ambiguous in Python, it means that we have two distinct types of &amp;ldquo;change&amp;rdquo; in Python.</description>
     </item>
-    
     <item>
       <title>Tips for Python - Numpy and Pandas library</title>
       <link>/post/2020_12_30_pandas_tips/</link>
       <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020_12_30_pandas_tips/</guid>
-      <description>Introduction Saving time for cleaning, tidying and processing data is quite useful in data science. It means that you can get more time to analyses and think about solutions.
-If I working Data Science with Python, usually I am using Pandas and Numpy library. It is a great library with a lot smart functions. However, sometimes I forget some functions and write my own functions to solve calculations. For practicing it is cool, but it spends some time.</description>
+      <description>Introduction Saving time for cleaning, tidying and processing data is quite useful in data science. It means that you can get more time to analyses and think about solutions.&#xA;If I working Data Science with Python, usually I am using Pandas and Numpy library. It is a great library with a lot smart functions. However, sometimes I forget some functions and write my own functions to solve calculations. For practicing it is cool, but it spends some time.</description>
     </item>
-    
     <item>
       <title>Heat map para diferença de preço médio mensal e anual </title>
       <link>/post/2020_12_17_stocks_diff_yavr_mavr/</link>
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020_12_17_stocks_diff_yavr_mavr/</guid>
-      <description>Nota Este post tem como finalidade APENAS o estudo de análises de variação de preços para fins didáticos. Não trata-se de recomendação ou indicação de investimento. Salienta-se que o código não foi revisado e há possibilidade de haver erros.
-Motivação Em ciências de dados obter e analisar dados é rotina de trabalho. Com finalidade de fixar conteúdo e praticas uma análise simples, este estudo teve como objetivo calcular a diferença entre variação de preço médio mensal e a anual de um ativo.</description>
+      <description>Nota Este post tem como finalidade APENAS o estudo de análises de variação de preços para fins didáticos. Não trata-se de recomendação ou indicação de investimento. Salienta-se que o código não foi revisado e há possibilidade de haver erros.&#xA;Motivação Em ciências de dados obter e analisar dados é rotina de trabalho. Com finalidade de fixar conteúdo e praticas uma análise simples, este estudo teve como objetivo calcular a diferença entre variação de preço médio mensal e a anual de um ativo.</description>
     </item>
-    
     <item>
       <title>PCA analysis and tidy data</title>
       <link>/post/2020_03_21_tidypca/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020_03_21_tidypca/</guid>
-      <description>Introduction PCA (principal components analysis) is multivariate statistical method that concerned with examination of several variables simultaneously. The idea is provide a dimensionality reduction of data sets, finding the most representative variables to explain some phenomenon. Thus the PCA analyses inter-relation among variables and explains them by its inherent dimensions (components). If there is NO correlation among the variables, PCA analysis will not be useful.
-This post is divided in two section.</description>
+      <description>Introduction PCA (principal components analysis) is multivariate statistical method that concerned with examination of several variables simultaneously. The idea is provide a dimensionality reduction of data sets, finding the most representative variables to explain some phenomenon. Thus the PCA analyses inter-relation among variables and explains them by its inherent dimensions (components). If there is NO correlation among the variables, PCA analysis will not be useful.&#xA;This post is divided in two section.</description>
     </item>
-    
     <item>
       <title>Filtering objects from a workdir</title>
       <link>/post/2019_07_08_filterobje/</link>
       <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/2019_07_08_filterobje/</guid>
-      <description>Introduction Usually, if you work with in data science field, you need to create several objects, like list, DataFrame, matrix, etc. Besides, you have to handle some files to read and make copies. For that and other actions, sometime you have to select some objects from your workdir.
-The goal in this post is to show some options about how to filter objects from your workdir.
-Listing and Filtering your objects There are several options to list the objects from a workdir.</description>
+      <description>Introduction Usually, if you work with in data science field, you need to create several objects, like list, DataFrame, matrix, etc. Besides, you have to handle some files to read and make copies. For that and other actions, sometime you have to select some objects from your workdir.&#xA;The goal in this post is to show some options about how to filter objects from your workdir.&#xA;Listing and Filtering your objects There are several options to list the objects from a workdir.</description>
     </item>
-    
     <item>
       <title>lucyLattes (v0.0.0) um script para manipular dados da plataforma Lattes</title>
       <link>/post/2019_03_13_lucylattes/</link>
       <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/2019_03_13_lucylattes/</guid>
-      <description>Estou atualizando este post em 2024-08-17, pois o que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o lucyLattes para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão. Há um novo post sobre a versão nova, inclusive há videos como instalar e usar o lucyLattes no canal do youtube: Rafael Tieppo .
-Aqui deixo um pouco da história, um pouco sobre o relatório de saída, e o site no github: https://github.</description>
+      <description>Estou atualizando este post em 2024-08-17, pois o que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o lucyLattes para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão. Há um novo post sobre a versão nova, inclusive há videos como instalar e usar o lucyLattes no canal do youtube: Rafael Tieppo .&#xA;Aqui deixo um pouco da história, um pouco sobre o relatório de saída, e o site no github: https://github.</description>
     </item>
-    
     <item>
       <title>Python beginner tips</title>
       <link>/post/2018_12_16_pythontips/</link>
       <pubDate>Sun, 16 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/2018_12_16_pythontips/</guid>
-      <description>Introduction I spent around 4 years working with R, and I can say that R is amazing. However, I decided to start a new stage in my professional life, and a need came, a multi proposal language. My option was Python, because It provides have data science tools, and has a huge support for others applications.
-After some months, studying in my free time, I would like to share some code that I learned (from several sources).</description>
+      <description>Introduction I spent around 4 years working with R, and I can say that R is amazing. However, I decided to start a new stage in my professional life, and a need came, a multi proposal language. My option was Python, because It provides have data science tools, and has a huge support for others applications.&#xA;After some months, studying in my free time, I would like to share some code that I learned (from several sources).</description>
     </item>
-    
     <item>
       <title>Julian date with python 3</title>
       <link>/post/2018_12_01_juliandate/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/2018_12_01_juliandate/</guid>
-      <description>Please NOTE
-Regarding some comments in this post, and to avoid any misunderstood, please note that Julian Date is regarding Ordinal Day Calendar :
-Leap years: (2000, 2004, 2008, 2012, 2016, 2020&amp;hellip;)
-Month Day Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 1 1 32 61 92 122 153 183 214 245 275 306 336 2 2 33 62 93 123 154 184 215 246 276 307 337 3 3 34 63 94 124 155 185 216 247 277 308 338 4 4 35 64 95 125 156 186 217 248 278 309 339 5 5 36 65 96 126 157 187 218 249 279 310 340 6 6 37 66 97 127 158 188 219 250 280 311 341 7 7 38 67 98 128 159 189 220 251 281 312 342 8 8 39 68 99 129 160 190 221 252 282 313 343 9 9 40 69 100 130 161 191 222 253 283 314 344 10 10 41 70 101 131 162 192 223 254 284 315 345 11 11 42 71 102 132 163 193 224 255 285 316 346 12 12 43 72 103 133 164 194 225 256 286 317 347 13 13 44 73 104 134 165 195 226 257 287 318 348 14 14 45 74 105 135 166 196 227 258 288 319 349 15 15 46 75 106 136 167 197 228 259 289 320 350 16 16 47 76 107 137 168 198 229 260 290 321 351 17 17 48 77 108 138 169 199 230 261 291 322 352 18 18 49 78 109 139 170 200 231 262 292 323 353 19 19 50 79 110 140 171 201 232 263 293 324 354 20 20 51 80 111 141 172 202 233 264 294 325 355 21 21 52 81 112 142 173 203 234 265 295 326 356 22 22 53 82 113 143 174 204 235 266 296 327 357 23 23 54 83 114 144 175 205 236 267 297 328 358 24 24 55 84 115 145 176 206 237 268 298 329 359 25 25 56 85 116 146 177 207 238 269 299 330 360 26 26 57 86 117 147 178 208 239 270 300 331 361 27 27 58 87 118 148 179 209 240 271 301 332 362 28 28 59 88 119 149 180 210 241 272 302 333 363 29 29 60 89 120 150 181 211 242 273 303 334 364 30 30 90 121 151 182 212 243 274 304 335 365 31 31 91 152 213 244 305 366 Regular years: (2001-2003, 2005-2007, 2009-2011, 2013-2015&amp;hellip;)</description>
+      <description>Please NOTE&#xA;Regarding some comments in this post, and to avoid any misunderstood, please note that Julian Date is regarding Ordinal Day Calendar :&#xA;Leap years: (2000, 2004, 2008, 2012, 2016, 2020&amp;hellip;)&#xA;Month Day Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 1 1 32 61 92 122 153 183 214 245 275 306 336 2 2 33 62 93 123 154 184 215 246 276 307 337 3 3 34 63 94 124 155 185 216 247 277 308 338 4 4 35 64 95 125 156 186 217 248 278 309 339 5 5 36 65 96 126 157 187 218 249 279 310 340 6 6 37 66 97 127 158 188 219 250 280 311 341 7 7 38 67 98 128 159 189 220 251 281 312 342 8 8 39 68 99 129 160 190 221 252 282 313 343 9 9 40 69 100 130 161 191 222 253 283 314 344 10 10 41 70 101 131 162 192 223 254 284 315 345 11 11 42 71 102 132 163 193 224 255 285 316 346 12 12 43 72 103 133 164 194 225 256 286 317 347 13 13 44 73 104 134 165 195 226 257 287 318 348 14 14 45 74 105 135 166 196 227 258 288 319 349 15 15 46 75 106 136 167 197 228 259 289 320 350 16 16 47 76 107 137 168 198 229 260 290 321 351 17 17 48 77 108 138 169 199 230 261 291 322 352 18 18 49 78 109 139 170 200 231 262 292 323 353 19 19 50 79 110 140 171 201 232 263 293 324 354 20 20 51 80 111 141 172 202 233 264 294 325 355 21 21 52 81 112 142 173 203 234 265 295 326 356 22 22 53 82 113 143 174 204 235 266 296 327 357 23 23 54 83 114 144 175 205 236 267 297 328 358 24 24 55 84 115 145 176 206 237 268 298 329 359 25 25 56 85 116 146 177 207 238 269 299 330 360 26 26 57 86 117 147 178 208 239 270 300 331 361 27 27 58 87 118 148 179 209 240 271 301 332 362 28 28 59 88 119 149 180 210 241 272 302 333 363 29 29 60 89 120 150 181 211 242 273 303 334 364 30 30 90 121 151 182 212 243 274 304 335 365 31 31 91 152 213 244 305 366 Regular years: (2001-2003, 2005-2007, 2009-2011, 2013-2015&amp;hellip;)</description>
     </item>
-    
     <item>
       <title>Histogram and Barplot with Python</title>
       <link>/post/2018_11_26_barhistpy/</link>
       <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/2018_11_26_barhistpy/</guid>
-      <description>Introduction Some people make a small confusion with histogram and barplots. So in this post we intend to provide some points about both of them.
-Let&amp;rsquo;s supose that we have a sample from 200 persons, and we need to check the age distribution, so we can produce a histogram (Figure 1).
-# creating data DF = pd.DataFrame({&amp;#34;A&amp;#34; : np.random.normal(30, 0.75, 200)}) # plot plt.figure(figsize=(8, 5)) plt.hist(DF[&amp;#34;A&amp;#34;], bins = 10, color=&amp;#39;steelblue&amp;#39;, alpha = 0.</description>
+      <description>Introduction Some people make a small confusion with histogram and barplots. So in this post we intend to provide some points about both of them.&#xA;Let&amp;rsquo;s supose that we have a sample from 200 persons, and we need to check the age distribution, so we can produce a histogram (Figure 1).&#xA;# creating data DF = pd.DataFrame({&amp;#34;A&amp;#34; : np.random.normal(30, 0.75, 200)}) # plot plt.figure(figsize=(8, 5)) plt.hist(DF[&amp;#34;A&amp;#34;], bins = 10, color=&amp;#39;steelblue&amp;#39;, alpha = 0.</description>
     </item>
-    
     <item>
       <title>Ordenar dados INMET</title>
       <link>/post/141211_inmetdataorder/</link>
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
-      
       <guid>/post/141211_inmetdataorder/</guid>
-      <description>Introdução Em algum momento da graduação ou pós-graduação, você já trabalhou com séries históricas de clima. No seu estudo, provavelmente você se deparou com o desafio de organizar e analisar, arquivos que comumente atingem 10000 linhas.
-Uma das fontes mais comuns para obtenção de dados climáticos é o INMET. Contudo, os arquivos que são obtidos pelo site do INMET, não possuem uma formatação das mais práticas (Figura 1).
-Repare que para cada dia registrado duas linhas são ocupadas.</description>
+      <description>Introdução Em algum momento da graduação ou pós-graduação, você já trabalhou com séries históricas de clima. No seu estudo, provavelmente você se deparou com o desafio de organizar e analisar, arquivos que comumente atingem 10000 linhas.&#xA;Uma das fontes mais comuns para obtenção de dados climáticos é o INMET. Contudo, os arquivos que são obtidos pelo site do INMET, não possuem uma formatação das mais práticas (Figura 1).&#xA;Repare que para cada dia registrado duas linhas são ocupadas.</description>
     </item>
-    
   </channel>
 </rss>

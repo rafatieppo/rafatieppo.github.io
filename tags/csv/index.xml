@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>csv on Rafael Tieppo</title>
+    <title>Csv on Rafael Tieppo</title>
     <link>/tags/csv/</link>
-    <description>Recent content in csv on Rafael Tieppo</description>
+    <description>Recent content in Csv on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 10 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="/tags/csv/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 May 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/csv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Converter lista com data.frame(s) em um data.frame</title>
       <link>/post/170510_bind_rows/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>/post/170510_bind_rows/</guid>
-      <description>Introdução Trabalhando com banco de dados, em algum momento torna-se necessária a extração de determininados elementos que satisfaçam um dada condição. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.
-Estudo de caso Vamos supor que você tenha um data.frame com três tratamentos e quatro repetições
-DF &amp;lt;- data.frame(BLOCO = rep(seq(1,4), each = 12), TRAT=rep(c(&amp;#34;T1&amp;#34;, &amp;#34;T2&amp;#34;, &amp;#34;T3&amp;#34;), each = 4), REP = seq(1,4), Z = rnorm(48, 30, 2.</description>
+      <description>Introdução Trabalhando com banco de dados, em algum momento torna-se necessária a extração de determininados elementos que satisfaçam um dada condição. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.&#xA;Estudo de caso Vamos supor que você tenha um data.frame com três tratamentos e quatro repetições&#xA;DF &amp;lt;- data.frame(BLOCO = rep(seq(1,4), each = 12), TRAT=rep(c(&amp;#34;T1&amp;#34;, &amp;#34;T2&amp;#34;, &amp;#34;T3&amp;#34;), each = 4), REP = seq(1,4), Z = rnorm(48, 30, 2.</description>
     </item>
-    
     <item>
       <title>Lendo e armazenando uma série de arquivos</title>
       <link>/post/170514_reading_files/</link>
       <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>/post/170514_reading_files/</guid>
-      <description>Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.
-Estudo de caso I Vamos supor que você tenha uma série de arquivos no formato .</description>
+      <description>Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.&#xA;Estudo de caso I Vamos supor que você tenha uma série de arquivos no formato .</description>
     </item>
-    
   </channel>
 </rss>

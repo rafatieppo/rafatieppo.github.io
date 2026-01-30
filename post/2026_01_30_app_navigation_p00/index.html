@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="
+
+app phone for navigatin and deal with GeoJson or KML files">
+  <meta name="generator" content="Hugo 0.123.7">
+
+  <title>Amazing and simple apps for navigating tracks and other stuff. &middot; Rafael Tieppo</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7506711413537626" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">RafaTieppo</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/project/"><i class='fa fa-briefcase fa-fw'></i>Project</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/teaching/"><i class='fa fa-graduation-cap fa-fw'></i>Teaching</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/rafaeltieppo" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://researchgate.net/profile/Rafael-Tieppo" rel="me" target="_blank"><i class="ai ai-researchgate-square ai-1x"></i>researchgate</a>
+    </li>
+    
+    
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://orcid.org/0000-0001-8132-4813" rel="me" target="_blank"><i class="ai ai-orcid-square ai-1x"></i>orcid</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://scholar.google.com/citations?user=ClN1Q6AAAAAJ" rel="me" target="_blank"><i class="ai ai-google-scholar ai-1x"></i>google-scholar</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/rafatieppo" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/3109019/rafa" rel="me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2021 <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Licensed CC:By-NC-SA</a></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Amazing and simple apps for navigating tracks and other stuff.</h1>
+  <h2>app phone for navigatin and deal with GeoJson or KML files</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>2026-01-30</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/gnss">GNSS</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/gps">GPS</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/geojson">geojson</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/kml">kml</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/geoprocessing">Geoprocessing</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/organic-maps">Organic Maps</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/osmand">OsmAnd</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <h1 id="motivation">Motivation</h1>
+<p>Some times I plan a tracking activity and create a route in <em>QGIS</em>, after I just export as <code>geojson</code> or <code>kml</code> file to use in the mobile. The <a href="https://qfield.org/">QField</a> is outstanding, but I would like something more simple, besides it should allow to work off-line.</p>
+<p>After some research I found two options for my issues:</p>
+<ul>
+<li>
+<p><a href="https://osmand.net/">OsmAnd (Offline Maps &amp; GPS)</a>: Best for power users, hikers, and detailed mapping, offering offline topo lines, contours, and 3D terrain. The free version allows limited map downloads, while the full version provides unlimited, with excellent offline search, routing, and GPX track recording.</p>
+</li>
+<li>
+<p><a href="https://organicmaps.app/">Organic Maps</a>: An open-source, fast, and privacy-focused app. It is highly intuitive, 100% offline-capable, and excels at detailed hiking trails and cycling paths</p>
+</li>
+</ul>
+<h1 id="here-a-simple-comparation">Here a simple comparation:</h1>
+<h2 id="-organic-maps">🍃 Organic Maps</h2>
+<p><strong>Tagline:</strong> &ldquo;Keep it simple and fast.&rdquo;
+<strong>Best for:</strong> Daily commuting, light travelers</p>
+<h3 id="features">Features</h3>
+<ul>
+<li><strong>Lightning Fast:</strong> Uses a specialized map format that renders zooming and routing significantly faster than most competitors.</li>
+<li><strong>Minimalist UI:</strong> Extremely clean and intuitive; no steep learning curve or cluttered menus.</li>
+<li><strong>Battery Efficient:</strong> Optimized for low power consumption, making it ideal for long trips without a charger.</li>
+<li><strong>Truly 100% Free:</strong> No ads, no tracking, and no features locked behind a &ldquo;Pro&rdquo; subscription.</li>
+<li><strong>Limited Detail:</strong> Shows fewer map data points (like fire hydrants or benches) compared to the &ldquo;everything&rdquo; approach of OsmAnd.</li>
+<li><strong>Basic Customization:</strong> You cannot change map styles, layers, or technical overlays.</li>
+<li><strong>OS:</strong> Android / IOS</li>
+</ul>
+<h2 id="-osmand">🛠️ OsmAnd</h2>
+<p><strong>Tagline:</strong> &ldquo;The Swiss Army knife of mapping.&rdquo;
+<strong>Best for:</strong> Power users, hikers, off-roaders, and professional drivers.</p>
+<h3 id="features-1">Features</h3>
+<ul>
+<li><strong>Incredible Detail:</strong> Displays almost every piece of data available on OpenStreetMap, including opening hours, accessibility, and niche POIs.</li>
+<li><strong>Extreme Customization:</strong> Configure everything from icon sizes to unique vehicle profiles (RV, Truck, Motorcycle, etc.).</li>
+<li><strong>Advanced Outdoor Tools:</strong> Includes contour lines, hillshading, nautical charts, ski maps, and depth contours.</li>
+<li><strong>GPX Management:</strong> The industry gold standard for recording, importing, and following complex GPS tracks.</li>
+<li><strong>Steep Learning Curve:</strong> The menu system is famously complex and can take weeks to fully master.</li>
+<li><strong>Performance Heavy:</strong> Can feel &ldquo;laggy&rdquo; or slow to render maps on older or mid-range hardware.</li>
+<li><strong>Freemium Model:</strong> many advanced features (unlimited downloads, 3D, terrain) require a paid subscription.</li>
+<li><strong>Cluttered UI:</strong> The interface can become overwhelming due to the sheer number of buttons and options visible at once.</li>
+<li><strong>OS:</strong> Android / IOS</li>
+</ul>
+<h1 id="final-verdict">Final Verdict</h1>
+<ul>
+<li>For now and my needs, I choosed <strong>Organic Maps</strong>, I was looking for a reliable, fast app that &ldquo;just works&rdquo;. In the future, I may try<strong>OsmAnd</strong> for extra functions.</li>
+</ul>
+<h1 id="how-to-use">How to use</h1>
+<p>In my case, I found the instructions on: <a href="https://organicmaps.app/faq/bookmarks/how-to-import/">https://organicmaps.app/faq/bookmarks/how-to-import/</a>. For extra informations: <a href="https://organicmaps.app/faq/">https://organicmaps.app/faq/</a>.</p>
+<p>You can import bookmarks and/or tracks sent from Organic Maps or third party apps if they export bookmarks in KML, KMZ, KMB, GPX or GeoJSON (JSON) formats.</p>
+<ul>
+<li>To import a single file:</li>
+</ul>
+<p>Locate downloaded or shared KML, KMZ, KMB, GPX, GeoJSON (JSON) file sent by email, instant messenger or cloud storage, for example, iCloud or Google Drive.
+Tap once or tap and hold the KML, KMZ, KMB, GPX, GeoJSON (JSON) file and choose &ldquo;Open with Organic Maps&rdquo; (Android) or &ldquo;Import with Organic Maps&rdquo; (an icon with a square box and an arrow on iOS) in the pop-up window.
+Organic Maps should be launched, and you should see &ldquo;Bookmarks loaded successfully!&rdquo; message. You can see imported Bookmarks and/or Tracks on the map and on the &ldquo;Bookmarks and Tracks&rdquo; screen.</p>
+<ul>
+<li>Importing bookmarks and tracks in batch is also possible:</li>
+</ul>
+<p>Open Organic Maps and tap &ldquo;stars with dots&rdquo; button to open bookmarks and tracks. Press &ldquo;Import Bookmarks and Tracks&rdquo; button.
+Select a folder with KML, KMZ, KMB, GPX, GeoJSON (JSON) files. On Android, Organic Maps will scan it including subfolders and import all supported files with bookmarks and tracks. You can choose root folder to search over all storage.</p>
+
+  
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2f2026_01_30_app_navigation_p00%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2f2026_01_30_app_navigation_p00%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=%2fpost%2f2026_01_30_app_navigation_p00%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2f2026_01_30_app_navigation_p00%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2f2026_01_30_app_navigation_p00%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=%2fpost%2f2026_01_30_app_navigation_p00%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/2025_05_10_r_jupyter_lab/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/2025_05_10_r_jupyter_lab/">How to Run R Stats Directly in Jupyter Notebook Locally</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+  
+  
+  
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-rafatieppo-github-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+<script src="/js/menus.js"></script>
+
+
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-33432733-8', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+

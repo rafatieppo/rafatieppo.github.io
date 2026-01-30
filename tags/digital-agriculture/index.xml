@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>digital agriculture on Rafael Tieppo</title>
+    <title>Digital Agriculture on Rafael Tieppo</title>
     <link>/tags/digital-agriculture/</link>
-    <description>Recent content in digital agriculture on Rafael Tieppo</description>
+    <description>Recent content in Digital Agriculture on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 06 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="/tags/digital-agriculture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/digital-agriculture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SEBAL model by means GRASS and PYTHON</title>
       <link>/project/2018-07-06-portfolio_05_sebal/</link>
       <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/project/2018-07-06-portfolio_05_sebal/</guid>
-      <description>SEBAL model by means GRASS and PYTHON O modelo SEBAL ((Surface Energy Balance Algorithm for Land) utiliza o balanço de energia da superfície terrestre para a realizar a predição de algumas características hidrológicas (evapotranspiração, deficit de água, etc)). O principal criador do referido modelo é o Professor Wim G. M. Bastiaanssen (Bastiaanssen et al., 1998).
-Para maiores detalhes e download, acesse a página do código em: https://rafatieppo.github.io/sebal/.</description>
+      <description>SEBAL model by means GRASS and PYTHON O modelo SEBAL ((Surface Energy Balance Algorithm for Land) utiliza o balanço de energia da superfície terrestre para a realizar a predição de algumas características hidrológicas (evapotranspiração, deficit de água, etc)). O principal criador do referido modelo é o Professor Wim G. M. Bastiaanssen (Bastiaanssen et al., 1998).&#xA;Para maiores detalhes e download, acesse a página do código em: https://rafatieppo.github.io/sebal/.</description>
     </item>
-    
   </channel>
 </rss>

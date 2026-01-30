@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>regex on Rafael Tieppo</title>
+    <title>Regex on Rafael Tieppo</title>
     <link>/tags/regex/</link>
-    <description>Recent content in regex on Rafael Tieppo</description>
+    <description>Recent content in Regex on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 25 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/regex/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/regex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>30DaysOfQGIS – Master QGIS in 30 Days</title>
       <link>/post/2024_05_25_qgis_challenge/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>/post/2024_05_25_qgis_challenge/</guid>
-      <description>Day 1 Introduction and Course Overview From the great spatialthoughts.com, I mean the Ujaval Gandhi and team, this challenge is a really way to improve skills in geoprocessing. I am a quite rusty, so Why not to practice? The goal is to achieve the 30 challenges, maybe I will be late a little bit! Anyway, Lets go!
-The Advanced QGIS (Full Course Material) is here. The Youtube content is Here</description>
+      <description>Day 1 Introduction and Course Overview From the great spatialthoughts.com, I mean the Ujaval Gandhi and team, this challenge is a really way to improve skills in geoprocessing. I am a quite rusty, so Why not to practice? The goal is to achieve the 30 challenges, maybe I will be late a little bit! Anyway, Lets go!&#xA;The Advanced QGIS (Full Course Material) is here. The Youtube content is Here</description>
     </item>
-    
     <item>
       <title>How to upload TCX file from Polar Flow to Garmin Connect</title>
       <link>/post/2022_10_01_tcxfile_polargarm/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>/post/2022_10_01_tcxfile_polargarm/</guid>
-      <description>Introduction I used a Garmin 310XT since 2015 and it works very well until now. However I would like to measure some data from my sleep time. Thus I was wondering to buy a new watch.
-My first idea was a Garmin, but the prices in Brazil were a little bit bitter that moment. I made a research and found out some Polar models, and after all I bought a Polar M2.</description>
+      <description>Introduction I used a Garmin 310XT since 2015 and it works very well until now. However I would like to measure some data from my sleep time. Thus I was wondering to buy a new watch.&#xA;My first idea was a Garmin, but the prices in Brazil were a little bit bitter that moment. I made a research and found out some Polar models, and after all I bought a Polar M2.</description>
     </item>
-    
   </channel>
 </rss>

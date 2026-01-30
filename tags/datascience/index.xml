@@ -1,117 +1,83 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>datascience on Rafael Tieppo</title>
+    <title>Datascience on Rafael Tieppo</title>
     <link>/tags/datascience/</link>
-    <description>Recent content in datascience on Rafael Tieppo</description>
+    <description>Recent content in Datascience on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/datascience/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/datascience/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Run R Stats Directly in Jupyter Notebook Locally</title>
       <link>/post/2025_05_10_r_jupyter_lab/</link>
       <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
-      
       <guid>/post/2025_05_10_r_jupyter_lab/</guid>
-      <description>Motivation Around 2010, I begun my data science journey with R, after Python. Now days I spend more time in Python, but I am thinking to change my workflow. So, I am trying a new approach.
-Regarding data analysis, people spend most of their time running R R-Studio and Python in Jupyter (jupyter-lab or jupyter-notebook).
-Note: For programming and any other job, as type a text, notes, etc, I work in Emacs.</description>
+      <description>Motivation Around 2010, I begun my data science journey with R, after Python. Now days I spend more time in Python, but I am thinking to change my workflow. So, I am trying a new approach.&#xA;Regarding data analysis, people spend most of their time running R R-Studio and Python in Jupyter (jupyter-lab or jupyter-notebook).&#xA;Note: For programming and any other job, as type a text, notes, etc, I work in Emacs.</description>
     </item>
-    
     <item>
       <title>Computing data in org-mode table by means sql and R</title>
       <link>/post/2025_01_23_emacs_org_tbl_sourcecode/</link>
       <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
-      
       <guid>/post/2025_01_23_emacs_org_tbl_sourcecode/</guid>
-      <description>Usually I prepare some personal reports and some shorts analysis as well. The Jupyter-Notebook is an amazing tool, however sometimes I just wanna a simple plain text. I use EMACS org-mode to organize my agenda and to manage my projects. So, Why not use org-mode tables in EMACS?
-At the begin I thought it was complicate, but actually not. With source code blocks in EMACS is possible to run several languages.</description>
+      <description>Usually I prepare some personal reports and some shorts analysis as well. The Jupyter-Notebook is an amazing tool, however sometimes I just wanna a simple plain text. I use EMACS org-mode to organize my agenda and to manage my projects. So, Why not use org-mode tables in EMACS?&#xA;At the begin I thought it was complicate, but actually not. With source code blocks in EMACS is possible to run several languages.</description>
     </item>
-    
     <item>
       <title>lucyLattes (v1.0.0) um script para manipular dados da plataforma Lattes</title>
       <link>/post/2024_08_17_lucylattes_v100/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>/post/2024_08_17_lucylattes_v100/</guid>
-      <description>O que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o lucyLattes para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão.
-Se estiver interessado na história do lucyLattes: https://rafatieppo.github.io/post/2019_03_13_lucylattes/ .
-Na versão v1.0.0 , as melhorias são:
-Reorganização do código: acredito estar melhor do que antes, pelo menos no que tange a estrutura, organização e por incrível que pareça, no código em si.</description>
+      <description>O que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o lucyLattes para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão.&#xA;Se estiver interessado na história do lucyLattes: https://rafatieppo.github.io/post/2019_03_13_lucylattes/ .&#xA;Na versão v1.0.0 , as melhorias são:&#xA;Reorganização do código: acredito estar melhor do que antes, pelo menos no que tange a estrutura, organização e por incrível que pareça, no código em si.</description>
     </item>
-    
     <item>
       <title>Changes in python objects</title>
       <link>/post/2020_12_31_pythonchanges/</link>
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020_12_31_pythonchanges/</guid>
-      <description>I am enthusiast programmer, thus I am no a professional. I wanna getting better and some times I write some notes to improve my English and programming skills. Certainly you will find some mistakes in the text and programming concepts in this post, I am sorry, I am trying.
-Lets go to what matter now!
-The word change is ambiguous in Python, it means that we have two distinct types of &amp;ldquo;change&amp;rdquo; in Python.</description>
+      <description>I am enthusiast programmer, thus I am no a professional. I wanna getting better and some times I write some notes to improve my English and programming skills. Certainly you will find some mistakes in the text and programming concepts in this post, I am sorry, I am trying.&#xA;Lets go to what matter now!&#xA;The word change is ambiguous in Python, it means that we have two distinct types of &amp;ldquo;change&amp;rdquo; in Python.</description>
     </item>
-    
     <item>
       <title>Tips for Python - Numpy and Pandas library</title>
       <link>/post/2020_12_30_pandas_tips/</link>
       <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020_12_30_pandas_tips/</guid>
-      <description>Introduction Saving time for cleaning, tidying and processing data is quite useful in data science. It means that you can get more time to analyses and think about solutions.
-If I working Data Science with Python, usually I am using Pandas and Numpy library. It is a great library with a lot smart functions. However, sometimes I forget some functions and write my own functions to solve calculations. For practicing it is cool, but it spends some time.</description>
+      <description>Introduction Saving time for cleaning, tidying and processing data is quite useful in data science. It means that you can get more time to analyses and think about solutions.&#xA;If I working Data Science with Python, usually I am using Pandas and Numpy library. It is a great library with a lot smart functions. However, sometimes I forget some functions and write my own functions to solve calculations. For practicing it is cool, but it spends some time.</description>
     </item>
-    
     <item>
       <title>PCA analysis and tidy data</title>
       <link>/post/2020_03_21_tidypca/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020_03_21_tidypca/</guid>
-      <description>Introduction PCA (principal components analysis) is multivariate statistical method that concerned with examination of several variables simultaneously. The idea is provide a dimensionality reduction of data sets, finding the most representative variables to explain some phenomenon. Thus the PCA analyses inter-relation among variables and explains them by its inherent dimensions (components). If there is NO correlation among the variables, PCA analysis will not be useful.
-This post is divided in two section.</description>
+      <description>Introduction PCA (principal components analysis) is multivariate statistical method that concerned with examination of several variables simultaneously. The idea is provide a dimensionality reduction of data sets, finding the most representative variables to explain some phenomenon. Thus the PCA analyses inter-relation among variables and explains them by its inherent dimensions (components). If there is NO correlation among the variables, PCA analysis will not be useful.&#xA;This post is divided in two section.</description>
     </item>
-    
     <item>
       <title>Filtering objects from a workdir</title>
       <link>/post/2019_07_08_filterobje/</link>
       <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/2019_07_08_filterobje/</guid>
-      <description>Introduction Usually, if you work with in data science field, you need to create several objects, like list, DataFrame, matrix, etc. Besides, you have to handle some files to read and make copies. For that and other actions, sometime you have to select some objects from your workdir.
-The goal in this post is to show some options about how to filter objects from your workdir.
-Listing and Filtering your objects There are several options to list the objects from a workdir.</description>
+      <description>Introduction Usually, if you work with in data science field, you need to create several objects, like list, DataFrame, matrix, etc. Besides, you have to handle some files to read and make copies. For that and other actions, sometime you have to select some objects from your workdir.&#xA;The goal in this post is to show some options about how to filter objects from your workdir.&#xA;Listing and Filtering your objects There are several options to list the objects from a workdir.</description>
     </item>
-    
     <item>
       <title>lucyLattes (v0.0.0) um script para manipular dados da plataforma Lattes</title>
       <link>/post/2019_03_13_lucylattes/</link>
       <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/2019_03_13_lucylattes/</guid>
-      <description>Estou atualizando este post em 2024-08-17, pois o que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o lucyLattes para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão. Há um novo post sobre a versão nova, inclusive há videos como instalar e usar o lucyLattes no canal do youtube: Rafael Tieppo .
-Aqui deixo um pouco da história, um pouco sobre o relatório de saída, e o site no github: https://github.</description>
+      <description>Estou atualizando este post em 2024-08-17, pois o que eu achava algo improvável aconteceu. Como outras pessoas estão utilizando o lucyLattes para analisar currículos, resolvi trabalhar em uma nova versão (v1.0.0), e aos poucos estou atualizando a nova versão. Há um novo post sobre a versão nova, inclusive há videos como instalar e usar o lucyLattes no canal do youtube: Rafael Tieppo .&#xA;Aqui deixo um pouco da história, um pouco sobre o relatório de saída, e o site no github: https://github.</description>
     </item>
-    
     <item>
       <title>Python beginner tips</title>
       <link>/post/2018_12_16_pythontips/</link>
       <pubDate>Sun, 16 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/2018_12_16_pythontips/</guid>
-      <description>Introduction I spent around 4 years working with R, and I can say that R is amazing. However, I decided to start a new stage in my professional life, and a need came, a multi proposal language. My option was Python, because It provides have data science tools, and has a huge support for others applications.
-After some months, studying in my free time, I would like to share some code that I learned (from several sources).</description>
+      <description>Introduction I spent around 4 years working with R, and I can say that R is amazing. However, I decided to start a new stage in my professional life, and a need came, a multi proposal language. My option was Python, because It provides have data science tools, and has a huge support for others applications.&#xA;After some months, studying in my free time, I would like to share some code that I learned (from several sources).</description>
     </item>
-    
     <item>
       <title>Lendo e armazenando uma série de arquivos</title>
       <link>/post/170514_reading_files/</link>
       <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>/post/170514_reading_files/</guid>
-      <description>Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.
-Estudo de caso I Vamos supor que você tenha uma série de arquivos no formato .</description>
+      <description>Introdução Com frequência há necessidade de acessarmos uma série arquivos para gerar um banco de dados. Quando se tem dois ou três arquivos, pode-se dizer que escrever algumas linhas não demora. Contudo, quando se tem mais de três arquivos, seja ele .csv, .dat, etc., gasta-se tempo que poderia ser investido em outra ação. Na linguagem R, uma das opções de se realizar esta operação é a utilização de listas.&#xA;Estudo de caso I Vamos supor que você tenha uma série de arquivos no formato .</description>
     </item>
-    
   </channel>
 </rss>

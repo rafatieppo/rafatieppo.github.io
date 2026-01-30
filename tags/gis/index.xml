@@ -7,26 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 25 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/gis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/gis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>30DaysOfQGIS – Master QGIS in 30 Days</title>
       <link>/post/2024_05_25_qgis_challenge/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>/post/2024_05_25_qgis_challenge/</guid>
-      <description>Day 1 Introduction and Course Overview From the great spatialthoughts.com, I mean the Ujaval Gandhi and team, this challenge is a really way to improve skills in geoprocessing. I am a quite rusty, so Why not to practice? The goal is to achieve the 30 challenges, maybe I will be late a little bit! Anyway, Lets go!
-The Advanced QGIS (Full Course Material) is here. The Youtube content is Here</description>
+      <description>Day 1 Introduction and Course Overview From the great spatialthoughts.com, I mean the Ujaval Gandhi and team, this challenge is a really way to improve skills in geoprocessing. I am a quite rusty, so Why not to practice? The goal is to achieve the 30 challenges, maybe I will be late a little bit! Anyway, Lets go!&#xA;The Advanced QGIS (Full Course Material) is here. The Youtube content is Here</description>
     </item>
-    
     <item>
       <title>Livro Mapas de Produtividade em AP com QGIS</title>
       <link>/project/2020-05-22-portfolio_05_bookyieldmap/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>/project/2020-05-22-portfolio_05_bookyieldmap/</guid>
-      <description>Antes de iniciar a leitura deste material, acho no mínimo interessante você saber o porquê está fazendo isto. Qual seria a importância de aprender a processar, gerar e analisar dados de mapas de produtividade de grãos?
-Se você se interessou por este material, provavelmente é um profissional ligado à agricultura, um entusiasta, ou ainda um possível curioso (no bom sentido), e talvez não tenha clareza do assunto em questão. Para iniciarmos as justificativas do porquê ler este material, vamos iniciar com conceitos.</description>
+      <description>Antes de iniciar a leitura deste material, acho no mínimo interessante você saber o porquê está fazendo isto. Qual seria a importância de aprender a processar, gerar e analisar dados de mapas de produtividade de grãos?&#xA;Se você se interessou por este material, provavelmente é um profissional ligado à agricultura, um entusiasta, ou ainda um possível curioso (no bom sentido), e talvez não tenha clareza do assunto em questão. Para iniciarmos as justificativas do porquê ler este material, vamos iniciar com conceitos.</description>
     </item>
-    
   </channel>
 </rss>

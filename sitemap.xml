@@ -2,13 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2025-05-10T00:00:00+00:00</lastmod>
+    <loc>/post/2026_01_30_app_navigation_p00/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/datascience/</loc>
-    <lastmod>2025-05-10T00:00:00+00:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/datascience/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/geojson/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/geoprocessing/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/gnss/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/gps/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/kml/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/organic-maps/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/osmand/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/datascience/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/2025_05_10_r_jupyter_lab/</loc>
@@ -20,19 +53,10 @@
     <loc>/tags/jupyter-notebook/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
-    <lastmod>2025-05-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/r/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/r-stats/</loc>
-    <lastmod>2025-05-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2025-05-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2025-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/2025_01_23_emacs_org_tbl_sourcecode/</loc>
@@ -72,9 +96,6 @@
     <lastmod>2024-05-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/2024_05_25_qgis_challenge/</loc>
-    <lastmod>2024-05-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/geoprocessing/</loc>
     <lastmod>2024-05-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/geoprocessing/</loc>

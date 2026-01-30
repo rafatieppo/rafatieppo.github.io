@@ -7,87 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>datascience</title>
+      <title>Datascience</title>
       <link>/categories/datascience/</link>
-      <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
-      
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
       <guid>/categories/datascience/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>geoprocessing</title>
+      <title>Geoprocessing</title>
       <link>/categories/geoprocessing/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>/categories/geoprocessing/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>python</title>
+      <title>Python</title>
       <link>/categories/python/</link>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>/categories/python/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>science</title>
+      <title>Science</title>
       <link>/categories/science/</link>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
-      
       <guid>/categories/science/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>teaching</title>
+      <title>Teaching</title>
       <link>/categories/teaching/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/teaching/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>computer and eletronics</title>
+      <title>Computer and Eletronics</title>
       <link>/categories/computer-and-eletronics/</link>
       <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/computer-and-eletronics/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>programming</title>
+      <title>Programming</title>
       <link>/categories/programming/</link>
       <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/categories/programming/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>emacs</title>
+      <title>Emacs</title>
       <link>/categories/emacs/</link>
       <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>/categories/emacs/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>R</title>
       <link>/categories/r/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>/categories/r/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

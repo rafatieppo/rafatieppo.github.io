@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>matplotlib on Rafael Tieppo</title>
+    <title>Matplotlib on Rafael Tieppo</title>
     <link>/tags/matplotlib/</link>
-    <description>Recent content in matplotlib on Rafael Tieppo</description>
+    <description>Recent content in Matplotlib on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Heat map para diferença de preço médio mensal e anual </title>
       <link>/post/2020_12_17_stocks_diff_yavr_mavr/</link>
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020_12_17_stocks_diff_yavr_mavr/</guid>
-      <description>Nota Este post tem como finalidade APENAS o estudo de análises de variação de preços para fins didáticos. Não trata-se de recomendação ou indicação de investimento. Salienta-se que o código não foi revisado e há possibilidade de haver erros.
-Motivação Em ciências de dados obter e analisar dados é rotina de trabalho. Com finalidade de fixar conteúdo e praticas uma análise simples, este estudo teve como objetivo calcular a diferença entre variação de preço médio mensal e a anual de um ativo.</description>
+      <description>Nota Este post tem como finalidade APENAS o estudo de análises de variação de preços para fins didáticos. Não trata-se de recomendação ou indicação de investimento. Salienta-se que o código não foi revisado e há possibilidade de haver erros.&#xA;Motivação Em ciências de dados obter e analisar dados é rotina de trabalho. Com finalidade de fixar conteúdo e praticas uma análise simples, este estudo teve como objetivo calcular a diferença entre variação de preço médio mensal e a anual de um ativo.</description>
     </item>
-    
     <item>
       <title>Histogram and Barplot with Python</title>
       <link>/post/2018_11_26_barhistpy/</link>
       <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/2018_11_26_barhistpy/</guid>
-      <description>Introduction Some people make a small confusion with histogram and barplots. So in this post we intend to provide some points about both of them.
-Let&amp;rsquo;s supose that we have a sample from 200 persons, and we need to check the age distribution, so we can produce a histogram (Figure 1).
-# creating data DF = pd.DataFrame({&amp;#34;A&amp;#34; : np.random.normal(30, 0.75, 200)}) # plot plt.figure(figsize=(8, 5)) plt.hist(DF[&amp;#34;A&amp;#34;], bins = 10, color=&amp;#39;steelblue&amp;#39;, alpha = 0.</description>
+      <description>Introduction Some people make a small confusion with histogram and barplots. So in this post we intend to provide some points about both of them.&#xA;Let&amp;rsquo;s supose that we have a sample from 200 persons, and we need to check the age distribution, so we can produce a histogram (Figure 1).&#xA;# creating data DF = pd.DataFrame({&amp;#34;A&amp;#34; : np.random.normal(30, 0.75, 200)}) # plot plt.figure(figsize=(8, 5)) plt.hist(DF[&amp;#34;A&amp;#34;], bins = 10, color=&amp;#39;steelblue&amp;#39;, alpha = 0.</description>
     </item>
-    
   </channel>
 </rss>

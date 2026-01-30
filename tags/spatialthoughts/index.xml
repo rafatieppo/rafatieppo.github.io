@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>spatialthoughts on Rafael Tieppo</title>
+    <title>Spatialthoughts on Rafael Tieppo</title>
     <link>/tags/spatialthoughts/</link>
-    <description>Recent content in spatialthoughts on Rafael Tieppo</description>
+    <description>Recent content in Spatialthoughts on Rafael Tieppo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 25 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/spatialthoughts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/spatialthoughts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>30DaysOfQGIS – Master QGIS in 30 Days</title>
       <link>/post/2024_05_25_qgis_challenge/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>/post/2024_05_25_qgis_challenge/</guid>
-      <description>Day 1 Introduction and Course Overview From the great spatialthoughts.com, I mean the Ujaval Gandhi and team, this challenge is a really way to improve skills in geoprocessing. I am a quite rusty, so Why not to practice? The goal is to achieve the 30 challenges, maybe I will be late a little bit! Anyway, Lets go!
-The Advanced QGIS (Full Course Material) is here. The Youtube content is Here</description>
+      <description>Day 1 Introduction and Course Overview From the great spatialthoughts.com, I mean the Ujaval Gandhi and team, this challenge is a really way to improve skills in geoprocessing. I am a quite rusty, so Why not to practice? The goal is to achieve the 30 challenges, maybe I will be late a little bit! Anyway, Lets go!&#xA;The Advanced QGIS (Full Course Material) is here. The Youtube content is Here</description>
     </item>
-    
   </channel>
 </rss>
