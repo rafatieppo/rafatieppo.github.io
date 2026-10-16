@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pyhton on Rafael Tieppo</title>
+    <link>/tags/pyhton/</link>
+    <description>Recent content in Pyhton on Rafael Tieppo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/pyhton/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Instalando QGIS via miniconda</title>
+      <link>/post/2026_10_14_qgis_miniconda/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>/post/2026_10_14_qgis_miniconda/</guid>
+      <description>Motivação Ao usar o QGIS em instalações convencionais alguns pacotes geram erro, isto porque necessitam de alguma pacote python específico, como geopandas por exemplo. Para evitar esses erros, o ideal é criar um ambiente python e instalar o QGIS e os demais pacotes necessários, evitando assim, algum conflito com o pyhton do seu sistemas operacional.&#xA;Assume-se como instalação convencional aquela realizazada por uns instalador windows (setup.exe) ou via repositórios (Linux).</description>
+    </item>
+  </channel>
+</rss>

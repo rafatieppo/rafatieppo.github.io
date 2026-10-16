@@ -7,8 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#39;http://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;Licensed CC:By-NC-SA&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conda</title>
+      <link>/tags/conda/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/conda/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GIS</title>
+      <link>/tags/gis/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/gis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pyhton</title>
+      <link>/tags/pyhton/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/pyhton/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>QGIS</title>
+      <link>/tags/qgis/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/qgis/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Geojson</title>
       <link>/tags/geojson/</link>
@@ -161,20 +189,6 @@
       <link>/tags/30daysofqgis/</link>
       <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
       <guid>/tags/30daysofqgis/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GIS</title>
-      <link>/tags/gis/</link>
-      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/gis/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>QGIS</title>
-      <link>/tags/qgis/</link>
-      <pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/qgis/</guid>
       <description></description>
     </item>
     <item>
